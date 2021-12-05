@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: module name here
       url: core.html
+    - output: web,pdf
+      title: Config
+      url: config.html
     output: web
     title: recohut
   output: web

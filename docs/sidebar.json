@@ -2,6 +2,7 @@
   "recohut": {
     "Overview": "/",
     "module name here": "core.html",
-    "Config": "config.html"
+    "Config": "config.html",
+    "Logging": "logging.html"
   }
 }

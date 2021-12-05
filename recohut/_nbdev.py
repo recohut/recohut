@@ -2,9 +2,11 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"Configurator": "config.ipynb"}
+index = {"Configurator": "config.ipynb",
+         "set_logger": "logging.ipynb"}
 
-modules = ["utils/config.py"]
+modules = ["utils/config.py",
+           "utils/logging.py"]
 
 doc_url = "https://RecoHut-Projects.github.io/recohut/"
 

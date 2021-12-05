@@ -15,6 +15,10 @@ jobs:
       run: |
         pip install nbdev jupyter
         pip install -e .
+    - name: Build all modules
+      run: |
+        nbdev_install_git_hooks
+        nbdev_build_lib && nbdev_clean_nbs && nbdev_build_docs
     - name: Read all notebooks
       run: |
         nbdev_read_nbs

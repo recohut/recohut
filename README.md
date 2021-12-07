@@ -1,10 +1,13 @@
 # recohut
+
+<a href="https://recohut.notion.site/RecoHut-Express-1f131a195ce3451ebfad4c6d7ec9c210" alt="blog_notion"> <img src="https://img.shields.io/static/v1?label=notion&message=blog&color=orange&logo=notion" /></a>
+
 > This is a python library for building recommender systems.
 
 
 ## Install
 
-`pip install your_project_name`
+`pip install recohut`
 
 ## How to use
 

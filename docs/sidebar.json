@@ -3,6 +3,9 @@
     "Overview": "/",
     "module name here": "core.html",
     "DeepMF": "deepmf.html",
+    "NCF": "ncf.html",
+    "VDeepMF": "vdeepmf.html",
+    "VNCF": "vncf.html",
     "PyTorch Utils": "utils.html",
     "Config": "config.html",
     "Logging": "logging.html"

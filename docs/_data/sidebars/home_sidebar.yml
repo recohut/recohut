@@ -16,6 +16,15 @@ entries:
       title: DeepMF
       url: deepmf.html
     - output: web,pdf
+      title: NCF
+      url: ncf.html
+    - output: web,pdf
+      title: VDeepMF
+      url: vdeepmf.html
+    - output: web,pdf
+      title: VNCF
+      url: vncf.html
+    - output: web,pdf
       title: PyTorch Utils
       url: utils.html
     - output: web,pdf

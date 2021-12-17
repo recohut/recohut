@@ -3,6 +3,7 @@
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"calculate_precision_recall": "utils.ipynb",
+         "calculate_ndcg": "utils.ipynb",
          "DeepMF": "deepmf.ipynb",
          "NCF": "ncf.ipynb",
          "VDeepMF": "vdeepmf.ipynb",

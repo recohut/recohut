@@ -2,7 +2,7 @@
   "recohut": {
     "Overview": "/",
     "module name here": "core.html",
-    "PyTorch Utils": "utils.html",
+    "Metric utils": "utils.html",
     "DeepMF": "deepmf.html",
     "NCF": "ncf.html",
     "VDeepMF": "vdeepmf.html",

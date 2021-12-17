@@ -5,7 +5,7 @@ __all__ = ['VDeepMF']
 # Cell
 import tensorflow as tf
 from tensorflow.keras.models import Model, Sequential
-from tensorflow.keras.layers import Embedding, Flatten, Input, Dropout, Dense, Concatenate, Lambda
+from tensorflow.keras.layers import Embedding, Flatten, Input, Dropout, Dense, Dot, Concatenate, Lambda
 from tensorflow.keras import backend as K
 
 

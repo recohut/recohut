@@ -2,10 +2,15 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"Configurator": "config.ipynb",
+index = {"BetaBandit": "bandits.ipynb",
+         "EpsilonBandit": "bandits.ipynb",
+         "seed_everything": "utils.ipynb",
+         "Configurator": "config.ipynb",
          "set_logger": "logging.ipynb"}
 
-modules = ["utils/config.py",
+modules = ["models/bandits.py",
+           "pytorch/utils.py",
+           "utils/config.py",
            "utils/logging.py"]
 
 doc_url = "https://RecoHut-Projects.github.io/recohut/"

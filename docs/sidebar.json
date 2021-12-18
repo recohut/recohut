@@ -2,6 +2,8 @@
   "recohut": {
     "Overview": "/",
     "module name here": "core.html",
+    "Bandits": "bandits.html",
+    "PyTorch Utils": "utils.html",
     "Config": "config.html",
     "Logging": "logging.html"
   }

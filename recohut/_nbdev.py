@@ -4,6 +4,9 @@ __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
 index = {"calculate_precision_recall": "utils.ipynb",
          "calculate_ndcg": "utils.ipynb",
+         "recall": "utils.ipynb",
+         "ndcg": "utils.ipynb",
+         "recalls_and_ndcgs_for_ks": "utils.ipynb",
          "DeepMF": "deepmf.ipynb",
          "NCF": "ncf.ipynb",
          "VDeepMF": "vdeepmf.ipynb",
@@ -13,10 +16,10 @@ index = {"calculate_precision_recall": "utils.ipynb",
          "set_logger": "logging.ipynb"}
 
 modules = ["metrics/utils.py",
-           "models/tensorflow/deepmf.py",
-           "models/tensorflow/ncf.py",
+           "models/tf/deepmf.py",
+           "models/tf/ncf.py",
            "models/tensorflow/vdeepmf.py",
-           "models/tensorflow/vncf.py",
+           "models/tf/vncf.py",
            "pytorch/utils.py",
            "utils/config.py",
            "utils/logging.py"]

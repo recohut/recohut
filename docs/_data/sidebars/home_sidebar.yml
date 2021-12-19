@@ -37,6 +37,12 @@ entries:
       title: VNCF
       url: vncf.html
     - output: web,pdf
+      title: DDPG Agent
+      url: ddpg.html
+    - output: web,pdf
+      title: RecSys RL Env
+      url: recsys.html
+    - output: web,pdf
       title: RL Memory
       url: memory.html
     - output: web,pdf

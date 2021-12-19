@@ -10,6 +10,8 @@
     "NCF": "ncf.html",
     "VDeepMF": "vdeepmf.html",
     "VNCF": "vncf.html",
+    "DDPG Agent": "ddpg.html",
+    "RecSys RL Env": "recsys.html",
     "RL Memory": "memory.html",
     "User Grouping": "user_grouping.html",
     "Config": "config.html",

@@ -2,6 +2,11 @@
   "recohut": {
     "Overview": "/",
     "module name here": "core.html",
+    "Metric utils": "utils.html",
+    "DeepMF": "deepmf.html",
+    "NCF": "ncf.html",
+    "VDeepMF": "vdeepmf.html",
+    "VNCF": "vncf.html",
     "Config": "config.html",
     "Logging": "logging.html"
   }

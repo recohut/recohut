@@ -2,11 +2,16 @@
   "recohut": {
     "Overview": "/",
     "module name here": "core.html",
+    "OU Noise Layer": "ou_noise.html",
     "Metric utils": "utils.html",
+    "Actor-critic Model": "actor_critic.html",
+    "Embedding": "embedding.html",
     "DeepMF": "deepmf.html",
     "NCF": "ncf.html",
     "VDeepMF": "vdeepmf.html",
     "VNCF": "vncf.html",
+    "RL Memory": "memory.html",
+    "User Grouping": "user_grouping.html",
     "Config": "config.html",
     "Logging": "logging.html"
   }

@@ -2,25 +2,38 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"calculate_precision_recall": "utils.ipynb",
+index = {"OUNoise": "ou_noise.ipynb",
+         "calculate_precision_recall": "utils.ipynb",
          "calculate_ndcg": "utils.ipynb",
          "recall": "utils.ipynb",
          "ndcg": "utils.ipynb",
          "recalls_and_ndcgs_for_ks": "utils.ipynb",
+         "Actor": "actor_critic.ipynb",
+         "Critic": "actor_critic.ipynb",
+         "EmbeddingNet": "embedding.ipynb",
+         "get_list": "embedding.ipynb",
+         "GroupEmbedding": "embedding.ipynb",
          "DeepMF": "deepmf.ipynb",
          "NCF": "ncf.ipynb",
          "VDeepMF": "vdeepmf.ipynb",
          "VNCF": "vncf.ipynb",
          "seed_everything": "utils.ipynb",
+         "ReplayMemory": "memory.ipynb",
+         "GroupGenerator": "user_grouping.ipynb",
          "Configurator": "config.ipynb",
          "set_logger": "logging.ipynb"}
 
-modules = ["metrics/utils.py",
+modules = ["layers/ou_noise.py",
+           "metrics/utils.py",
+           "models/actor_critic.py",
+           "models/embedding.py",
            "models/tf/deepmf.py",
            "models/tf/ncf.py",
            "models/tf/vdeepmf.py",
            "models/tf/vncf.py",
            "pytorch/utils.py",
+           "rl/memory.py",
+           "transforms/user_grouping.py",
            "utils/config.py",
            "utils/logging.py"]
 

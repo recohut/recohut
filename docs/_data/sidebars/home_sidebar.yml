@@ -13,8 +13,17 @@ entries:
       title: module name here
       url: core.html
     - output: web,pdf
+      title: OU Noise Layer
+      url: ou_noise.html
+    - output: web,pdf
       title: Metric utils
       url: utils.html
+    - output: web,pdf
+      title: Actor-critic Model
+      url: actor_critic.html
+    - output: web,pdf
+      title: Embedding
+      url: embedding.html
     - output: web,pdf
       title: DeepMF
       url: deepmf.html
@@ -27,6 +36,12 @@ entries:
     - output: web,pdf
       title: VNCF
       url: vncf.html
+    - output: web,pdf
+      title: RL Memory
+      url: memory.html
+    - output: web,pdf
+      title: User Grouping
+      url: user_grouping.html
     - output: web,pdf
       title: Config
       url: config.html

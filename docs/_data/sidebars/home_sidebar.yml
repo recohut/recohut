@@ -31,17 +31,44 @@ entries:
       title: SiReN
       url: siren.html
     - output: web,pdf
+      title: AttRec
+      url: attrec.html
+    - output: web,pdf
+      title: BPR
+      url: bpr.html
+    - output: web,pdf
+      title: Caser
+      url: caser.html
+    - output: web,pdf
+      title: Deep and Cross Network (DCN)
+      url: dcn.html
+    - output: web,pdf
+      title: Deep Crossing
+      url: deepcross.html
+    - output: web,pdf
       title: DeepMF
       url: deepmf.html
     - output: web,pdf
+      title: Factorization Machines
+      url: fm.html
+    - output: web,pdf
       title: NCF
       url: ncf.html
+    - output: web,pdf
+      title: Product-based Neural Network (PNN)
+      url: pnn.html
+    - output: web,pdf
+      title: SASRec
+      url: sasrec.html
     - output: web,pdf
       title: VDeepMF
       url: vdeepmf.html
     - output: web,pdf
       title: VNCF
       url: vncf.html
+    - output: web,pdf
+      title: Wide & Deep Learning (W&D)
+      url: widedeep.html
     - output: web,pdf
       title: DDPG Agent
       url: ddpg.html

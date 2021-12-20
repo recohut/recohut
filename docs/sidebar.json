@@ -7,6 +7,7 @@
     "Metric utils": "utils.html",
     "Actor-critic Model": "actor_critic.html",
     "Embedding": "embedding.html",
+    "SiReN": "siren.html",
     "DeepMF": "deepmf.html",
     "NCF": "ncf.html",
     "VDeepMF": "vdeepmf.html",

@@ -28,6 +28,9 @@ entries:
       title: Embedding
       url: embedding.html
     - output: web,pdf
+      title: SiReN
+      url: siren.html
+    - output: web,pdf
       title: DeepMF
       url: deepmf.html
     - output: web,pdf

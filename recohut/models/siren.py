@@ -6,6 +6,7 @@ __all__ = ['SiReN']
 import torch
 from torch import nn
 import torch.nn.functional as F
+from torch_geometric.data import Data
 
 from ..layers.message_passing import LightGConv, LRGCCF
 

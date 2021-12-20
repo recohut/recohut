@@ -55,6 +55,12 @@ entries:
       title: Bi-partite Dataset
       url: bipartite.html
     - output: web,pdf
+      title: Criteo Dataset Transformation
+      url: criteo.html
+    - output: web,pdf
+      title: MovieLens Dataset Transformation
+      url: movielens.html
+    - output: web,pdf
       title: User Grouping
       url: user_grouping.html
     - output: web,pdf

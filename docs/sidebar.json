@@ -16,6 +16,8 @@
     "RecSys RL Env": "recsys.html",
     "RL Memory": "memory.html",
     "Bi-partite Dataset": "bipartite.html",
+    "Criteo Dataset Transformation": "criteo.html",
+    "MovieLens Dataset Transformation": "movielens.html",
     "User Grouping": "user_grouping.html",
     "Config": "config.html",
     "Logging": "logging.html"

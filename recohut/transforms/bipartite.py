@@ -13,9 +13,10 @@ from torch.utils.data import Dataset
 # Cell
 class BipartiteDataset(Dataset):
     def __init__(self, args, train, neg_dist, offset, num_u, num_v,K):
-        self.edge_1 = torch.tensor(train[args.user_col].values-1)
-        self.edge_2 = torch.tensor(train[args.item_col].values-1) +num_u
-        self.edge_3 = torch.tensor(train[args.feedback_col].values) - offset
+        self.args = args
+        self.edge_1 = torch.tensor(train[self.args.user_col].values-1)
+        self.edge_2 = torch.tensor(train[self.args.item_col].values-1) +num_u
+        self.edge_3 = torch.tensor(train[self.args.feedback_col].values) - offset
         self.neg_dist = neg_dist
         self.K = K;
         self.num_u = num_u
@@ -26,9 +27,9 @@ class BipartiteDataset(Dataset):
     def negs_gen_(self):
         print('negative sampling...'); st=time.time()
         self.edge_4 = torch.empty((len(self.edge_1),self.K),dtype=torch.long)
-        prog = tqdm(desc='negative sampling for each epoch...',total=len(set(self.train[args.user_col].values)),position=0)
-        for j in set(self.train[args.user_col].values):
-            pos=self.train[self.train[args.user_col]==j][args.item_col].values-1
+        prog = tqdm(desc='negative sampling for each epoch...',total=len(set(self.train[self.args.user_col].values)),position=0)
+        for j in set(self.train[self.args.user_col].values):
+            pos=self.train[self.train[self.args.user_col]==j][self.args.item_col].values-1
             neg = np.setdiff1d(self.tot,pos)
             temp = (torch.tensor(np.random.choice(neg,len(pos)*self.K,replace=True,p=self.neg_dist[neg]/self.neg_dist[neg].sum()))+self.num_u).long()
             self.edge_4[self.edge_1==j-1]=temp.view(int(len(temp)/self.K),self.K)
@@ -40,9 +41,9 @@ class BipartiteDataset(Dataset):
     def negs_gen_EP(self,epoch):
         print('negative sampling for next epochs...'); st=time.time()
         self.edge_4_tot = torch.empty((len(self.edge_1),self.K,epoch),dtype=torch.long)
-        prog = tqdm(desc='negative sampling for next epochs...',total=len(set(self.train[args.user_col].values)),position=0)
-        for j in set(self.train[args.user_col].values):
-            pos=self.train[self.train[args.user_col]==j][args.item_col].values-1
+        prog = tqdm(desc='negative sampling for next epochs...',total=len(set(self.train[self.args.user_col].values)),position=0)
+        for j in set(self.train[self.args.user_col].values):
+            pos=self.train[self.train[self.args.user_col]==j][self.args.item_col].values-1
             neg = np.setdiff1d(self.tot,pos)
             temp = (torch.tensor(np.random.choice(neg,len(pos)*self.K*epoch,replace=True,p=self.neg_dist[neg]/self.neg_dist[neg].sum()))+self.num_u).long()
             self.edge_4_tot[self.edge_1==j-1]=temp.view(int(len(temp)/self.K/epoch),self.K,epoch)

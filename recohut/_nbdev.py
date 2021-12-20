@@ -59,6 +59,7 @@ index = {"LightGConv": "message_passing.ipynb",
          "denseFeature": "criteo.ipynb",
          "create_criteo_dataset": "criteo.ipynb",
          "create_ml_1m_dataset": "movielens.ipynb",
+         "create_implicit_ml_1m_dataset": "movielens.ipynb",
          "GroupGenerator": "user_grouping.ipynb",
          "Configurator": "config.ipynb",
          "set_logger": "logging.ipynb"}

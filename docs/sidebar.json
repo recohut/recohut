@@ -2,6 +2,7 @@
   "recohut": {
     "Overview": "/",
     "module name here": "core.html",
+    "Message Passing": "message_passing.html",
     "OU Noise Layer": "ou_noise.html",
     "Metric utils": "utils.html",
     "Actor-critic Model": "actor_critic.html",
@@ -13,6 +14,7 @@
     "DDPG Agent": "ddpg.html",
     "RecSys RL Env": "recsys.html",
     "RL Memory": "memory.html",
+    "Bi-partite Dataset": "bipartite.html",
     "User Grouping": "user_grouping.html",
     "Config": "config.html",
     "Logging": "logging.html"

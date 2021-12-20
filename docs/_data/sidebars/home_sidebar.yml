@@ -13,6 +13,9 @@ entries:
       title: module name here
       url: core.html
     - output: web,pdf
+      title: Message Passing
+      url: message_passing.html
+    - output: web,pdf
       title: OU Noise Layer
       url: ou_noise.html
     - output: web,pdf
@@ -24,6 +27,9 @@ entries:
     - output: web,pdf
       title: Embedding
       url: embedding.html
+    - output: web,pdf
+      title: SiReN
+      url: siren.html
     - output: web,pdf
       title: DeepMF
       url: deepmf.html
@@ -45,6 +51,9 @@ entries:
     - output: web,pdf
       title: RL Memory
       url: memory.html
+    - output: web,pdf
+      title: Bi-partite Dataset
+      url: bipartite.html
     - output: web,pdf
       title: User Grouping
       url: user_grouping.html

@@ -13,20 +13,41 @@ entries:
       title: module name here
       url: core.html
     - output: web,pdf
+      title: Abstract Dataset
+      url: base.html
+    - output: web,pdf
+      title: MovieLens Dataset Transformation
+      url: movielens.html
+    - output: web,pdf
+      title: Synthetic Datasets
+      url: synthetic.html
+    - output: web,pdf
       title: Message Passing
       url: message_passing.html
     - output: web,pdf
       title: OU Noise Layer
       url: ou_noise.html
     - output: web,pdf
-      title: Metric utils
+      title: PyTorch Utils
       url: utils.html
     - output: web,pdf
       title: Actor-critic Model
       url: actor_critic.html
     - output: web,pdf
+      title: Bandits
+      url: bandits.html
+    - output: web,pdf
+      title: DNNs
+      url: dnn.html
+    - output: web,pdf
       title: Embedding
       url: embedding.html
+    - output: web,pdf
+      title: Epsilon
+      url: epsilon.html
+    - output: web,pdf
+      title: Factorization
+      url: factorization.html
     - output: web,pdf
       title: SiReN
       url: siren.html
@@ -79,17 +100,29 @@ entries:
       title: RL Memory
       url: memory.html
     - output: web,pdf
+      title: Aggregate
+      url: aggregate.html
+    - output: web,pdf
       title: Bi-partite Dataset
       url: bipartite.html
     - output: web,pdf
       title: Criteo Dataset Transformation
       url: criteo.html
     - output: web,pdf
-      title: MovieLens Dataset Transformation
-      url: movielens.html
+      title: Encode
+      url: encode.html
+    - output: web,pdf
+      title: Normalize
+      url: normalize.html
+    - output: web,pdf
+      title: Sampling
+      url: sampling.html
     - output: web,pdf
       title: User Grouping
       url: user_grouping.html
+    - output: web,pdf
+      title: Common utils
+      url: common_utils.html
     - output: web,pdf
       title: Config
       url: config.html

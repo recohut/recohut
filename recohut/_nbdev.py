@@ -61,6 +61,14 @@ index = {"LightGConv": "message_passing.ipynb",
          "create_ml_1m_dataset": "movielens.ipynb",
          "create_implicit_ml_1m_dataset": "movielens.ipynb",
          "GroupGenerator": "user_grouping.ipynb",
+         "makedirs": "common_utils.ipynb",
+         "wget_download": "common_utils.ipynb",
+         "download_url": "common_utils.ipynb",
+         "maybe_log": "common_utils.ipynb",
+         "extract_tar": "common_utils.ipynb",
+         "extract_zip": "common_utils.ipynb",
+         "extract_bz2": "common_utils.ipynb",
+         "extract_gz": "common_utils.ipynb",
          "Configurator": "config.ipynb",
          "set_logger": "logging.ipynb"}
 
@@ -91,6 +99,7 @@ modules = ["layers/message_passing.py",
            "transforms/datasets/criteo.py",
            "transforms/datasets/movielens.py",
            "transforms/user_grouping.py",
+           "utils/common_utils.py",
            "utils/config.py",
            "utils/logging.py"]
 

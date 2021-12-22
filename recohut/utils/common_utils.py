@@ -4,6 +4,7 @@ __all__ = ['wget_download', 'download_url', 'extract_tar', 'extract_zip', 'extra
 
 # Cell
 import sys
+import os
 import ssl
 import os.path as osp
 from six.moves import urllib

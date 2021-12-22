@@ -1,13 +1,13 @@
 ---
 
-title: Abstract Dataset
+title: Base dataset
 
 
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "Abstract base class for dataset module."
-description: "Abstract base class for dataset module."
+summary: "Base class for dataset module."
+description: "Base class for dataset module."
 nb_path: "nbs/datasets/base.ipynb"
 ---
 <!--
@@ -47,7 +47,7 @@ nb_path: "nbs/datasets/base.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="AbstractDataset" class="doc_header"><code>class</code> <code>AbstractDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L32" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AbstractDataset</code>(<strong><code>args</code></strong>)</p>
+<h2 id="AbstractDataset" class="doc_header"><code>class</code> <code>AbstractDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L40" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AbstractDataset</code>(<strong><code>args</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -78,8 +78,56 @@ nb_path: "nbs/datasets/base.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="AbstractDatasetv2" class="doc_header"><code>class</code> <code>AbstractDatasetv2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L125" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AbstractDatasetv2</code>(<strong><code>args</code></strong>)</p>
+<h2 id="AbstractDatasetv2" class="doc_header"><code>class</code> <code>AbstractDatasetv2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L133" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AbstractDatasetv2</code>(<strong><code>args</code></strong>)</p>
 </blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="SessionDataset" class="doc_header"><code>class</code> <code>SessionDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L400" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SessionDataset</code>(<strong><code>root</code></strong>, <strong><code>process_method</code></strong>, <strong><code>min_date</code></strong>=<em><code>None</code></em>, <strong><code>session_length</code></strong>=<em><code>None</code></em>, <strong><code>min_session_length</code></strong>=<em><code>None</code></em>, <strong><code>min_item_support</code></strong>=<em><code>None</code></em>, <strong><code>num_slices</code></strong>=<em><code>None</code></em>, <strong><code>days_offset</code></strong>=<em><code>None</code></em>, <strong><code>days_shift</code></strong>=<em><code>None</code></em>, <strong><code>days_train</code></strong>=<em><code>None</code></em>, <strong><code>days_test</code></strong>=<em><code>None</code></em>, <strong><code>data</code></strong>=<em><code>None</code></em>) :: <a href="/recohut/retailrocket.html#Dataset"><code>Dataset</code></a></p>
+</blockquote>
+<p>Session dataset base class.</p>
+<p>Args:
+    root (string): Root directory where the dataset should be saved.
+    process_method (string):
+        last: last day =&gt; test set
+        last_min_date: last day =&gt; test set, but from a minimal date onwards
+        days_test: last N days =&gt; test set
+        slice: create multiple train-test-combinations with a sliding window approach
+    min_date (string): Minimum date
+    session_length (int): Session time length :default = 30 * 60 #30 minutes
+    min_session_length (int): Minimum number of items for a session to be valid
+    min_item_support (int): Minimum number of interactions for an item to be valid
+    num_slices (int): Offset in days from the first date in the data set
+    days_offset (int): Number of days the training start date is shifted after creating one slice
+    days_shift (int): Days shift
+    days_train (int): Days in train set in each slice
+    days_test (int): Days in test set in each slice</p>
 
 </div>
 

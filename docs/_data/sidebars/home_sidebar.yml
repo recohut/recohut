@@ -13,11 +13,23 @@ entries:
       title: module name here
       url: core.html
     - output: web,pdf
-      title: Abstract Dataset
+      title: AOTM dataset
+      url: aotm.html
+    - output: web,pdf
+      title: Base dataset
       url: base.html
     - output: web,pdf
       title: MovieLens Dataset Transformation
       url: movielens.html
+    - output: web,pdf
+      title: Music30 dataset
+      url: music30.html
+    - output: web,pdf
+      title: NowPlaying dataset
+      url: nowplaying.html
+    - output: web,pdf
+      title: RetailRocket Dataset
+      url: retailrocket.html
     - output: web,pdf
       title: Synthetic Datasets
       url: synthetic.html

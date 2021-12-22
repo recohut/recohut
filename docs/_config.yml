@@ -2,7 +2,7 @@ repository: RecoHut-Projects/recohut
 output: web
 topnav_title: recohut
 site_title: recohut
-company_name: Free to use and distribute
+company_name: RecoChef
 description: A python library for building recommender systems.
 # Set to false to disable KaTeX math
 use_math: true
@@ -10,6 +10,8 @@ use_math: true
 google_analytics:
 # See http://nbdev.fast.ai/search for help with adding Search
 google_search:
+
+default_badges: {colab: true}
 
 host: 127.0.0.1
 # the preview server used. Leave as is.

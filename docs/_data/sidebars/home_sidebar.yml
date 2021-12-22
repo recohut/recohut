@@ -7,40 +7,70 @@ entries:
 - folders:
   - folderitems:
     - output: web,pdf
-      title: Overview
-      url: /
-    - output: web,pdf
-      title: AOTM dataset
-      url: aotm.html
-    - output: web,pdf
-      title: Base dataset
+      title: Base
       url: base.html
     - output: web,pdf
-      title: MovieLens Dataset Transformation
-      url: movielens.html
+      title: AOTM
+      url: aotm.html
     - output: web,pdf
-      title: Music30 dataset
+      title: Music30
       url: music30.html
     - output: web,pdf
-      title: NowPlaying dataset
+      title: NowPlaying
       url: nowplaying.html
     - output: web,pdf
-      title: RetailRocket Dataset
+      title: RetailRocket
       url: retailrocket.html
     - output: web,pdf
-      title: Synthetic Datasets
+      title: Synthetic
       url: synthetic.html
+    output: web
+    title: Datasets
+  - folderitems:
+    - output: web,pdf
+      title: Aggregate
+      url: aggregate.html
+    - output: web,pdf
+      title: Bi-partite
+      url: bipartite.html
+    - output: web,pdf
+      title: Criteo
+      url: criteo.html
+    - output: web,pdf
+      title: MovieLens
+      url: movielens.html
+    - output: web,pdf
+      title: Encode
+      url: encode.html
+    - output: web,pdf
+      title: Normalize
+      url: normalize.html
+    - output: web,pdf
+      title: Sampling
+      url: sampling.html
+    - output: web,pdf
+      title: User Grouping
+      url: user_grouping.html
+    output: web
+    title: Transforms
+  - folderitems:
     - output: web,pdf
       title: Message Passing
       url: message_passing.html
     - output: web,pdf
-      title: OU Noise Layer
+      title: OU Noise
       url: ou_noise.html
     - output: web,pdf
-      title: PyTorch Utils
-      url: utils.html
+      title: Factorization
+      url: factorization.html
     - output: web,pdf
-      title: Actor-critic Model
+      title: Embedding
+      url: embedding.html
+    output: web
+    title: Layers
+  - folderitems:
+    - output: web,pdf
+      title: Actor-critic
       url: actor_critic.html
     - output: web,pdf
       title: Bandits
@@ -49,14 +79,8 @@ entries:
       title: DNNs
       url: dnn.html
     - output: web,pdf
-      title: Embedding
-      url: embedding.html
-    - output: web,pdf
       title: Epsilon
       url: epsilon.html
-    - output: web,pdf
-      title: Factorization
-      url: factorization.html
     - output: web,pdf
       title: SiReN
       url: siren.html
@@ -70,22 +94,22 @@ entries:
       title: Caser
       url: caser.html
     - output: web,pdf
-      title: Deep and Cross Network (DCN)
+      title: DCN
       url: dcn.html
     - output: web,pdf
-      title: Deep Crossing
+      title: DeepCross
       url: deepcross.html
     - output: web,pdf
       title: DeepMF
       url: deepmf.html
     - output: web,pdf
-      title: Factorization Machines
+      title: FM
       url: fm.html
     - output: web,pdf
       title: NCF
       url: ncf.html
     - output: web,pdf
-      title: Product-based Neural Network (PNN)
+      title: PNN
       url: pnn.html
     - output: web,pdf
       title: SASRec
@@ -97,38 +121,26 @@ entries:
       title: VNCF
       url: vncf.html
     - output: web,pdf
-      title: Wide & Deep Learning (W&D)
+      title: Wide&Deep
       url: widedeep.html
+    output: web
+    title: Models
+  - folderitems:
     - output: web,pdf
-      title: DDPG Agent
+      title: Agents
       url: ddpg.html
     - output: web,pdf
-      title: RecSys RL Env
+      title: Environments
       url: recsys.html
     - output: web,pdf
-      title: RL Memory
+      title: Memories
       url: memory.html
+    output: web
+    title: rl
+  - folderitems:
     - output: web,pdf
-      title: Aggregate
-      url: aggregate.html
-    - output: web,pdf
-      title: Bi-partite Dataset
-      url: bipartite.html
-    - output: web,pdf
-      title: Criteo Dataset Transformation
-      url: criteo.html
-    - output: web,pdf
-      title: Encode
-      url: encode.html
-    - output: web,pdf
-      title: Normalize
-      url: normalize.html
-    - output: web,pdf
-      title: Sampling
-      url: sampling.html
-    - output: web,pdf
-      title: User Grouping
-      url: user_grouping.html
+      title: PyTorch utils
+      url: utils.html
     - output: web,pdf
       title: Common utils
       url: common_utils.html
@@ -139,6 +151,6 @@ entries:
       title: Logging
       url: logging.html
     output: web
-    title: recohut
+    title: utils
   output: web
   title: Sidebar

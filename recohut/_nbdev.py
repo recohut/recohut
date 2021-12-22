@@ -2,7 +2,8 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"download": "movielens.ipynb",
+index = {"AOTMDataset": "aotm.ipynb",
+         "download": "movielens.ipynb",
          "unzip": "movielens.ipynb",
          "AbstractDataset": "base.ipynb",
          "AbstractDatasetv2": "base.ipynb",
@@ -11,6 +12,8 @@ index = {"download": "movielens.ipynb",
          "Dataset": "retailrocket.ipynb",
          "SessionDataset": "base.ipynb",
          "ML1MDataset": "movielens.ipynb",
+         "Music30Dataset": "music30.ipynb",
+         "NowPlayingDataset": "nowplaying.ipynb",
          "RetailRocketDatasetv2": "retailrocket.ipynb",
          "Synthetic": "synthetic.ipynb",
          "Session": "synthetic.ipynb",
@@ -102,8 +105,11 @@ index = {"download": "movielens.ipynb",
          "Configurator": "config.ipynb",
          "set_logger": "logging.ipynb"}
 
-modules = ["datasets/base.py",
+modules = ["datasets/aotm.py",
+           "datasets/base.py",
            "datasets/movielens.py",
+           "datasets/music30.py",
+           "datasets/nowplaying.py",
            "datasets/retailrocket.py",
            "datasets/synthetic.py",
            "layers/message_passing.py",

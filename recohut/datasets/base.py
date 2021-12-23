@@ -26,6 +26,7 @@ import math
 import operator
 import itertools
 from datetime import date, timezone, datetime, timedelta
+from pandas import Timedelta
 
 from ..utils.common_utils import download_url, extract_zip, makedirs
 

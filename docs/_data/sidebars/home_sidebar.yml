@@ -19,8 +19,17 @@ entries:
       title: NowPlaying
       url: nowplaying.html
     - output: web,pdf
+      title: Gowalla
+      url: gowalla.html
+    - output: web,pdf
+      title: LastFM
+      url: lastfm.html
+    - output: web,pdf
+      title: MovieLens
+      url: movielens.html
+    - output: web,pdf
       title: RetailRocket
-      url: retailrocket.html
+      url: tianchi.html
     - output: web,pdf
       title: Synthetic
       url: synthetic.html
@@ -49,6 +58,9 @@ entries:
       title: Sampling
       url: sampling.html
     - output: web,pdf
+      title: Splitting
+      url: splitting.html
+    - output: web,pdf
       title: User Grouping
       url: user_grouping.html
     output: web
@@ -76,8 +88,14 @@ entries:
       title: Bandits
       url: bandits.html
     - output: web,pdf
+      title: BCQ
+      url: bcq.html
+    - output: web,pdf
       title: DNNs
       url: dnn.html
+    - output: web,pdf
+      title: DSSM
+      url: dssm.html
     - output: web,pdf
       title: Epsilon
       url: epsilon.html
@@ -123,20 +141,38 @@ entries:
     - output: web,pdf
       title: Wide&Deep
       url: widedeep.html
+    - output: web,pdf
+      title: SRGNN
+      url: srgnn.html
+    - output: web,pdf
+      title: TAGNN
+      url: tagnn.html
+    - output: web,pdf
+      title: TAGNN++
+      url: tagnn_pp.html
     output: web
     title: Models
   - folderitems:
-    - output: web,pdf
+    - output: web
+      subfolders:
+      - output: web,pdf
+        title: DDPG
+        url: ddpg.html
       title: Agents
-      url: ddpg.html
-    - output: web,pdf
+    - output: web
+      subfolders:
+      - output: web,pdf
+        title: RecSys
+        url: recsys.html
+      - output: web,pdf
+        title: Bandits
+        url: bandits.html
       title: Environments
-      url: recsys.html
     - output: web,pdf
       title: Memories
       url: memory.html
     output: web
-    title: rl
+    title: RL
   - folderitems:
     - output: web,pdf
       title: PyTorch utils

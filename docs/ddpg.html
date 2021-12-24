@@ -1,13 +1,13 @@
 ---
 
-title: DDPG Agent
+title: DDPG
 
 
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "Implementation of RL-based DDPG (Deep Deterministic Policy Gradient) Agent for Recommending items."
-description: "Implementation of RL-based DDPG (Deep Deterministic Policy Gradient) Agent for Recommending items."
+summary: "An implementation of DDPG, Deep Deterministic Policy Gradient."
+description: "An implementation of DDPG, Deep Deterministic Policy Gradient."
 nb_path: "nbs/rl/agents/ddpg.ipynb"
 ---
 <!--
@@ -47,7 +47,7 @@ nb_path: "nbs/rl/agents/ddpg.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="DDPGAgent" class="doc_header"><code>class</code> <code>DDPGAgent</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/rl/agents/ddpg.py#L19" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DDPGAgent</code>(<strong><code>config</code></strong>, <strong><code>noise</code></strong>:<a href="/recohut/ou_noise.html#OUNoise"><code>OUNoise</code></a>, <strong><code>group2members_dict</code></strong>:<code>dict</code>, <strong><code>verbose</code></strong>=<em><code>False</code></em>)</p>
+<h2 id="DDPGAgent" class="doc_header"><code>class</code> <code>DDPGAgent</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/rl/agents/ddpg.py#L20" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DDPGAgent</code>(<strong><code>config</code></strong>, <strong><code>noise</code></strong>:<a href="/recohut/ou_noise.html#OUNoise"><code>OUNoise</code></a>, <strong><code>group2members_dict</code></strong>:<code>dict</code>, <strong><code>verbose</code></strong>=<em><code>False</code></em>)</p>
 </blockquote>
 <p>DDPG (Deep Deterministic Policy Gradient) Agent</p>
 
@@ -186,6 +186,61 @@ Critic(
 
 </div>
 </div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="DDPG" class="doc_header"><code>class</code> <code>DDPG</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/rl/agents/ddpg.py#L213" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DDPG</code>(<strong><code>actor</code></strong>, <strong><code>actor_optim</code></strong>, <strong><code>critic</code></strong>, <strong><code>critic_optim</code></strong>, <strong><code>tau</code></strong>=<em><code>0.001</code></em>, <strong><code>gamma</code></strong>=<em><code>0.99</code></em>, <strong><code>policy_delay</code></strong>=<em><code>1</code></em>, <strong><code>item_embeds</code></strong>=<em><code>None</code></em>, <strong><code>device</code></strong>=<em><code>device(type='cpu')</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 
 </div>
     {% endraw %}

@@ -4,7 +4,12 @@
     "AOTM": "aotm.html",
     "Music30": "music30.html",
     "NowPlaying": "nowplaying.html",
+    "Gowalla": "gowalla.html",
+    "LastFM": "lastfm.html",
+    "MovieLens": "movielens.html",
     "RetailRocket": "retailrocket.html",
+    "RetailRocket": "session.html",
+    "RetailRocket": "tianchi.html",
     "Synthetic": "synthetic.html"
   },
   "Transforms": {
@@ -15,6 +20,7 @@
     "Encode": "encode.html",
     "Normalize": "normalize.html",
     "Sampling": "sampling.html",
+    "Splitting": "splitting.html",
     "User Grouping": "user_grouping.html"
   },
   "Layers": {
@@ -26,7 +32,9 @@
   "Models": {
     "Actor-critic": "actor_critic.html",
     "Bandits": "bandits.html",
+    "BCQ": "bcq.html",
     "DNNs": "dnn.html",
+    "DSSM": "dssm.html",
     "Epsilon": "epsilon.html",
     "SiReN": "siren.html",
     "AttRec": "attrec.html",
@@ -41,11 +49,19 @@
     "SASRec": "sasrec.html",
     "VDeepMF": "vdeepmf.html",
     "VNCF": "vncf.html",
-    "Wide&Deep": "widedeep.html"
+    "Wide&Deep": "widedeep.html",
+    "SRGNN": "srgnn.html",
+    "TAGNN": "tagnn.html",
+    "TAGNN++": "tagnn_pp.html"
   },
-  "rl": {
-    "Agents": "ddpg.html",
-    "Environments": "recsys.html",
+  "RL": {
+    "Agents": {
+        "DDPG": "ddpg.html"
+    },
+    "Environments": {
+        "RecSys": "recsys.html",
+        "Bandits": "bandits.html"
+    },
     "Memories": "memory.html"
   },
   "utils": {

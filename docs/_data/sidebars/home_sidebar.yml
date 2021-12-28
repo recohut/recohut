@@ -29,6 +29,12 @@ entries:
       url: movielens.html
     - output: web,pdf
       title: RetailRocket
+      url: retailrocket.html
+    - output: web,pdf
+      title: Session
+      url: session.html
+    - output: web,pdf
+      title: Tianchi
       url: tianchi.html
     - output: web,pdf
       title: Synthetic
@@ -60,6 +66,9 @@ entries:
     - output: web,pdf
       title: Splitting
       url: splitting.html
+    - output: web,pdf
+      title: Session
+      url: session.html
     - output: web,pdf
       title: User Grouping
       url: user_grouping.html
@@ -148,8 +157,17 @@ entries:
       title: TAGNN
       url: tagnn.html
     - output: web,pdf
-      title: TAGNN++
-      url: tagnn_pp.html
+      title: GMF
+      url: gmf.html
+    - output: web,pdf
+      title: NMF
+      url: nmf.html
+    - output: web,pdf
+      title: MLP
+      url: mlp.html
+    - output: web,pdf
+      title: Prod2Vec
+      url: prod2vec.html
     output: web
     title: Models
   - folderitems:
@@ -158,6 +176,12 @@ entries:
       - output: web,pdf
         title: DDPG
         url: ddpg.html
+      - output: web,pdf
+        title: RePlay
+        url: replay_agents.html
+      - output: web,pdf
+        title: AB Test
+        url: ab_test_agent.html
       title: Agents
     - output: web
       subfolders:
@@ -168,6 +192,12 @@ entries:
         title: Bandits
         url: bandits.html
       title: Environments
+    - output: web
+      subfolders:
+      - output: web,pdf
+        title: Bandits
+        url: bandit_policies.html
+      title: Policies
     - output: web,pdf
       title: Memories
       url: memory.html
@@ -175,18 +205,30 @@ entries:
     title: RL
   - folderitems:
     - output: web,pdf
-      title: PyTorch utils
+      title: Torch
       url: utils.html
     - output: web,pdf
-      title: Common utils
+      title: Common
       url: common_utils.html
     - output: web,pdf
       title: Config
       url: config.html
     - output: web,pdf
+      title: AB Testing
+      url: ab_testing.html
+    - output: web,pdf
       title: Logging
       url: logging.html
     output: web
-    title: utils
+    title: Utils
+  - folderitems:
+    - output: web,pdf
+      title: Common
+      url: basic_plots.html
+    - output: web,pdf
+      title: EDA
+      url: eda.html
+    output: web
+    title: Visualizations
   output: web
   title: Sidebar

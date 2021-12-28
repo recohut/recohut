@@ -8,8 +8,8 @@
     "LastFM": "lastfm.html",
     "MovieLens": "movielens.html",
     "RetailRocket": "retailrocket.html",
-    "RetailRocket": "session.html",
-    "RetailRocket": "tianchi.html",
+    "Session": "session.html",
+    "Tianchi": "tianchi.html",
     "Synthetic": "synthetic.html"
   },
   "Transforms": {
@@ -21,6 +21,7 @@
     "Normalize": "normalize.html",
     "Sampling": "sampling.html",
     "Splitting": "splitting.html",
+    "Session": "session.html",
     "User Grouping": "user_grouping.html"
   },
   "Layers": {
@@ -52,22 +53,35 @@
     "Wide&Deep": "widedeep.html",
     "SRGNN": "srgnn.html",
     "TAGNN": "tagnn.html",
-    "TAGNN++": "tagnn_pp.html"
+    "GMF": "gmf.html",
+    "NMF": "nmf.html",
+    "MLP": "mlp.html",
+    "Prod2Vec": "prod2vec.html"
   },
   "RL": {
     "Agents": {
-        "DDPG": "ddpg.html"
+        "DDPG": "ddpg.html",
+        "RePlay": "replay_agents.html",
+        "AB Test": "ab_test_agent.html"
     },
     "Environments": {
         "RecSys": "recsys.html",
         "Bandits": "bandits.html"
     },
+    "Policies": {
+        "Bandits": "bandit_policies.html"
+    },
     "Memories": "memory.html"
   },
-  "utils": {
-    "PyTorch utils": "utils.html",
-    "Common utils": "common_utils.html",
+  "Utils": {
+    "Torch": "utils.html",
+    "Common": "common_utils.html",
     "Config": "config.html",
+    "AB Testing": "ab_testing.html",
     "Logging": "logging.html"
+  },
+  "Visualizations": {
+    "Common": "basic_plots.html",
+    "EDA": "eda.html"
   }
 }

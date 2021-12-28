@@ -1,13 +1,13 @@
 ---
 
-title: recohut
+title: Title
 
 
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "This is a python library for building recommender systems."
-description: "This is a python library for building recommender systems."
+
+
 nb_path: "nbs/index.ipynb"
 ---
 <!--
@@ -31,52 +31,137 @@ nb_path: "nbs/index.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Install">Install<a class="anchor-link" href="#Install"> </a></h2>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><code>pip install your_project_name</code></p>
+<div id="top"></div><p><a href="https://github.com/RecoHut-Projects/recohut/graphs/contributors"><img src="https://img.shields.io/github/contributors/RecoHut-Projects/recohut.svg?style=for-the-badge" alt="Contributors"></a>
+<a href="https://github.com/RecoHut-Projects/recohut/network/members"><img src="https://img.shields.io/github/forks/RecoHut-Projects/recohut.svg?style=for-the-badge" alt="Forks"></a>
+<a href="https://github.com/RecoHut-Projects/recohut/stargazers"><img src="https://img.shields.io/github/stars/RecoHut-Projects/recohut.svg?style=for-the-badge" alt="Stargazers"></a>
+<a href="https://github.com/RecoHut-Projects/recohut/issues"><img src="https://img.shields.io/github/issues/RecoHut-Projects/recohut.svg?style=for-the-badge" alt="Issues"></a>
+<a href="https://github.com/RecoHut-Projects/recohut/blob/master/LICENSE.txt"><img src="https://img.shields.io/github/license/RecoHut-Projects/recohut.svg?style=for-the-badge" alt="MIT License"></a></p>
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/RecoHut-Projects/recohut">
+    <img src="https://github.com/recohut/reco-static/raw/master/media/diagrams/recohut_logo.svg" alt="Logo" width="80" height="80">
+  </a>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="How-to-use">How to use<a class="anchor-link" href="#How-to-use"> </a></h2>
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
+<!-- <h3 align="center">recohut</h3> -->
 
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import recohut</span>
-<span class="c1"># from recohut.datasets import MovieLens</span>
-<span class="c1"># from recohut.models import MatrixFactorization</span>
+<p align="center">
+    This is a python library for building recommender systems.
+    <br />
+    <a href="https://recohut-projects.github.io/recohut"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/RecoHut-Projects/recohut/tree/master/tutorials">View Demo</a>
+    ·
+    <a href="https://github.com/RecoHut-Projects/recohut/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/RecoHut-Projects/recohut/issues">Request Feature</a>
+  </p>
+</div>
 
-<span class="c1"># # define the data and model</span>
-<span class="c1"># data = MovieLens(version=&#39;100k&#39;, download=True)</span>
-<span class="c1"># model = MatrixFactorization()</span>
 
-<span class="c1"># # train the matrix factorization model</span>
-<span class="c1"># model.train(data)</span>
 
-<span class="c1"># # evaluate the model</span>
-<span class="c1"># model.evaluate(metrics=[&#39;MRR&#39;,&#39;HR&#39;])</span>
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://github.com/RecoHut-Projects/recohut)
+
+
+<p align="right">(<a href="#top">back to top</a>)</p><h3 id="Built-With">Built With<a class="anchor-link" href="#Built-With"> </a></h3><ul>
+<li><a href="https://www.python.org/">Python</a></li>
+<li><a href="https://pytorch.org/">PyTorch</a></li>
+<li><a href="https://numpy.org/">Numpy</a></li>
+<li><a href="https://pandas.pydata.org/">Pandas</a></li>
+<li><a href="https://github.com/fastai/nbdev">nbdev</a></li>
+<li><a href="https://jupyter.org/">Jupyter</a></li>
+</ul>
+<p align="right">(<a href="#top">back to top</a>)</p><p><!-- GETTING STARTED --></p>
+<h2 id="Getting-Started">Getting Started<a class="anchor-link" href="#Getting-Started"> </a></h2><p>To get a local copy up and running follow these simple example steps.</p>
+<h3 id="Prerequisites">Prerequisites<a class="anchor-link" href="#Prerequisites"> </a></h3><ul>
+<li>pytorch<div class="highlight"><pre><span></span>pip install torch
 </pre></div>
+</li>
+</ul>
+<h3 id="Installation">Installation<a class="anchor-link" href="#Installation"> </a></h3>
+<pre><code>pip install recohut</code></pre>
+<p align="right">(<a href="#top">back to top</a>)</p><p><!-- USAGE EXAMPLES --></p>
+<h2 id="Usage">Usage<a class="anchor-link" href="#Usage"> </a></h2><div class="highlight"><pre><span></span><span class="c1"># import the required modules</span>
+<span class="kn">import</span> <span class="nn">recohut</span>
+<span class="kn">from</span> <span class="nn">recohut.datasets</span> <span class="kn">import</span> <span class="n">MovieLens</span>
+<span class="kn">from</span> <span class="nn">recohut.models</span> <span class="kn">import</span> <span class="n">MatrixFactorization</span>
 
-    </div>
+<span class="c1"># define the data and model</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">MovieLens</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="s1">&#39;100k&#39;</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">MatrixFactorization</span><span class="p">()</span>
+
+<span class="c1"># train the matrix factorization model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># evaluate the model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;MRR&#39;</span><span class="p">,</span><span class="s1">&#39;HR&#39;</span><span class="p">])</span>
+</pre></div>
+<p><em>For more examples, please refer to the <a href="https://recohut-projects.github.io/recohut">Documentation</a> and <a href="https://github.com/RecoHut-Projects/recohut/tree/master/tutorials">Tutorials</a>.</em></p>
+<p align="right">(<a href="#top">back to top</a>)</p><p><!-- ROADMAP --></p>
+<h2 id="Roadmap">Roadmap<a class="anchor-link" href="#Roadmap"> </a></h2><ul>
+<li>[] RecSys Model Deployment and MLOps features</li>
+<li>[] RL agents and environment specific to recommender systems</li>
+<li>[] Visualization utilities and EDA</li>
+</ul>
+<p>See the <a href="https://github.com/RecoHut-Projects/recohut/issues">open issues</a> for a full list of proposed features (and known issues).</p>
+<p align="right">(<a href="#top">back to top</a>)</p><p><!-- CONTRIBUTING --></p>
+<h2 id="Contributing">Contributing<a class="anchor-link" href="#Contributing"> </a></h2><p>Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are <strong>greatly appreciated</strong>.</p>
+<p>If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!</p>
+<ol>
+<li>Fork the Project</li>
+<li>Create your Feature Branch (<code>git checkout -b feature/AmazingFeature</code>)</li>
+<li>Commit your Changes (<code>git commit -m 'Add some AmazingFeature'</code>)</li>
+<li>Push to the Branch (<code>git push origin feature/AmazingFeature</code>)</li>
+<li>Open a Pull Request</li>
+</ol>
+<p align="right">(<a href="#top">back to top</a>)</p><p><!-- LICENSE --></p>
+<h2 id="License">License<a class="anchor-link" href="#License"> </a></h2><p>Distributed under the MIT License. See <code>LICENSE.txt</code> for more information.</p>
+<p align="right">(<a href="#top">back to top</a>)</p><p><!-- CONTACT --></p>
+<h2 id="Contact">Contact<a class="anchor-link" href="#Contact"> </a></h2><p>Your Name - Sparsh A.</p>
+<p>Project Link: <a href="https://github.com/RecoHut-Projects/recohut">https://github.com/RecoHut-Projects/recohut</a></p>
+<p align="right">(<a href="#top">back to top</a>)</p><p><!-- ACKNOWLEDGMENTS --></p>
+<h2 id="Acknowledgments">Acknowledgments<a class="anchor-link" href="#Acknowledgments"> </a></h2><ul>
+<li><a href="https://nbdev.fast.ai/tutorial.html">nbdev team</a> for providing supporting tools to build this library.</li>
+<li><a href="https://colab.research.google.com/">colab team</a> for providing running VMs instances for development and testing.</li>
+</ul>
+<p align="right">(<a href="#top">back to top</a>)</p><p><!-- MARKDOWN LINKS & IMAGES --></p>
+
 </div>
 </div>
-
 </div>
-    {% endraw %}
-
 </div>
  
 

@@ -1021,7 +1021,7 @@ class GraphDataset():
         return us_pois, us_msks, len_max
 
 # Cell
-class SessionGraphDataset(base.Dataset):
+class SessionGraphDataset(Dataset):
     """
     References
         1. COTREC session-based recommender model training. https://t.ly/cXTH.

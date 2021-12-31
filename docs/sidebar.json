@@ -1,104 +1,115 @@
 {
-  "Datasets": {
-    "Base": "base.html",
-    "AOTM": "aotm.html",
-    "Music30": "music30.html",
-    "Diginetica": "diginetica.html",
-    "NowPlaying": "nowplaying.html",
-    "Gowalla": "gowalla.html",
-    "LastFM": "lastfm.html",
-    "MovieLens": "movielens.html",
-    "RetailRocket": "retailrocket.html",
-    "Session": "session.html",
-    "Tianchi": "tianchi.html",
-    "Tmall": "tmall.html",
-    "Synthetic": "synthetic.html",
-    "Sample Session": "sample_session.html",
-    "Weeplaces": "weeplaces.html",
-    "Yoochooses": "yoochooses.html",
-    "Torch": {
-        "Session": "session.html"
-    }
-  },
+    "Getting started": {
+        "Overview": "/"
+        },
+    "Datasets": {
+        "Base": "base.html",
+        "AOTM": "aotm.html",
+        "Music30": "music30.html",
+        "Diginetica": "diginetica.html",
+        "NowPlaying": "nowplaying.html",
+        "Gowalla": "gowalla.html",
+        "LastFM": "lastfm.html",
+        "MovieLens": "movielens.html",
+        "RetailRocket": "retailrocket.html",
+        "Session": "session.html",
+        "Tianchi": "tianchi.html",
+        "Tmall": "tmall.html",
+        "Synthetic": "synthetic.html",
+        "Sample Session": "sample_session.html",
+        "Weeplaces": "weeplaces.html",
+        "Yoochooses": "yoochoose.html",
+        "": {
+            "Torch": {
+                "Session": "session.html"
+                }
+             }
+        },
   "Transforms": {
-    "Aggregate": "aggregate.html",
-    "Bi-partite": "bipartite.html",
-    "Criteo": "criteo.html",
-    "MovieLens": "movielens.html",
-    "Encode": "encode.html",
-    "Normalize": "normalize.html",
-    "Sampling": "sampling.html",
-    "Splitting": "splitting.html",
-    "Session": "session.html",
-    "User Grouping": "user_grouping.html"
-  },
+      "Aggregate": "aggregate.html",
+      "Bi-partite": "bipartite.html",
+      "Criteo": "criteo.html",
+      "MovieLens": "movielens.html",
+      "Encode": "encode.html",
+      "Normalize": "normalize.html",
+      "Sampling": "sampling.html",
+      "Splitting": "splitting.html",
+      "Session": "session.html",
+      "User Grouping": "user_grouping.html"
+      },
   "Layers": {
-    "Message Passing": "message_passing.html",
-    "OU Noise": "ou_noise.html",
-    "Factorization": "factorization.html",
-    "Embedding": "embedding.html",
-    "Attention": "attention.html",
-    "TemporalConvNet": "tcn.html"
-  },
+      "Message Passing": "message_passing.html",
+      "OU Noise": "ou_noise.html",
+      "Factorization": "factorization.html",
+      "Embedding": "embedding.html",
+      "Attention": "attention.html",
+      "TemporalConvNet": "tcn.html"
+      },
   "Models": {
-    "Actor-critic": "actor_critic.html",
-    "Bandits": "bandits.html",
-    "BCQ": "bcq.html",
-    "DNNs": "dnn.html",
-    "DSSM": "dssm.html",
-    "Epsilon": "epsilon.html",
-    "SiReN": "siren.html",
-    "AttRec": "attrec.html",
-    "BPR": "bpr.html",
-    "Caser": "caser.html",
-    "DCN": "dcn.html",
-    "DeepCross": "deepcross.html",
-    "DeepMF": "deepmf.html",
-    "FM": "fm.html",
-    "NCF": "ncf.html",
-    "PNN": "pnn.html",
-    "SASRec": "sasrec.html",
-    "VDeepMF": "vdeepmf.html",
-    "VNCF": "vncf.html",
-    "Wide&Deep": "widedeep.html",
-    "SRGNN": "srgnn.html",
-    "TAGNN": "tagnn.html",
-    "GMF": "gmf.html",
-    "NMF": "nmf.html",
-    "MLP": "mlp.html",
-    "Prod2Vec": "prod2vec.html",
-    "BERT": "bert.html",
-    "SASRec": "sasrec.html",
-    "NARM": "narm.html",
-    "GroupIM": "groupim.html",
-    "MPM": "mpm.html",
-    "COTREC": "cotrec.html",
-    "UltraGCN": "ultragcn.html"
-  },
+      "Actor-critic": "actor_critic.html",
+      "Bandits": "bandits.html",
+      "BCQ": "bcq.html",
+      "DNNs": "dnn.html",
+      "DSSM": "dssm.html",
+      "Epsilon": "epsilon.html",
+      "SiReN": "siren.html",
+      "AttRec": "attrec.html",
+      "BPR": "bpr.html",
+      "Caser": "caser.html",
+      "DCN": "dcn.html",
+      "DeepCross": "deepcross.html",
+      "DeepMF": "deepmf.html",
+      "FM": "fm.html",
+      "NCF": "ncf.html",
+      "PNN": "pnn.html",
+      "SASRec": "sasrec.html",
+      "VDeepMF": "vdeepmf.html",
+      "VNCF": "vncf.html",
+      "Wide&Deep": "widedeep.html",
+      "SRGNN": "srgnn.html",
+      "TAGNN": "tagnn.html",
+      "GMF": "gmf.html",
+      "NMF": "nmf.html",
+      "MLP": "mlp.html",
+      "Prod2Vec": "prod2vec.html",
+      "BERT": "bert.html",
+      "SASRec": "sasrec.html",
+      "NARM": "narm.html",
+      "GroupIM": "groupim.html",
+      "MPM": "mpm.html",
+      "COTREC": "cotrec.html",
+      "UltraGCN": "ultragcn.html"
+      },
   "RL": {
-    "Agents": {
-        "DDPG": "ddpg.html",
-        "RePlay": "replay_agents.html",
-        "AB Test": "ab_test_agent.html"
-    },
-    "Environments": {
-        "RecSys": "recsys.html",
-        "Bandits": "bandits.html"
-    },
-    "Policies": {
-        "Bandits": "bandit_policies.html"
-    },
-    "Memories": "memory.html"
-  },
-  "Utils": {
-    "Torch Utils": "torch_utils.html",
-    "Common Utils": "common_utils.html",
-    "Config": "config.html",
-    "AB Testing": "ab_testing.html",
-    "Logging": "logging.html"
-  },
-  "Visualizations": {
-    "Common": "basic_plots.html",
-    "EDA": "eda.html"
-  }
-}
+      "": {
+          "Agents": {
+              "DDPG": "ddpg.html",
+              "RePlay": "replay_agents.html",
+              "AB Test": "ab_test_agent.html"
+              }
+           },
+      "": {
+          "Environments": {
+              "RecSys": "recsys.html",
+              "Bandits": "bandits.html"
+              }
+           },
+      "": {
+          "Agents": {
+              "Bandits": "bandit_policies.html"
+              }
+           },
+         "Memories": "memory.html"
+         },
+ "Utils": {
+     "Torch Utils": "torch_utils.html",
+     "Common Utils": "common_utils.html",
+     "Config": "config.html",
+     "AB Testing": "ab_testing.html",
+     "Logging": "logging.html"
+     },
+ "Visualizations": {
+     "Common": "basic_plots.html",
+     "EDA": "eda.html"
+     }
+ }

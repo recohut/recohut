@@ -58,8 +58,9 @@ entries:
       title: Weeplaces
       url: weeplaces.html
     - output: web,pdf
-      title: Yoochooses
+      title: Yoochoose
       url: yoochoose.html
+      subfolders:
       - output: web
         subfolderitems:
         - output: web,pdf
@@ -222,6 +223,7 @@ entries:
     output: web
     title: Models
   - folderitems:
+      subfolders:
       - output: web
         subfolderitems:
         - output: web,pdf

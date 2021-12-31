@@ -16,6 +16,9 @@ entries:
       title: Music30
       url: music30.html
     - output: web,pdf
+      title: Diginetica
+      url: diginetica.html
+    - output: web,pdf
       title: NowPlaying
       url: nowplaying.html
     - output: web,pdf
@@ -37,8 +40,26 @@ entries:
       title: Tianchi
       url: tianchi.html
     - output: web,pdf
+      title: Tmall
+      url: tmall.html
+    - output: web,pdf
       title: Synthetic
       url: synthetic.html
+    - output: web,pdf
+      title: Sample Session
+      url: sample_session.html
+    - output: web,pdf
+      title: Weeplaces
+      url: weeplaces.html
+    - output: web,pdf
+      title: Yoochooses
+      url: yoochooses.html
+    - output: web
+      subfolders:
+      - output: web,pdf
+        title: Session
+        url: session.html
+      title: Torch
     output: web
     title: Datasets
   - folderitems:
@@ -87,6 +108,12 @@ entries:
     - output: web,pdf
       title: Embedding
       url: embedding.html
+    - output: web,pdf
+      title: Attention
+      url: attention.html
+    - output: web,pdf
+      title: TemporalConvNet
+      url: tcn.html
     output: web
     title: Layers
   - folderitems:
@@ -168,6 +195,24 @@ entries:
     - output: web,pdf
       title: Prod2Vec
       url: prod2vec.html
+    - output: web,pdf
+      title: BERT
+      url: bert.html
+    - output: web,pdf
+      title: NARM
+      url: narm.html
+    - output: web,pdf
+      title: GroupIM
+      url: groupim.html
+    - output: web,pdf
+      title: MPM
+      url: mpm.html
+    - output: web,pdf
+      title: COTREC
+      url: cotrec.html
+    - output: web,pdf
+      title: UltraGCN
+      url: ultragcn.html
     output: web
     title: Models
   - folderitems:
@@ -205,10 +250,10 @@ entries:
     title: RL
   - folderitems:
     - output: web,pdf
-      title: Torch
-      url: utils.html
+      title: Torch Utils
+      url: torch_utils.html
     - output: web,pdf
-      title: Common
+      title: Common Utils
       url: common_utils.html
     - output: web,pdf
       title: Config

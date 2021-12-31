@@ -6,7 +6,6 @@ __all__ = ['BCQ']
 from copy import deepcopy
 import torch
 import torch.nn as nn
-import torch.nn.functional as
 
 # Cell
 class BCQ(nn.Module):

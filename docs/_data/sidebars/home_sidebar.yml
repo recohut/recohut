@@ -60,7 +60,6 @@ entries:
     - output: web,pdf
       title: Yoochooses
       url: yoochoose.html
-      subfolders:
       - output: web
         subfolderitems:
         - output: web,pdf
@@ -223,7 +222,27 @@ entries:
     output: web
     title: Models
   - folderitems:
-      subfolders:
+      - output: web
+        subfolderitems:
+        - output: web,pdf
+          title: DDPG
+          url: ddpg.html
+        - output: web,pdf
+          title: RePlay
+          url: replay_agents.html
+        - output: web,pdf
+          title: AB Test
+          url: ab_test_agent.html
+        title: Agents
+      - output: web
+        subfolderitems:
+        - output: web,pdf
+          title: RecSys
+          url: recsys.html
+        - output: web,pdf
+          title: Bandits
+          url: bandits.html
+        title: Environments
       - output: web
         subfolderitems:
         - output: web,pdf

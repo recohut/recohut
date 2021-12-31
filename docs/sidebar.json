@@ -19,7 +19,7 @@
         "Sample Session": "sample_session.html",
         "Weeplaces": "weeplaces.html",
         "Yoochooses": "yoochoose.html",
-        "": {
+        "empty1": {
             "Torch": {
                 "Session": "session.html"
                 }
@@ -81,20 +81,20 @@
       "UltraGCN": "ultragcn.html"
       },
   "RL": {
-      "": {
+      "empty1": {
           "Agents": {
               "DDPG": "ddpg.html",
               "RePlay": "replay_agents.html",
               "AB Test": "ab_test_agent.html"
               }
            },
-      "": {
+      "empty2": {
           "Environments": {
               "RecSys": "recsys.html",
               "Bandits": "bandits.html"
               }
            },
-      "": {
+      "empty3": {
           "Agents": {
               "Bandits": "bandit_policies.html"
               }

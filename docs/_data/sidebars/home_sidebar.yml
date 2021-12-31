@@ -60,13 +60,6 @@ entries:
     - output: web,pdf
       title: Yoochoose
       url: yoochoose.html
-      subfolders:
-      - output: web
-        subfolderitems:
-        - output: web,pdf
-          title: Session
-          url: session.html
-        title: Torch
     output: web
     title: Datasets
   - folderitems:
@@ -223,34 +216,24 @@ entries:
     output: web
     title: Models
   - folderitems:
-      subfolders:
-      - output: web
-        subfolderitems:
-        - output: web,pdf
-          title: DDPG
-          url: ddpg.html
-        - output: web,pdf
-          title: RePlay
-          url: replay_agents.html
-        - output: web,pdf
-          title: AB Test
-          url: ab_test_agent.html
-        title: Agents
-      - output: web
-        subfolderitems:
-        - output: web,pdf
-          title: RecSys
-          url: recsys.html
-        - output: web,pdf
-          title: Bandits
-          url: bandits.html
-        title: Environments
-      - output: web
-        subfolderitems:
-        - output: web,pdf
-          title: Bandits
-          url: bandit_policies.html
-        title: Agents
+    - output: web,pdf
+      title: DDPG Agent
+      url: ddpg.html
+    - output: web,pdf
+      title: RePlay Agent
+      url: replay_agents.html
+    - output: web,pdf
+      title: AB Testing Agent
+      url: ab_test_agent.html
+    - output: web,pdf
+      title: Bandit Agent
+      url: bandits.html
+    - output: web,pdf
+      title: RecSys Environment
+      url: recsys.html
+    - output: web,pdf
+      title: Bandit Policy
+      url: bandit_policies.html
     - output: web,pdf
       title: Memories
       url: memory.html

@@ -18,12 +18,7 @@
         "Synthetic": "synthetic.html",
         "Sample Session": "sample_session.html",
         "Weeplaces": "weeplaces.html",
-        "Yoochoose": "yoochoose.html",
-        "": {
-            "Torch": {
-                "Session": "session.html"
-                }
-             }
+        "Yoochoose": "yoochoose.html"
         },
   "Transforms": {
       "Aggregate": "aggregate.html",
@@ -81,26 +76,14 @@
       "UltraGCN": "ultragcn.html"
       },
   "RL": {
-      "": {
-          "Agents": {
-              "DDPG": "ddpg.html",
-              "RePlay": "replay_agents.html",
-              "AB Test": "ab_test_agent.html"
-              }
-           },
-      "empty1": {
-          "Environments": {
-              "RecSys": "recsys.html",
-              "Bandits": "bandits.html"
-              }
-           },
-      "empty2": {
-          "Agents": {
-              "Bandits": "bandit_policies.html"
-              }
-           },
-         "Memories": "memory.html"
-         },
+    "DDPG Agent": "ddpg.html",
+    "RePlay Agent": "replay_agents.html",
+    "AB Testing Agent": "ab_test_agent.html",
+    "Bandit Agent": "bandits.html",
+    "RecSys Environment": "recsys.html",
+    "Bandit Policy": "bandit_policies.html",
+    "Memories": "memory.html"
+    },
  "Utils": {
      "Torch Utils": "torch_utils.html",
      "Common Utils": "common_utils.html",

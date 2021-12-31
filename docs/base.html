@@ -59,7 +59,7 @@ nb_path: "nbs/datasets/base.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="AbstractDataset" class="doc_header"><code>class</code> <code>AbstractDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L46" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AbstractDataset</code>(<strong><code>args</code></strong>)</p>
+<h2 id="AbstractDataset" class="doc_header"><code>class</code> <code>AbstractDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L47" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AbstractDataset</code>(<strong><code>args</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -96,7 +96,7 @@ nb_path: "nbs/datasets/base.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="AbstractDatasetv2" class="doc_header"><code>class</code> <code>AbstractDatasetv2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L139" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AbstractDatasetv2</code>(<strong><code>args</code></strong>)</p>
+<h2 id="AbstractDatasetv2" class="doc_header"><code>class</code> <code>AbstractDatasetv2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L140" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AbstractDatasetv2</code>(<strong><code>args</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -145,7 +145,282 @@ nb_path: "nbs/datasets/base.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="SessionDataset" class="doc_header"><code>class</code> <code>SessionDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L406" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SessionDataset</code>(<strong><code>root</code></strong>, <strong><code>process_method</code></strong>, <strong><code>min_date</code></strong>=<em><code>None</code></em>, <strong><code>session_length</code></strong>=<em><code>None</code></em>, <strong><code>min_session_length</code></strong>=<em><code>None</code></em>, <strong><code>min_item_support</code></strong>=<em><code>None</code></em>, <strong><code>num_slices</code></strong>=<em><code>None</code></em>, <strong><code>days_offset</code></strong>=<em><code>None</code></em>, <strong><code>days_shift</code></strong>=<em><code>None</code></em>, <strong><code>days_train</code></strong>=<em><code>None</code></em>, <strong><code>days_test</code></strong>=<em><code>None</code></em>, <strong><code>data</code></strong>=<em><code>None</code></em>) :: <a href="/recohut/retailrocket.html#Dataset"><code>Dataset</code></a></p>
+<h2 id="SessionDataset" class="doc_header"><code>class</code> <code>SessionDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L407" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SessionDataset</code>(<strong><code>root</code></strong>, <strong><code>min_session_length</code></strong>:<code>int</code>=<em><code>None</code></em>, <strong><code>min_item_support</code></strong>:<code>int</code>=<em><code>None</code></em>, <strong><code>eval_sec</code></strong>:<code>int</code>=<em><code>86400</code></em>) :: <a href="/recohut/session.html#Dataset"><code>Dataset</code></a></p>
+</blockquote>
+<p>Session data base class.</p>
+<p>Args:
+    min_session_length (int): Minimum number of items for a session to be valid
+    min_item_support (int): Minimum number of interactions for an item to be valid
+    eval_sec (int): these many seconds from the end will be taken as validation data</p>
+<p>References:</p>
+
+<pre><code>1. https://github.com/Ethan-Yys/GRU4REC-pytorch-master/blob/master/preprocessing.py</code></pre>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">YoochooseDataset</span><span class="p">(</span><span class="n">SessionDataset</span><span class="p">):</span>
+    <span class="n">data_id</span> <span class="o">=</span> <span class="s1">&#39;1UEcKC4EfgMVD2n_zBvAyp0vRNyv7ndSF&#39;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+                 <span class="n">root</span><span class="p">,</span>
+                 <span class="n">min_session_length</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span>
+                 <span class="n">min_item_support</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+                 <span class="n">eval_sec</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">86400</span><span class="p">,</span>
+                 <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">min_session_length</span><span class="p">,</span> <span class="n">min_item_support</span><span class="p">,</span> <span class="n">eval_sec</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">raw_file_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;rsc15-clicks.dat&#39;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">processed_file_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;yoochoose_train.txt&#39;</span><span class="p">,</span><span class="s1">&#39;yoochoose_valid.txt&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="kn">from</span> <span class="nn">google_drive_downloader</span> <span class="kn">import</span> <span class="n">GoogleDriveDownloader</span> <span class="k">as</span> <span class="n">gdd</span>
+        <span class="kn">from</span> <span class="nn">shutil</span> <span class="kn">import</span> <span class="n">move</span><span class="p">,</span> <span class="n">rmtree</span>
+
+        <span class="n">path</span> <span class="o">=</span> <span class="n">osp</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">,</span> <span class="s1">&#39;rsc15.zip&#39;</span><span class="p">)</span>
+        <span class="n">gdd</span><span class="o">.</span><span class="n">download_file_from_google_drive</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">data_id</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        <span class="n">extract_zip</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="n">move</span><span class="p">(</span><span class="n">osp</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">,</span> <span class="s1">&#39;rsc15&#39;</span><span class="p">,</span> <span class="s1">&#39;raw&#39;</span><span class="p">,</span> <span class="p">),</span>
+             <span class="n">osp</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_file_names</span><span class="p">))</span>
+        <span class="n">rmtree</span><span class="p">(</span><span class="n">osp</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">,</span> <span class="s1">&#39;rsc15&#39;</span><span class="p">))</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">process</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_ratings_df</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_session_length</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove_short_sessions</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">min_item_support</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">remove_sparse_items</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+        <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">split_df</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+        <span class="n">train</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">processed_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">test</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">processed_paths</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load_ratings_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+                         <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">})</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;uid&#39;</span><span class="p">,</span> <span class="s1">&#39;timestamp&#39;</span><span class="p">,</span> <span class="s1">&#39;sid&#39;</span><span class="p">]</span>
+        <span class="n">df</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span>
+            <span class="n">x</span><span class="p">,</span> <span class="s1">&#39;%Y-%m-</span><span class="si">%d</span><span class="s1">T%H:%M:%S.</span><span class="si">%f</span><span class="s1">Z&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">timestamp</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">YoochooseDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s1">&#39;/content/yoochoose&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Processing...
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Training Set has 31637239 Events, 7966257 Sessions, and 37483 Items
+
+
+Validation Set has 71222 Events, 15324 Sessions, and 6751 Items
+
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Done!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>tree --du -h -C /content/yoochoose
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="ansi-blue-intense-fg ansi-bold">/content/yoochoose</span>
+├── [995M]  <span class="ansi-blue-intense-fg ansi-bold">processed</span>
+│   ├── [993M]  yoochoose_train.txt
+│   └── [2.3M]  yoochoose_valid.txt
+└── [1.4G]  <span class="ansi-blue-intense-fg ansi-bold">raw</span>
+    └── [1.4G]  rsc15-clicks.dat
+
+ 2.4G used in 2 directories, 3 files
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="v2">v2<a class="anchor-link" href="#v2"> </a></h3>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="SessionDatasetv2" class="doc_header"><code>class</code> <code>SessionDatasetv2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L469" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SessionDatasetv2</code>(<strong><code>root</code></strong>, <strong><code>column_names</code></strong>) :: <a href="/recohut/session.html#Dataset"><code>Dataset</code></a></p>
+</blockquote>
+<p>Dataset base class</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="v3">v3<a class="anchor-link" href="#v3"> </a></h3>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="SessionDatasetv3" class="doc_header"><code>class</code> <code>SessionDatasetv3</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L661" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SessionDatasetv3</code>(<strong><code>root</code></strong>) :: <a href="/recohut/session.html#Dataset"><code>Dataset</code></a></p>
+</blockquote>
+<p>Dataset base class</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="v4">v4<a class="anchor-link" href="#v4"> </a></h3>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="SessionDatasetv4" class="doc_header"><code>class</code> <code>SessionDatasetv4</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L817" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SessionDatasetv4</code>(<strong><code>root</code></strong>, <strong><code>process_method</code></strong>, <strong><code>min_date</code></strong>=<em><code>None</code></em>, <strong><code>session_length</code></strong>=<em><code>None</code></em>, <strong><code>min_session_length</code></strong>=<em><code>None</code></em>, <strong><code>min_item_support</code></strong>=<em><code>None</code></em>, <strong><code>num_slices</code></strong>=<em><code>None</code></em>, <strong><code>days_offset</code></strong>=<em><code>None</code></em>, <strong><code>days_shift</code></strong>=<em><code>None</code></em>, <strong><code>days_train</code></strong>=<em><code>None</code></em>, <strong><code>days_test</code></strong>=<em><code>None</code></em>, <strong><code>data</code></strong>=<em><code>None</code></em>) :: <a href="/recohut/session.html#Dataset"><code>Dataset</code></a></p>
 </blockquote>
 <p>Session dataset base class.</p>
 <p>Args:
@@ -184,7 +459,7 @@ nb_path: "nbs/datasets/base.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="v2">v2<a class="anchor-link" href="#v2"> </a></h3>
+<h2 id="Graph-Dataset">Graph Dataset<a class="anchor-link" href="#Graph-Dataset"> </a></h2>
 </div>
 </div>
 </div>
@@ -199,83 +474,7 @@ nb_path: "nbs/datasets/base.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="SessionDatasetv2" class="doc_header"><code>class</code> <code>SessionDatasetv2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L614" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SessionDatasetv2</code>(<strong><code>root</code></strong>, <strong><code>column_names</code></strong>) :: <a href="/recohut/retailrocket.html#Dataset"><code>Dataset</code></a></p>
-</blockquote>
-<p>Dataset base class</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="v3">v3<a class="anchor-link" href="#v3"> </a></h3>
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="SessionDatasetv3" class="doc_header"><code>class</code> <code>SessionDatasetv3</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L806" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SessionDatasetv3</code>(<strong><code>root</code></strong>) :: <a href="/recohut/retailrocket.html#Dataset"><code>Dataset</code></a></p>
-</blockquote>
-<p>Dataset base class</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="GraphData">GraphData<a class="anchor-link" href="#GraphData"> </a></h2>
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="GraphData" class="doc_header"><code>class</code> <code>GraphData</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L970" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>GraphData</code>(<strong><code>data</code></strong>, <strong><code>shuffle</code></strong>=<em><code>False</code></em>, <strong><code>graph</code></strong>=<em><code>None</code></em>)</p>
+<h2 id="GraphDataset" class="doc_header"><code>class</code> <code>GraphDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L1025" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>GraphDataset</code>(<strong><code>data</code></strong>, <strong><code>shuffle</code></strong>=<em><code>False</code></em>, <strong><code>graph</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
@@ -352,11 +551,800 @@ nb_path: "nbs/datasets/base.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<hr>
+<h2 id="SessionGraph-Dataset">SessionGraph Dataset<a class="anchor-link" href="#SessionGraph-Dataset"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="SessionGraphDataset" class="doc_header"><code>class</code> <code>SessionGraphDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L1087" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SessionGraphDataset</code>(<strong><code>root</code></strong>, <strong><code>shuffle</code></strong>=<em><code>False</code></em>, <strong><code>n_node</code></strong>=<em><code>None</code></em>) :: <a href="/recohut/session.html#Dataset"><code>Dataset</code></a></p>
+</blockquote>
+<p>References</p>
+
+<pre><code>1. COTREC session-based recommender model training. https://t.ly/cXTH.</code></pre>
+
+</div>
+
+</div>
 
 </div>
 </div>
+
 </div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">DigineticaDataset</span><span class="p">(</span><span class="n">SessionGraphDataset</span><span class="p">):</span>
+    <span class="n">train_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/RecoHut-Datasets/diginetica/raw/v2/train.txt&quot;</span>
+    <span class="n">test_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/RecoHut-Datasets/diginetica/raw/v2/test.txt&quot;</span>
+    <span class="n">all_train_seq_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/RecoHut-Datasets/diginetica/raw/v2/all_train_seq.txt&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">n_node</span><span class="o">=</span><span class="mi">43097</span><span class="p">,</span> <span class="n">is_train</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_node</span> <span class="o">=</span> <span class="n">n_node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shuffle</span> <span class="o">=</span> <span class="n">shuffle</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_train</span> <span class="o">=</span> <span class="n">is_train</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="p">,</span> <span class="n">n_node</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">raw_file_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_train</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;train.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;all_train_seq.txt&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;test.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;all_train_seq.txt&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all_train_seq_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_train</span><span class="p">:</span>
+            <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">train_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="s1">&#39;/content/diginetica&#39;</span>
+
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">DigineticaDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">is_train</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">test_data</span> <span class="o">=</span> <span class="n">DigineticaDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">is_train</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">TmallDataset</span><span class="p">(</span><span class="n">SessionGraphDataset</span><span class="p">):</span>
+    <span class="n">train_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/RecoHut-Datasets/tmall/raw/v1/train.txt&quot;</span>
+    <span class="n">test_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/RecoHut-Datasets/tmall/raw/v1/test.txt&quot;</span>
+    <span class="n">all_train_seq_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/RecoHut-Datasets/tmall/raw/v1/all_train_seq.txt&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">n_node</span><span class="o">=</span><span class="mi">40727</span><span class="p">,</span> <span class="n">is_train</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_node</span> <span class="o">=</span> <span class="n">n_node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shuffle</span> <span class="o">=</span> <span class="n">shuffle</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_train</span> <span class="o">=</span> <span class="n">is_train</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="p">,</span> <span class="n">n_node</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">raw_file_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_train</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;train.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;all_train_seq.txt&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;test.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;all_train_seq.txt&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all_train_seq_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_train</span><span class="p">:</span>
+            <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">train_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="s1">&#39;/content/tmall&#39;</span>
+
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">TmallDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">is_train</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">test_data</span> <span class="o">=</span> <span class="n">TmallDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">is_train</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/local/lib/python3.7/dist-packages/numpy/core/_asarray.py:83: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray
+  return array(a, dtype, copy=False, order=order)
+/usr/local/lib/python3.7/dist-packages/numpy/core/_asarray.py:83: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray
+  return array(a, dtype, copy=False, order=order)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">RetailRocketDataset</span><span class="p">(</span><span class="n">SessionGraphDataset</span><span class="p">):</span>
+    <span class="n">train_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/RecoHut-Datasets/retail_rocket/raw/v1/train.txt&quot;</span>
+    <span class="n">test_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/RecoHut-Datasets/retail_rocket/raw/v1/test.txt&quot;</span>
+    <span class="n">all_train_seq_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/RecoHut-Datasets/retail_rocket/raw/v1/all_train_seq.txt&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">n_node</span><span class="o">=</span><span class="mi">40727</span><span class="p">,</span> <span class="n">is_train</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_node</span> <span class="o">=</span> <span class="n">n_node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shuffle</span> <span class="o">=</span> <span class="n">shuffle</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_train</span> <span class="o">=</span> <span class="n">is_train</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="p">,</span> <span class="n">n_node</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">raw_file_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_train</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;train.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;all_train_seq.txt&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;test.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;all_train_seq.txt&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all_train_seq_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_train</span><span class="p">:</span>
+            <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">train_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="s1">&#39;/content/retail_rocket&#39;</span>
+
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">RetailRocketDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">is_train</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">test_data</span> <span class="o">=</span> <span class="n">RetailRocketDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">is_train</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Downloading https://github.com/RecoHut-Datasets/retail_rocket/raw/v1/all_train_seq.txt
+Downloading https://github.com/RecoHut-Datasets/retail_rocket/raw/v1/train.txt
+Using existing file all_train_seq.txt
+Downloading https://github.com/RecoHut-Datasets/retail_rocket/raw/v1/test.txt
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">SampleDataset</span><span class="p">(</span><span class="n">SessionGraphDataset</span><span class="p">):</span>
+    <span class="n">train_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/RecoHut-Datasets/sample_session/raw/v2/train.txt&quot;</span>
+    <span class="n">test_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/RecoHut-Datasets/sample_session/raw/v2/test.txt&quot;</span>
+    <span class="n">all_train_seq_url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/RecoHut-Datasets/sample_session/raw/v2/all_train_seq.txt&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">n_node</span><span class="o">=</span><span class="mi">309</span><span class="p">,</span> <span class="n">is_train</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n_node</span> <span class="o">=</span> <span class="n">n_node</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shuffle</span> <span class="o">=</span> <span class="n">shuffle</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">is_train</span> <span class="o">=</span> <span class="n">is_train</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="p">,</span> <span class="n">n_node</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">raw_file_names</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_train</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;train.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;all_train_seq.txt&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;test.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;all_train_seq.txt&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">all_train_seq_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">is_train</span><span class="p">:</span>
+            <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">train_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">test_url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">root</span> <span class="o">=</span> <span class="s1">&#39;/content/sample&#39;</span>
+
+<span class="n">train_data</span> <span class="o">=</span> <span class="n">SampleDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">is_train</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">test_data</span> <span class="o">=</span> <span class="n">SampleDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="n">root</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">is_train</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Downloading https://github.com/RecoHut-Datasets/sample_session/raw/v2/all_train_seq.txt
+Downloading https://github.com/RecoHut-Datasets/sample_session/raw/v2/train.txt
+/usr/local/lib/python3.7/dist-packages/numpy/core/_asarray.py:83: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray
+  return array(a, dtype, copy=False, order=order)
+Using existing file all_train_seq.txt
+Downloading https://github.com/RecoHut-Datasets/sample_session/raw/v2/test.txt
+/usr/local/lib/python3.7/dist-packages/numpy/core/_asarray.py:83: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify &#39;dtype=object&#39; when creating the ndarray
+  return array(a, dtype, copy=False, order=order)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Rating-Dataset">Rating Dataset<a class="anchor-link" href="#Rating-Dataset"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="RatingDataset" class="doc_header"><code>class</code> <code>RatingDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/base.py#L1204" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>RatingDataset</code>(<strong><code>root</code></strong>, <strong><code>min_uc</code></strong>, <strong><code>min_sc</code></strong>, <strong><code>split</code></strong>=<em><code>'leave_one_out'</code></em>, <strong><code>dataset_split_seed</code></strong>=<em><code>42</code></em>, <strong><code>eval_set_size</code></strong>=<em><code>None</code></em>, <strong><code>min_rating</code></strong>=<em><code>None</code></em>, <strong><code>iterative_triplet</code></strong>=<em><code>False</code></em>) :: <a href="/recohut/session.html#Dataset"><code>Dataset</code></a></p>
+</blockquote>
+<p>Interaction data with rating feedback</p>
+<p>Args:
+    root: data folder path
+    min_uc: minimum user count to keep in the data
+    min_sc: minimum item count to keep in the data
+    split: data split method - leave_one_out/holdout
+    min_rating: minimum rating threshold to convert explicit feedback into implicit</p>
+<p>References:</p>
+
+<pre><code>1. https://github.com/Yueeeeeeee/RecSys-Extraction-Attack/tree/main/datasets</code></pre>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">AmazonGamesDataset</span><span class="p">(</span><span class="n">RatingDataset</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/ratings_Video_Games.csv&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">raw_file_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;ratings_Video_Games.csv&#39;</span>
+
+    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load_ratings_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;uid&#39;</span><span class="p">,</span> <span class="s1">&#39;sid&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;timestamp&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">AmazonGamesDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s1">&#39;/content/amazon_games&#39;</span><span class="p">,</span> <span class="n">min_uc</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">min_sc</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Processing...
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Filtering triplets
+Densifying index
+Splitting
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>100%|██████████| 7519/7519 [00:02&lt;00:00, 2512.75it/s]
+Done!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">AmazonBeautyDataset</span><span class="p">(</span><span class="n">RatingDataset</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/ratings_Beauty.csv&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">raw_file_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;ratings_Beauty.csv&#39;</span>
+
+    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load_ratings_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;uid&#39;</span><span class="p">,</span> <span class="s1">&#39;sid&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;timestamp&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">AmazonGamesDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s1">&#39;/content/amazon_beauty&#39;</span><span class="p">,</span> <span class="n">min_uc</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">min_sc</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Downloading http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/ratings_Video_Games.csv
+Processing...
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Filtering triplets
+Densifying index
+Splitting
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>100%|██████████| 7519/7519 [00:02&lt;00:00, 2527.69it/s]
+Done!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">ML1mDataset</span><span class="p">(</span><span class="n">RatingDataset</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://files.grouplens.org/datasets/movielens/ml-1m.zip&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">raw_file_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;ratings.dat&#39;</span>
+
+    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="n">extract_zip</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">shutil</span> <span class="kn">import</span> <span class="n">move</span><span class="p">,</span> <span class="n">rmtree</span>
+        <span class="n">move</span><span class="p">(</span><span class="n">osp</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">,</span> <span class="s1">&#39;ml-1m&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_file_names</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="n">rmtree</span><span class="p">(</span><span class="n">osp</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">,</span> <span class="s1">&#39;ml-1m&#39;</span><span class="p">))</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load_ratings_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;::&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s1">&#39;python&#39;</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;uid&#39;</span><span class="p">,</span> <span class="s1">&#39;sid&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;timestamp&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">ML1mDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s1">&#39;/content/ML1m&#39;</span><span class="p">,</span> <span class="n">min_uc</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">min_sc</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Processing...
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Filtering triplets
+Densifying index
+Splitting
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>100%|██████████| 6040/6040 [00:02&lt;00:00, 2590.97it/s]
+Done!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">SteamGamesDataset</span><span class="p">(</span><span class="n">RatingDataset</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;http://cseweb.ucsd.edu/~wckang/steam_reviews.json.gz&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">raw_file_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;steam_reviews.json&#39;</span>
+
+    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="n">extract_gz</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load_ratings_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+        <span class="kn">import</span> <span class="nn">ast</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">():</span>
+            <span class="n">temp</span> <span class="o">=</span> <span class="n">ast</span><span class="o">.</span><span class="n">literal_eval</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">([</span><span class="n">temp</span><span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">],</span> <span class="n">temp</span><span class="p">[</span><span class="s1">&#39;product_id&#39;</span><span class="p">],</span> <span class="n">temp</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]])</span>
+
+        <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;uid&#39;</span><span class="p">,</span> <span class="s1">&#39;sid&#39;</span><span class="p">,</span> <span class="s1">&#39;timestamp&#39;</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">SteamGamesDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s1">&#39;/content/steam&#39;</span><span class="p">,</span> <span class="n">min_uc</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">min_sc</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Processing...
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Filtering triplets
+Densifying index
+Splitting
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>100%|██████████| 120145/120145 [01:10&lt;00:00, 1709.62it/s]
+Done!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">YoochooseDataset</span><span class="p">(</span><span class="n">RatingDataset</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://s3-eu-west-1.amazonaws.com/yc-rdata/yoochoose-data.7z&quot;</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">raw_file_names</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;yoochoose-clicks.dat&#39;</span>
+
+    <span class="k">def</span> <span class="nf">download</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">path</span> <span class="o">=</span> <span class="n">download_url</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="c1"># pip install pyunpack patool</span>
+        <span class="kn">import</span> <span class="nn">pyunpack</span>
+        <span class="n">pyunpack</span><span class="o">.</span><span class="n">Archive</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">extractall</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_dir</span><span class="p">)</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">load_ratings_df</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">raw_paths</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;uid&#39;</span><span class="p">,</span> <span class="s1">&#39;timestamp&#39;</span><span class="p">,</span> <span class="s1">&#39;sid&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">YoochooseDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s1">&#39;/content/yoochoose&#39;</span><span class="p">,</span> <span class="n">min_uc</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">min_sc</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Processing...
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:28: DtypeWarning: Columns (3) have mixed types.Specify dtype option on import or set low_memory=False.
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Filtering triplets
+Densifying index
+Splitting
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>100%|██████████| 449961/449961 [03:55&lt;00:00, 1913.52it/s]
+Done!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 

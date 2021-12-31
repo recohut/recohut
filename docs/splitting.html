@@ -38,7 +38,7 @@ nb_path: "nbs/transforms/splitting.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Split-by-Ratio">Split by Ratio<a class="anchor-link" href="#Split-by-Ratio"> </a></h2>
+<h3 id="Split-by-Ratio">Split by Ratio<a class="anchor-link" href="#Split-by-Ratio"> </a></h3>
 </div>
 </div>
 </div>
@@ -53,7 +53,7 @@ nb_path: "nbs/transforms/splitting.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="split_by_ratio" class="doc_header"><code>split_by_ratio</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L44" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>split_by_ratio</code>(<strong><code>data</code></strong>, <strong><code>shuffle</code></strong>=<em><code>False</code></em>, <strong><code>test_size</code></strong>=<em><code>None</code></em>, <strong><code>pad_unknown</code></strong>=<em><code>True</code></em>, <strong><code>filter_unknown</code></strong>=<em><code>False</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
+<h4 id="split_by_ratio" class="doc_header"><code>split_by_ratio</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L48" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>split_by_ratio</code>(<strong><code>data</code></strong>, <strong><code>shuffle</code></strong>=<em><code>False</code></em>, <strong><code>test_size</code></strong>=<em><code>None</code></em>, <strong><code>pad_unknown</code></strong>=<em><code>True</code></em>, <strong><code>filter_unknown</code></strong>=<em><code>False</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
 </blockquote>
 
 </div>
@@ -351,7 +351,7 @@ test:
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Last-session-out-split">Last-session-out split<a class="anchor-link" href="#Last-session-out-split"> </a></h2>
+<h3 id="Last-session-out-Split">Last-session-out Split<a class="anchor-link" href="#Last-session-out-Split"> </a></h3>
 </div>
 </div>
 </div>
@@ -366,7 +366,7 @@ test:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="last_session_out_split" class="doc_header"><code>last_session_out_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L90" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>last_session_out_split</code>(<strong><code>data</code></strong>, <strong><code>user_key</code></strong>=<em><code>'user_id'</code></em>, <strong><code>session_key</code></strong>=<em><code>'session_id'</code></em>, <strong><code>time_key</code></strong>=<em><code>'ts'</code></em>)</p>
+<h4 id="last_session_out_split" class="doc_header"><code>last_session_out_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L94" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>last_session_out_split</code>(<strong><code>data</code></strong>, <strong><code>user_key</code></strong>=<em><code>'user_id'</code></em>, <strong><code>session_key</code></strong>=<em><code>'session_id'</code></em>, <strong><code>time_key</code></strong>=<em><code>'ts'</code></em>)</p>
 </blockquote>
 <p>Assign the last session of every user to the test set and the remaining ones to the training set</p>
 
@@ -714,6 +714,167 @@ test:
 
 </div>
 </div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Random-Split">Random Split<a class="anchor-link" href="#Random-Split"> </a></h3>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="random_split" class="doc_header"><code>random_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L291" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>random_split</code>(<strong><code>data</code></strong>, <strong><code>ratio</code></strong>=<em><code>0.8</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
+</blockquote>
+<p>Pandas random splitter.
+The splitter randomly splits the input data.
+Args:
+    data (pandas.DataFrame): Pandas DataFrame to be split.
+    ratio (float or list): Ratio for splitting data. If it is a single float number
+        it splits data into two halves and the ratio argument indicates the ratio
+        of training data set; if it is a list of float numbers, the splitter splits
+        data into several portions corresponding to the split ratios. If a list is
+        provided and the ratios are not summed to 1, they will be normalized.
+    seed (int): Seed.
+Returns:
+    list: Splits of the input data as pandas.DataFrame.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Chrono-Split">Chrono Split<a class="anchor-link" href="#Chrono-Split"> </a></h3>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="chrono_split" class="doc_header"><code>chrono_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L316" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>chrono_split</code>(<strong><code>data</code></strong>, <strong><code>ratio</code></strong>=<em><code>0.75</code></em>, <strong><code>min_rating</code></strong>=<em><code>1</code></em>, <strong><code>filter_by</code></strong>=<em><code>'user'</code></em>, <strong><code>col_user</code></strong>=<em><code>'USERID'</code></em>, <strong><code>col_item</code></strong>=<em><code>'ITEMID'</code></em>, <strong><code>col_timestamp</code></strong>=<em><code>'TIMESTAMP'</code></em>)</p>
+</blockquote>
+<p>Pandas chronological splitter.
+This function splits data in a chronological manner. That is, for each user / item, the
+split function takes proportions of ratings which is specified by the split ratio(s).
+The split is stratified.
+Args:
+    data (pandas.DataFrame): Pandas DataFrame to be split.
+    ratio (float or list): Ratio for splitting data. If it is a single float number
+        it splits data into two halves and the ratio argument indicates the ratio of
+        training data set; if it is a list of float numbers, the splitter splits
+        data into several portions corresponding to the split ratios. If a list is
+        provided and the ratios are not summed to 1, they will be normalized.
+    seed (int): Seed.
+    min_rating (int): minimum number of ratings for user or item.
+    filter_by (str): either "user" or "item", depending on which of the two is to
+        filter with min_rating.
+    col_user (str): column name of user IDs.
+    col_item (str): column name of item IDs.
+    col_timestamp (str): column name of timestamps.
+Returns:
+    list: Splits of the input data as pandas.DataFrame.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Stratified-Split">Stratified Split<a class="anchor-link" href="#Stratified-Split"> </a></h3>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="stratified_split" class="doc_header"><code>stratified_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L358" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>stratified_split</code>(<strong><code>data</code></strong>, <strong><code>ratio</code></strong>=<em><code>0.75</code></em>, <strong><code>min_rating</code></strong>=<em><code>1</code></em>, <strong><code>filter_by</code></strong>=<em><code>'user'</code></em>, <strong><code>col_user</code></strong>=<em><code>'USERID'</code></em>, <strong><code>col_item</code></strong>=<em><code>'ITEMID'</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
+</blockquote>
+<p>Pandas stratified splitter.
+For each user / item, the split function takes proportions of ratings which is
+specified by the split ratio(s). The split is stratified.
+Args:
+    data (pandas.DataFrame): Pandas DataFrame to be split.
+    ratio (float or list): Ratio for splitting data. If it is a single float number
+        it splits data into two halves and the ratio argument indicates the ratio of
+        training data set; if it is a list of float numbers, the splitter splits
+        data into several portions corresponding to the split ratios. If a list is
+        provided and the ratios are not summed to 1, they will be normalized.
+    seed (int): Seed.
+    min_rating (int): minimum number of ratings for user or item.
+    filter_by (str): either "user" or "item", depending on which of the two is to
+        filter with min_rating.
+    col_user (str): column name of user IDs.
+    col_item (str): column name of item IDs.
+Returns:
+    list: Splits of the input data as pandas.DataFrame.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
 
 </div>
     {% endraw %}

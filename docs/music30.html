@@ -49,23 +49,14 @@ nb_path: "nbs/datasets/music30.ipynb"
 <div class="output_markdown rendered_html output_subarea ">
 <h2 id="Music30Dataset" class="doc_header"><code>class</code> <code>Music30Dataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/music30.py#L22" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Music30Dataset</code>(<strong><code>root</code></strong>, <strong><code>process_method</code></strong>, <strong><code>min_session_length</code></strong>=<em><code>2</code></em>, <strong><code>min_item_support</code></strong>=<em><code>2</code></em>, <strong><code>num_slices</code></strong>=<em><code>5</code></em>, <strong><code>days_offset</code></strong>=<em><code>0</code></em>, <strong><code>days_shift</code></strong>=<em><code>95</code></em>, <strong><code>days_train</code></strong>=<em><code>90</code></em>, <strong><code>days_test</code></strong>=<em><code>5</code></em>) :: <a href="/recohut/base.html#SessionDataset"><code>SessionDataset</code></a></p>
 </blockquote>
-<p>Session dataset base class.</p>
+<p>Session data base class.</p>
 <p>Args:
-    root (string): Root directory where the dataset should be saved.
-    process_method (string):
-        last: last day =&gt; test set
-        last_min_date: last day =&gt; test set, but from a minimal date onwards
-        days_test: last N days =&gt; test set
-        slice: create multiple train-test-combinations with a sliding window approach
-    min_date (string): Minimum date
-    session_length (int): Session time length :default = 30 * 60 #30 minutes
     min_session_length (int): Minimum number of items for a session to be valid
     min_item_support (int): Minimum number of interactions for an item to be valid
-    num_slices (int): Offset in days from the first date in the data set
-    days_offset (int): Number of days the training start date is shifted after creating one slice
-    days_shift (int): Days shift
-    days_train (int): Days in train set in each slice
-    days_test (int): Days in test set in each slice</p>
+    eval_sec (int): these many seconds from the end will be taken as validation data</p>
+<p>References:</p>
+
+<pre><code>1. https://github.com/Ethan-Yys/GRU4REC-pytorch-master/blob/master/preprocessing.py</code></pre>
 
 </div>
 

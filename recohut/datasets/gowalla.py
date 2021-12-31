@@ -3,6 +3,16 @@
 __all__ = ['GowallaDataset']
 
 # Cell
+import os
+import os.path as osp
+import numpy as np
+import pandas as pd
+from pandas import Timedelta
+
+from .base import SessionDatasetv3
+from ..utils.common_utils import download_url, extract_gz
+
+# Cell
 class GowallaDataset(SessionDatasetv3):
     url = 'https://snap.stanford.edu/data/loc-gowalla_totalCheckins.txt.gz'
 

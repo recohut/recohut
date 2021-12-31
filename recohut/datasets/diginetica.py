@@ -3,6 +3,12 @@
 __all__ = ['DigineticaDataset', 'DigineticaDatasetv2']
 
 # Cell
+import numpy as np
+
+from . import base
+from ..utils.common_utils import download_url
+
+# Cell
 class DigineticaDataset(base.SessionDatasetv2):
     url = 'https://github.com/RecoHut-Datasets/diginetica/raw/main/train-item-views.csv'
 

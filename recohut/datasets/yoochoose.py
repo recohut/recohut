@@ -39,7 +39,7 @@ class YoochooseDataset(SessionDataset):
         path = osp.join(self.raw_dir, 'rsc15.zip')
         gdd.download_file_from_google_drive(self.data_id, path)
         extract_zip(path, self.raw_dir)
-        move(osp.join(self.raw_dir, 'rsc15', 'raw', ),
+        move(osp.join(self.raw_dir, 'rsc15', 'raw', self.raw_file_names),
              osp.join(self.raw_dir, self.raw_file_names))
         rmtree(osp.join(self.raw_dir, 'rsc15'))
         os.unlink(path)

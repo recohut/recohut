@@ -134,7 +134,7 @@ class DCNv2(nn.Module):
     def __init__(self, feat_size, embedding_size, linear_feature_columns, dnn_feature_columns, cross_num=2,
                  cross_param='vector', dnn_hidden_units=(128, 128,), init_std=0.0001, seed=2022, l2_reg=0.00001,
                  drop_rate=0.5):
-        super(DCN, self).__init__()
+        super(DCNv2, self).__init__()
         self.feat_size = feat_size
         self.embedding_size = embedding_size
         self.dnn_hidden_units = dnn_hidden_units

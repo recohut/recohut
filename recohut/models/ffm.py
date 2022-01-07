@@ -3,6 +3,7 @@
 __all__ = ['FieldAwareFactorizationMachine', 'FFM']
 
 # Cell
+import numpy as np
 import torch
 
 from ..layers.common import FeaturesLinear

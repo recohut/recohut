@@ -9,262 +9,280 @@ entries:
     - output: web,pdf
       title: Overview
       url: /
-    output: web
-    title: Getting started
-  - folderitems:
     - output: web,pdf
-      title: Base
-      url: base.html
+      title: AOTM dataset
+      url: datasets.aotm.html
     - output: web,pdf
-      title: AOTM
-      url: aotm.html
+      title: Avazu
+      url: datasets.avazu.html
     - output: web,pdf
-      title: Music30
-      url: music30.html
-    - output: web,pdf
-      title: Diginetica
-      url: diginetica.html
-    - output: web,pdf
-      title: NowPlaying
-      url: nowplaying.html
-    - output: web,pdf
-      title: Gowalla
-      url: gowalla.html
-    - output: web,pdf
-      title: LastFM
-      url: lastfm.html
-    - output: web,pdf
-      title: MovieLens
-      url: movielens.html
-    - output: web,pdf
-      title: RetailRocket
-      url: retailrocket.html
-    - output: web,pdf
-      title: Session
-      url: session.html
-    - output: web,pdf
-      title: Tianchi
-      url: tianchi.html
-    - output: web,pdf
-      title: Tmall
-      url: tmall.html
-    - output: web,pdf
-      title: Synthetic
-      url: synthetic.html
-    - output: web,pdf
-      title: Sample Session
-      url: sample_session.html
-    - output: web,pdf
-      title: Weeplaces
-      url: weeplaces.html
-    - output: web,pdf
-      title: Yoochoose
-      url: yoochoose.html
-    output: web
-    title: Datasets
-  - folderitems:
-    - output: web,pdf
-      title: Aggregate
-      url: aggregate.html
-    - output: web,pdf
-      title: Bi-partite
-      url: bipartite.html
+      title: Base dataset
+      url: datasets.base.html
     - output: web,pdf
       title: Criteo
-      url: criteo.html
+      url: datasets.criteo.html
     - output: web,pdf
-      title: MovieLens
-      url: movielens.html
+      title: Diginetica dataset
+      url: datasets.diginetica.html
     - output: web,pdf
-      title: Encode
-      url: encode.html
+      title: Gowalla dataset
+      url: datasets.gowalla.html
     - output: web,pdf
-      title: Normalize
-      url: normalize.html
+      title: LastFM dataset
+      url: datasets.lastfm.html
     - output: web,pdf
-      title: Sampling
-      url: sampling.html
+      title: MovieLens Dataset
+      url: datasets.movielens.html
     - output: web,pdf
-      title: Splitting
-      url: splitting.html
+      title: Music30 dataset
+      url: datasets.music30.html
     - output: web,pdf
-      title: Session
-      url: session.html
+      title: NowPlaying dataset
+      url: datasets.nowplaying.html
     - output: web,pdf
-      title: User Grouping
-      url: user_grouping.html
-    output: web
-    title: Transforms
-  - folderitems:
+      title: RetailRocket Dataset
+      url: datasets.retailrocket.html
+    - output: web,pdf
+      title: Sample Session dataset
+      url: datasets.sample_session.html
+    - output: web,pdf
+      title: Synthetic Datasets
+      url: datasets.synthetic.html
+    - output: web,pdf
+      title: Tianchi dataset
+      url: datasets.tianchi.html
+    - output: web,pdf
+      title: Tmall dataset
+      url: datasets.tmall.html
+    - output: web,pdf
+      title: Weeplaces
+      url: datasets.weeplaces.html
+    - output: web,pdf
+      title: Yoochoose
+      url: datasets.yoochoose.html
+    - output: web,pdf
+      title: Metrics
+      url: evaluation.metrics.html
+    - output: web,pdf
+      title: Attention Layers
+      url: layers.attention.html
+    - output: web,pdf
+      title: Common Layers
+      url: layers.layers.common.html
     - output: web,pdf
       title: Message Passing
-      url: message_passing.html
+      url: layers.message_passing.html
     - output: web,pdf
-      title: OU Noise
-      url: ou_noise.html
+      title: OU Noise Layer
+      url: layers.ou_noise.html
     - output: web,pdf
-      title: Factorization
-      url: factorization.html
+      title: TCN
+      url: layers.tcn.html
     - output: web,pdf
-      title: Embedding
-      url: embedding.html
+      title: Actor-critic Model
+      url: models.actor_critic.html
     - output: web,pdf
-      title: Attention
-      url: attention.html
+      title: AFM
+      url: models.afm.html
     - output: web,pdf
-      title: TemporalConvNet
-      url: tcn.html
-    output: web
-    title: Layers
-  - folderitems:
+      title: AFN
+      url: models.afn.html
     - output: web,pdf
-      title: Actor-critic
-      url: actor_critic.html
+      title: AR
+      url: models.ar.html
+    - output: web,pdf
+      title: AutoInt
+      url: models.autoint.html
     - output: web,pdf
       title: Bandits
-      url: bandits.html
+      url: models.bandits.html
     - output: web,pdf
       title: BCQ
-      url: bcq.html
-    - output: web,pdf
-      title: DNNs
-      url: dnn.html
-    - output: web,pdf
-      title: DSSM
-      url: dssm.html
-    - output: web,pdf
-      title: Epsilon
-      url: epsilon.html
-    - output: web,pdf
-      title: SiReN
-      url: siren.html
-    - output: web,pdf
-      title: AttRec
-      url: attrec.html
-    - output: web,pdf
-      title: BPR
-      url: bpr.html
-    - output: web,pdf
-      title: Caser
-      url: caser.html
-    - output: web,pdf
-      title: DCN
-      url: dcn.html
-    - output: web,pdf
-      title: DeepCross
-      url: deepcross.html
-    - output: web,pdf
-      title: DeepMF
-      url: deepmf.html
-    - output: web,pdf
-      title: FM
-      url: fm.html
-    - output: web,pdf
-      title: NCF
-      url: ncf.html
-    - output: web,pdf
-      title: PNN
-      url: pnn.html
-    - output: web,pdf
-      title: SASRec
-      url: sasrec.html
-    - output: web,pdf
-      title: VDeepMF
-      url: vdeepmf.html
-    - output: web,pdf
-      title: VNCF
-      url: vncf.html
-    - output: web,pdf
-      title: Wide&Deep
-      url: widedeep.html
-    - output: web,pdf
-      title: SRGNN
-      url: srgnn.html
-    - output: web,pdf
-      title: TAGNN
-      url: tagnn.html
-    - output: web,pdf
-      title: GMF
-      url: gmf.html
-    - output: web,pdf
-      title: NMF
-      url: nmf.html
-    - output: web,pdf
-      title: MLP
-      url: mlp.html
-    - output: web,pdf
-      title: Prod2Vec
-      url: prod2vec.html
+      url: models.bcq.html
     - output: web,pdf
       title: BERT
-      url: bert.html
-    - output: web,pdf
-      title: NARM
-      url: narm.html
-    - output: web,pdf
-      title: GroupIM
-      url: groupim.html
-    - output: web,pdf
-      title: MPM
-      url: mpm.html
+      url: models.bert.html
     - output: web,pdf
       title: COTREC
-      url: cotrec.html
+      url: models.cotrec.html
+    - output: web,pdf
+      title: DCN
+      url: models.dcn.html
+    - output: web,pdf
+      title: DeepFM
+      url: models.deepfm.html
+    - output: web,pdf
+      title: DNNs
+      url: models.dnn.html
+    - output: web,pdf
+      title: DSSM
+      url: models.dssm.html
+    - output: web,pdf
+      title: Embedding
+      url: models.embedding.html
+    - output: web,pdf
+      title: Epsilon
+      url: models.epsilon.html
+    - output: web,pdf
+      title: Factorization
+      url: models.factorization.html
+    - output: web,pdf
+      title: FFM
+      url: models.ffm.html
+    - output: web,pdf
+      title: FM
+      url: models.fm.html
+    - output: web,pdf
+      title: FNFM
+      url: models.fnfm.html
+    - output: web,pdf
+      title: FNN
+      url: models.fnn.html
+    - output: web,pdf
+      title: GMF
+      url: models.gmf.html
+    - output: web,pdf
+      title: GroupIM
+      url: models.groupim.html
+    - output: web,pdf
+      title: HOFM
+      url: models.hofm.html
+    - output: web,pdf
+      title: LR
+      url: models.lr.html
+    - output: web,pdf
+      title: MLP
+      url: models.mlp.html
+    - output: web,pdf
+      title: MPM
+      url: models.mpm.html
+    - output: web,pdf
+      title: NARM
+      url: models.narm.html
+    - output: web,pdf
+      title: NCF
+      url: models.ncf.html
+    - output: web,pdf
+      title: NFM
+      url: models.nfm.html
+    - output: web,pdf
+      title: NMF
+      url: models.nmf.html
+    - output: web,pdf
+      title: Product-based Neural Network (PNN)
+      url: models.pnn.html
+    - output: web,pdf
+      title: Prod2Vec
+      url: models.prod2vec.html
+    - output: web,pdf
+      title: SASRec
+      url: models.sasrec.html
+    - output: web,pdf
+      title: SiReN
+      url: models.siren.html
+    - output: web,pdf
+      title: S-Pop
+      url: models.spop.html
+    - output: web,pdf
+      title: SR
+      url: models.sr.html
+    - output: web,pdf
+      title: SRGNN
+      url: models.srgnn.html
+    - output: web,pdf
+      title: TAGNN
+      url: models.tagnn.html
+    - output: web,pdf
+      title: TAGNN++
+      url: models.tagnn_pp.html
     - output: web,pdf
       title: UltraGCN
-      url: ultragcn.html
-    output: web
-    title: Models
-  - folderitems:
+      url: models.ultragcn.html
     - output: web,pdf
-      title: DDPG Agent
-      url: ddpg.html
+      title: VSKNN
+      url: models.vsknn.html
     - output: web,pdf
-      title: RePlay Agent
-      url: replay_agents.html
+      title: Wide & Deep
+      url: models.wide_and_deep.html
     - output: web,pdf
-      title: AB Testing Agent
-      url: ab_test_agent.html
+      title: xDeepFM
+      url: models.xdeepfm.html
     - output: web,pdf
-      title: Bandit Agent
-      url: bandits.html
+      title: AB Test Agents
+      url: rl.agents.ab_test_agent.html
     - output: web,pdf
-      title: RecSys Environment
-      url: recsys.html
+      title: DDPG
+      url: rl.agents.ddpg.html
     - output: web,pdf
-      title: Bandit Policy
-      url: bandit_policies.html
+      title: Replay Agents
+      url: rl.agents.replay_agents.html
     - output: web,pdf
-      title: Memories
-      url: memory.html
-    output: web
-    title: RL
-  - folderitems:
+      title: Bandit RL Environments
+      url: rl.envs.bandits.html
     - output: web,pdf
-      title: Torch Utils
-      url: torch_utils.html
+      title: RecSys RL Env
+      url: rl.envs.recsys.html
     - output: web,pdf
-      title: Common Utils
-      url: common_utils.html
+      title: Bandit Policies
+      url: rl.policies.bandit_policies.html
+    - output: web,pdf
+      title: RL Memory
+      url: rl.memory.html
+    - output: web,pdf
+      title: Trainer
+      url: trainers.trainer.html
+    - output: web,pdf
+      title: Criteo Dataset Transformation
+      url: transforms.datasets.criteo.html
+    - output: web,pdf
+      title: MovieLens Dataset Transformation
+      url: transforms.datasets.movielens.html
+    - output: web,pdf
+      title: Aggregate
+      url: transforms.aggregate.html
+    - output: web,pdf
+      title: Bi-partite Dataset
+      url: transforms.bipartite.html
+    - output: web,pdf
+      title: Encode
+      url: transforms.encode.html
+    - output: web,pdf
+      title: Normalize
+      url: transforms.normalize.html
+    - output: web,pdf
+      title: Sampling
+      url: transforms.sampling.html
+    - output: web,pdf
+      title: Session
+      url: transforms.session.html
+    - output: web,pdf
+      title: Splitting
+      url: transforms.splitting.html
+    - output: web,pdf
+      title: User Grouping
+      url: transforms.user_grouping.html
+    - output: web,pdf
+      title: AB Test Utils
+      url: utils.ab_testing.html
+    - output: web,pdf
+      title: Common utils
+      url: utils.common_utils.html
     - output: web,pdf
       title: Config
-      url: config.html
-    - output: web,pdf
-      title: AB Testing
-      url: ab_testing.html
+      url: utils.config.html
     - output: web,pdf
       title: Logging
-      url: logging.html
-    output: web
-    title: Utils
-  - folderitems:
+      url: utils.logging.html
     - output: web,pdf
-      title: Common
-      url: basic_plots.html
+      title: PyTorch Utils
+      url: utils.torch_utils.html
     - output: web,pdf
-      title: EDA
-      url: eda.html
+      title: Visualizations Basic Plots
+      url: visualization.basic_plots.html
+    - output: web,pdf
+      title: EDA Visualization
+      url: visualization.eda.html
     output: web
-    title: Visualizations
+    title: recohut
   output: web
   title: Sidebar

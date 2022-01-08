@@ -9,50 +9,53 @@ entries:
     - output: web,pdf
       title: Overview
       url: /
+    output: web
+    title: Getting started
+  - folderitems:
     - output: web,pdf
-      title: AOTM dataset
+      title: AOTM
       url: datasets.aotm.html
     - output: web,pdf
       title: Avazu
       url: datasets.avazu.html
     - output: web,pdf
-      title: Base dataset
+      title: Base
       url: datasets.base.html
     - output: web,pdf
       title: Criteo
       url: datasets.criteo.html
     - output: web,pdf
-      title: Diginetica dataset
+      title: Diginetica
       url: datasets.diginetica.html
     - output: web,pdf
-      title: Gowalla dataset
+      title: Gowalla
       url: datasets.gowalla.html
     - output: web,pdf
-      title: LastFM dataset
+      title: LastFM
       url: datasets.lastfm.html
     - output: web,pdf
-      title: MovieLens Dataset
+      title: MovieLens
       url: datasets.movielens.html
     - output: web,pdf
-      title: Music30 dataset
+      title: Music30
       url: datasets.music30.html
     - output: web,pdf
-      title: NowPlaying dataset
+      title: NowPlaying
       url: datasets.nowplaying.html
     - output: web,pdf
-      title: RetailRocket Dataset
+      title: RetailRocket
       url: datasets.retailrocket.html
     - output: web,pdf
-      title: Sample Session dataset
+      title: Sample Session
       url: datasets.sample_session.html
     - output: web,pdf
       title: Synthetic Datasets
       url: datasets.synthetic.html
     - output: web,pdf
-      title: Tianchi dataset
+      title: Tianchi
       url: datasets.tianchi.html
     - output: web,pdf
-      title: Tmall dataset
+      title: Tmall
       url: datasets.tmall.html
     - output: web,pdf
       title: Weeplaces
@@ -60,26 +63,56 @@ entries:
     - output: web,pdf
       title: Yoochoose
       url: datasets.yoochoose.html
+    output: web
+    title: Datasets
+  - folderitems:
     - output: web,pdf
-      title: Metrics
-      url: evaluation.metrics.html
+      title: Aggregate
+      url: transforms.aggregate.html
     - output: web,pdf
-      title: Attention Layers
+      title: Bi-partite Dataset
+      url: transforms.bipartite.html
+    - output: web,pdf
+      title: Encode
+      url: transforms.encode.html
+    - output: web,pdf
+      title: Normalize
+      url: transforms.normalize.html
+    - output: web,pdf
+      title: Sampling
+      url: transforms.sampling.html
+    - output: web,pdf
+      title: Session
+      url: transforms.session.html
+    - output: web,pdf
+      title: Splitting
+      url: transforms.splitting.html
+    - output: web,pdf
+      title: User Grouping
+      url: transforms.user_grouping.html
+    output: web
+    title: Transforms
+  - folderitems:
+    - output: web,pdf
+      title: Attention
       url: layers.attention.html
     - output: web,pdf
-      title: Common Layers
+      title: Common
       url: layers.layers.common.html
     - output: web,pdf
       title: Message Passing
       url: layers.message_passing.html
     - output: web,pdf
-      title: OU Noise Layer
+      title: OU Noise
       url: layers.ou_noise.html
     - output: web,pdf
       title: TCN
       url: layers.tcn.html
+    output: web
+    title: Layers
+  - folderitems:
     - output: web,pdf
-      title: Actor-critic Model
+      title: Actor-critic
       url: models.actor_critic.html
     - output: web,pdf
       title: AFM
@@ -169,7 +202,7 @@ entries:
       title: NMF
       url: models.nmf.html
     - output: web,pdf
-      title: Product-based Neural Network (PNN)
+      title: PNN
       url: models.pnn.html
     - output: web,pdf
       title: Prod2Vec
@@ -202,11 +235,20 @@ entries:
       title: VSKNN
       url: models.vsknn.html
     - output: web,pdf
-      title: Wide & Deep
+      title: Wide&Deep
       url: models.wide_and_deep.html
     - output: web,pdf
       title: xDeepFM
       url: models.xdeepfm.html
+    output: web
+    title: Models
+  - folderitems:
+    - output: web,pdf
+      title: Metrics
+      url: evaluation.metrics.html
+    output: web
+    title: Evaluation
+  - folderitems:
     - output: web,pdf
       title: AB Test Agents
       url: rl.agents.ab_test_agent.html
@@ -228,39 +270,9 @@ entries:
     - output: web,pdf
       title: RL Memory
       url: rl.memory.html
-    - output: web,pdf
-      title: Trainer
-      url: trainers.trainer.html
-    - output: web,pdf
-      title: Criteo Dataset Transformation
-      url: transforms.datasets.criteo.html
-    - output: web,pdf
-      title: MovieLens Dataset Transformation
-      url: transforms.datasets.movielens.html
-    - output: web,pdf
-      title: Aggregate
-      url: transforms.aggregate.html
-    - output: web,pdf
-      title: Bi-partite Dataset
-      url: transforms.bipartite.html
-    - output: web,pdf
-      title: Encode
-      url: transforms.encode.html
-    - output: web,pdf
-      title: Normalize
-      url: transforms.normalize.html
-    - output: web,pdf
-      title: Sampling
-      url: transforms.sampling.html
-    - output: web,pdf
-      title: Session
-      url: transforms.session.html
-    - output: web,pdf
-      title: Splitting
-      url: transforms.splitting.html
-    - output: web,pdf
-      title: User Grouping
-      url: transforms.user_grouping.html
+    output: web
+    title: RL
+  - folderitems:
     - output: web,pdf
       title: AB Test Utils
       url: utils.ab_testing.html
@@ -276,13 +288,16 @@ entries:
     - output: web,pdf
       title: PyTorch Utils
       url: utils.torch_utils.html
+    output: web
+    title: Utils
+  - folderitems:
     - output: web,pdf
-      title: Visualizations Basic Plots
+      title: Basic Plots
       url: visualization.basic_plots.html
     - output: web,pdf
       title: EDA Visualization
       url: visualization.eda.html
     output: web
-    title: recohut
+    title: Visualizations
   output: web
   title: Sidebar

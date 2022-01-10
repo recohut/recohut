@@ -18,7 +18,7 @@ import numpy as np
 from datetime import timezone, datetime, timedelta
 import time
 
-from . import base
+from .bases import common as base
 from ..utils.common_utils import download_url
 
 # Cell

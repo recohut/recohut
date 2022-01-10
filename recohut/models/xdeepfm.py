@@ -5,7 +5,7 @@ __all__ = ['CompressedInteractionNetwork', 'xDeepFM']
 # Cell
 import torch
 
-from ..layers.common import FeaturesEmbedding, FeaturesLinear, MultiLayerPerceptron
+from .layers.common import FeaturesEmbedding, FeaturesLinear, MultiLayerPerceptron
 
 # Cell
 class CompressedInteractionNetwork(torch.nn.Module):

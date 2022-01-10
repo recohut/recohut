@@ -6,7 +6,7 @@ __all__ = ['FieldAwareFactorizationMachine', 'FNFM']
 import numpy as np
 import torch
 
-from ..layers.common import FeaturesLinear, MultiLayerPerceptron
+from .layers.common import FeaturesLinear, MultiLayerPerceptron
 
 # Cell
 class FieldAwareFactorizationMachine(torch.nn.Module):

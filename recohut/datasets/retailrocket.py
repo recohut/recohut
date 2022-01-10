@@ -16,7 +16,7 @@ from datetime import timezone, datetime, timedelta
 import time
 
 from ..utils.common_utils import download_url, extract_zip, makedirs
-from . import base
+from .bases import common as base
 
 # Cell
 class RetailRocketDataset(base.SessionGraphDataset):

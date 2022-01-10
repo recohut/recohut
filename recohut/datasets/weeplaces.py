@@ -13,7 +13,7 @@ import torch
 from torch.utils import data
 
 import recohut
-from . import base
+from .bases import common as base
 from ..utils.common_utils import download_url, extract_zip
 
 # Cell

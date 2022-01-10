@@ -11,7 +11,7 @@ from typing import List
 from copy import deepcopy
 import numpy as np
 
-from ...layers.ou_noise import OUNoise
+from ...models.layers.ou_noise import OUNoise
 from ...models.actor_critic import Actor, Critic
 from ...models.embedding import GroupEmbedding
 from ..memory import ReplayMemory

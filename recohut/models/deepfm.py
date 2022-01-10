@@ -5,7 +5,7 @@ __all__ = ['FactorizationMachine', 'DeepFM', 'DeepFMv2']
 # Cell
 import torch
 
-from ..layers.common import FeaturesEmbedding, FeaturesLinear, MultiLayerPerceptron
+from .layers.common import FeaturesEmbedding, FeaturesLinear, MultiLayerPerceptron
 
 # Cell
 class FactorizationMachine(torch.nn.Module):

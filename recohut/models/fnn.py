@@ -5,7 +5,7 @@ __all__ = ['FNN']
 # Cell
 import torch
 
-from ..layers.common import FeaturesEmbedding, MultiLayerPerceptron
+from .layers.common import FeaturesEmbedding, MultiLayerPerceptron
 
 # Cell
 class FNN(torch.nn.Module):

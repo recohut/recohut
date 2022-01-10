@@ -5,7 +5,7 @@ __all__ = ['CrossNetwork', 'DCN', 'DNN', 'CrossNet', 'DCNv2']
 # Cell
 import torch
 
-from ..layers.common import FeaturesEmbedding, MultiLayerPerceptron
+from .layers.common import FeaturesEmbedding, MultiLayerPerceptron
 
 
 class CrossNetwork(torch.nn.Module):

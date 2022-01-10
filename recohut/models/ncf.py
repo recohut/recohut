@@ -5,7 +5,7 @@ __all__ = ['NCF']
 # Cell
 import torch
 
-from ..layers.common import FeaturesEmbedding, MultiLayerPerceptron
+from .layers.common import FeaturesEmbedding, MultiLayerPerceptron
 
 # Cell
 class NCF(torch.nn.Module):

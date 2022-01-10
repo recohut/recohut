@@ -7,7 +7,7 @@ import torch
 from torch import nn as nn
 import math
 
-from ..layers.attention import *
+from .layers.attention import *
 
 # Internal Cell
 class BERTEmbedding(nn.Module):

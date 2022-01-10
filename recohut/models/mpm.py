@@ -8,7 +8,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
-from ..layers.tcn import TemporalConvNet
+from .layers.tcn import TemporalConvNet
 
 # Cell
 class MPM(nn.Module):

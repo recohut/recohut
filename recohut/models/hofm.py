@@ -5,7 +5,7 @@ __all__ = ['FactorizationMachine', 'AnovaKernel', 'HOFM']
 # Cell
 import torch
 
-from ..layers.common import FeaturesEmbedding, FeaturesLinear
+from .layers.common import FeaturesEmbedding, FeaturesLinear
 
 # Cell
 class FactorizationMachine(torch.nn.Module):

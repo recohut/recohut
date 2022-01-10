@@ -15,7 +15,7 @@ import pandas as pd
 from datetime import timezone, datetime, timedelta
 import time
 
-from .base import SessionDataset
+from .bases.common import SessionDataset
 from ..utils.common_utils import download_url, extract_zip, makedirs
 
 # Cell

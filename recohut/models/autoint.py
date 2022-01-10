@@ -6,7 +6,7 @@ __all__ = ['AutoInt']
 import torch
 import torch.nn.functional as F
 
-from ..layers.common import FeaturesEmbedding, FeaturesLinear, MultiLayerPerceptron
+from .layers.common import FeaturesEmbedding, FeaturesLinear, MultiLayerPerceptron
 
 # Cell
 class AutoInt(torch.nn.Module):

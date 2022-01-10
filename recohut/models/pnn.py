@@ -5,7 +5,7 @@ __all__ = ['InnerProductNetwork', 'OuterProductNetwork', 'PNN']
 # Cell
 import torch
 
-from ..layers.common import FeaturesEmbedding, FeaturesLinear, MultiLayerPerceptron
+from .layers.common import FeaturesEmbedding, FeaturesLinear, MultiLayerPerceptron
 
 # Cell
 class InnerProductNetwork(torch.nn.Module):

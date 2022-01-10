@@ -7,7 +7,7 @@ import torch
 from torch import nn
 import math
 
-from ..layers.attention import *
+from .layers.attention import *
 
 # Internal Cell
 class SASEmbedding(nn.Module):

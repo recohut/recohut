@@ -5,7 +5,7 @@ __all__ = ['LR']
 # Cell
 import torch
 
-from ..layers.common import FeaturesLinear
+from .layers.common import FeaturesLinear
 
 # Cell
 class LR(torch.nn.Module):

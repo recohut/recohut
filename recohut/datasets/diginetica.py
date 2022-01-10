@@ -5,7 +5,7 @@ __all__ = ['DigineticaDataset', 'DigineticaDatasetv2']
 # Cell
 import numpy as np
 
-from . import base
+from .bases import common as base
 from ..utils.common_utils import download_url
 
 # Cell

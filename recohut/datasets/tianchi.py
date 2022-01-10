@@ -9,7 +9,7 @@ import sys
 import numpy as np
 import pandas as pd
 
-from .base import Dataset
+from .bases.common import Dataset
 from ..utils.common_utils import download_url, extract_zip, makedirs
 
 # Cell

@@ -5,7 +5,7 @@ __all__ = ['WideAndDeep']
 # Cell
 import torch
 
-from ..layers.common import FeaturesEmbedding, FeaturesLinear, MultiLayerPerceptron
+from .layers.common import FeaturesEmbedding, FeaturesLinear, MultiLayerPerceptron
 
 # Cell
 class WideAndDeep(torch.nn.Module):

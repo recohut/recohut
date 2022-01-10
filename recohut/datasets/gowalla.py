@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from pandas import Timedelta
 
-from .base import SessionDatasetv3
+from .bases.common import SessionDatasetv3
 from ..utils.common_utils import download_url, extract_gz
 
 # Cell

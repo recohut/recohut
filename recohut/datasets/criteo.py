@@ -19,7 +19,7 @@ from tqdm import tqdm
 import torch
 from torch.utils.data import Dataset, TensorDataset
 
-from .base import Dataset
+from .bases.common import Dataset
 from ..utils.common_utils import download_url
 
 # Cell

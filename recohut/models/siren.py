@@ -8,7 +8,7 @@ from torch import nn
 import torch.nn.functional as F
 from torch_geometric.data import Data
 
-from ..layers.message_passing import LightGConv, LRGCCF
+from .layers.message_passing import LightGConv, LRGCCF
 
 # Cell
 class SiReN(nn.Module):

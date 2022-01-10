@@ -3,30 +3,37 @@
 __all__ = ['GMF']
 
 # Cell
+from typing import Any, Iterable, List, Optional, Tuple, Union, Callable
+import os
+
 import torch
 from torch import nn
 
+from .bases.common import PointModel
+
 # Cell
-class GMF(nn.Module):
-    def __init__(self, args, num_users, num_items):
-        super(GMF, self).__init__()
-        self.num_users = num_users
-        self.num_items = num_items
-        self.factor_num = args.factor_num
+class GMF(PairModel):
+    def __init__(self, n_users, n_items, embedding_dim):
+        super().__init__()
 
-        self.embedding_user = nn.Embedding(num_embeddings=self.num_users, embedding_dim=self.factor_num)
-        self.embedding_item = nn.Embedding(num_embeddings=self.num_items, embedding_dim=self.factor_num)
+        self.user_embedding = nn.Embedding(
+            num_embeddings=n_users, embedding_dim=embedding_dim
+        )
+        self.item_embedding = nn.Embedding(
+            num_embeddings=n_items, embedding_dim=embedding_dim
+        )
+        self.fc = nn.Linear(embedding_dim, 1)
 
-        self.affine_output = nn.Linear(in_features=self.factor_num, out_features=1)
-        self.logistic = nn.Sigmoid()
+        # not using sigmoid layer because loss is BCEWithLogits in PairModel
+        # self.logistic = nn.Sigmoid()
 
-    def forward(self, user_indices, item_indices):
-        user_embedding = self.embedding_user(user_indices)
-        item_embedding = self.embedding_item(item_indices)
-        element_product = torch.mul(user_embedding, item_embedding)
-        logits = self.affine_output(element_product)
-        rating = self.logistic(logits)
-        return rating
+    def forward(self, users, items):
+        user_embeddings = self.user_embedding(users)
+        item_embeddings = self.item_embedding(items)
+        embeddings = user_embeddings.mul(item_embeddings)
+        output = self.fc(embeddings)
 
-    def init_weight(self):
-        pass
+        # not using sigmoid layer because loss is BCEWithLogits in PairModel
+        # rating = self.logistic(output)
+
+        return output.squeeze()

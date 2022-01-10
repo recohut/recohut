@@ -19,8 +19,11 @@ entries:
       title: Avazu
       url: datasets.avazu.html
     - output: web,pdf
-      title: Base
-      url: datasets.base.html
+      title: Base Common
+      url: datasets.bases.common.html
+    - output: web,pdf
+      title: Base Interactions
+      url: datasets.bases.interactions.html
     - output: web,pdf
       title: Criteo
       url: datasets.criteo.html
@@ -95,19 +98,19 @@ entries:
   - folderitems:
     - output: web,pdf
       title: Attention
-      url: layers.attention.html
+      url: models.layers.attention.html
     - output: web,pdf
       title: Common
-      url: layers.layers.common.html
+      url: models.layers.models.layers.common.html
     - output: web,pdf
       title: Message Passing
-      url: layers.message_passing.html
+      url: models.layers.message_passing.html
     - output: web,pdf
       title: OU Noise
-      url: layers.ou_noise.html
+      url: models.layers.ou_noise.html
     - output: web,pdf
       title: TCN
-      url: layers.tcn.html
+      url: models.layers.tcn.html
     output: web
     title: Layers
   - folderitems:
@@ -279,15 +282,6 @@ entries:
     - output: web,pdf
       title: Common utils
       url: utils.common_utils.html
-    - output: web,pdf
-      title: Config
-      url: utils.config.html
-    - output: web,pdf
-      title: Logging
-      url: utils.logging.html
-    - output: web,pdf
-      title: PyTorch Utils
-      url: utils.torch_utils.html
     output: web
     title: Utils
   - folderitems:

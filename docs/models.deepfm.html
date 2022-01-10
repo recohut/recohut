@@ -313,6 +313,106 @@ epoch/epoches: 9/10, train loss: 0.312, test auc: 0.729
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#     def __init__(self, n_users, n_items, embedding_dim, batch_norm=True, dropout=0.1, num_layers=3, act_function=&#39;relu&#39;):</span>
+<span class="c1">#         &quot;&quot;&quot;</span>
+<span class="c1">#         Args:</span>
+<span class="c1">#             n_users : int, the number of users</span>
+<span class="c1">#             n_items : int, the number of items</span>
+<span class="c1">#             embedding_dim : int, the number of latent factoact_function : str, activation function for hidden layer</span>
+<span class="c1">#             num_layers : int, number of hidden layers</span>
+<span class="c1">#             batch_norm : bool, whether to normalize a batch of data</span>
+<span class="c1">#             dropout : float, dropout rate</span>
+<span class="c1">#         &quot;&quot;&quot;</span>
+<span class="c1">#         super().__init__()</span>
+
+<span class="c1">#         self.num_layers = num_layers</span>
+
+<span class="c1">#         self.user_embedding = nn.Embedding(</span>
+<span class="c1">#             num_embeddings=n_users, embedding_dim=embedding_dim</span>
+<span class="c1">#         )</span>
+<span class="c1">#         self.item_embedding = nn.Embedding(</span>
+<span class="c1">#             num_embeddings=n_items, embedding_dim=embedding_dim</span>
+<span class="c1">#         )</span>
+<span class="c1">#         self.user_bias = nn.Embedding(n_users, 1)</span>
+<span class="c1">#         self.item_bias = nn.Embedding(n_items, 1)</span>
+<span class="c1">#         self.bias_ = nn.Parameter(torch.tensor([0.0]))</span>
+
+<span class="c1">#         fm_modules = []</span>
+<span class="c1">#         if batch_norm:</span>
+<span class="c1">#             fm_modules.append(nn.BatchNorm1d(embedding_dim))</span>
+<span class="c1">#         fm_modules.append(nn.Dropout(dropout))</span>
+<span class="c1">#         self.fm_layers = nn.Sequential(*fm_modules)</span>
+
+<span class="c1">#         deep_modules = []</span>
+<span class="c1">#         in_dim = embedding_dim * 2   # user &amp; item</span>
+<span class="c1">#         for _ in range(num_layers):  # _ is dim if layers is list</span>
+<span class="c1">#             out_dim = in_dim</span>
+<span class="c1">#             deep_modules.append(nn.Linear(in_dim, out_dim))</span>
+<span class="c1">#             in_dim = out_dim</span>
+<span class="c1">#             if batch_norm:</span>
+<span class="c1">#                 deep_modules.append(nn.BatchNorm1d(out_dim))</span>
+<span class="c1">#             if act_function == &#39;relu&#39;:</span>
+<span class="c1">#                 deep_modules.append(nn.ReLU())</span>
+<span class="c1">#             elif act_function == &#39;sigmoid&#39;:</span>
+<span class="c1">#                 deep_modules.append(nn.Sigmoid())</span>
+<span class="c1">#             elif act_function == &#39;tanh&#39;:</span>
+<span class="c1">#                 deep_modules.append(nn.Tanh())</span>
+<span class="c1">#             deep_modules.append(nn.Dropout(dropout))</span>
+
+<span class="c1">#         self.deep_layers = nn.Sequential(*deep_modules)</span>
+<span class="c1">#         self.deep_out = nn.Linear(in_dim, 1, bias=False)</span>
+
+<span class="c1">#         self._init_weights()</span>
+
+<span class="c1">#     def _init_weights(self):</span>
+<span class="c1">#         nn.init.normal_(self.item_embedding.weight, std=0.01)</span>
+<span class="c1">#         nn.init.normal_(self.user_embedding.weight, std=0.01)</span>
+<span class="c1">#         nn.init.constant_(self.user_bias.weight, 0.0)</span>
+<span class="c1">#         nn.init.constant_(self.item_bias.weight, 0.0)</span>
+
+<span class="c1">#         # for deep layers</span>
+<span class="c1">#         for m in self.deep_layers:</span>
+<span class="c1">#             if isinstance(m, nn.Linear):</span>
+<span class="c1">#                 nn.init.xavier_normal_(m.weight)</span>
+<span class="c1">#         nn.init.xavier_normal_(self.deep_out.weight)</span>
+
+<span class="c1">#     def forward(self, users, items):</span>
+<span class="c1">#         embed_user = self.user_embedding(users)</span>
+<span class="c1">#         embed_item = self.item_embedding(items)</span>
+
+<span class="c1">#         fm = embed_user * embed_item</span>
+<span class="c1">#         fm = self.fm_layers(fm)</span>
+<span class="c1">#         y_fm = fm.sum(dim=-1)</span>
+
+<span class="c1">#         y_fm = y_fm + self.user_bias(users) + self.item_bias(items) + self.bias_</span>
+
+<span class="c1">#         if self.num_layers:</span>
+<span class="c1">#             fm = self.deep_layers(fm)</span>
+
+<span class="c1">#         y_deep = torch.cat((embed_user, embed_item), dim=-1)</span>
+<span class="c1">#         y_deep = self.deep_layers(y_deep)</span>
+
+<span class="c1">#         # since BCELoss will automatically transfer pred with sigmoid</span>
+<span class="c1">#         # there is no need to use extra nn.Sigmoid(pred)</span>
+<span class="c1">#         pred = y_fm + y_deep</span>
+
+<span class="c1">#         return pred.view(-1)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
 </div>
  
 

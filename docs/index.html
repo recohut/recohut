@@ -60,7 +60,7 @@ nb_path: "nbs/index.ipynb"
 </div>
 
 
-<!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 <img src="https://github.com/recohut/reco-static/raw/master/media/diagrams/recohut_lib_main.svg">
@@ -69,10 +69,8 @@ nb_path: "nbs/index.ipynb"
 <p align="right">(<a href="#top">back to top</a>)</p><h3 id="Built-With">Built With<a class="anchor-link" href="#Built-With"> </a></h3><ul>
 <li><a href="https://www.python.org/">Python</a></li>
 <li><a href="https://pytorch.org/">PyTorch</a></li>
-<li><a href="https://numpy.org/">Numpy</a></li>
-<li><a href="https://pandas.pydata.org/">Pandas</a></li>
+<li><a href="https://www.pytorchlightning.ai/">Lightning</a></li>
 <li><a href="https://github.com/fastai/nbdev">nbdev</a></li>
-<li><a href="https://jupyter.org/">Jupyter</a></li>
 </ul>
 <p align="right">(<a href="#top">back to top</a>)</p><p><!-- GETTING STARTED --></p>
 <h2 id="Getting-Started">Getting Started<a class="anchor-link" href="#Getting-Started"> </a></h2><p>To get a local copy up and running follow these simple example steps.</p>
@@ -80,25 +78,49 @@ nb_path: "nbs/index.ipynb"
 <li>pytorch<div class="highlight"><pre><span></span>pip install torch
 </pre></div>
 </li>
+<li>lightning<div class="highlight"><pre><span></span>pip install pytorch-lightning
+</pre></div>
+</li>
 </ul>
 <h3 id="Installation">Installation<a class="anchor-link" href="#Installation"> </a></h3>
 <pre><code>pip install recohut</code></pre>
 <p align="right">(<a href="#top">back to top</a>)</p><p><!-- USAGE EXAMPLES --></p>
 <h2 id="Usage">Usage<a class="anchor-link" href="#Usage"> </a></h2><div class="highlight"><pre><span></span><span class="c1"># import the required modules</span>
-<span class="kn">import</span> <span class="nn">recohut</span>
-<span class="kn">from</span> <span class="nn">recohut.datasets</span> <span class="kn">import</span> <span class="n">MovieLens</span>
-<span class="kn">from</span> <span class="nn">recohut.models</span> <span class="kn">import</span> <span class="n">MatrixFactorization</span>
+<span class="kn">from</span> <span class="nn">recohut.datasets.movielens</span> <span class="kn">import</span> <span class="n">ML1mDataModule</span>
+<span class="kn">from</span> <span class="nn">recohut.models.nmf</span> <span class="kn">import</span> <span class="n">NMF</span>
+<span class="kn">from</span> <span class="nn">recohut.trainers.pl_trainer</span> <span class="kn">import</span> <span class="n">pl_trainer</span>
 
-<span class="c1"># define the data and model</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">MovieLens</span><span class="p">(</span><span class="n">version</span><span class="o">=</span><span class="s1">&#39;100k&#39;</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">MatrixFactorization</span><span class="p">()</span>
+<span class="c1"># build the dataset</span>
+<span class="k">class</span> <span class="nc">Args</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_dir</span> <span class="o">=</span> <span class="s1">&#39;/content/data&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_rating</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_negative_samples</span> <span class="o">=</span> <span class="mi">99</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_uc</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_sc</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">val_p</span> <span class="o">=</span> <span class="mf">0.2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test_p</span> <span class="o">=</span> <span class="mf">0.2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_workers</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">normalize</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">batch_size</span> <span class="o">=</span> <span class="mi">32</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">shuffle</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">pin_memory</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">drop_last</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">split_type</span> <span class="o">=</span> <span class="s1">&#39;stratified&#39;</span>
 
-<span class="c1"># train the matrix factorization model</span>
-<span class="n">model</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">args</span> <span class="o">=</span> <span class="n">Args</span><span class="p">()</span>
 
-<span class="c1"># evaluate the model</span>
-<span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;MRR&#39;</span><span class="p">,</span><span class="s1">&#39;HR&#39;</span><span class="p">])</span>
+<span class="n">ds</span> <span class="o">=</span> <span class="n">ML1mDataModule</span><span class="p">(</span><span class="o">**</span><span class="n">args</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">prepare_data</span><span class="p">()</span>
+
+<span class="c1"># build the model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">NMF</span><span class="p">(</span><span class="n">n_items</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">num_items</span><span class="p">,</span> <span class="n">n_users</span><span class="o">=</span><span class="n">ds</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">num_users</span><span class="p">,</span> <span class="n">embedding_dim</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+
+<span class="c1"># train and evaluate the matrix factorization model</span>
+<span class="n">pl_trainer</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">max_epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
+<p>Check <a href="https://github.com/recohut/notebooks/blob/main/nbs/recohut_quick_tutorial.ipynb">this</a> quick tutorial.</p>
 <p><em>For more examples, please refer to the <a href="https://recohut-projects.github.io/recohut">Documentation</a> and <a href="https://github.com/RecoHut-Projects/recohut/tree/master/tutorials">Tutorials</a>.</em></p>
 <p align="right">(<a href="#top">back to top</a>)</p><p><!-- ROADMAP --></p>
 <h2 id="Roadmap">Roadmap<a class="anchor-link" href="#Roadmap"> </a></h2><ul>
@@ -121,8 +143,8 @@ Don't forget to give the project a star! Thanks again!</p>
 <p align="right">(<a href="#top">back to top</a>)</p><p><!-- LICENSE --></p>
 <h2 id="License">License<a class="anchor-link" href="#License"> </a></h2><p>Distributed under the MIT License. See <code>LICENSE.txt</code> for more information.</p>
 <p align="right">(<a href="#top">back to top</a>)</p><p><!-- CONTACT --></p>
-<h2 id="Contact">Contact<a class="anchor-link" href="#Contact"> </a></h2><p>Your Name - Sparsh A.</p>
-<p>Project Link: <a href="https://github.com/RecoHut-Projects/recohut">https://github.com/RecoHut-Projects/recohut</a></p>
+<h2 id="Contact">Contact<a class="anchor-link" href="#Contact"> </a></h2><p>Sparsh A.</p>
+<p><a href="https://github.com/RecoHut-Projects/recohut">@sparsh-ai</a></p>
 <p align="right">(<a href="#top">back to top</a>)</p><p><!-- ACKNOWLEDGMENTS --></p>
 <h2 id="Acknowledgments">Acknowledgments<a class="anchor-link" href="#Acknowledgments"> </a></h2><ul>
 <li><a href="https://nbdev.fast.ai/tutorial.html">nbdev team</a> for providing supporting tools to build this library.</li>

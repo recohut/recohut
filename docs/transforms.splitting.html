@@ -38,7 +38,7 @@ nb_path: "nbs/transforms/transforms.splitting.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Split-by-Ratio">Split by Ratio<a class="anchor-link" href="#Split-by-Ratio"> </a></h3>
+<h2 id="Random-split">Random split<a class="anchor-link" href="#Random-split"> </a></h2>
 </div>
 </div>
 </div>
@@ -53,7 +53,319 @@ nb_path: "nbs/transforms/transforms.splitting.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="split_by_ratio" class="doc_header"><code>split_by_ratio</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L48" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>split_by_ratio</code>(<strong><code>data</code></strong>, <strong><code>shuffle</code></strong>=<em><code>False</code></em>, <strong><code>test_size</code></strong>=<em><code>None</code></em>, <strong><code>pad_unknown</code></strong>=<em><code>True</code></em>, <strong><code>filter_unknown</code></strong>=<em><code>False</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
+<h4 id="random_split" class="doc_header"><code>random_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L42" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>random_split</code>(<strong><code>mat</code></strong>, <strong><code>val_p</code></strong>=<em><code>0.0</code></em>, <strong><code>test_p</code></strong>=<em><code>0.2</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
+</blockquote>
+<p>Randomly split interactions into training, validation, and testing sets.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="k">def</span> <span class="nf">test_random_split</span><span class="p">():</span>
+
+    <span class="n">interactions_to_split_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+        <span class="s1">&#39;item_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+        <span class="s1">&#39;rating&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="n">interactions_to_split</span><span class="o">=</span><span class="n">coo_matrix</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="n">interactions_to_split_df</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">],</span>
+            <span class="p">(</span><span class="n">interactions_to_split_df</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">],</span> <span class="n">interactions_to_split_df</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]),</span>
+        <span class="p">),</span>
+        <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">interactions_to_split_df</span><span class="o">.</span><span class="n">user_id</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span> <span class="n">interactions_to_split_df</span><span class="o">.</span><span class="n">item_id</span><span class="o">.</span><span class="n">nunique</span><span class="p">()),</span>
+    <span class="p">)</span>
+
+    <span class="n">train_expected_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+            <span class="s1">&#39;item_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">],</span>
+            <span class="s1">&#39;rating&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> 
+        <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="n">train_expected</span><span class="o">=</span><span class="n">coo_matrix</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="n">train_expected_df</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">],</span>
+            <span class="p">(</span><span class="n">train_expected_df</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">],</span> <span class="n">train_expected_df</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]),</span>
+        <span class="p">),</span>
+        <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">interactions_to_split</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">interactions_to_split</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+    <span class="p">)</span>
+
+    <span class="n">validate_expected_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="s1">&#39;item_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="s1">&#39;rating&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">]}</span>
+    <span class="p">)</span>
+    <span class="n">validate_expected</span><span class="o">=</span><span class="n">coo_matrix</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="n">validate_expected_df</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">],</span>
+            <span class="p">(</span><span class="n">validate_expected_df</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">],</span> <span class="n">validate_expected_df</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]),</span>
+        <span class="p">),</span>
+        <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">interactions_to_split</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">interactions_to_split</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+    <span class="p">)</span>
+
+    <span class="n">test_expected_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+            <span class="s1">&#39;item_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+            <span class="s1">&#39;rating&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="n">test_expected</span><span class="o">=</span><span class="n">coo_matrix</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="n">test_expected_df</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">],</span>
+            <span class="p">(</span><span class="n">test_expected_df</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">],</span> <span class="n">test_expected_df</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]),</span>
+        <span class="p">),</span>
+        <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">interactions_to_split</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">interactions_to_split</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+    <span class="p">)</span>
+
+    <span class="p">(</span><span class="n">train_actual</span><span class="p">,</span> <span class="n">validate_actual</span><span class="p">,</span> <span class="n">test_actual</span><span class="p">)</span> <span class="o">=</span> <span class="n">random_split</span><span class="p">(</span>
+        <span class="n">mat</span><span class="o">=</span><span class="n">interactions_to_split</span><span class="p">,</span> <span class="n">val_p</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">test_p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span>
+    <span class="p">)</span>
+
+    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">train_actual</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">train_expected</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span>
+        <span class="n">validate_actual</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">validate_expected</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">test_actual</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">test_expected</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="n">train_actual</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">train_expected</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">validate_actual</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">validate_expected</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">test_actual</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">test_expected</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="n">train_actual</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">train_expected</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">validate_actual</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">validate_expected</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">test_actual</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">test_expected</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="nb">type</span><span class="p">(</span><span class="n">train_actual</span><span class="p">)</span>
+        <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">train_expected</span><span class="p">)</span>
+        <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">validate_actual</span><span class="p">)</span>
+        <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">validate_expected</span><span class="p">)</span>
+        <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">test_actual</span><span class="p">)</span>
+        <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">test_expected</span><span class="p">)</span>
+    <span class="p">)</span>
+
+<span class="n">test_random_split</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Stratified-split">Stratified split<a class="anchor-link" href="#Stratified-split"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="stratified_split" class="doc_header"><code>stratified_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L118" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>stratified_split</code>(<strong><code>mat</code></strong>, <strong><code>val_p</code></strong>=<em><code>0.0</code></em>, <strong><code>test_p</code></strong>=<em><code>0.2</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
+</blockquote>
+<p>Split into train, validate, and test datasets in a stratified
+manner such that each user appears at least once in each of the datasets.
+This split guarantees that every user will be represented in the training, validation, and
+testing datasets given they appear at least three times. If <code>val_p ==
+0</code>, they will appear in the training and testing datasets given they appear at least two times.
+If a user appears fewer than this number of times, a <code>ValueError</code> will
+be raised.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+
+<span class="k">def</span> <span class="nf">test_stratified_split</span><span class="p">():</span>
+
+    <span class="n">interactions_to_split_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+        <span class="s1">&#39;item_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+        <span class="s1">&#39;rating&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="n">interactions_to_split</span><span class="o">=</span><span class="n">coo_matrix</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="n">interactions_to_split_df</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">],</span>
+            <span class="p">(</span><span class="n">interactions_to_split_df</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">],</span> <span class="n">interactions_to_split_df</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]),</span>
+        <span class="p">),</span>
+        <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">interactions_to_split_df</span><span class="o">.</span><span class="n">user_id</span><span class="o">.</span><span class="n">nunique</span><span class="p">(),</span> <span class="n">interactions_to_split_df</span><span class="o">.</span><span class="n">item_id</span><span class="o">.</span><span class="n">nunique</span><span class="p">()),</span>
+    <span class="p">)</span>
+
+    <span class="n">train_expected_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+            <span class="s1">&#39;item_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+            <span class="s1">&#39;rating&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>  
+        <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="n">train_expected</span><span class="o">=</span><span class="n">coo_matrix</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="n">train_expected_df</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">],</span>
+            <span class="p">(</span><span class="n">train_expected_df</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">],</span> <span class="n">train_expected_df</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]),</span>
+        <span class="p">),</span>
+        <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">interactions_to_split</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">interactions_to_split</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+    <span class="p">)</span>
+
+    <span class="n">validate_expected_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s1">&#39;item_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s1">&#39;rating&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">]}</span>
+    <span class="p">)</span>
+    <span class="n">validate_expected</span><span class="o">=</span><span class="n">coo_matrix</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="n">validate_expected_df</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">],</span>
+            <span class="p">(</span><span class="n">validate_expected_df</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">],</span> <span class="n">validate_expected_df</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]),</span>
+        <span class="p">),</span>
+        <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">interactions_to_split</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">interactions_to_split</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+    <span class="p">)</span>
+
+    <span class="n">test_expected_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+        <span class="n">data</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">&#39;user_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span>
+            <span class="s1">&#39;item_id&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+            <span class="s1">&#39;rating&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+        <span class="p">}</span>
+    <span class="p">)</span>
+    <span class="n">test_expected</span><span class="o">=</span><span class="n">coo_matrix</span><span class="p">(</span>
+        <span class="p">(</span>
+            <span class="n">test_expected_df</span><span class="p">[</span><span class="s1">&#39;rating&#39;</span><span class="p">],</span>
+            <span class="p">(</span><span class="n">test_expected_df</span><span class="p">[</span><span class="s1">&#39;user_id&#39;</span><span class="p">],</span> <span class="n">test_expected_df</span><span class="p">[</span><span class="s1">&#39;item_id&#39;</span><span class="p">]),</span>
+        <span class="p">),</span>
+        <span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">interactions_to_split</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">interactions_to_split</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]),</span>
+    <span class="p">)</span>
+
+    <span class="p">(</span><span class="n">train_actual</span><span class="p">,</span> <span class="n">validate_actual</span><span class="p">,</span> <span class="n">test_actual</span><span class="p">)</span> <span class="o">=</span> <span class="n">stratified_split</span><span class="p">(</span>
+        <span class="n">mat</span><span class="o">=</span><span class="n">interactions_to_split</span><span class="p">,</span> <span class="n">val_p</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">test_p</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span>
+    <span class="p">)</span>
+
+    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">train_actual</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">train_expected</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span>
+        <span class="n">validate_actual</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">validate_expected</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_equal</span><span class="p">(</span><span class="n">test_actual</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">test_expected</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="n">train_actual</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">train_expected</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">validate_actual</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">validate_expected</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">test_actual</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">test_expected</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="n">train_actual</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">train_expected</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">validate_actual</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">validate_expected</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">test_actual</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="o">==</span> <span class="n">test_expected</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="k">assert</span> <span class="p">(</span>
+        <span class="nb">type</span><span class="p">(</span><span class="n">train_actual</span><span class="p">)</span>
+        <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">train_expected</span><span class="p">)</span>
+        <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">validate_actual</span><span class="p">)</span>
+        <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">validate_expected</span><span class="p">)</span>
+        <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">test_actual</span><span class="p">)</span>
+        <span class="o">==</span> <span class="nb">type</span><span class="p">(</span><span class="n">test_expected</span><span class="p">)</span>
+    <span class="p">)</span>
+
+
+<span class="n">test_stratified_split</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Split-by-Ratio">Split by Ratio<a class="anchor-link" href="#Split-by-Ratio"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="split_by_ratio" class="doc_header"><code>split_by_ratio</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L180" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>split_by_ratio</code>(<strong><code>data</code></strong>, <strong><code>shuffle</code></strong>=<em><code>False</code></em>, <strong><code>test_size</code></strong>=<em><code>None</code></em>, <strong><code>pad_unknown</code></strong>=<em><code>True</code></em>, <strong><code>filter_unknown</code></strong>=<em><code>False</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
 </blockquote>
 
 </div>
@@ -351,7 +663,7 @@ test:
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Last-session-out-Split">Last-session-out Split<a class="anchor-link" href="#Last-session-out-Split"> </a></h3>
+<h2 id="Last-session-out-Split">Last-session-out Split<a class="anchor-link" href="#Last-session-out-Split"> </a></h2>
 </div>
 </div>
 </div>
@@ -366,7 +678,7 @@ test:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="last_session_out_split" class="doc_header"><code>last_session_out_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L94" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>last_session_out_split</code>(<strong><code>data</code></strong>, <strong><code>user_key</code></strong>=<em><code>'user_id'</code></em>, <strong><code>session_key</code></strong>=<em><code>'session_id'</code></em>, <strong><code>time_key</code></strong>=<em><code>'ts'</code></em>)</p>
+<h4 id="last_session_out_split" class="doc_header"><code>last_session_out_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L226" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>last_session_out_split</code>(<strong><code>data</code></strong>, <strong><code>user_key</code></strong>=<em><code>'user_id'</code></em>, <strong><code>session_key</code></strong>=<em><code>'session_id'</code></em>, <strong><code>time_key</code></strong>=<em><code>'ts'</code></em>)</p>
 </blockquote>
 <p>Assign the last session of every user to the test set and the remaining ones to the training set</p>
 
@@ -720,7 +1032,7 @@ test:
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Random-Split">Random Split<a class="anchor-link" href="#Random-Split"> </a></h3>
+<h2 id="Random-Split-v2">Random Split v2<a class="anchor-link" href="#Random-Split-v2"> </a></h2>
 </div>
 </div>
 </div>
@@ -735,7 +1047,7 @@ test:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="random_split" class="doc_header"><code>random_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L291" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>random_split</code>(<strong><code>data</code></strong>, <strong><code>ratio</code></strong>=<em><code>0.8</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
+<h4 id="random_split_v2" class="doc_header"><code>random_split_v2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L423" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>random_split_v2</code>(<strong><code>data</code></strong>, <strong><code>ratio</code></strong>=<em><code>0.8</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
 </blockquote>
 <p>Pandas random splitter.
 The splitter randomly splits the input data.
@@ -769,7 +1081,7 @@ Returns:
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Chrono-Split">Chrono Split<a class="anchor-link" href="#Chrono-Split"> </a></h3>
+<h2 id="Chrono-Split">Chrono Split<a class="anchor-link" href="#Chrono-Split"> </a></h2>
 </div>
 </div>
 </div>
@@ -784,7 +1096,7 @@ Returns:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="chrono_split" class="doc_header"><code>chrono_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L316" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>chrono_split</code>(<strong><code>data</code></strong>, <strong><code>ratio</code></strong>=<em><code>0.75</code></em>, <strong><code>min_rating</code></strong>=<em><code>1</code></em>, <strong><code>filter_by</code></strong>=<em><code>'user'</code></em>, <strong><code>col_user</code></strong>=<em><code>'USERID'</code></em>, <strong><code>col_item</code></strong>=<em><code>'ITEMID'</code></em>, <strong><code>col_timestamp</code></strong>=<em><code>'TIMESTAMP'</code></em>)</p>
+<h4 id="chrono_split" class="doc_header"><code>chrono_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L448" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>chrono_split</code>(<strong><code>data</code></strong>, <strong><code>ratio</code></strong>=<em><code>0.75</code></em>, <strong><code>min_rating</code></strong>=<em><code>1</code></em>, <strong><code>filter_by</code></strong>=<em><code>'user'</code></em>, <strong><code>col_user</code></strong>=<em><code>'USERID'</code></em>, <strong><code>col_item</code></strong>=<em><code>'ITEMID'</code></em>, <strong><code>col_timestamp</code></strong>=<em><code>'TIMESTAMP'</code></em>)</p>
 </blockquote>
 <p>Pandas chronological splitter.
 This function splits data in a chronological manner. That is, for each user / item, the
@@ -826,7 +1138,7 @@ Returns:
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Stratified-Split">Stratified Split<a class="anchor-link" href="#Stratified-Split"> </a></h3>
+<h2 id="Stratified-Split-v2">Stratified Split v2<a class="anchor-link" href="#Stratified-Split-v2"> </a></h2>
 </div>
 </div>
 </div>
@@ -841,7 +1153,7 @@ Returns:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="stratified_split" class="doc_header"><code>stratified_split</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L358" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>stratified_split</code>(<strong><code>data</code></strong>, <strong><code>ratio</code></strong>=<em><code>0.75</code></em>, <strong><code>min_rating</code></strong>=<em><code>1</code></em>, <strong><code>filter_by</code></strong>=<em><code>'user'</code></em>, <strong><code>col_user</code></strong>=<em><code>'USERID'</code></em>, <strong><code>col_item</code></strong>=<em><code>'ITEMID'</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
+<h4 id="stratified_split_v2" class="doc_header"><code>stratified_split_v2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L490" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>stratified_split_v2</code>(<strong><code>data</code></strong>, <strong><code>ratio</code></strong>=<em><code>0.75</code></em>, <strong><code>min_rating</code></strong>=<em><code>1</code></em>, <strong><code>filter_by</code></strong>=<em><code>'user'</code></em>, <strong><code>col_user</code></strong>=<em><code>'USERID'</code></em>, <strong><code>col_item</code></strong>=<em><code>'ITEMID'</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
 </blockquote>
 <p>Pandas stratified splitter.
 For each user / item, the split function takes proportions of ratings which is

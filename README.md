@@ -36,7 +36,7 @@
 </div>
 
 
-<!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 <img src="https://github.com/recohut/reco-static/raw/master/media/diagrams/recohut_lib_main.svg">
@@ -50,10 +50,8 @@
 
 * [Python](https://www.python.org/)
 * [PyTorch](https://pytorch.org/)
-* [Numpy](https://numpy.org/)
-* [Pandas](https://pandas.pydata.org/)
+* [Lightning](https://www.pytorchlightning.ai/)
 * [nbdev](https://github.com/fastai/nbdev)
-* [Jupyter](https://jupyter.org/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -69,6 +67,10 @@ To get a local copy up and running follow these simple example steps.
 * pytorch
   ```sh
   pip install torch
+  ```
+* lightning
+  ```sh
+  pip install pytorch-lightning
   ```
 
 ### Installation
@@ -86,20 +88,41 @@ pip install recohut
 
 ```python
 # import the required modules
-import recohut
-from recohut.datasets import MovieLens
-from recohut.models import MatrixFactorization
+from recohut.datasets.movielens import ML1mDataModule
+from recohut.models.nmf import NMF
+from recohut.trainers.pl_trainer import pl_trainer
 
-# define the data and model
-data = MovieLens(version='100k', download=True)
-model = MatrixFactorization()
+# build the dataset
+class Args:
+    def __init__(self):
+        self.data_dir = '/content/data'
+        self.min_rating = 4
+        self.num_negative_samples = 99
+        self.min_uc = 5
+        self.min_sc = 5
+        self.val_p = 0.2
+        self.test_p = 0.2
+        self.num_workers = 2
+        self.normalize = False
+        self.batch_size = 32
+        self.seed = 42
+        self.shuffle = True
+        self.pin_memory = True
+        self.drop_last = False
+        self.split_type = 'stratified'
 
-# train the matrix factorization model
-model.train(data)
+args = Args()
 
-# evaluate the model
-model.evaluate(metrics=['MRR','HR'])
+ds = ML1mDataModule(**args.__dict__)
+ds.prepare_data()
+
+# build the model
+model = NMF(n_items=ds.data.num_items, n_users=ds.data.num_users, embedding_dim=20)
+
+# train and evaluate the matrix factorization model
+pl_trainer(model, ds, max_epochs=5)
 ```
+Check [this](https://github.com/recohut/notebooks/blob/main/nbs/recohut_quick_tutorial.ipynb) quick tutorial.
 
 _For more examples, please refer to the [Documentation](https://recohut-projects.github.io/recohut) and [Tutorials](https://github.com/RecoHut-Projects/recohut/tree/master/tutorials)._
 
@@ -150,9 +173,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - Sparsh A.
+Sparsh A.
 
-Project Link: [https://github.com/RecoHut-Projects/recohut](https://github.com/RecoHut-Projects/recohut)
+[@sparsh-ai](https://github.com/RecoHut-Projects/recohut)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

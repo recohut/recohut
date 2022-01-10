@@ -47,87 +47,7 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="calculate_precision_recall" class="doc_header"><code>calculate_precision_recall</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L13" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>calculate_precision_recall</code>(<strong><code>X</code></strong>, <strong><code>y_true</code></strong>, <strong><code>y_pred</code></strong>, <strong><code>N</code></strong>, <strong><code>threshold</code></strong>)</p>
-</blockquote>
-<p>Calculate the precision and recall scores.</p>
-<p>Args:
-    X
-    y_true
-    y_pred
-    N
-    threshold</p>
-<p>Returns:
-    precision_score (float)
-    recall_score (float)</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="calculate_ndcg" class="doc_header"><code>calculate_ndcg</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L55" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>calculate_ndcg</code>(<strong><code>X</code></strong>, <strong><code>y_true</code></strong>, <strong><code>y_pred</code></strong>, <strong><code>N</code></strong>)</p>
-</blockquote>
-<p>Calculate the NDCG score.</p>
-<p>Args:
-    X
-    y_true
-    y_pred
-    N</p>
-<p>Returns:
-    ndcg_score (float)</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="recall" class="doc_header"><code>recall</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L86" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>recall</code>(<strong><code>scores</code></strong>, <strong><code>labels</code></strong>, <strong><code>k</code></strong>)</p>
+<h4 id="NDCG" class="doc_header"><code>NDCG</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L9" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>NDCG</code>(<strong><code>true</code></strong>, <strong><code>pred</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -144,13 +64,6 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
 <div class="output_wrapper">
 <div class="output">
 
@@ -158,7 +71,7 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="ndcg" class="doc_header"><code>ndcg</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L95" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ndcg</code>(<strong><code>scores</code></strong>, <strong><code>labels</code></strong>, <strong><code>k</code></strong>)</p>
+<h4 id="APAK" class="doc_header"><code>APAK</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L16" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>APAK</code>(<strong><code>true</code></strong>, <strong><code>pred</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -175,6 +88,23 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="HR" class="doc_header"><code>HR</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L23" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>HR</code>(<strong><code>true</code></strong>, <strong><code>pred</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     {% endraw %}
 
@@ -189,7 +119,7 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="recalls_and_ndcgs_for_ks" class="doc_header"><code>recalls_and_ndcgs_for_ks</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L109" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>recalls_and_ndcgs_for_ks</code>(<strong><code>scores</code></strong>, <strong><code>labels</code></strong>, <strong><code>ks</code></strong>)</p>
+<h4 id="get_eval_metrics" class="doc_header"><code>get_eval_metrics</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L28" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_eval_metrics</code>(<strong><code>scores</code></strong>, <strong><code>true</code></strong>, <strong><code>k</code></strong>=<em><code>10</code></em>)</p>
 </blockquote>
 
 </div>
@@ -216,46 +146,15 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="p">[{</span><span class="mi">1</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">},</span>
+          <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">},</span>
+          <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">},</span>
+          <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">},</span>
+          <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mi">3</span><span class="p">:</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mi">4</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">9</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">}]</span>
 
-<span class="n">sample_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_records</span><span class="p">(</span>
-    <span class="p">[{</span><span class="s1">&#39;deepmf&#39;</span><span class="p">:</span> <span class="mf">2.7268011569976807</span><span class="p">,</span>
-  <span class="s1">&#39;item&#39;</span><span class="p">:</span> <span class="mi">496</span><span class="p">,</span>
-  <span class="s1">&#39;ncf&#39;</span><span class="p">:</span> <span class="mf">2.854853630065918</span><span class="p">,</span>
-  <span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="mi">68</span><span class="p">,</span>
-  <span class="s1">&#39;vdeepmf&#39;</span><span class="p">:</span> <span class="mf">2.4722371101379395</span><span class="p">,</span>
-  <span class="s1">&#39;vncf&#39;</span><span class="p">:</span> <span class="mf">2.620150566101074</span><span class="p">,</span>
-  <span class="s1">&#39;y_test&#39;</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">},</span>
- <span class="p">{</span><span class="s1">&#39;deepmf&#39;</span><span class="p">:</span> <span class="mf">3.3491923809051514</span><span class="p">,</span>
-  <span class="s1">&#39;item&#39;</span><span class="p">:</span> <span class="mi">473</span><span class="p">,</span>
-  <span class="s1">&#39;ncf&#39;</span><span class="p">:</span> <span class="mf">3.0023105144500732</span><span class="p">,</span>
-  <span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="mi">633</span><span class="p">,</span>
-  <span class="s1">&#39;vdeepmf&#39;</span><span class="p">:</span> <span class="mf">2.847424030303955</span><span class="p">,</span>
-  <span class="s1">&#39;vncf&#39;</span><span class="p">:</span> <span class="mf">2.6900570392608643</span><span class="p">,</span>
-  <span class="s1">&#39;y_test&#39;</span><span class="p">:</span> <span class="mf">3.5</span><span class="p">},</span>
- <span class="p">{</span><span class="s1">&#39;deepmf&#39;</span><span class="p">:</span> <span class="mf">3.7268624305725098</span><span class="p">,</span>
-  <span class="s1">&#39;item&#39;</span><span class="p">:</span> <span class="mi">329</span><span class="p">,</span>
-  <span class="s1">&#39;ncf&#39;</span><span class="p">:</span> <span class="mf">3.605560779571533</span><span class="p">,</span>
-  <span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="mi">1405</span><span class="p">,</span>
-  <span class="s1">&#39;vdeepmf&#39;</span><span class="p">:</span> <span class="mf">3.810497283935547</span><span class="p">,</span>
-  <span class="s1">&#39;vncf&#39;</span><span class="p">:</span> <span class="mf">3.466035842895508</span><span class="p">,</span>
-  <span class="s1">&#39;y_test&#39;</span><span class="p">:</span> <span class="mf">4.0</span><span class="p">},</span>
- <span class="p">{</span><span class="s1">&#39;deepmf&#39;</span><span class="p">:</span> <span class="mf">3.4670088291168213</span><span class="p">,</span>
-  <span class="s1">&#39;item&#39;</span><span class="p">:</span> <span class="mi">328</span><span class="p">,</span>
-  <span class="s1">&#39;ncf&#39;</span><span class="p">:</span> <span class="mf">3.389759063720703</span><span class="p">,</span>
-  <span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="mi">1240</span><span class="p">,</span>
-  <span class="s1">&#39;vdeepmf&#39;</span><span class="p">:</span> <span class="mf">3.6399013996124268</span><span class="p">,</span>
-  <span class="s1">&#39;vncf&#39;</span><span class="p">:</span> <span class="mf">3.205043315887451</span><span class="p">,</span>
-  <span class="s1">&#39;y_test&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">},</span>
- <span class="p">{</span><span class="s1">&#39;deepmf&#39;</span><span class="p">:</span> <span class="mf">3.140076160430908</span><span class="p">,</span>
-  <span class="s1">&#39;item&#39;</span><span class="p">:</span> <span class="mi">54</span><span class="p">,</span>
-  <span class="s1">&#39;ncf&#39;</span><span class="p">:</span> <span class="mf">3.1944096088409424</span><span class="p">,</span>
-  <span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="mi">841</span><span class="p">,</span>
-  <span class="s1">&#39;vdeepmf&#39;</span><span class="p">:</span> <span class="mf">2.887760877609253</span><span class="p">,</span>
-  <span class="s1">&#39;vncf&#39;</span><span class="p">:</span> <span class="mf">2.848487138748169</span><span class="p">,</span>
-  <span class="s1">&#39;y_test&#39;</span><span class="p">:</span> <span class="mf">3.0</span><span class="p">}]</span>
-<span class="p">)</span>
-<span class="n">sample_data</span>
+<span class="n">true</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">],[</span><span class="mi">4</span><span class="p">]])</span>
+<span class="n">metric</span> <span class="o">=</span> <span class="n">get_eval_metrics</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">true</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">metric</span>
 </pre></div>
 
     </div>
@@ -268,167 +167,9 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
 <div class="output_area">
 
 
-<div class="output_html rendered_html output_subarea output_execute_result">
 
-  <div id="df-58b30018-5fc4-4258-b49c-935742dcba6d">
-    <div class="colab-df-container">
-      <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>deepmf</th>
-      <th>item</th>
-      <th>ncf</th>
-      <th>user</th>
-      <th>vdeepmf</th>
-      <th>vncf</th>
-      <th>y_test</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2.726801</td>
-      <td>496</td>
-      <td>2.854854</td>
-      <td>68</td>
-      <td>2.472237</td>
-      <td>2.620151</td>
-      <td>3.0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>3.349192</td>
-      <td>473</td>
-      <td>3.002311</td>
-      <td>633</td>
-      <td>2.847424</td>
-      <td>2.690057</td>
-      <td>3.5</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3.726862</td>
-      <td>329</td>
-      <td>3.605561</td>
-      <td>1405</td>
-      <td>3.810497</td>
-      <td>3.466036</td>
-      <td>4.0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>3.467009</td>
-      <td>328</td>
-      <td>3.389759</td>
-      <td>1240</td>
-      <td>3.639901</td>
-      <td>3.205043</td>
-      <td>0.5</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>3.140076</td>
-      <td>54</td>
-      <td>3.194410</td>
-      <td>841</td>
-      <td>2.887761</td>
-      <td>2.848487</td>
-      <td>3.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-58b30018-5fc4-4258-b49c-935742dcba6d')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-58b30018-5fc4-4258-b49c-935742dcba6d button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-58b30018-5fc4-4258-b49c-935742dcba6d');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  
+<div class="output_text output_subarea output_execute_result">
+<pre>(0.4261859357357025, 0.36666667461395264, 0.6000000238418579)</pre>
 </div>
 
 </div>
@@ -446,20 +187,28 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_recommendations</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;ncf&#39;</span>
-<span class="n">like_threshold</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="n">ids</span> <span class="o">=</span> <span class="n">sample_data</span><span class="p">[[</span><span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="s1">&#39;item&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">y_true</span> <span class="o">=</span> <span class="n">sample_data</span><span class="p">[</span><span class="s1">&#39;y_test&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">sample_data</span><span class="p">[</span><span class="n">method</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
-<span class="n">precision</span><span class="p">,</span> <span class="n">recall</span> <span class="o">=</span> <span class="n">calculate_precision_recall</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">num_recommendations</span><span class="p">,</span> <span class="n">like_threshold</span><span class="p">)</span>
-
-<span class="n">test_eq</span><span class="p">(</span><span class="n">precision</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">)</span>
-<span class="n">test_eq</span><span class="p">(</span><span class="n">recall</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">true</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">4</span><span class="p">],[</span><span class="mi">4</span><span class="p">],[</span><span class="mi">4</span><span class="p">],[</span><span class="mi">4</span><span class="p">],[</span><span class="mi">4</span><span class="p">]])</span>
+<span class="n">metric</span> <span class="o">=</span> <span class="n">get_eval_metrics</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">true</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">metric</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(1.0, 1.0, 1.0)</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -473,663 +222,28 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample_data_2</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;y_true&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]),</span>
-    <span class="s1">&#39;y_pred&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">]),</span>
-    <span class="s1">&#39;ids&#39;</span><span class="p">:</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],[</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">]]),</span>
-<span class="p">}</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">true</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mi">9</span><span class="p">],[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">9</span><span class="p">],[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">metric</span> <span class="o">=</span> <span class="n">get_eval_metrics</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">true</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">metric</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_recommendations</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">ids</span> <span class="o">=</span> <span class="n">sample_data_2</span><span class="p">[</span><span class="s1">&#39;ids&#39;</span><span class="p">]</span>
-<span class="n">y_true</span> <span class="o">=</span> <span class="n">sample_data_2</span><span class="p">[</span><span class="s1">&#39;y_true&#39;</span><span class="p">]</span>
-<span class="n">y_pred</span> <span class="o">=</span> <span class="n">sample_data_2</span><span class="p">[</span><span class="s1">&#39;y_pred&#39;</span><span class="p">]</span>
-<span class="n">ndcg</span> <span class="o">=</span> <span class="n">calculate_ndcg</span><span class="p">(</span><span class="n">ids</span><span class="p">,</span> <span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">num_recommendations</span><span class="p">)</span>
-<span class="n">test_close</span><span class="p">(</span><span class="n">ndcg</span><span class="p">,</span> <span class="mf">0.9686</span><span class="p">,</span> <span class="n">eps</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="NDCG">NDCG<a class="anchor-link" href="#NDCG"> </a></h2><blockquote><p>Normalized Discounted Cumulative Gain.</p>
-</blockquote>
-<p>NDCG is a metric that evaluates how well the recommender performs in recommending ranked items to users. Therefore both hit of relevant items and correctness in ranking of these items matter to the NDCG evaluation. The total NDCG score is normalized by the total number of users.</p>
-<p>nDCG has three parts. First is ‘CG’ which stands for Cumulative Gains. It deals with the fact that most relevant items are more useful than somewhat relevant items that are more useful than irrelevant items. It sums the items based on its relevancy, hence, the term cumulative.</p>
-<p>But CG doesn’t account for the position of the items on the list. And hence, changing the item's position won’t change the CG. This is where the second part of nDCG comes in to play i.e. ‘D’. Discounted Cumulative Gain, DCG for short, penalized the items that appear lower in the list. A relevant item appearing at the end of the list is a result of a bad recommender system and hence that item should be discounted to indicate the bad performance of the model.</p>
-<p>nDCG normalized the DCG values of the different number of the items lists. To do so we sort the item list by relevancy and calculate the DCG for that list. This will be the perfect DCG score as items are sorted by their relevancy score.</p>
-<p><img src="https://camo.githubusercontent.com/b8491f0e8346610f9ec4dd04753bfa14095e21cafd3251f3221b0500867f7648/68747470733a2f2f6769746875622e636f6d2f7265636f6875742f7265636f2d7374617469632f7261772f6d61737465722f6d656469612f696d616765732f6d6574726963732f6e6463672e706e67"></p>
-
-</div>
-</div>
-</div>
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
 <div class="output_wrapper">
 <div class="output">
 
 <div class="output_area">
 
 
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="ndcg_at_k" class="doc_header"><code>ndcg_at_k</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L135" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ndcg_at_k</code>(<strong><code>y_true_list</code></strong>, <strong><code>y_reco_list</code></strong>, <strong><code>users</code></strong>=<em><code>None</code></em>, <strong><code>k</code></strong>=<em><code>10</code></em>, <strong><code>next_item</code></strong>=<em><code>False</code></em>, <strong><code>all_item</code></strong>=<em><code>False</code></em>)</p>
-</blockquote>
 
+<div class="output_text output_subarea output_execute_result">
+<pre>(0.0, 0.0, 0.0)</pre>
 </div>
 
 </div>
 
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="ndcg_one" class="doc_header"><code>ndcg_one</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L169" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ndcg_one</code>(<strong><code>y_true</code></strong>, <strong><code>y_reco</code></strong>, <strong><code>k</code></strong>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="dcg_at_k" class="doc_header"><code>dcg_at_k</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L186" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>dcg_at_k</code>(<strong><code>r</code></strong>, <strong><code>k</code></strong>, <strong><code>method</code></strong>=<em><code>0</code></em>)</p>
-</blockquote>
-<p>Args:
-    r: Relevance scores (list or numpy) in rank order
-        (first element is the first item)
-    k: Number of results to consider
-    method: If 0 then weights are [1.0, 1.0, 0.6309, 0.5, 0.4307, ...]
-            If 1 then weights are [1.0, 0.6309, 0.5, 0.4307, ...]
-Returns:
-    Discounted cumulative gain</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">dcg_at_k</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">6</span><span class="p">)</span>
-<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="mf">8.0972</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="ndcg_at_k_v2" class="doc_header"><code>ndcg_at_k_v2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L208" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ndcg_at_k_v2</code>(<strong><code>r</code></strong>, <strong><code>k</code></strong>, <strong><code>method</code></strong>=<em><code>0</code></em>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">ndcg_at_k_v2</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">6</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span> <span class="mf">0.9608</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="one_hot_1d" class="doc_header"><code>one_hot_1d</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L286" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>one_hot_1d</code>(<strong><code>labels</code></strong>:<code>Tensor</code>, <strong><code>num_classes</code></strong>:<code>int</code>, <strong><code>device</code></strong>:<code>Optional</code>[<code>device</code>]=<em><code>None</code></em>, <strong><code>dtype</code></strong>:<code>Optional</code>[<code>dtype</code>]=<em><code>torch.float32</code></em>)</p>
-</blockquote>
-<p>Coverts a 1d label tensor to one-hot representation
-Args:
-    labels (torch.Tensor) : tensor with labels of shape :math:<code>(N, H, W)</code>,
-                            where N is batch siz. Each value is an integer
-                            representing correct classification.
-    num_classes (int): number of classes in labels.
-    device (Optional[torch.device]): the desired device of returned tensor.
-     Default: if None, uses the current device for the default tensor type
-     (see torch.set_default_tensor_type()). device will be the CPU for CPU
-     tensor types and the current CUDA device for CUDA tensor types.
-    dtype (Optional[torch.dtype]): the desired data type of returned
-     tensor. Default: torch.float32
-Returns:
-    torch.Tensor: the labels in one hot tensor.
-Examples::</p>
-
-<pre><code>&gt;&gt;&gt; labels = torch.LongTensor([0, 1, 2, 0])
-&gt;&gt;&gt; one_hot_1d(labels, num_classes=3)
-tensor([[1., 0., 0.],
-        [0., 1., 0.],
-        [0., 0., 1.],
-        [1., 0., 0.],
-       ])</code></pre>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="RankingMetric" class="doc_header"><code>class</code> <code>RankingMetric</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L338" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>RankingMetric</code>(<strong><code>top_ks</code></strong>=<em><code>None</code></em>, <strong><code>labels_onehot</code></strong>=<em><code>False</code></em>) :: <code>Metric</code></p>
-</blockquote>
-<p>Metric wrapper for computing ranking metrics@K for session-based task.</p>
-<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>top_ks : list, default [2, 5])
-    list of cutoffs
-labels_onehot : bool
-    Enable transform the labels to one-hot representation</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="PrecisionAt" class="doc_header"><code>class</code> <code>PrecisionAt</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L375" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PrecisionAt</code>(<strong><code>top_ks</code></strong>=<em><code>None</code></em>, <strong><code>labels_onehot</code></strong>=<em><code>False</code></em>) :: <a href="/recohut/evaluation.metrics.html#RankingMetric"><code>RankingMetric</code></a></p>
-</blockquote>
-<p>Metric wrapper for computing ranking metrics@K for session-based task.</p>
-<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>top_ks : list, default [2, 5])
-    list of cutoffs
-labels_onehot : bool
-    Enable transform the labels to one-hot representation</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="RecallAt" class="doc_header"><code>class</code> <code>RecallAt</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L405" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>RecallAt</code>(<strong><code>top_ks</code></strong>=<em><code>None</code></em>, <strong><code>labels_onehot</code></strong>=<em><code>False</code></em>) :: <a href="/recohut/evaluation.metrics.html#RankingMetric"><code>RankingMetric</code></a></p>
-</blockquote>
-<p>Metric wrapper for computing ranking metrics@K for session-based task.</p>
-<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>top_ks : list, default [2, 5])
-    list of cutoffs
-labels_onehot : bool
-    Enable transform the labels to one-hot representation</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="AvgPrecisionAt" class="doc_header"><code>class</code> <code>AvgPrecisionAt</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L446" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AvgPrecisionAt</code>(<strong><code>top_ks</code></strong>=<em><code>None</code></em>, <strong><code>labels_onehot</code></strong>=<em><code>False</code></em>) :: <a href="/recohut/evaluation.metrics.html#RankingMetric"><code>RankingMetric</code></a></p>
-</blockquote>
-<p>Metric wrapper for computing ranking metrics@K for session-based task.</p>
-<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>top_ks : list, default [2, 5])
-    list of cutoffs
-labels_onehot : bool
-    Enable transform the labels to one-hot representation</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#     def __init__(self, top_ks=None, labels_onehot=False):</span>
-<span class="c1">#         super(MRRAt, self).__init__(top_ks=top_ks, labels_onehot=labels_onehot)</span>
-
-<span class="c1">#     def _metric(self, ks: torch.Tensor, scores: torch.Tensor, labels: torch.Tensor) -&gt; torch.Tensor:</span>
-<span class="c1">#         &quot;&quot;&quot;Compute mean reciprocal rank at K for provided cutoffs</span>
-<span class="c1">#         Parameters</span>
-<span class="c1">#         ----------</span>
-<span class="c1">#         ks : torch.Tensor or list</span>
-<span class="c1">#             list of cutoffs</span>
-<span class="c1">#         scores : torch.Tensor</span>
-<span class="c1">#             2-dim tensor of predicted item scores</span>
-<span class="c1">#         labels : torch.Tensor</span>
-<span class="c1">#             2-dim tensor of true item labels</span>
-<span class="c1">#         Returns</span>
-<span class="c1">#         -------</span>
-<span class="c1">#         torch.Tensor:</span>
-<span class="c1">#             list of mrr scores at cutoffs</span>
-<span class="c1">#         &quot;&quot;&quot;</span>
-<span class="c1">#         ks, scores, labels = _check_inputs(ks, scores, labels)</span>
-<span class="c1">#         topk_scores, _, topk_labels = _extract_topk(ks, scores, labels)</span>
-<span class="c1">#         mrrs = _create_output_placeholder(scores, ks)</span>
-
-<span class="c1">#         # Compute mrr scores at K</span>
-<span class="c1">#         # for index, k in enumerate(ks):</span>
-<span class="c1">#             # topk_labels = topk_labels[torch.argsort(topk_scores[:,:k], dim=-1, descending=True)]</span>
-<span class="c1">#             # position = torch.nonzero(topk_labels)</span>
-<span class="c1">#             # mrrs[:, index] = 1.0 / (position[0] + 1.0).to(</span>
-<span class="c1">#             #     dtype=torch.float32, device=scores.device</span>
-<span class="c1">#             # )</span>
-
-<span class="c1">#         return topk_labels</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># batch_size = 10 # The number of ranked lists to process</span>
-<span class="c1"># cutoffs = [10, 20, 50, 100] # Cutoffs for the number of positions to include when computing metrics</span>
-
-<span class="c1"># # labels: A large tensor of binary relevance labels</span>
-<span class="c1"># probabilities = torch.empty(batch_size, num_items).fill_(0.5)</span>
-<span class="c1"># labels = torch.bernoulli(probabilities)</span>
-
-<span class="c1"># # scores: A large tensor of simulated relevance scores</span>
-<span class="c1"># scores = torch.empty(batch_size, num_items).uniform_(0, 1)</span>
-
-<span class="c1"># metric_at_k = MRRAt(cutoffs)</span>
-
-<span class="c1"># # metric has correct shape?</span>
-<span class="c1"># p_at_ks = metric_at_k(scores, labels)</span>
-<span class="c1"># # test_eq(len(p_at_ks.shape), 1)</span>
-<span class="c1"># # test_eq(len(p_at_ks), len(cutoffs))</span>
-
-<span class="c1"># # # metric is all zero when nothing is relevant</span>
-<span class="c1"># # p_at_ks = metric_at_k(scores, torch.zeros(batch_size, num_items))</span>
-<span class="c1"># # test_eq(int(torch.count_nonzero(p_at_ks)), 0)</span>
-
-<span class="c1"># # # metric is all one when everything is relevant</span>
-<span class="c1"># # p_at_ks = metric_at_k(scores, torch.ones(batch_size, num_items))</span>
-<span class="c1"># # test_eq(int(torch.count_nonzero(p_at_ks)), len(cutoffs))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="DCGAt" class="doc_header"><code>class</code> <code>DCGAt</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L486" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DCGAt</code>(<strong><code>top_ks</code></strong>=<em><code>None</code></em>, <strong><code>labels_onehot</code></strong>=<em><code>False</code></em>) :: <a href="/recohut/evaluation.metrics.html#RankingMetric"><code>RankingMetric</code></a></p>
-</blockquote>
-<p>Metric wrapper for computing ranking metrics@K for session-based task.</p>
-<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>top_ks : list, default [2, 5])
-    list of cutoffs
-labels_onehot : bool
-    Enable transform the labels to one-hot representation</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="NDCGAt" class="doc_header"><code>class</code> <code>NDCGAt</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L533" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>NDCGAt</code>(<strong><code>top_ks</code></strong>=<em><code>None</code></em>, <strong><code>labels_onehot</code></strong>=<em><code>False</code></em>) :: <a href="/recohut/evaluation.metrics.html#RankingMetric"><code>RankingMetric</code></a></p>
-</blockquote>
-<p>Metric wrapper for computing ranking metrics@K for session-based task.</p>
-<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>top_ks : list, default [2, 5])
-    list of cutoffs
-labels_onehot : bool
-    Enable transform the labels to one-hot representation</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_items</span> <span class="o">=</span> <span class="mi">10000</span> <span class="c1"># The number of candidate items to rank</span>
-<span class="n">batch_size</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># The number of ranked lists to process</span>
-<span class="n">cutoffs</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span> <span class="c1"># Cutoffs for the number of positions to include when computing metrics</span>
-
-<span class="c1"># labels: A large tensor of binary relevance labels</span>
-<span class="n">probabilities</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_items</span><span class="p">)</span><span class="o">.</span><span class="n">fill_</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">bernoulli</span><span class="p">(</span><span class="n">probabilities</span><span class="p">)</span>
-
-<span class="c1"># scores: A large tensor of simulated relevance scores</span>
-<span class="n">scores</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_items</span><span class="p">)</span><span class="o">.</span><span class="n">uniform_</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-
-<span class="n">ranking_metrics</span> <span class="o">=</span> <span class="p">[</span><span class="n">PrecisionAt</span><span class="p">,</span> <span class="n">RecallAt</span><span class="p">,</span> <span class="n">AvgPrecisionAt</span><span class="p">,</span> <span class="n">DCGAt</span><span class="p">,</span> <span class="n">NDCGAt</span><span class="p">]</span>
-
-<span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="n">ranking_metrics</span><span class="p">:</span>
-    <span class="n">metric_at_k</span> <span class="o">=</span> <span class="n">metric</span><span class="p">(</span><span class="n">cutoffs</span><span class="p">)</span>
-
-    <span class="c1"># metric has correct shape?</span>
-    <span class="n">p_at_ks</span> <span class="o">=</span> <span class="n">metric_at_k</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">labels</span><span class="p">)</span>
-    <span class="n">test_eq</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">p_at_ks</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="n">test_eq</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">p_at_ks</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">cutoffs</span><span class="p">))</span>
-
-    <span class="c1"># metric is all zero when nothing is relevant</span>
-    <span class="n">p_at_ks</span> <span class="o">=</span> <span class="n">metric_at_k</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_items</span><span class="p">))</span>
-    <span class="n">test_eq</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">p_at_ks</span><span class="p">)),</span> <span class="mi">0</span><span class="p">)</span>
-
-    <span class="c1"># metric is all one when everything is relevant</span>
-    <span class="n">p_at_ks</span> <span class="o">=</span> <span class="n">metric_at_k</span><span class="p">(</span><span class="n">scores</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">batch_size</span><span class="p">,</span> <span class="n">num_items</span><span class="p">))</span>
-    <span class="n">test_eq</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span><span class="n">p_at_ks</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">cutoffs</span><span class="p">))</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 

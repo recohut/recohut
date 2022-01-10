@@ -5,7 +5,8 @@
     "Datasets": {
         "AOTM": "datasets.aotm.html",
         "Avazu": "datasets.avazu.html",
-        "Base": "datasets.base.html",
+        "Base Common": "datasets.bases.common.html",
+        "Base Interactions": "datasets.bases.interactions.html",
         "Criteo": "datasets.criteo.html",
         "Diginetica": "datasets.diginetica.html",
         "Gowalla": "datasets.gowalla.html",
@@ -32,11 +33,11 @@
       "User Grouping": "transforms.user_grouping.html"
       },
   "Layers": {
-      "Attention": "layers.attention.html",
-      "Common": "layers.layers.common.html",
-      "Message Passing": "layers.message_passing.html",
-      "OU Noise": "layers.ou_noise.html",
-      "TCN": "layers.tcn.html"
+      "Attention": "models.layers.attention.html",
+      "Common": "models.layers.models.layers.common.html",
+      "Message Passing": "models.layers.message_passing.html",
+      "OU Noise": "models.layers.ou_noise.html",
+      "TCN": "models.layers.tcn.html"
       },
   "Models": {
       "Actor-critic": "models.actor_critic.html",
@@ -97,10 +98,7 @@
     },
  "Utils": {
      "AB Test Utils": "utils.ab_testing.html",
-     "Common utils": "utils.common_utils.html",
-     "Config": "utils.config.html",
-     "Logging": "utils.logging.html",
-     "PyTorch Utils": "utils.torch_utils.html"
+     "Common utils": "utils.common_utils.html"
      },
  "Visualizations": {
      "Basic Plots": "visualization.basic_plots.html",

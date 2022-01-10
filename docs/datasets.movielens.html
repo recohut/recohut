@@ -53,18 +53,87 @@ nb_path: "nbs/datasets/datasets.movielens.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="ML1mRatingDataset" class="doc_header"><code>class</code> <code>ML1mRatingDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/movielens.py#L25" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>ML1mRatingDataset</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwds</code></strong>) :: <a href="/recohut/datasets.base.html#RatingDataset"><code>RatingDataset</code></a></p>
+<h2 id="ML1mDataset" class="doc_header"><code>class</code> <code>ML1mDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/movielens.py#L16" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>ML1mDataset</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwds</code></strong>) :: <a href="/recohut/datasets.bases.interactions.html#InteractionsDataset"><code>InteractionsDataset</code></a></p>
 </blockquote>
-<p>Interaction data with rating feedback</p>
-<p>Args:
-    root: data folder path
-    min_uc: minimum user count to keep in the data
-    min_sc: minimum item count to keep in the data
-    split: data split method - leave_one_out/holdout
-    min_rating: minimum rating threshold to convert explicit feedback into implicit</p>
-<p>References:</p>
+<p>An abstract class representing a :class:<a href="/recohut/datasets.base.html#Dataset"><code>Dataset</code></a>.</p>
+<p>All datasets that represent a map from keys to data samples should subclass
+it. All subclasses should overwrite :meth:<code>__getitem__</code>, supporting fetching a
+data sample for a given key. Subclasses could also optionally overwrite
+:meth:<code>__len__</code>, which is expected to return the size of the dataset by many
+:class:<code>~torch.utils.data.Sampler</code> implementations and the default options
+of :class:<code>~torch.utils.data.DataLoader</code>.</p>
+<p>.. note::
+  :class:<code>~torch.utils.data.DataLoader</code> by default constructs a index
+  sampler that yields integral indices.  To make it work with a map-style
+  dataset with non-integral indices/keys, a custom sampler must be provided.</p>
 
-<pre><code>1. https://github.com/Yueeeeeeee/RecSys-Extraction-Attack/tree/main/datasets</code></pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="ML1mDataModule" class="doc_header"><code>class</code> <code>ML1mDataModule</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/movielens.py#L39" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>ML1mDataModule</code>(<strong>*<code>args</code></strong>:<code>Any</code>, <strong>**<code>kwargs</code></strong>:<code>Any</code>) :: <a href="/recohut/datasets.bases.interactions.html#InteractionsDataModule"><code>InteractionsDataModule</code></a></p>
+</blockquote>
+<p>A DataModule standardizes the training, val, test splits, data preparation and transforms. The main
+advantage is consistent data splits, data preparation and transforms across models.</p>
+<p>Example::</p>
+
+<pre><code>class MyDataModule(LightningDataModule):
+    def __init__(self):
+        super().__init__()
+    def prepare_data(self):
+        # download, split, etc...
+        # only called on 1 GPU/TPU in distributed
+    def setup(self, stage):
+        # make assignments here (val/train/test split)
+        # called on every process in DDP
+    def train_dataloader(self):
+        train_split = Dataset(...)
+        return DataLoader(train_split)
+    def val_dataloader(self):
+        val_split = Dataset(...)
+        return DataLoader(val_split)
+    def test_dataloader(self):
+        test_split = Dataset(...)
+        return DataLoader(test_split)
+    def teardown(self):
+        # clean up after fit or test
+        # called on every process in DDP
+
+</code></pre>
+<p>A DataModule implements 6 key methods:</p>
+<ul>
+<li><strong>prepare_data</strong> (things to do on 1 GPU/TPU not on every GPU/TPU in distributed mode).</li>
+<li><strong>setup</strong>  (things to do on every accelerator in distributed mode).</li>
+<li><strong>train_dataloader</strong> the training dataloader.</li>
+<li><strong>val_dataloader</strong> the val dataloader(s).</li>
+<li><strong>test_dataloader</strong> the test dataloader(s).</li>
+<li><strong>teardown</strong> (things to do on every accelerator in distributed mode when finished)</li>
+</ul>
+<p>This allows you to share a full dataset without explaining how to download, split, transform, and process the data</p>
 
 </div>
 
@@ -90,7 +159,37 @@ nb_path: "nbs/datasets/datasets.movielens.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">ML1mRatingDataset</span><span class="p">(</span><span class="n">root</span><span class="o">=</span><span class="s1">&#39;/content/ML1m&#39;</span><span class="p">,</span> <span class="n">min_uc</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">min_sc</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Args</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">data_dir</span> <span class="o">=</span> <span class="s1">&#39;/content/data&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_rating</span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_negative_samples</span> <span class="o">=</span> <span class="mi">99</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_uc</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">min_sc</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">val_p</span> <span class="o">=</span> <span class="mf">0.2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">test_p</span> <span class="o">=</span> <span class="mf">0.2</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">seed</span> <span class="o">=</span> <span class="mi">42</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">split_type</span> <span class="o">=</span> <span class="s1">&#39;stratified&#39;</span>
+
+<span class="n">args</span> <span class="o">=</span> <span class="n">Args</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">ML1mDataModule</span><span class="p">(</span><span class="o">**</span><span class="n">args</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">prepare_data</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -103,10 +202,66 @@ nb_path: "nbs/datasets/datasets.movielens.ipynb"
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Downloading http://files.grouplens.org/datasets/movielens/ml-1m.zip
-Extracting /content/ML1m/raw/ml-1m.zip
-Processing...
-Done!
+<pre>Processing...
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Turning into implicit ratings
+Filtering triplets
+Densifying index
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>Done!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>tree -h --du -C <span class="s2">&quot;{args.data_dir}&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="ansi-blue-intense-fg ansi-bold">/content/data</span>
+├── [ 11M]  <span class="ansi-blue-intense-fg ansi-bold">processed</span>
+│   ├── [2.3M]  data_test_neg.pt
+│   ├── [ 95K]  data_test_pos.pt
+│   ├── [6.5M]  data_train.pt
+│   ├── [2.3M]  data_valid_neg.pt
+│   └── [ 95K]  data_valid_pos.pt
+└── [ 23M]  <span class="ansi-blue-intense-fg ansi-bold">raw</span>
+    └── [ 23M]  ratings.dat
+
+  35M used in 2 directories, 6 files
 </pre>
 </div>
 </div>
@@ -134,7 +289,7 @@ Done!
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="ML100kDataset" class="doc_header"><code>class</code> <code>ML100kDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/movielens.py#L61" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>ML100kDataset</code>(<strong><code>root</code></strong>) :: <a href="/recohut/datasets.base.html#Dataset"><code>Dataset</code></a></p>
+<h2 id="ML100kDataset" class="doc_header"><code>class</code> <code>ML100kDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/movielens.py#L43" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>ML100kDataset</code>(<strong><code>root</code></strong>) :: <a href="/recohut/datasets.base.html#Dataset"><code>Dataset</code></a></p>
 </blockquote>
 <p>Dataset base class</p>
 

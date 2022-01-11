@@ -6,6 +6,8 @@ __all__ = ['HOFM', 'FactorizationMachine', 'AnovaKernel', 'HOFM_v2']
 import torch
 from torch import nn
 
+from itertools import combinations
+
 from .layers.embedding import EmbeddingLayer
 from .layers.interaction import InnerProductLayer
 from .layers.common import LR_Layer

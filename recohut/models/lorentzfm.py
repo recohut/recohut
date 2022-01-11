@@ -6,6 +6,8 @@ __all__ = ['LorentzFM']
 import torch
 from torch import nn
 
+from itertools import combinations
+
 from .layers.embedding import EmbeddingLayer
 from .layers.interaction import InnerProductLayer
 

@@ -11,15 +11,16 @@ from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.loggers import TensorBoardLogger
 
 # Cell
-def pl_trainer(model, datamodule, max_epochs=10, val_epoch=5, gpus=None, log_dir=None, model_dir=None):
+def pl_trainer(model, datamodule, max_epochs=10, val_epoch=5, gpus=None, log_dir=None,
+               model_dir=None, monitor='val_loss', mode='min', *args, **kwargs):
     log_dir = log_dir if log_dir is not None else os.getcwd()
     model_dir = model_dir if model_dir is not None else os.getcwd()
 
     logger = TensorBoardLogger(save_dir=log_dir)
 
     checkpoint_callback = ModelCheckpoint(
-        monitor="Val Metrics",
-        mode="max",
+        monitor=monitor,
+        mode=mode,
         dirpath=model_dir,
         filename="recommender",
     )

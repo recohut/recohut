@@ -2,7 +2,8 @@
 
 __all__ = ['wget_download', 'download_url', 'extract_tar', 'extract_zip', 'extract_bz2', 'extract_gz',
            'print_result_as_table', 'list_files', 'seed_everything', 'map_column', 'get_context', 'pad_arr', 'pad_list',
-           'mask_list', 'mask_last_elements_list', 'masked_accuracy', 'masked_ce']
+           'mask_list', 'mask_last_elements_list', 'masked_accuracy', 'masked_ce', 'explode', 'explode_mult',
+           'group_concat']
 
 # Cell
 import sys
@@ -15,6 +16,7 @@ import tarfile
 import zipfile
 import bz2
 import gzip
+import numpy as np
 import pandas as pd
 from tabulate import tabulate
 
@@ -251,3 +253,48 @@ def masked_ce(y_pred, y_true, mask):
     loss = F.cross_entropy(y_pred, y_true, reduction="none")
     loss = loss * mask
     return loss.sum() / (mask.sum() + 1e-8)
+
+# Cell
+def explode(df, col_expl):
+    """Separate string in column col_expl and explode elements into multiple rows."""
+
+    s = df[col_expl].str.split('|', expand=True).stack()
+    i = s.index.get_level_values(0)
+    df2 = df.loc[i].copy()
+    df2[col_expl] = s.values
+
+    return df2
+
+
+def explode_mult(df_in, col_list):
+    """Explode each column in col_list into multiple rows."""
+
+    df = df_in.copy()
+
+    for col in col_list:
+        df.loc[:, col] = df.loc[:, col].str.split("|")
+
+    df_out = pd.DataFrame(
+        {col: np.repeat(df[col].to_numpy(),
+                        df[col_list[0]].str.len())
+         for col in df.columns.drop(col_list)}
+    )
+
+    for col in col_list:
+        df_out.loc[:, col] = np.concatenate(df.loc[:, col].to_numpy())
+
+    return df_out
+
+
+def group_concat(df, gr_cols, col_concat):
+    """Concatenate multiple rows into one."""
+
+    df_out = (
+        df
+        .groupby(gr_cols)[col_concat]
+        .apply(lambda x: ' '.join(x))
+        .to_frame()
+        .reset_index()
+    )
+
+    return df_out

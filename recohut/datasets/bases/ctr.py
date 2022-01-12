@@ -199,7 +199,7 @@ class CTRDataset(torch.utils.data.Dataset, BaseDataset):
             max_len = feature_column.get("max_len", 0)
             padding = feature_column.get("padding", "post")
             tokenizer = Tokenizer(min_freq=min_categr_count, splitter=splitter,
-                                  na_value=na_value, max_len=max_len, padding=padding)
+                                  na_value=na_value, max_len=max_len, padding_type=padding)
             if "share_embedding" in feature_column:
                 self.feature_map.feature_specs[name]["share_embedding"] = feature_column["share_embedding"]
                 tokenizer.set_vocab(self.encoders["{}_tokenizer".format(feature_column["share_embedding"])].vocab)

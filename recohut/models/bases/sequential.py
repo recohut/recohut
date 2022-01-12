@@ -59,8 +59,8 @@ class SequentialModel(LightningModule):
         y_true = y_true.view(-1)
         src_items = src_items.view(-1)
         mask = src_items == self.mask
-        loss = masked_ce(y_pred=y_pred, y_true=y_true, mask=mask)
-        accuracy = masked_accuracy(y_pred=y_pred, y_true=y_true, mask=mask)
+        loss = self.masked_ce(y_pred=y_pred, y_true=y_true, mask=mask)
+        accuracy = self.masked_accuracy(y_pred=y_pred, y_true=y_true, mask=mask)
         self.log("train_loss", loss)
         self.log("train_accuracy", accuracy)
         return loss
@@ -72,8 +72,8 @@ class SequentialModel(LightningModule):
         y_true = y_true.view(-1)
         src_items = src_items.view(-1)
         mask = src_items == self.mask
-        loss = masked_ce(y_pred=y_pred, y_true=y_true, mask=mask)
-        accuracy = masked_accuracy(y_pred=y_pred, y_true=y_true, mask=mask)
+        loss = self.masked_ce(y_pred=y_pred, y_true=y_true, mask=mask)
+        accuracy = self.masked_accuracy(y_pred=y_pred, y_true=y_true, mask=mask)
         self.log("valid_loss", loss)
         self.log("valid_accuracy", accuracy)
         return loss
@@ -85,8 +85,8 @@ class SequentialModel(LightningModule):
         y_true = y_true.view(-1)
         src_items = src_items.view(-1)
         mask = src_items == self.mask
-        loss = masked_ce(y_pred=y_pred, y_true=y_true, mask=mask)
-        accuracy = masked_accuracy(y_pred=y_pred, y_true=y_true, mask=mask)
+        loss = self.masked_ce(y_pred=y_pred, y_true=y_true, mask=mask)
+        accuracy = self.masked_accuracy(y_pred=y_pred, y_true=y_true, mask=mask)
         self.log("test_loss", loss)
         self.log("test_accuracy", accuracy)
         return loss

@@ -22,7 +22,8 @@ class SequentialDataset(Dataset, BaseDataset):
     def __init__(self,
                  data_dir,
                  data_type='train',
-                 history_size=None,
+                 history_size=8,
+                 step_size=1,
                  seed=42,
                  mask=1,
                  *args,
@@ -34,6 +35,7 @@ class SequentialDataset(Dataset, BaseDataset):
         """
         self.data_type = data_type
         self.history_size = history_size
+        self.step_size = step_size
         self.seed = seed
         self.mask = mask
 
@@ -96,6 +98,21 @@ class SequentialDataset(Dataset, BaseDataset):
     def mask_last_elements_list(self, l1, val_context_size: int = 5):
         l1 = l1[:-val_context_size] + self.mask_list(l1[-val_context_size:], p=0.5)
         return l1
+
+    def create_sequences(self, values, window_size, step_size):
+        sequences = []
+        start_index = 0
+        while True:
+            end_index = start_index + window_size
+            seq = values[start_index:end_index]
+            if len(seq) < window_size:
+                seq = values[-window_size:]
+                if len(seq) == window_size:
+                    sequences.append(seq)
+                break
+            sequences.append(seq)
+            start_index += step_size
+        return sequences
 
     def process(self):
         df = self.load_ratings_df()

@@ -1,10 +1,10 @@
 from .aotm import *
 from .avazu import *
-from criteo import *
-from diginetica import *
-from gowalla import *
-from kkbox import *
-from lastfm import *
+from .criteo import *
+from .diginetica import *
+from .gowalla import *
+from .kkbox import *
+from .lastfm import *
 from .movielens import *
 from .music30 import *
 

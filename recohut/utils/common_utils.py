@@ -3,7 +3,7 @@
 __all__ = ['wget_download', 'download_url', 'extract_tar', 'extract_zip', 'extract_bz2', 'extract_gz',
            'print_result_as_table', 'list_files', 'seed_everything', 'map_column', 'get_context', 'pad_arr', 'pad_list',
            'mask_list', 'mask_last_elements_list', 'masked_accuracy', 'masked_ce', 'explode', 'explode_mult',
-           'group_concat']
+           'group_concat', 'get_coo_matrix']
 
 # Cell
 import sys
@@ -300,3 +300,24 @@ def group_concat(df, gr_cols, col_concat):
     )
 
     return df_out
+
+# Cell
+def get_coo_matrix(df,
+                   user_col='user_id',
+                   item_col='item_id',
+                   weight_col=None,
+                   users_mapping={},
+                   items_mapping={}):
+    if weight_col is None:
+        weights = np.ones(len(df), dtype=np.float32)
+    else:
+        weights = df[weight_col].astype(np.float32)
+
+    interaction_matrix = sp.coo_matrix((
+        weights,
+        (
+            df[user_col].map(users_mapping.get),
+            df[item_col].map(items_mapping.get)
+        )
+    ))
+    return interaction_matrix

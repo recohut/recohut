@@ -19,8 +19,8 @@ class MTSDataset(InteractionsDataset):
     url_inter = "https://github.com/RecoHut-Datasets/mts_kion/raw/v1/interactions.parquet.snappy"
 
     def __init__(self, sample_frac=1, **kwargs):
-        super().__init__(**kwargs)
         self.sample_frac = sample_frac
+        super().__init__(**kwargs)
 
     @property
     def raw_file_names(self):

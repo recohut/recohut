@@ -50,7 +50,7 @@ class MTSDataset(InteractionsDataset):
 
     def load_ratings_df(self):
         df = pd.read_parquet(self.raw_paths[2])
-        df = df.sample(frac=sample_frac)
+        df = df.sample(frac=self.sample_frac)
         return df
 
     @staticmethod

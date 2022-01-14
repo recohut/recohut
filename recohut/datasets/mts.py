@@ -18,6 +18,10 @@ class MTSDataset(InteractionsDataset):
     url_items = "https://github.com/RecoHut-Datasets/mts_kion/raw/v1/items.parquet.snappy"
     url_inter = "https://github.com/RecoHut-Datasets/mts_kion/raw/v1/interactions.parquet.snappy"
 
+    def __init__(self, sample_frac=1, **kwargs):
+        super().__init__(**kwargs)
+        self.sample_frac = sample_frac
+
     @property
     def raw_file_names(self):
         return ['users.parquet.snappy',
@@ -29,8 +33,7 @@ class MTSDataset(InteractionsDataset):
         return ['users_processed.csv',
                 'items_processed.csv',
                 'interactions_processed.csv',
-                'item_stats_for_submit.csv',
-                'item_stats_for_boost_train.csv']
+                'item_stats.csv']
 
     def download(self):
         _ = download_url(self.url_users, self.raw_dir)
@@ -47,6 +50,7 @@ class MTSDataset(InteractionsDataset):
 
     def load_ratings_df(self):
         df = pd.read_parquet(self.raw_paths[2])
+        df = df.sample(frac=sample_frac)
         return df
 
     @staticmethod
@@ -207,6 +211,35 @@ class MTSDataset(InteractionsDataset):
                         inplace=True)
         return item_stats
 
+    @staticmethod
+    def get_coo_matrix(df,
+                    user_col='user_id',
+                    item_col='item_id',
+                    weight_col=None,
+                    users_mapping={},
+                    items_mapping={}):
+        if weight_col is None:
+            weights = np.ones(len(df), dtype=np.float32)
+        else:
+            weights = df[weight_col].astype(np.float32)
+
+        interaction_matrix = sp.coo_matrix((
+            weights,
+            (
+                df[user_col].map(users_mapping.get),
+                df[item_col].map(items_mapping.get)
+            )
+        ))
+        return interaction_matrix
+
+    @staticmethod
+    def create_mapping():
+        # Creating items and users mapping
+        users_inv_mapping = dict(enumerate(df['user_id'].unique()))
+        users_mapping = {v: k for k, v in users_inv_mapping.items()}
+        items_inv_mapping = dict(enumerate(df['item_id'].unique()))
+        items_mapping = {v: k for k, v in items_inv_mapping.items()}
+
     def process(self):
         # load data
         print('Loading data')
@@ -275,6 +308,7 @@ class MTSDataset(InteractionsDataset):
         interactions_df['watched_pct'] = interactions_df['watched_pct'].fillna(0)
         interactions_df['last_watch_dt'] = pd.to_datetime(
             interactions_df['last_watch_dt'])
+        interactions_df.sort_values(by='last_watch_dt', inplace=True)
 
         # user stats feature engineering
         print('Processing users stats')
@@ -285,27 +319,17 @@ class MTSDataset(InteractionsDataset):
         users_df = self.add_user_stats(interactions_boost, users_df, split_name='boost_')
         users_df = self.add_user_stats(interactions_df, users_df, split_name='')
 
-        # Saving preprocessed files
-        users_df.to_csv(self.processed_paths[0], index=False)
-        items_df.to_csv(self.processed_paths[1], index=False)
-        interactions_df.to_csv(self.processed_paths[2], index=False)
-
+        # Item stats
         print('Processing items stats')
-
-        # Item stats for submit
-        item_stats = items_df[['item_id']]
-        item_stats = item_stats.set_index('item_id')
-        item_stats = self.add_item_watches_stats(interactions_df, items_df, item_stats)
-        item_stats.fillna(0, inplace=True)
-        item_stats = self.add_sex_stats(interactions_df, item_stats, users_df)
-        item_stats = self.add_age_stats(interactions_df, item_stats, users_df)
-        item_stats.to_csv(self.processed_paths[3], index=True)
-
-        # Item stats for boosting training
         item_stats = items_df[['item_id']]
         item_stats = item_stats.set_index('item_id')
         item_stats = self.add_item_watches_stats(interactions_boost, items_df, item_stats)
         item_stats.fillna(0, inplace=True)
         item_stats = self.add_sex_stats(interactions_boost, item_stats, users_df)
         item_stats = self.add_age_stats(interactions_boost, item_stats, users_df)
-        item_stats.to_csv(self.processed_paths[4], index=True)
+
+        # Saving preprocessed files
+        users_df.to_csv(self.processed_paths[0], index=False)
+        items_df.to_csv(self.processed_paths[1], index=False)
+        interactions_df.to_csv(self.processed_paths[2], index=False)
+        item_stats.to_csv(self.processed_paths[3], index=True)

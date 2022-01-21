@@ -99,6 +99,54 @@ class SequentialDataset(Dataset, BaseDataset):
         l1 = l1[:-val_context_size] + self.mask_list(l1[-val_context_size:], p=0.5)
         return l1
 
+    def make_user_history(self, data):
+        user_history = [ [] for _ in range(self.num_users) ]
+        for u, i, r in data: user_history[u].append(i)
+        return user_history
+
+    # def pad(self, arr, max_len = None, pad_with = -1, side = 'right'):
+    #     seq_len = max_len if max_len is not None else max(map(len, arr))
+    #     seq_len = min(seq_len, 200) # You don't need more than this
+
+    #     for i in range(len(arr)):
+    #         while len(arr[i]) < seq_len:
+    #             pad_elem = arr[i][-1] if len(arr[i]) > 0 else 0
+    #             pad_elem = pad_elem if pad_with == -1 else pad_with
+    #             if side == 'right': arr[i].append(pad_elem)
+    #             else: arr[i] = [ pad_elem ] + arr[i]
+    #         arr[i] = arr[i][-seq_len:] # Keep last `seq_len` items
+    #     return arr
+
+    # def sequential_pad(self, arr, max_seq_len, total_items):
+    #     # Padding left side so that we can simply take out [:, -1, :] in the output
+    #     return self.pad(
+    #         arr, max_len = max_seq_len,
+    #         pad_with = total_items, side = 'left'
+    #     )
+
+    # def scatter(self, batch, tensor_kind, last_dimension):
+    #     ret = tensor_kind(len(batch), last_dimension).zero_()
+
+    #     if not torch.is_tensor(batch):
+    #         if ret.is_cuda: batch = torch.cuda.LongTensor(batch)
+    #         else: batch = torch.LongTensor(batch)
+
+    #     return ret.scatter_(1, batch, 1)
+
+    # def get_item_count_map(self, data):
+    #     item_count = defaultdict(int)
+    #     for u, i, r in data: item_count[i] += 1
+    #     return item_count
+
+    # def get_item_propensity(self, data, num_items, A = 0.55, B = 1.5):
+    #     item_freq_map = self.get_item_count_map()
+    #     item_freq = [ item_freq_map[i] for i in range(num_items) ]
+    #     num_instances = len(data)
+
+    #     C = (np.log(num_instances)-1)*np.power(B+1, A)
+    #     wts = 1.0 + C*np.power(np.array(item_freq)+B, -A)
+    #     return np.ravel(wts)
+
     def create_sequences(self, values, window_size, step_size):
         sequences = []
         start_index = 0

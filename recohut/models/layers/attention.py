@@ -3,13 +3,16 @@
 __all__ = ['TokenEmbedding', 'PositionalEmbedding', 'GELU', 'PositionwiseFeedForward', 'LayerNorm',
            'SublayerConnection', 'Attention', 'ScaledDotProductAttention', 'MultiHeadAttention',
            'MultiHeadedAttention_v2', 'MultiHeadSelfAttention', 'TransformerBlock', 'SqueezeExcitationLayer',
-           'SASMultiHeadedAttention', 'SASPositionwiseFeedForward', 'SASTransformerBlock']
+           'SASMultiHeadedAttention', 'SASPositionwiseFeedForward', 'SASTransformerBlock', 'SelfAttention',
+           'DistSelfAttention', 'DistMeanSelfAttention']
 
 # Cell
 import math
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+
+from ...utils.distances import wasserstein_distance_matmul
 
 # Cell
 class TokenEmbedding(nn.Embedding):
@@ -318,3 +321,239 @@ class SASTransformerBlock(nn.Module):
         x = self.attention(self.layer_norm(x), x, x, mask)
         x = self.feed_forward(x)
         return x
+
+# Cell
+class SelfAttention(nn.Module):
+    """
+    References:
+        1. https://github.com/RecoHut-Stanzas/STOSA/blob/ee14e2eabcc60922eb52cc7d3231df4954d9ff16/modules.py#L127
+    """
+    def __init__(self,
+                 hidden_size,
+                 num_attention_heads,
+                 attention_probs_dropout_prob,
+                 hidden_dropout_prob):
+        super().__init__()
+        if hidden_size % num_attention_heads != 0:
+            raise ValueError(
+                "The hidden size (%d) is not a multiple of the number of attention "
+                "heads (%d)" % (hidden_size, num_attention_heads))
+        self.num_attention_heads = num_attention_heads
+        self.attention_head_size = int(hidden_size / num_attention_heads)
+        self.all_head_size = self.num_attention_heads * self.attention_head_size
+
+        self.query = nn.Linear(hidden_size, self.all_head_size)
+        self.key = nn.Linear(hidden_size, self.all_head_size)
+        self.value = nn.Linear(hidden_size, self.all_head_size)
+
+        self.attn_dropout = nn.Dropout(attention_probs_dropout_prob)
+
+        self.dense = nn.Linear(hidden_size, hidden_size)
+        self.layernorm = nn.LayerNorm(hidden_size, eps=1e-12)
+        self.out_dropout = nn.Dropout(hidden_dropout_prob)
+
+    def transpose_for_scores(self, x):
+        new_x_shape = x.size()[:-1] + (self.num_attention_heads, self.attention_head_size)
+        x = x.view(*new_x_shape)
+        return x.permute(0, 2, 1, 3)
+
+    def forward(self, input_tensor, attention_mask):
+        mixed_query_layer = self.query(input_tensor)
+        mixed_key_layer = self.key(input_tensor)
+        mixed_value_layer = self.value(input_tensor)
+
+        query_layer = self.transpose_for_scores(mixed_query_layer)
+        key_layer = self.transpose_for_scores(mixed_key_layer)
+        value_layer = self.transpose_for_scores(mixed_value_layer)
+
+        # Take the dot product between "query" and "key" to get the raw attention scores.
+        attention_scores = torch.matmul(query_layer, key_layer.transpose(-1, -2))
+
+        attention_scores = attention_scores / math.sqrt(self.attention_head_size)
+        attention_scores = attention_scores + attention_mask
+
+        # Normalize the attention scores to probabilities.
+        attention_probs = nn.Softmax(dim=-1)(attention_scores)
+        # This is actually dropping out entire tokens to attend to, which might
+        # seem a bit unusual, but is taken from the original Transformer paper.
+        attention_probs = self.attn_dropout(attention_probs)
+        context_layer = torch.matmul(attention_probs, value_layer)
+        context_layer = context_layer.permute(0, 2, 1, 3).contiguous()
+        new_context_layer_shape = context_layer.size()[:-2] + (self.all_head_size,)
+        context_layer = context_layer.view(*new_context_layer_shape)
+        hidden_states = self.dense(context_layer)
+        hidden_states = self.out_dropout(hidden_states)
+        hidden_states = self.layernorm(hidden_states + input_tensor)
+
+        return hidden_states, attention_probs
+
+# Cell
+class DistSelfAttention(nn.Module):
+    def __init__(self,
+                 hidden_size,
+                 num_attention_heads,
+                 hidden_dropout_prob,
+                 attention_probs_dropout_prob,
+                 distance_metric = 'wasserstein'):
+        super().__init__()
+        if hidden_size % num_attention_heads != 0:
+            raise ValueError(
+                "The hidden size (%d) is not a multiple of the number of attention "
+                "heads (%d)" % (hidden_size, num_attention_heads))
+        self.num_attention_heads = num_attention_heads
+        self.attention_head_size = int(hidden_size / num_attention_heads)
+        self.all_head_size = self.num_attention_heads * self.attention_head_size
+
+        self.mean_query = nn.Linear(hidden_size, self.all_head_size)
+        self.cov_query = nn.Linear(hidden_size, self.all_head_size)
+        self.mean_key = nn.Linear(hidden_size, self.all_head_size)
+        self.cov_key = nn.Linear(hidden_size, self.all_head_size)
+        self.mean_value = nn.Linear(hidden_size, self.all_head_size)
+        self.cov_value = nn.Linear(hidden_size, self.all_head_size)
+
+        self.activation = nn.ELU()
+
+        self.attn_dropout = nn.Dropout(attention_probs_dropout_prob)
+        self.mean_dense = nn.Linear(hidden_size, hidden_size)
+        self.cov_dense = nn.Linear(hidden_size, hidden_size)
+        self.out_dropout = nn.Dropout(hidden_dropout_prob)
+
+        self.distance_metric = distance_metric
+        self.layernorm = nn.LayerNorm(hidden_size, eps=1e-12)
+
+    def transpose_for_scores(self, x):
+        new_x_shape = x.size()[:-1] + (self.num_attention_heads, self.attention_head_size)
+        x = x.view(*new_x_shape)
+        return x.permute(0, 2, 1, 3)
+
+    def forward(self, input_mean_tensor, input_cov_tensor, attention_mask):
+        mixed_mean_query_layer = self.mean_query(input_mean_tensor)
+        mixed_mean_key_layer = self.mean_key(input_mean_tensor)
+        mixed_mean_value_layer = self.mean_value(input_mean_tensor)
+
+        mean_query_layer = self.transpose_for_scores(mixed_mean_query_layer)
+        mean_key_layer = self.transpose_for_scores(mixed_mean_key_layer)
+        mean_value_layer = self.transpose_for_scores(mixed_mean_value_layer)
+
+        mixed_cov_query_layer = self.activation(self.cov_query(input_cov_tensor)) + 1
+        mixed_cov_key_layer = self.activation(self.cov_key(input_cov_tensor)) + 1
+        mixed_cov_value_layer = self.activation(self.cov_value(input_cov_tensor)) + 1
+
+        cov_query_layer = self.transpose_for_scores(mixed_cov_query_layer)
+        cov_key_layer = self.transpose_for_scores(mixed_cov_key_layer)
+        cov_value_layer = self.transpose_for_scores(mixed_cov_value_layer)
+
+        if self.distance_metric == 'wasserstein':
+            attention_scores = -wasserstein_distance_matmul(mean_query_layer, cov_query_layer, mean_key_layer, cov_key_layer)
+        else:
+            attention_scores = -kl_distance_matmul(mean_query_layer, cov_query_layer, mean_key_layer, cov_key_layer)
+
+        attention_scores = attention_scores / math.sqrt(self.attention_head_size)
+        attention_scores = attention_scores + attention_mask
+        attention_probs = nn.Softmax(dim=-1)(attention_scores)
+
+        attention_probs = self.attn_dropout(attention_probs)
+        mean_context_layer = torch.matmul(attention_probs, mean_value_layer)
+        cov_context_layer = torch.matmul(attention_probs ** 2, cov_value_layer)
+        mean_context_layer = mean_context_layer.permute(0, 2, 1, 3).contiguous()
+        cov_context_layer = cov_context_layer.permute(0, 2, 1, 3).contiguous()
+        new_context_layer_shape = mean_context_layer.size()[:-2] + (self.all_head_size,)
+
+        mean_context_layer = mean_context_layer.view(*new_context_layer_shape)
+        cov_context_layer = cov_context_layer.view(*new_context_layer_shape)
+
+        mean_hidden_states = self.mean_dense(mean_context_layer)
+        mean_hidden_states = self.out_dropout(mean_hidden_states)
+        mean_hidden_states = self.layernorm(mean_hidden_states + input_mean_tensor)
+
+        cov_hidden_states = self.cov_dense(cov_context_layer)
+        cov_hidden_states = self.out_dropout(cov_hidden_states)
+        cov_hidden_states = self.layernorm(cov_hidden_states + input_cov_tensor)
+
+        return mean_hidden_states, cov_hidden_states, attention_probs
+
+# Cell
+class DistMeanSelfAttention(nn.Module):
+    def __init__(self,
+                 hidden_size,
+                 num_attention_heads,
+                 attention_probs_dropout_prob,
+                 hidden_dropout_prob):
+        super().__init__()
+        if hidden_size % num_attention_heads != 0:
+            raise ValueError(
+                "The hidden size (%d) is not a multiple of the number of attention "
+                "heads (%d)" % (hidden_size, num_attention_heads))
+        self.num_attention_heads = num_attention_heads
+        self.attention_head_size = int(hidden_size / num_attention_heads)
+        self.all_head_size = self.num_attention_heads * self.attention_head_size
+
+        self.mean_query = nn.Linear(hidden_size, self.all_head_size)
+        self.mean_key = nn.Linear(hidden_size, self.all_head_size)
+        self.mean_value = nn.Linear(hidden_size, self.all_head_size)
+        self.cov_key = nn.Linear(hidden_size, self.all_head_size)
+        self.cov_query = nn.Linear(hidden_size, self.all_head_size)
+        self.cov_value = nn.Linear(hidden_size, self.all_head_size)
+
+        self.activation = nn.ELU()
+
+        self.attn_dropout = nn.Dropout(attention_probs_dropout_prob)
+        self.mean_dense = nn.Linear(hidden_size, hidden_size)
+        self.cov_dense = nn.Linear(hidden_size, hidden_size)
+        self.out_dropout = nn.Dropout(hidden_dropout_prob)
+
+        self.layernorm = nn.LayerNorm(hidden_size, eps=1e-12)
+
+    def transpose_for_scores(self, x):
+        new_x_shape = x.size()[:-1] + (self.num_attention_heads, self.attention_head_size)
+        x = x.view(*new_x_shape)
+        return x.permute(0, 2, 1, 3)
+
+    def forward(self, input_mean_tensor, input_cov_tensor, attention_mask):
+        mixed_mean_query_layer = self.mean_query(input_mean_tensor)
+        mixed_mean_key_layer = self.mean_key(input_mean_tensor)
+        mixed_mean_value_layer = self.mean_value(input_mean_tensor)
+
+        mean_query_layer = self.transpose_for_scores(mixed_mean_query_layer)
+        mean_key_layer = self.transpose_for_scores(mixed_mean_key_layer)
+        mean_value_layer = self.transpose_for_scores(mixed_mean_value_layer)
+
+        mixed_cov_query_layer = self.activation(self.cov_query(input_cov_tensor)) + 1
+        mixed_cov_key_layer = self.activation(self.cov_key(input_cov_tensor)) + 1
+        mixed_cov_value_layer = self.activation(self.cov_value(input_cov_tensor)) + 1
+
+        cov_query_layer = self.transpose_for_scores(mixed_cov_query_layer)
+        cov_key_layer = self.transpose_for_scores(mixed_cov_key_layer)
+        cov_value_layer = self.transpose_for_scores(mixed_cov_value_layer)
+
+        mean_attention_scores = torch.matmul(mean_query_layer, mean_key_layer.transpose(-1, -2))
+        cov_attention_scores = torch.matmul(cov_query_layer, cov_key_layer.transpose(-1, -2))
+
+        mean_attention_scores = mean_attention_scores / math.sqrt(self.attention_head_size)
+        mean_attention_scores = mean_attention_scores + attention_mask
+        mean_attention_probs = nn.Softmax(dim=-1)(mean_attention_scores)
+
+        cov_attention_scores = cov_attention_scores / math.sqrt(self.attention_head_size)
+        cov_attention_scores = cov_attention_scores + attention_mask
+        cov_attention_probs = nn.Softmax(dim=-1)(cov_attention_scores)
+
+        mean_attention_probs = self.attn_dropout(mean_attention_probs)
+        cov_attention_probs = self.attn_dropout(cov_attention_probs)
+        mean_context_layer = torch.matmul(mean_attention_probs, mean_value_layer)
+        cov_context_layer = torch.matmul(cov_attention_probs, cov_value_layer)
+        mean_context_layer = mean_context_layer.permute(0, 2, 1, 3).contiguous()
+        cov_context_layer = cov_context_layer.permute(0, 2, 1, 3).contiguous()
+        new_context_layer_shape = mean_context_layer.size()[:-2] + (self.all_head_size,)
+
+        mean_context_layer = mean_context_layer.view(*new_context_layer_shape)
+        cov_context_layer = cov_context_layer.view(*new_context_layer_shape)
+
+        mean_hidden_states = self.mean_dense(mean_context_layer)
+        mean_hidden_states = self.out_dropout(mean_hidden_states)
+        mean_hidden_states = self.layernorm(mean_hidden_states + input_mean_tensor)
+
+        cov_hidden_states = self.cov_dense(cov_context_layer)
+        cov_hidden_states = self.out_dropout(cov_hidden_states)
+        cov_hidden_states = self.layernorm(cov_hidden_states + input_cov_tensor)
+
+        return mean_hidden_states, cov_hidden_states, mean_attention_probs

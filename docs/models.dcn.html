@@ -39,6 +39,13 @@ nb_path: "nbs/models/models.dcn.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
 <div class="output_wrapper">
 <div class="output">
 
@@ -46,7 +53,142 @@ nb_path: "nbs/models/models.dcn.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="CrossNetwork" class="doc_header"><code>class</code> <code>CrossNetwork</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/dcn.py#L11" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>CrossNetwork</code>(<strong><code>input_dim</code></strong>, <strong><code>num_layers</code></strong>) :: <code>Module</code></p>
+<h2 id="DCN" class="doc_header"><code>class</code> <code>DCN</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/dcn.py#L44" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DCN</code>(<strong><code>feature_map</code></strong>, <strong><code>model_id</code></strong>=<em><code>'DCN'</code></em>, <strong><code>task</code></strong>=<em><code>'binary_classification'</code></em>, <strong><code>embedding_initializer</code></strong>=<em><code>'torch.nn.init.normal_(std=1e-4)'</code></em>, <strong><code>embedding_dim</code></strong>=<em><code>10</code></em>, <strong><code>dnn_hidden_units</code></strong>=<em><code>[]</code></em>, <strong><code>dnn_activations</code></strong>=<em><code>'ReLU'</code></em>, <strong><code>crossing_layers</code></strong>=<em><code>3</code></em>, <strong><code>embedding_dropout</code></strong>=<em><code>0</code></em>, <strong><code>net_dropout</code></strong>=<em><code>0</code></em>, <strong><code>batch_norm</code></strong>=<em><code>False</code></em>, <strong>**<code>kwargs</code></strong>) :: <a href="/recohut/models.bases.ctr.html#CTRModel"><code>CTRModel</code></a></p>
+</blockquote>
+<p>Hooks to be used in LightningModule.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Example</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">DCN</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">feature_map</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">recohut.trainers.pl_trainer</span> <span class="kn">import</span> <span class="n">pl_trainer</span>
+
+<span class="n">pl_trainer</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">max_epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+
+  | Name             | Type           | Params
+----------------------------------------------------
+0 | embedding_layer  | EmbeddingLayer | 4.8 K 
+1 | dnn              | MLP_Layer      | 13.2 K
+2 | crossnet         | CrossNet       | 840   
+3 | fc               | Linear         | 205   
+4 | final_activation | Sigmoid        | 0     
+----------------------------------------------------
+19.0 K    Trainable params
+0         Non-trainable params
+19.0 K    Total params
+0.076     Total estimated model params size (MB)
+/usr/local/lib/python3.7/dist-packages/pytorch_lightning/callbacks/model_checkpoint.py:631: UserWarning: Checkpoint directory /content exists and is not empty.
+  rank_zero_warn(f&#34;Checkpoint directory {dirpath} exists and is not empty.&#34;)
+/usr/local/lib/python3.7/dist-packages/pytorch_lightning/trainer/data_loading.py:429: UserWarning: The number of training samples (2) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  f&#34;The number of training samples ({self.num_training_batches}) is smaller than the logging interval&#34;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{&#39;Test Metrics&#39;: {&#39;AUC&#39;: tensor(1.), &#39;logloss&#39;: tensor(0.4742)}}
+--------------------------------------------------------------------------------
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[{&#39;Test Metrics&#39;: {&#39;AUC&#39;: tensor(1.), &#39;logloss&#39;: tensor(0.4742)}}]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="v2">v2<a class="anchor-link" href="#v2"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="CrossNetwork" class="doc_header"><code>class</code> <code>CrossNetwork</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/dcn.py#L100" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>CrossNetwork</code>(<strong><code>input_dim</code></strong>, <strong><code>num_layers</code></strong>) :: <code>Module</code></p>
 </blockquote>
 <p>Base class for all neural network modules.</p>
 <p>Your models should also subclass this class.</p>
@@ -94,7 +236,7 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="DCN" class="doc_header"><code>class</code> <code>DCN</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/dcn.py#L33" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DCN</code>(<strong><code>field_dims</code></strong>, <strong><code>embed_dim</code></strong>, <strong><code>num_layers</code></strong>, <strong><code>mlp_dims</code></strong>, <strong><code>dropout</code></strong>) :: <code>Module</code></p>
+<h2 id="DCNv2" class="doc_header"><code>class</code> <code>DCNv2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/dcn.py#L122" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DCNv2</code>(<strong><code>field_dims</code></strong>, <strong><code>embed_dim</code></strong>, <strong><code>num_layers</code></strong>, <strong><code>mlp_dims</code></strong>, <strong><code>dropout</code></strong>) :: <code>Module</code></p>
 </blockquote>
 <p>A pytorch implementation of Deep &amp; Cross Network.
 Reference:
@@ -119,7 +261,7 @@ Reference:
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="v2">v2<a class="anchor-link" href="#v2"> </a></h2>
+<h2 id="v3">v3<a class="anchor-link" href="#v3"> </a></h2>
 </div>
 </div>
 </div>
@@ -134,7 +276,7 @@ Reference:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="DNN" class="doc_header"><code>class</code> <code>DNN</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/dcn.py#L66" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DNN</code>(<strong><code>inputs_dim</code></strong>, <strong><code>hidden_units</code></strong>, <strong><code>dropout_rate</code></strong>) :: <code>Module</code></p>
+<h2 id="DNN" class="doc_header"><code>class</code> <code>DNN</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/dcn.py#L155" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DNN</code>(<strong><code>inputs_dim</code></strong>, <strong><code>hidden_units</code></strong>, <strong><code>dropout_rate</code></strong>) :: <code>Module</code></p>
 </blockquote>
 <p>Base class for all neural network modules.</p>
 <p>Your models should also subclass this class.</p>
@@ -182,7 +324,7 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="CrossNet" class="doc_header"><code>class</code> <code>CrossNet</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/dcn.py#L96" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>CrossNet</code>(<strong><code>in_features</code></strong>, <strong><code>layer_num</code></strong>=<em><code>2</code></em>, <strong><code>parameterization</code></strong>=<em><code>'vector'</code></em>, <strong><code>seed</code></strong>=<em><code>2022</code></em>) :: <code>Module</code></p>
+<h2 id="CrossNet" class="doc_header"><code>class</code> <code>CrossNet</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/dcn.py#L19" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>CrossNet</code>(<strong><code>in_features</code></strong>, <strong><code>layer_num</code></strong>=<em><code>2</code></em>, <strong><code>parameterization</code></strong>=<em><code>'vector'</code></em>, <strong><code>seed</code></strong>=<em><code>2022</code></em>) :: <code>Module</code></p>
 </blockquote>
 <p>Base class for all neural network modules.</p>
 <p>Your models should also subclass this class.</p>
@@ -230,7 +372,7 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="DCNv2" class="doc_header"><code>class</code> <code>DCNv2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/dcn.py#L128" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DCNv2</code>(<strong><code>feat_size</code></strong>, <strong><code>embedding_size</code></strong>, <strong><code>linear_feature_columns</code></strong>, <strong><code>dnn_feature_columns</code></strong>, <strong><code>cross_num</code></strong>=<em><code>2</code></em>, <strong><code>cross_param</code></strong>=<em><code>'vector'</code></em>, <strong><code>dnn_hidden_units</code></strong>=<em><code>(128, 128)</code></em>, <strong><code>init_std</code></strong>=<em><code>0.0001</code></em>, <strong><code>seed</code></strong>=<em><code>2022</code></em>, <strong><code>l2_reg</code></strong>=<em><code>1e-05</code></em>, <strong><code>drop_rate</code></strong>=<em><code>0.5</code></em>) :: <code>Module</code></p>
+<h2 id="DCNv3" class="doc_header"><code>class</code> <code>DCNv3</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/dcn.py#L217" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DCNv3</code>(<strong><code>feat_size</code></strong>, <strong><code>embedding_size</code></strong>, <strong><code>linear_feature_columns</code></strong>, <strong><code>dnn_feature_columns</code></strong>, <strong><code>cross_num</code></strong>=<em><code>2</code></em>, <strong><code>cross_param</code></strong>=<em><code>'vector'</code></em>, <strong><code>dnn_hidden_units</code></strong>=<em><code>(128, 128)</code></em>, <strong><code>init_std</code></strong>=<em><code>0.0001</code></em>, <strong><code>seed</code></strong>=<em><code>2022</code></em>, <strong><code>l2_reg</code></strong>=<em><code>1e-05</code></em>, <strong><code>drop_rate</code></strong>=<em><code>0.5</code></em>) :: <code>Module</code></p>
 </blockquote>
 <p>DCN model implementation in pytorch</p>
 <p>Reference:</p>

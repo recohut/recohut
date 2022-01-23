@@ -47,17 +47,19 @@ nb_path: "nbs/datasets/datasets.avazu.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="AvazuDataset" class="doc_header"><code>class</code> <code>AvazuDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/avazu.py#L17" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AvazuDataset</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwds</code></strong>) :: <a href="/recohut/datasets.base.html#Dataset"><code>Dataset</code></a></p>
+<h2 id="AvazuDataset" class="doc_header"><code>class</code> <code>AvazuDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/avazu.py#L12" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AvazuDataset</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwds</code></strong>) :: <a href="/recohut/datasets.bases.ctr.html#CTRDataset"><code>CTRDataset</code></a></p>
 </blockquote>
-<p>Avazu Click-Through Rate Prediction Dataset
-Dataset preparation
-    Remove the infrequent features (appearing in less than threshold instances) and treat them as a single feature
-:param dataset_path: avazu train path
-:param cache_path: lmdb cache path
-:param rebuild_cache: If True, lmdb cache is refreshed
-:param min_threshold: infrequent feature threshold
-Reference
-    <a href="https://www.kaggle.com/c/avazu-ctr-prediction">https://www.kaggle.com/c/avazu-ctr-prediction</a></p>
+<p>An abstract class representing a :class:<a href="/recohut/datasets.base.html#Dataset"><code>Dataset</code></a>.</p>
+<p>All datasets that represent a map from keys to data samples should subclass
+it. All subclasses should overwrite :meth:<code>__getitem__</code>, supporting fetching a
+data sample for a given key. Subclasses could also optionally overwrite
+:meth:<code>__len__</code>, which is expected to return the size of the dataset by many
+:class:<code>~torch.utils.data.Sampler</code> implementations and the default options
+of :class:<code>~torch.utils.data.DataLoader</code>.</p>
+<p>.. note::
+  :class:<code>~torch.utils.data.DataLoader</code> by default constructs a index
+  sampler that yields integral indices.  To make it work with a map-style
+  dataset with non-integral indices/keys, a custom sampler must be provided.</p>
 
 </div>
 
@@ -72,6 +74,531 @@ Reference
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="AvazuDataModule" class="doc_header"><code>class</code> <code>AvazuDataModule</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/avazu.py#L55" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AvazuDataModule</code>(<strong>*<code>args</code></strong>:<code>Any</code>, <strong>**<code>kwargs</code></strong>:<code>Any</code>) :: <a href="/recohut/datasets.bases.ctr.html#CTRDataModule"><code>CTRDataModule</code></a></p>
+</blockquote>
+<p>A DataModule standardizes the training, val, test splits, data preparation and transforms. The main
+advantage is consistent data splits, data preparation and transforms across models.</p>
+<p>Example::</p>
+
+<pre><code>class MyDataModule(LightningDataModule):
+    def __init__(self):
+        super().__init__()
+    def prepare_data(self):
+        # download, split, etc...
+        # only called on 1 GPU/TPU in distributed
+    def setup(self, stage):
+        # make assignments here (val/train/test split)
+        # called on every process in DDP
+    def train_dataloader(self):
+        train_split = Dataset(...)
+        return DataLoader(train_split)
+    def val_dataloader(self):
+        val_split = Dataset(...)
+        return DataLoader(val_split)
+    def test_dataloader(self):
+        test_split = Dataset(...)
+        return DataLoader(test_split)
+    def teardown(self):
+        # clean up after fit or test
+        # called on every process in DDP
+
+</code></pre>
+<p>A DataModule implements 6 key methods:</p>
+<ul>
+<li><strong>prepare_data</strong> (things to do on 1 GPU/TPU not on every GPU/TPU in distributed mode).</li>
+<li><strong>setup</strong>  (things to do on every accelerator in distributed mode).</li>
+<li><strong>train_dataloader</strong> the training dataloader.</li>
+<li><strong>val_dataloader</strong> the val dataloader(s).</li>
+<li><strong>test_dataloader</strong> the test dataloader(s).</li>
+<li><strong>teardown</strong> (things to do on every accelerator in distributed mode when finished)</li>
+</ul>
+<p>This allows you to share a full dataset without explaining how to download, split, transform, and process the data</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Example</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;model_id&#39;</span><span class="p">:</span> <span class="s1">&#39;DCN_demo&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;data_dir&#39;</span><span class="p">:</span> <span class="s1">&#39;/content/data&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;model_root&#39;</span><span class="p">:</span> <span class="s1">&#39;./checkpoints/&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;dnn_hidden_units&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">],</span>
+              <span class="s1">&#39;dnn_activations&#39;</span><span class="p">:</span> <span class="s2">&quot;relu&quot;</span><span class="p">,</span>
+              <span class="s1">&#39;crossing_layers&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+              <span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">1e-3</span><span class="p">,</span>
+              <span class="s1">&#39;net_dropout&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="s1">&#39;batch_norm&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+              <span class="s1">&#39;optimizer&#39;</span><span class="p">:</span> <span class="s1">&#39;adamw&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;task&#39;</span><span class="p">:</span> <span class="s1">&#39;binary_classification&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;loss&#39;</span><span class="p">:</span> <span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;metrics&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;logloss&#39;</span><span class="p">,</span> <span class="s1">&#39;AUC&#39;</span><span class="p">],</span>
+              <span class="s1">&#39;embedding_dim&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+              <span class="s1">&#39;batch_size&#39;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span>
+              <span class="s1">&#39;epochs&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+              <span class="s1">&#39;shuffle&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="s1">&#39;seed&#39;</span><span class="p">:</span> <span class="mi">2019</span><span class="p">,</span>
+              <span class="s1">&#39;use_hdf5&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="s1">&#39;workers&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="s1">&#39;verbose&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>rm -r /content/data
+<span class="n">ds</span> <span class="o">=</span> <span class="n">AvazuDataModule</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">prepare_data</span><span class="p">()</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">train_dataloader</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/local/lib/python3.7/dist-packages/pytorch_lightning/core/datamodule.py:74: LightningDeprecationWarning: DataModule property `train_transforms` was deprecated in v1.5 and will be removed in v1.7.
+  &#34;DataModule property `train_transforms` was deprecated in v1.5 and will be removed in v1.7.&#34;
+Downloading https://github.com/RecoHut-Datasets/avazu/raw/v1/train.csv
+Downloading https://github.com/RecoHut-Datasets/avazu/raw/v1/valid.csv
+Downloading https://github.com/RecoHut-Datasets/avazu/raw/v1/test.csv
+Processing...
+Done!
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[tensor([[1., 1., 2.,  ..., 6., 1., 1.],
+        [1., 1., 1.,  ..., 1., 1., 1.],
+        [1., 1., 1.,  ..., 1., 1., 1.],
+        ...,
+        [1., 1., 2.,  ..., 2., 1., 1.],
+        [1., 1., 1.,  ..., 1., 1., 1.],
+        [1., 1., 1.,  ..., 4., 1., 1.]], dtype=torch.float64), tensor([0., 1., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0., 0., 0., 0., 0., 0., 0.,
+        0., 1., 0., 0., 1., 1., 1., 0., 0., 0., 0., 0., 0., 0., 1., 0., 0., 0.,
+        0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 1.,
+        0., 0., 0., 0., 0., 0., 0., 0., 1., 0.], dtype=torch.float64)]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">recohut.models.deepcrossing</span> <span class="kn">import</span> <span class="n">DeepCrossing</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;model_id&#39;</span><span class="p">:</span> <span class="s1">&#39;DeepCrossing&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;data_dir&#39;</span><span class="p">:</span> <span class="s1">&#39;/content/data&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;model_root&#39;</span><span class="p">:</span> <span class="s1">&#39;./checkpoints/&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;dnn_hidden_units&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">],</span>
+              <span class="s1">&#39;dnn_activations&#39;</span><span class="p">:</span> <span class="s2">&quot;relu&quot;</span><span class="p">,</span>
+              <span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">1e-3</span><span class="p">,</span>
+              <span class="s1">&#39;net_dropout&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="s1">&#39;batch_norm&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+              <span class="s1">&#39;optimizer&#39;</span><span class="p">:</span> <span class="s1">&#39;adamw&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;use_residual&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="s1">&#39;residual_blocks&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span>
+              <span class="s1">&#39;task&#39;</span><span class="p">:</span> <span class="s1">&#39;binary_classification&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;loss&#39;</span><span class="p">:</span> <span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;metrics&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;logloss&#39;</span><span class="p">,</span> <span class="s1">&#39;AUC&#39;</span><span class="p">],</span>
+              <span class="s1">&#39;embedding_dim&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+              <span class="s1">&#39;batch_size&#39;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span>
+              <span class="s1">&#39;epochs&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+              <span class="s1">&#39;shuffle&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="s1">&#39;seed&#39;</span><span class="p">:</span> <span class="mi">2019</span><span class="p">,</span>
+              <span class="s1">&#39;use_hdf5&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="s1">&#39;workers&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="s1">&#39;verbose&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">DeepCrossing</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">feature_map</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">recohut.trainers.pl_trainer</span> <span class="kn">import</span> <span class="n">pl_trainer</span>
+
+<span class="n">pl_trainer</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">max_epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+/usr/local/lib/python3.7/dist-packages/pytorch_lightning/core/datamodule.py:470: LightningDeprecationWarning: DataModule.setup has already been called, so it will not be called again. In v1.6 this behavior will change to always call DataModule.setup.
+  f&#34;DataModule.{name} has already been called, so it will not be called again. &#34;
+
+  | Name              | Type           | Params
+-----------------------------------------------------
+0 | embedding_layer   | EmbeddingLayer | 12.6 K
+1 | crossing_layer    | Sequential     | 722 K 
+2 | output_activation | Sigmoid        | 0     
+-----------------------------------------------------
+735 K     Trainable params
+0         Non-trainable params
+735 K     Total params
+2.940     Total estimated model params size (MB)
+/usr/local/lib/python3.7/dist-packages/pytorch_lightning/callbacks/model_checkpoint.py:631: UserWarning: Checkpoint directory /content exists and is not empty.
+  rank_zero_warn(f&#34;Checkpoint directory {dirpath} exists and is not empty.&#34;)
+/usr/local/lib/python3.7/dist-packages/pytorch_lightning/trainer/data_loading.py:429: UserWarning: The number of training samples (47) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  f&#34;The number of training samples ({self.num_training_batches}) is smaller than the logging interval&#34;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/local/lib/python3.7/dist-packages/pytorch_lightning/core/datamodule.py:470: LightningDeprecationWarning: DataModule.setup has already been called, so it will not be called again. In v1.6 this behavior will change to always call DataModule.setup.
+  f&#34;DataModule.{name} has already been called, so it will not be called again. &#34;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+[Metrics] logloss: 0.000000 - AUC: 1.000000
+--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{&#39;Test Metrics&#39;: {&#39;AUC&#39;: tensor(1.), &#39;logloss&#39;: tensor(1.0680e-07)}}
+--------------------------------------------------------------------------------
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[{&#39;Test Metrics&#39;: {&#39;AUC&#39;: tensor(1.), &#39;logloss&#39;: tensor(1.0680e-07)}}]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># import shutil</span>
+<span class="c1"># import struct</span>
+<span class="c1"># from collections import defaultdict</span>
+<span class="c1"># from pathlib import Path</span>
+
+<span class="c1"># import lmdb</span>
+<span class="c1"># import numpy as np</span>
+<span class="c1"># import torch.utils.data</span>
+<span class="c1"># from tqdm import tqdm</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># class AvazuDataset(torch.utils.data.Dataset):</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+<span class="c1">#     Avazu Click-Through Rate Prediction Dataset</span>
+<span class="c1">#     Dataset preparation</span>
+<span class="c1">#         Remove the infrequent features (appearing in less than threshold instances) and treat them as a single feature</span>
+<span class="c1">#     :param dataset_path: avazu train path</span>
+<span class="c1">#     :param cache_path: lmdb cache path</span>
+<span class="c1">#     :param rebuild_cache: If True, lmdb cache is refreshed</span>
+<span class="c1">#     :param min_threshold: infrequent feature threshold</span>
+<span class="c1">#     Reference</span>
+<span class="c1">#         https://www.kaggle.com/c/avazu-ctr-prediction</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+
+<span class="c1">#     def __init__(self, dataset_path=None, cache_path=&#39;.avazu&#39;, rebuild_cache=False, min_threshold=4):</span>
+<span class="c1">#         self.NUM_FEATS = 22</span>
+<span class="c1">#         self.min_threshold = min_threshold</span>
+<span class="c1">#         if rebuild_cache or not Path(cache_path).exists():</span>
+<span class="c1">#             shutil.rmtree(cache_path, ignore_errors=True)</span>
+<span class="c1">#             if dataset_path is None:</span>
+<span class="c1">#                 raise ValueError(&#39;create cache: failed: dataset_path is None&#39;)</span>
+<span class="c1">#             self.__build_cache(dataset_path, cache_path)</span>
+<span class="c1">#         self.env = lmdb.open(cache_path, create=False, lock=False, readonly=True)</span>
+<span class="c1">#         with self.env.begin(write=False) as txn:</span>
+<span class="c1">#             self.length = txn.stat()[&#39;entries&#39;] - 1</span>
+<span class="c1">#             self.field_dims = np.frombuffer(txn.get(b&#39;field_dims&#39;), dtype=np.uint32)</span>
+
+<span class="c1">#     def __getitem__(self, index):</span>
+<span class="c1">#         with self.env.begin(write=False) as txn:</span>
+<span class="c1">#             np_array = np.frombuffer(</span>
+<span class="c1">#                 txn.get(struct.pack(&#39;&gt;I&#39;, index)), dtype=np.uint32).astype(dtype=np.long)</span>
+<span class="c1">#         return np_array[1:], np_array[0]</span>
+
+<span class="c1">#     def __len__(self):</span>
+<span class="c1">#         return self.length</span>
+
+<span class="c1">#     def __build_cache(self, path, cache_path):</span>
+<span class="c1">#         feat_mapper, defaults = self.__get_feat_mapper(path)</span>
+<span class="c1">#         with lmdb.open(cache_path, map_size=int(1e11)) as env:</span>
+<span class="c1">#             field_dims = np.zeros(self.NUM_FEATS, dtype=np.uint32)</span>
+<span class="c1">#             for i, fm in feat_mapper.items():</span>
+<span class="c1">#                 field_dims[i - 1] = len(fm) + 1</span>
+<span class="c1">#             with env.begin(write=True) as txn:</span>
+<span class="c1">#                 txn.put(b&#39;field_dims&#39;, field_dims.tobytes())</span>
+<span class="c1">#             for buffer in self.__yield_buffer(path, feat_mapper, defaults):</span>
+<span class="c1">#                 with env.begin(write=True) as txn:</span>
+<span class="c1">#                     for key, value in buffer:</span>
+<span class="c1">#                         txn.put(key, value)</span>
+
+<span class="c1">#     def __get_feat_mapper(self, path):</span>
+<span class="c1">#         feat_cnts = defaultdict(lambda: defaultdict(int))</span>
+<span class="c1">#         with open(path) as f:</span>
+<span class="c1">#             f.readline()</span>
+<span class="c1">#             pbar = tqdm(f, mininterval=1, smoothing=0.1)</span>
+<span class="c1">#             pbar.set_description(&#39;Create avazu dataset cache: counting features&#39;)</span>
+<span class="c1">#             for line in pbar:</span>
+<span class="c1">#                 values = line.rstrip(&#39;\n&#39;).split(&#39;,&#39;)</span>
+<span class="c1">#                 if len(values) != self.NUM_FEATS + 2:</span>
+<span class="c1">#                     continue</span>
+<span class="c1">#                 for i in range(1, self.NUM_FEATS + 1):</span>
+<span class="c1">#                     feat_cnts[i][values[i + 1]] += 1</span>
+<span class="c1">#         feat_mapper = {i: {feat for feat, c in cnt.items() if c &gt;= self.min_threshold} for i, cnt in feat_cnts.items()}</span>
+<span class="c1">#         feat_mapper = {i: {feat: idx for idx, feat in enumerate(cnt)} for i, cnt in feat_mapper.items()}</span>
+<span class="c1">#         defaults = {i: len(cnt) for i, cnt in feat_mapper.items()}</span>
+<span class="c1">#         return feat_mapper, defaults</span>
+
+<span class="c1">#     def __yield_buffer(self, path, feat_mapper, defaults, buffer_size=int(1e5)):</span>
+<span class="c1">#         item_idx = 0</span>
+<span class="c1">#         buffer = list()</span>
+<span class="c1">#         with open(path) as f:</span>
+<span class="c1">#             f.readline()</span>
+<span class="c1">#             pbar = tqdm(f, mininterval=1, smoothing=0.1)</span>
+<span class="c1">#             pbar.set_description(&#39;Create avazu dataset cache: setup lmdb&#39;)</span>
+<span class="c1">#             for line in pbar:</span>
+<span class="c1">#                 values = line.rstrip(&#39;\n&#39;).split(&#39;,&#39;)</span>
+<span class="c1">#                 if len(values) != self.NUM_FEATS + 2:</span>
+<span class="c1">#                     continue</span>
+<span class="c1">#                 np_array = np.zeros(self.NUM_FEATS + 1, dtype=np.uint32)</span>
+<span class="c1">#                 np_array[0] = int(values[1])</span>
+<span class="c1">#                 for i in range(1, self.NUM_FEATS + 1):</span>
+<span class="c1">#                     np_array[i] = feat_mapper[i].get(values[i+1], defaults[i])</span>
+<span class="c1">#                 buffer.append((struct.pack(&#39;&gt;I&#39;, item_idx), np_array.tobytes()))</span>
+<span class="c1">#                 item_idx += 1</span>
+<span class="c1">#                 if item_idx % buffer_size == 0:</span>
+<span class="c1">#                     yield buffer</span>
+<span class="c1">#                     buffer.clear()</span>
+<span class="c1">#             yield buffer</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
 
 </div>
     {% endraw %}

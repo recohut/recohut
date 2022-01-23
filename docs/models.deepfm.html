@@ -31,7 +31,180 @@ nb_path: "nbs/models/models.deepfm.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="v1">v1<a class="anchor-link" href="#v1"> </a></h2>
+<h1 id="v1">v1<a class="anchor-link" href="#v1"> </a></h1>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="DeepFM" class="doc_header"><code>class</code> <code>DeepFM</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/deepfm.py#L15" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DeepFM</code>(<strong><code>feature_map</code></strong>, <strong><code>model_id</code></strong>=<em><code>'DeepFM'</code></em>, <strong><code>task</code></strong>=<em><code>'binary_classification'</code></em>, <strong><code>learning_rate</code></strong>=<em><code>0.001</code></em>, <strong><code>embedding_initializer</code></strong>=<em><code>'torch.nn.init.normal_(std=1e-4)'</code></em>, <strong><code>embedding_dim</code></strong>=<em><code>10</code></em>, <strong><code>hidden_units</code></strong>=<em><code>[64, 64, 64]</code></em>, <strong><code>hidden_activations</code></strong>=<em><code>'ReLU'</code></em>, <strong><code>net_dropout</code></strong>=<em><code>0</code></em>, <strong><code>batch_norm</code></strong>=<em><code>False</code></em>, <strong>**<code>kwargs</code></strong>) :: <a href="/recohut/models.bases.ctr.html#CTRModel"><code>CTRModel</code></a></p>
+</blockquote>
+<p>Hooks to be used in LightningModule.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Example</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;model_id&#39;</span><span class="p">:</span> <span class="s1">&#39;DeepFM&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;data_dir&#39;</span><span class="p">:</span> <span class="s1">&#39;/content/data&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;model_root&#39;</span><span class="p">:</span> <span class="s1">&#39;./checkpoints/&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">1e-3</span><span class="p">,</span>
+              <span class="s1">&#39;optimizer&#39;</span><span class="p">:</span> <span class="s1">&#39;adamw&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;task&#39;</span><span class="p">:</span> <span class="s1">&#39;binary_classification&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;loss&#39;</span><span class="p">:</span> <span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;metrics&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;logloss&#39;</span><span class="p">,</span> <span class="s1">&#39;AUC&#39;</span><span class="p">],</span>
+              <span class="s1">&#39;embedding_dim&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+              <span class="s1">&#39;hidden_units&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">300</span><span class="p">],</span>
+              <span class="s1">&#39;hidden_activations&#39;</span><span class="p">:</span> <span class="s1">&#39;relu&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;net_regularizer&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="s1">&#39;embedding_regularizer&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="s1">&#39;batch_norm&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+              <span class="s1">&#39;net_dropout&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="s1">&#39;batch_size&#39;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span>
+              <span class="s1">&#39;epochs&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+              <span class="s1">&#39;shuffle&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="s1">&#39;seed&#39;</span><span class="p">:</span> <span class="mi">2019</span><span class="p">,</span>
+              <span class="s1">&#39;use_hdf5&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="s1">&#39;workers&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="s1">&#39;verbose&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">DeepFM</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">feature_map</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pl_trainer</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">max_epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+
+  | Name              | Type           | Params
+-----------------------------------------------------
+0 | embedding_layer   | EmbeddingLayer | 4.8 K 
+1 | fm_layer          | FM_Layer       | 854   
+2 | dnn               | MLP_Layer      | 223 K 
+3 | output_activation | Sigmoid        | 0     
+-----------------------------------------------------
+228 K     Trainable params
+378       Non-trainable params
+228 K     Total params
+0.915     Total estimated model params size (MB)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{&#39;Test Metrics&#39;: {&#39;AUC&#39;: tensor(1.), &#39;logloss&#39;: tensor(0.1845)}}
+--------------------------------------------------------------------------------
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[{&#39;Test Metrics&#39;: {&#39;AUC&#39;: tensor(1.), &#39;logloss&#39;: tensor(0.1845)}}]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="v2">v2<a class="anchor-link" href="#v2"> </a></h2>
 </div>
 </div>
 </div>
@@ -64,7 +237,7 @@ nb_path: "nbs/models/models.deepfm.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="FactorizationMachine" class="doc_header"><code>class</code> <code>FactorizationMachine</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/deepfm.py#L11" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>FactorizationMachine</code>(<strong><code>reduce_sum</code></strong>=<em><code>True</code></em>) :: <code>Module</code></p>
+<h2 id="FactorizationMachine" class="doc_header"><code>class</code> <code>FactorizationMachine</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/deepfm.py#L58" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>FactorizationMachine</code>(<strong><code>reduce_sum</code></strong>=<em><code>True</code></em>) :: <code>Module</code></p>
 </blockquote>
 <p>Base class for all neural network modules.</p>
 <p>Your models should also subclass this class.</p>
@@ -112,7 +285,7 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="DeepFM" class="doc_header"><code>class</code> <code>DeepFM</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/deepfm.py#L28" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DeepFM</code>(<strong><code>field_dims</code></strong>, <strong><code>embed_dim</code></strong>, <strong><code>mlp_dims</code></strong>, <strong><code>dropout</code></strong>) :: <code>Module</code></p>
+<h2 id="DeepFM_v2" class="doc_header"><code>class</code> <code>DeepFM_v2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/deepfm.py#L75" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DeepFM_v2</code>(<strong><code>field_dims</code></strong>, <strong><code>embed_dim</code></strong>, <strong><code>mlp_dims</code></strong>, <strong><code>dropout</code></strong>) :: <code>Module</code></p>
 </blockquote>
 <p>A pytorch implementation of DeepFM.
 Reference:
@@ -137,7 +310,7 @@ Reference:
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="v2">v2<a class="anchor-link" href="#v2"> </a></h2>
+<h2 id="v3">v3<a class="anchor-link" href="#v3"> </a></h2>
 </div>
 </div>
 </div>
@@ -167,7 +340,7 @@ Reference:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="DeepFMv2" class="doc_header"><code>class</code> <code>DeepFMv2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/deepfm.py#L78" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DeepFMv2</code>(<strong><code>feat_sizes</code></strong>, <strong><code>sparse_feature_columns</code></strong>, <strong><code>dense_feature_columns</code></strong>, <strong><code>dnn_hidden_units</code></strong>=<em><code>[400, 400, 400]</code></em>, <strong><code>dnn_dropout</code></strong>=<em><code>0.0</code></em>, <strong><code>ebedding_size</code></strong>=<em><code>4</code></em>, <strong><code>l2_reg_linear</code></strong>=<em><code>1e-05</code></em>, <strong><code>l2_reg_embedding</code></strong>=<em><code>1e-05</code></em>, <strong><code>l2_reg_dnn</code></strong>=<em><code>0</code></em>, <strong><code>init_std</code></strong>=<em><code>0.0001</code></em>, <strong><code>seed</code></strong>=<em><code>1024</code></em>, <strong><code>device</code></strong>=<em><code>'cpu'</code></em>) :: <code>Module</code></p>
+<h2 id="DeepFM_v3" class="doc_header"><code>class</code> <code>DeepFM_v3</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/deepfm.py#L125" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DeepFM_v3</code>(<strong><code>feat_sizes</code></strong>, <strong><code>sparse_feature_columns</code></strong>, <strong><code>dense_feature_columns</code></strong>, <strong><code>dnn_hidden_units</code></strong>=<em><code>[400, 400, 400]</code></em>, <strong><code>dnn_dropout</code></strong>=<em><code>0.0</code></em>, <strong><code>ebedding_size</code></strong>=<em><code>4</code></em>, <strong><code>l2_reg_linear</code></strong>=<em><code>1e-05</code></em>, <strong><code>l2_reg_embedding</code></strong>=<em><code>1e-05</code></em>, <strong><code>l2_reg_dnn</code></strong>=<em><code>0</code></em>, <strong><code>init_std</code></strong>=<em><code>0.0001</code></em>, <strong><code>seed</code></strong>=<em><code>1024</code></em>, <strong><code>device</code></strong>=<em><code>'cpu'</code></em>) :: <code>Module</code></p>
 </blockquote>
 <p>Base class for all neural network modules.</p>
 <p>Your models should also subclass this class.</p>
@@ -225,7 +398,6 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 <span class="kn">from</span> <span class="nn">torch.utils.data</span> <span class="kn">import</span> <span class="n">DataLoader</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">log_loss</span><span class="p">,</span> <span class="n">roc_auc_score</span>
 
-<span class="kn">from</span> <span class="nn">model</span> <span class="kn">import</span> <span class="n">DeepFMv2</span> <span class="k">as</span> <span class="n">DeepFM</span>
 <span class="kn">from</span> <span class="nn">recohut.datasets.criteo</span> <span class="kn">import</span> <span class="n">CriteoSampleDataset</span>
 
 
@@ -259,7 +431,7 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 <span class="n">dense_features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;I&#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">14</span><span class="p">)]</span>
 
 <span class="c1"># model = NFM(ds.feat_sizes, embedding_size, ds.linear_feature_columns, ds.dnn_feature_columns).to(device)</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">DeepFMv2</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">feat_sizes</span><span class="p">,</span> <span class="n">sparse_feature_columns</span><span class="o">=</span><span class="n">sparse_features</span><span class="p">,</span> <span class="n">dense_feature_columns</span><span class="o">=</span><span class="n">dense_features</span><span class="p">,</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">DeepFM_v3</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">feat_sizes</span><span class="p">,</span> <span class="n">sparse_feature_columns</span><span class="o">=</span><span class="n">sparse_features</span><span class="p">,</span> <span class="n">dense_feature_columns</span><span class="o">=</span><span class="n">dense_features</span><span class="p">,</span>
                 <span class="n">dnn_hidden_units</span><span class="o">=</span><span class="p">[</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">250</span><span class="p">],</span> <span class="n">dnn_dropout</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">ebedding_size</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
                 <span class="n">l2_reg_linear</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="n">device</span><span class="p">)</span>
 <span class="n">loss_func</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">BCELoss</span><span class="p">(</span><span class="n">reduction</span><span class="o">=</span><span class="s1">&#39;mean&#39;</span><span class="p">)</span>

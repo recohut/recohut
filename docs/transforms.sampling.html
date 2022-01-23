@@ -29,6 +29,12 @@ nb_path: "nbs/transforms/transforms.sampling.ipynb"
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Negative-Sampling">Negative Sampling<a class="anchor-link" href="#Negative-Sampling"> </a></h2>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -47,7 +53,7 @@ nb_path: "nbs/transforms/transforms.sampling.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="simple_negative_sampling" class="doc_header"><code>simple_negative_sampling</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/sampling.py#L16" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>simple_negative_sampling</code>(<strong><code>data</code></strong>, <strong><code>num_negatives</code></strong>=<em><code>4</code></em>, <strong><code>binarization</code></strong>=<em><code>False</code></em>, <strong><code>feedback_column</code></strong>=<em><code>'RATING'</code></em>)</p>
+<h4 id="simple_negative_sampling" class="doc_header"><code>simple_negative_sampling</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/sampling.py#L17" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>simple_negative_sampling</code>(<strong><code>data</code></strong>, <strong><code>num_negatives</code></strong>=<em><code>4</code></em>, <strong><code>binarization</code></strong>=<em><code>False</code></em>, <strong><code>feedback_column</code></strong>=<em><code>'RATING'</code></em>)</p>
 </blockquote>
 
 </div>
@@ -78,7 +84,7 @@ nb_path: "nbs/transforms/transforms.sampling.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="AbstractNegativeSampler" class="doc_header"><code>class</code> <code>AbstractNegativeSampler</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/sampling.py#L50" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AbstractNegativeSampler</code>(<strong><code>train</code></strong>, <strong><code>val</code></strong>, <strong><code>test</code></strong>, <strong><code>user_count</code></strong>, <strong><code>item_count</code></strong>, <strong><code>sample_size</code></strong>, <strong><code>seed</code></strong>, <strong><code>flag</code></strong>, <strong><code>save_folder</code></strong>)</p>
+<h2 id="AbstractNegativeSampler" class="doc_header"><code>class</code> <code>AbstractNegativeSampler</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/sampling.py#L51" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>AbstractNegativeSampler</code>(<strong><code>train</code></strong>, <strong><code>val</code></strong>, <strong><code>test</code></strong>, <strong><code>user_count</code></strong>, <strong><code>item_count</code></strong>, <strong><code>sample_size</code></strong>, <strong><code>seed</code></strong>, <strong><code>flag</code></strong>, <strong><code>save_folder</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -109,7 +115,7 @@ nb_path: "nbs/transforms/transforms.sampling.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="RandomNegativeSampler" class="doc_header"><code>class</code> <code>RandomNegativeSampler</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/sampling.py#L89" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>RandomNegativeSampler</code>(<strong><code>train</code></strong>, <strong><code>val</code></strong>, <strong><code>test</code></strong>, <strong><code>user_count</code></strong>, <strong><code>item_count</code></strong>, <strong><code>sample_size</code></strong>, <strong><code>seed</code></strong>, <strong><code>flag</code></strong>, <strong><code>save_folder</code></strong>) :: <a href="/recohut/transforms.sampling.html#AbstractNegativeSampler"><code>AbstractNegativeSampler</code></a></p>
+<h2 id="RandomNegativeSampler" class="doc_header"><code>class</code> <code>RandomNegativeSampler</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/sampling.py#L90" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>RandomNegativeSampler</code>(<strong><code>train</code></strong>, <strong><code>val</code></strong>, <strong><code>test</code></strong>, <strong><code>user_count</code></strong>, <strong><code>item_count</code></strong>, <strong><code>sample_size</code></strong>, <strong><code>seed</code></strong>, <strong><code>flag</code></strong>, <strong><code>save_folder</code></strong>) :: <a href="/recohut/transforms.sampling.html#AbstractNegativeSampler"><code>AbstractNegativeSampler</code></a></p>
 </blockquote>
 
 </div>
@@ -140,8 +146,105 @@ nb_path: "nbs/transforms/transforms.sampling.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="PopularNegativeSampler" class="doc_header"><code>class</code> <code>PopularNegativeSampler</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/sampling.py#L123" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PopularNegativeSampler</code>(<strong><code>train</code></strong>, <strong><code>val</code></strong>, <strong><code>test</code></strong>, <strong><code>user_count</code></strong>, <strong><code>item_count</code></strong>, <strong><code>sample_size</code></strong>, <strong><code>seed</code></strong>, <strong><code>flag</code></strong>, <strong><code>save_folder</code></strong>) :: <a href="/recohut/transforms.sampling.html#AbstractNegativeSampler"><code>AbstractNegativeSampler</code></a></p>
+<h2 id="PopularNegativeSampler" class="doc_header"><code>class</code> <code>PopularNegativeSampler</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/sampling.py#L124" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PopularNegativeSampler</code>(<strong><code>train</code></strong>, <strong><code>val</code></strong>, <strong><code>test</code></strong>, <strong><code>user_count</code></strong>, <strong><code>item_count</code></strong>, <strong><code>sample_size</code></strong>, <strong><code>seed</code></strong>, <strong><code>flag</code></strong>, <strong><code>save_folder</code></strong>) :: <a href="/recohut/transforms.sampling.html#AbstractNegativeSampler"><code>AbstractNegativeSampler</code></a></p>
 </blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Graph-Sampling">Graph Sampling<a class="anchor-link" href="#Graph-Sampling"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="ForestFireSampler" class="doc_header"><code>class</code> <code>ForestFireSampler</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/sampling.py#L183" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>ForestFireSampler</code>(<strong><code>number_of_nodes</code></strong>:<code>int</code>=<em><code>100</code></em>, <strong><code>p</code></strong>:<code>float</code>=<em><code>0.4</code></em>, <strong><code>seed</code></strong>:<code>int</code>=<em><code>42</code></em>, <strong><code>max_visited_nodes_backlog</code></strong>:<code>int</code>=<em><code>100</code></em>, <strong><code>restart_hop_size</code></strong>:<code>int</code>=<em><code>10</code></em>)</p>
+</blockquote>
+<p>An implementation of forest fire sampling. The procedure is a stochastic
+snowball sampling method where the expansion is proportional to the burning probability.
+<code>"For details about the algorithm see this paper." &lt;https://cs.stanford.edu/people/jure/pubs/sampling-kdd06.pdf&gt;</code>_
+Inspiration credit:
+    littleballoffur
+    <a href="https://github.com/benedekrozemberczki/littleballoffur">https://github.com/benedekrozemberczki/littleballoffur</a>
+Args:
+    number_of_nodes (int): Number of sampled nodes. Default is 100.
+    p (float): Burning probability. Default is 0.4.
+    seed (int): Random seed. Default is 42.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="RandomWalkWithRestartSampler" class="doc_header"><code>class</code> <code>RandomWalkWithRestartSampler</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/sampling.py#L248" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>RandomWalkWithRestartSampler</code>(<strong><code>number_of_nodes</code></strong>:<code>int</code>=<em><code>100</code></em>, <strong><code>seed</code></strong>:<code>int</code>=<em><code>42</code></em>, <strong><code>p</code></strong>:<code>float</code>=<em><code>0.1</code></em>)</p>
+</blockquote>
+<p>An implementation of node sampling by random walks with restart. The
+process is a discrete random walker on nodes which teleports back to the
+staring node with a fixed probability. This results in a connected subsample
+from the original input graph. <code>"For details about the algorithm see this
+paper." &lt;https://cs.stanford.edu/people/jure/pubs/sampling-kdd06.pdf&gt;</code>_
+Inspiration credit:
+    littleballoffur
+    <a href="https://github.com/benedekrozemberczki/littleballoffur">https://github.com/benedekrozemberczki/littleballoffur</a>
+Args:
+    number_of_nodes (int): Number of nodes. Default is 100.
+    seed (int): Random seed. Default is 42.
+    p (float): Restart probability. Default is 0.1.</p>
 
 </div>
 

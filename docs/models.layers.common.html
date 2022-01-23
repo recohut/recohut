@@ -47,7 +47,7 @@ nb_path: "nbs/models/layers/models.layers.common.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="FeaturesLinear" class="doc_header"><code>class</code> <code>FeaturesLinear</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L11" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>FeaturesLinear</code>(<strong><code>field_dims</code></strong>, <strong><code>output_dim</code></strong>=<em><code>1</code></em>) :: <code>Module</code></p>
+<h2 id="FeaturesLinear" class="doc_header"><code>class</code> <code>FeaturesLinear</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L27" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>FeaturesLinear</code>(<strong><code>field_dims</code></strong>, <strong><code>output_dim</code></strong>=<em><code>1</code></em>) :: <code>Module</code></p>
 </blockquote>
 <p>References:</p>
 
@@ -81,7 +81,7 @@ nb_path: "nbs/models/layers/models.layers.common.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="FeaturesEmbedding" class="doc_header"><code>class</code> <code>FeaturesEmbedding</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L30" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>FeaturesEmbedding</code>(<strong><code>field_dims</code></strong>, <strong><code>embed_dim</code></strong>) :: <code>Module</code></p>
+<h2 id="FeaturesEmbedding" class="doc_header"><code>class</code> <code>FeaturesEmbedding</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L46" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>FeaturesEmbedding</code>(<strong><code>field_dims</code></strong>, <strong><code>embed_dim</code></strong>) :: <code>Module</code></p>
 </blockquote>
 <p>References:</p>
 
@@ -115,7 +115,7 @@ nb_path: "nbs/models/layers/models.layers.common.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="MultiLayerPerceptron" class="doc_header"><code>class</code> <code>MultiLayerPerceptron</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L49" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>MultiLayerPerceptron</code>(<strong><code>input_dim</code></strong>, <strong><code>embed_dims</code></strong>, <strong><code>dropout</code></strong>, <strong><code>output_layer</code></strong>=<em><code>True</code></em>) :: <code>Module</code></p>
+<h2 id="MultiLayerPerceptron" class="doc_header"><code>class</code> <code>MultiLayerPerceptron</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L65" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>MultiLayerPerceptron</code>(<strong><code>input_dim</code></strong>, <strong><code>embed_dims</code></strong>, <strong><code>dropout</code></strong>, <strong><code>output_layer</code></strong>=<em><code>True</code></em>) :: <code>Module</code></p>
 </blockquote>
 <p>References:</p>
 
@@ -138,6 +138,451 @@ nb_path: "nbs/models/layers/models.layers.common.ipynb"
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="MLP_Layer" class="doc_header"><code>class</code> <code>MLP_Layer</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L90" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>MLP_Layer</code>(<strong><code>input_dim</code></strong>, <strong><code>output_dim</code></strong>=<em><code>None</code></em>, <strong><code>hidden_units</code></strong>=<em><code>[]</code></em>, <strong><code>hidden_activations</code></strong>=<em><code>'ReLU'</code></em>, <strong><code>output_activation</code></strong>=<em><code>None</code></em>, <strong><code>dropout_rates</code></strong>=<em><code>[]</code></em>, <strong><code>batch_norm</code></strong>=<em><code>False</code></em>, <strong><code>use_bias</code></strong>=<em><code>True</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Sequence</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="MaskedAveragePooling" class="doc_header"><code>class</code> <code>MaskedAveragePooling</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L126" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>MaskedAveragePooling</code>() :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="MaskedSumPooling" class="doc_header"><code>class</code> <code>MaskedSumPooling</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L137" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>MaskedSumPooling</code>() :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="KMaxPooling" class="doc_header"><code>class</code> <code>KMaxPooling</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L146" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>KMaxPooling</code>(<strong><code>k</code></strong>, <strong><code>dim</code></strong>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Shallow</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="LR_Layer" class="doc_header"><code>class</code> <code>LR_Layer</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L167" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>LR_Layer</code>(<strong><code>feature_map</code></strong>, <strong><code>output_activation</code></strong>=<em><code>None</code></em>, <strong><code>use_bias</code></strong>=<em><code>True</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="FM_Layer" class="doc_header"><code>class</code> <code>FM_Layer</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L185" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>FM_Layer</code>(<strong><code>feature_map</code></strong>, <strong><code>output_activation</code></strong>=<em><code>None</code></em>, <strong><code>use_bias</code></strong>=<em><code>True</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="LayerNorm" class="doc_header"><code>class</code> <code>LayerNorm</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/common.py#L201" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>LayerNorm</code>(<strong><code>hidden_size</code></strong>, <strong><code>eps</code></strong>=<em><code>1e-12</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hidden_size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">layer</span> <span class="o">=</span> <span class="n">LayerNorm</span><span class="p">(</span><span class="n">hidden_size</span><span class="o">=</span><span class="n">hidden_size</span><span class="p">)</span>
+
+<span class="n">torch</span><span class="o">.</span><span class="n">manual_seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">)</span>
+
+<span class="n">output</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">*</span><span class="mf">1e4</span><span class="p">)</span><span class="o">/</span><span class="mf">1e4</span>
+
+<span class="n">expected</span> <span class="o">=</span>  <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">([[</span><span class="mf">0.1621</span><span class="p">,</span>  <span class="mf">1.1356</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.2977</span><span class="p">],</span>
+                          <span class="p">[</span><span class="o">-</span><span class="mf">1.0854</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.2424</span><span class="p">,</span>  <span class="mf">1.3278</span><span class="p">]])</span>
+
+<span class="n">test_eq</span><span class="p">(</span><span class="n">output</span><span class="p">,</span> <span class="n">expected</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<blockquote><p><strong>References</strong></p>
+<ul>
+<li><a href="https://github.com/xue-pai/FuxiCTR/blob/main/fuxictr/pytorch/layers">https://github.com/xue-pai/FuxiCTR/blob/main/fuxictr/pytorch/layers</a></li>
+</ul>
+</blockquote>
+
+</div>
+</div>
+</div>
 </div>
  
 

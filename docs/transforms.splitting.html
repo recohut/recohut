@@ -1136,6 +1136,38 @@ Returns:
 </div>
     {% endraw %}
 
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="TimeRangeSplit" class="doc_header"><code>class</code> <code>TimeRangeSplit</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L490" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>TimeRangeSplit</code>(<strong><code>start_date</code></strong>, <strong><code>end_date</code></strong>=<em><code>None</code></em>, <strong><code>freq</code></strong>=<em><code>'D'</code></em>, <strong><code>periods</code></strong>=<em><code>None</code></em>, <strong><code>tz</code></strong>=<em><code>None</code></em>, <strong><code>normalize</code></strong>=<em><code>False</code></em>, <strong><code>closed</code></strong>=<em><code>None</code></em>, <strong><code>train_min_date</code></strong>=<em><code>None</code></em>, <strong><code>filter_cold_users</code></strong>=<em><code>True</code></em>, <strong><code>filter_cold_items</code></strong>=<em><code>True</code></em>, <strong><code>filter_already_seen</code></strong>=<em><code>True</code></em>)</p>
+</blockquote>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.date_range.html">https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.date_range.html</a></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Stratified-Split-v2">Stratified Split v2<a class="anchor-link" href="#Stratified-Split-v2"> </a></h2>
@@ -1153,7 +1185,7 @@ Returns:
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="stratified_split_v2" class="doc_header"><code>stratified_split_v2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L490" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>stratified_split_v2</code>(<strong><code>data</code></strong>, <strong><code>ratio</code></strong>=<em><code>0.75</code></em>, <strong><code>min_rating</code></strong>=<em><code>1</code></em>, <strong><code>filter_by</code></strong>=<em><code>'user'</code></em>, <strong><code>col_user</code></strong>=<em><code>'USERID'</code></em>, <strong><code>col_item</code></strong>=<em><code>'ITEMID'</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
+<h4 id="stratified_split_v2" class="doc_header"><code>stratified_split_v2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/splitting.py#L614" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>stratified_split_v2</code>(<strong><code>data</code></strong>, <strong><code>ratio</code></strong>=<em><code>0.75</code></em>, <strong><code>min_rating</code></strong>=<em><code>1</code></em>, <strong><code>filter_by</code></strong>=<em><code>'user'</code></em>, <strong><code>col_user</code></strong>=<em><code>'USERID'</code></em>, <strong><code>col_item</code></strong>=<em><code>'ITEMID'</code></em>, <strong><code>seed</code></strong>=<em><code>42</code></em>)</p>
 </blockquote>
 <p>Pandas stratified splitter.
 For each user / item, the split function takes proportions of ratings which is

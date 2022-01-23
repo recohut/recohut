@@ -36,6 +36,12 @@ nb_path: "nbs/models/layers/models.layers.attention.ipynb"
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="TokenEmbedding">TokenEmbedding<a class="anchor-link" href="#TokenEmbedding"> </a></h2>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -47,7 +53,7 @@ nb_path: "nbs/models/layers/models.layers.attention.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="TokenEmbedding" class="doc_header"><code>class</code> <code>TokenEmbedding</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L14" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>TokenEmbedding</code>(<strong><code>vocab_size</code></strong>, <strong><code>embed_size</code></strong>=<em><code>512</code></em>) :: <code>Embedding</code></p>
+<h2 id="TokenEmbedding" class="doc_header"><code>class</code> <code>TokenEmbedding</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L18" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>TokenEmbedding</code>(<strong><code>vocab_size</code></strong>, <strong><code>embed_size</code></strong>=<em><code>512</code></em>) :: <code>Embedding</code></p>
 </blockquote>
 <p>A simple lookup table that stores embeddings of a fixed dictionary and size.</p>
 <p>This module is often used to store word embeddings and retrieve them using indices.
@@ -159,6 +165,12 @@ tensor([[ 1.0000,  1.0000,  1.0000],
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="PositionalEmbedding">PositionalEmbedding<a class="anchor-link" href="#PositionalEmbedding"> </a></h2>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -170,7 +182,7 @@ tensor([[ 1.0000,  1.0000,  1.0000],
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="PositionalEmbedding" class="doc_header"><code>class</code> <code>PositionalEmbedding</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L19" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PositionalEmbedding</code>(<strong><code>max_len</code></strong>, <strong><code>d_model</code></strong>) :: <code>Module</code></p>
+<h2 id="PositionalEmbedding" class="doc_header"><code>class</code> <code>PositionalEmbedding</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L23" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PositionalEmbedding</code>(<strong><code>max_len</code></strong>, <strong><code>d_model</code></strong>) :: <code>Module</code></p>
 </blockquote>
 <p>Base class for all neural network modules.</p>
 <p>Your models should also subclass this class.</p>
@@ -225,7 +237,7 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="GELU" class="doc_header"><code>class</code> <code>GELU</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L33" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>GELU</code>() :: <code>Module</code></p>
+<h2 id="GELU" class="doc_header"><code>class</code> <code>GELU</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L37" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>GELU</code>() :: <code>Module</code></p>
 </blockquote>
 <p>Base class for all neural network modules.</p>
 <p>Your models should also subclass this class.</p>
@@ -280,7 +292,7 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="PositionwiseFeedForward" class="doc_header"><code>class</code> <code>PositionwiseFeedForward</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L38" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PositionwiseFeedForward</code>(<strong><code>d_model</code></strong>, <strong><code>d_ff</code></strong>) :: <code>Module</code></p>
+<h2 id="PositionwiseFeedForward" class="doc_header"><code>class</code> <code>PositionwiseFeedForward</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L42" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>PositionwiseFeedForward</code>(<strong><code>d_model</code></strong>, <strong><code>d_ff</code></strong>) :: <code>Module</code></p>
 </blockquote>
 <p>Base class for all neural network modules.</p>
 <p>Your models should also subclass this class.</p>
@@ -335,7 +347,7 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="LayerNorm" class="doc_header"><code>class</code> <code>LayerNorm</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L49" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>LayerNorm</code>(<strong><code>features</code></strong>, <strong><code>eps</code></strong>=<em><code>1e-06</code></em>) :: <code>Module</code></p>
+<h2 id="LayerNorm" class="doc_header"><code>class</code> <code>LayerNorm</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L53" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>LayerNorm</code>(<strong><code>features</code></strong>, <strong><code>eps</code></strong>=<em><code>1e-06</code></em>) :: <code>Module</code></p>
 </blockquote>
 <p>Base class for all neural network modules.</p>
 <p>Your models should also subclass this class.</p>
@@ -390,7 +402,7 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="SublayerConnection" class="doc_header"><code>class</code> <code>SublayerConnection</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L62" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SublayerConnection</code>(<strong><code>size</code></strong>, <strong><code>dropout</code></strong>) :: <code>Module</code></p>
+<h2 id="SublayerConnection" class="doc_header"><code>class</code> <code>SublayerConnection</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L66" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SublayerConnection</code>(<strong><code>size</code></strong>, <strong><code>dropout</code></strong>) :: <code>Module</code></p>
 </blockquote>
 <p>layer norm and dropout (dropout and then layer norm)</p>
 
@@ -411,6 +423,12 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Attention">Attention<a class="anchor-link" href="#Attention"> </a></h2>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -422,282 +440,7 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="Attention" class="doc_header"><code>class</code> <code>Attention</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L75" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Attention</code>() :: <code>Module</code></p>
-</blockquote>
-<p>Base class for all neural network modules.</p>
-<p>Your models should also subclass this class.</p>
-<p>Modules can also contain other Modules, allowing to nest them in
-a tree structure. You can assign the submodules as regular attributes::</p>
-
-<pre><code>import torch.nn as nn
-import torch.nn.functional as F
-
-class Model(nn.Module):
-    def __init__(self):
-        super(Model, self).__init__()
-        self.conv1 = nn.Conv2d(1, 20, 5)
-        self.conv2 = nn.Conv2d(20, 20, 5)
-
-    def forward(self, x):
-        x = F.relu(self.conv1(x))
-        return F.relu(self.conv2(x))
-
-</code></pre>
-<p>Submodules assigned in this way will be registered, and will have their
-parameters converted too when you call :meth:<code>to</code>, etc.</p>
-<p>:ivar training: Boolean represents whether this module is in training or
-                evaluation mode.
-:vartype training: bool</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="MultiHeadedAttention" class="doc_header"><code>class</code> <code>MultiHeadedAttention</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L96" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>MultiHeadedAttention</code>(<strong><code>h</code></strong>, <strong><code>d_model</code></strong>, <strong><code>head_size</code></strong>=<em><code>None</code></em>, <strong><code>dropout</code></strong>=<em><code>0.1</code></em>) :: <code>Module</code></p>
-</blockquote>
-<p>Base class for all neural network modules.</p>
-<p>Your models should also subclass this class.</p>
-<p>Modules can also contain other Modules, allowing to nest them in
-a tree structure. You can assign the submodules as regular attributes::</p>
-
-<pre><code>import torch.nn as nn
-import torch.nn.functional as F
-
-class Model(nn.Module):
-    def __init__(self):
-        super(Model, self).__init__()
-        self.conv1 = nn.Conv2d(1, 20, 5)
-        self.conv2 = nn.Conv2d(20, 20, 5)
-
-    def forward(self, x):
-        x = F.relu(self.conv1(x))
-        return F.relu(self.conv2(x))
-
-</code></pre>
-<p>Submodules assigned in this way will be registered, and will have their
-parameters converted too when you call :meth:<code>to</code>, etc.</p>
-<p>:ivar training: Boolean represents whether this module is in training or
-                evaluation mode.
-:vartype training: bool</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="TransformerBlock" class="doc_header"><code>class</code> <code>TransformerBlock</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L131" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>TransformerBlock</code>(<strong><code>hidden</code></strong>, <strong><code>attn_heads</code></strong>, <strong><code>head_size</code></strong>, <strong><code>feed_forward_hidden</code></strong>, <strong><code>dropout</code></strong>, <strong><code>attn_dropout</code></strong>=<em><code>0.1</code></em>) :: <code>Module</code></p>
-</blockquote>
-<p>Base class for all neural network modules.</p>
-<p>Your models should also subclass this class.</p>
-<p>Modules can also contain other Modules, allowing to nest them in
-a tree structure. You can assign the submodules as regular attributes::</p>
-
-<pre><code>import torch.nn as nn
-import torch.nn.functional as F
-
-class Model(nn.Module):
-    def __init__(self):
-        super(Model, self).__init__()
-        self.conv1 = nn.Conv2d(1, 20, 5)
-        self.conv2 = nn.Conv2d(20, 20, 5)
-
-    def forward(self, x):
-        x = F.relu(self.conv1(x))
-        return F.relu(self.conv2(x))
-
-</code></pre>
-<p>Submodules assigned in this way will be registered, and will have their
-parameters converted too when you call :meth:<code>to</code>, etc.</p>
-<p>:ivar training: Boolean represents whether this module is in training or
-                evaluation mode.
-:vartype training: bool</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="SASMultiHeadedAttention" class="doc_header"><code>class</code> <code>SASMultiHeadedAttention</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L148" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SASMultiHeadedAttention</code>(<strong><code>h</code></strong>, <strong><code>d_model</code></strong>, <strong><code>head_size</code></strong>=<em><code>None</code></em>, <strong><code>dropout</code></strong>=<em><code>0.1</code></em>) :: <code>Module</code></p>
-</blockquote>
-<p>Base class for all neural network modules.</p>
-<p>Your models should also subclass this class.</p>
-<p>Modules can also contain other Modules, allowing to nest them in
-a tree structure. You can assign the submodules as regular attributes::</p>
-
-<pre><code>import torch.nn as nn
-import torch.nn.functional as F
-
-class Model(nn.Module):
-    def __init__(self):
-        super(Model, self).__init__()
-        self.conv1 = nn.Conv2d(1, 20, 5)
-        self.conv2 = nn.Conv2d(20, 20, 5)
-
-    def forward(self, x):
-        x = F.relu(self.conv1(x))
-        return F.relu(self.conv2(x))
-
-</code></pre>
-<p>Submodules assigned in this way will be registered, and will have their
-parameters converted too when you call :meth:<code>to</code>, etc.</p>
-<p>:ivar training: Boolean represents whether this module is in training or
-                evaluation mode.
-:vartype training: bool</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="SASPositionwiseFeedForward" class="doc_header"><code>class</code> <code>SASPositionwiseFeedForward</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L184" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SASPositionwiseFeedForward</code>(<strong><code>d_model</code></strong>, <strong><code>d_ff</code></strong>, <strong><code>dropout</code></strong>=<em><code>0.1</code></em>) :: <code>Module</code></p>
-</blockquote>
-<p>Base class for all neural network modules.</p>
-<p>Your models should also subclass this class.</p>
-<p>Modules can also contain other Modules, allowing to nest them in
-a tree structure. You can assign the submodules as regular attributes::</p>
-
-<pre><code>import torch.nn as nn
-import torch.nn.functional as F
-
-class Model(nn.Module):
-    def __init__(self):
-        super(Model, self).__init__()
-        self.conv1 = nn.Conv2d(1, 20, 5)
-        self.conv2 = nn.Conv2d(20, 20, 5)
-
-    def forward(self, x):
-        x = F.relu(self.conv1(x))
-        return F.relu(self.conv2(x))
-
-</code></pre>
-<p>Submodules assigned in this way will be registered, and will have their
-parameters converted too when you call :meth:<code>to</code>, etc.</p>
-<p>:ivar training: Boolean represents whether this module is in training or
-                evaluation mode.
-:vartype training: bool</p>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="SASTransformerBlock" class="doc_header"><code>class</code> <code>SASTransformerBlock</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L198" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SASTransformerBlock</code>(<strong><code>hidden</code></strong>, <strong><code>attn_heads</code></strong>, <strong><code>head_size</code></strong>, <strong><code>feed_forward_hidden</code></strong>, <strong><code>dropout</code></strong>, <strong><code>attn_dropout</code></strong>=<em><code>0.1</code></em>) :: <code>Module</code></p>
+<h2 id="Attention" class="doc_header"><code>class</code> <code>Attention</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L79" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>Attention</code>() :: <code>Module</code></p>
 </blockquote>
 <p>Base class for all neural network modules.</p>
 <p>Your models should also subclass this class.</p>
@@ -743,9 +486,769 @@ parameters converted too when you call :meth:<code>to</code>, etc.</p>
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="ScaledDotProductAttention">ScaledDotProductAttention<a class="anchor-link" href="#ScaledDotProductAttention"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="ScaledDotProductAttention" class="doc_header"><code>class</code> <code>ScaledDotProductAttention</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L100" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>ScaledDotProductAttention</code>(<strong><code>dropout_rate</code></strong>=<em><code>0.0</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Scaled Dot-Product Attention
+Ref: <a href="https://zhuanlan.zhihu.com/p/47812375">https://zhuanlan.zhihu.com/p/47812375</a></p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="MultiHeadAttention">MultiHeadAttention<a class="anchor-link" href="#MultiHeadAttention"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="MultiHeadAttention" class="doc_header"><code>class</code> <code>MultiHeadAttention</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L124" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>MultiHeadAttention</code>(<strong><code>input_dim</code></strong>, <strong><code>attention_dim</code></strong>=<em><code>None</code></em>, <strong><code>num_heads</code></strong>=<em><code>1</code></em>, <strong><code>dropout_rate</code></strong>=<em><code>0.0</code></em>, <strong><code>use_residual</code></strong>=<em><code>True</code></em>, <strong><code>use_scale</code></strong>=<em><code>False</code></em>, <strong><code>layer_norm</code></strong>=<em><code>False</code></em>, <strong><code>align_to</code></strong>=<em><code>'input'</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Multi-head attention module</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="MultiHeadedAttention_v2">MultiHeadedAttention_v2<a class="anchor-link" href="#MultiHeadedAttention_v2"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="MultiHeadedAttention_v2" class="doc_header"><code>class</code> <code>MultiHeadedAttention_v2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L187" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>MultiHeadedAttention_v2</code>(<strong><code>h</code></strong>, <strong><code>d_model</code></strong>, <strong><code>head_size</code></strong>=<em><code>None</code></em>, <strong><code>dropout</code></strong>=<em><code>0.1</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="MultiHeadSelfAttention">MultiHeadSelfAttention<a class="anchor-link" href="#MultiHeadSelfAttention"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="MultiHeadSelfAttention" class="doc_header"><code>class</code> <code>MultiHeadSelfAttention</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L222" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>MultiHeadSelfAttention</code>(<strong><code>input_dim</code></strong>, <strong><code>attention_dim</code></strong>=<em><code>None</code></em>, <strong><code>num_heads</code></strong>=<em><code>1</code></em>, <strong><code>dropout_rate</code></strong>=<em><code>0.0</code></em>, <strong><code>use_residual</code></strong>=<em><code>True</code></em>, <strong><code>use_scale</code></strong>=<em><code>False</code></em>, <strong><code>layer_norm</code></strong>=<em><code>False</code></em>, <strong><code>align_to</code></strong>=<em><code>'input'</code></em>) :: <a href="/recohut/models.layers.attention.html#MultiHeadAttention"><code>MultiHeadAttention</code></a></p>
+</blockquote>
+<p>Multi-head attention module</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="TransformerBlock">TransformerBlock<a class="anchor-link" href="#TransformerBlock"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="TransformerBlock" class="doc_header"><code>class</code> <code>TransformerBlock</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L228" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>TransformerBlock</code>(<strong><code>hidden</code></strong>, <strong><code>attn_heads</code></strong>, <strong><code>head_size</code></strong>, <strong><code>feed_forward_hidden</code></strong>, <strong><code>dropout</code></strong>, <strong><code>attn_dropout</code></strong>=<em><code>0.1</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="SqueezeExcitationLayer">SqueezeExcitationLayer<a class="anchor-link" href="#SqueezeExcitationLayer"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="SqueezeExcitationLayer" class="doc_header"><code>class</code> <code>SqueezeExcitationLayer</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L245" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SqueezeExcitationLayer</code>(<strong><code>num_fields</code></strong>, <strong><code>reduction_ratio</code></strong>=<em><code>3</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="SASMultiHeadedAttention">SASMultiHeadedAttention<a class="anchor-link" href="#SASMultiHeadedAttention"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="SASMultiHeadedAttention" class="doc_header"><code>class</code> <code>SASMultiHeadedAttention</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L261" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SASMultiHeadedAttention</code>(<strong><code>h</code></strong>, <strong><code>d_model</code></strong>, <strong><code>head_size</code></strong>=<em><code>None</code></em>, <strong><code>dropout</code></strong>=<em><code>0.1</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="SASPositionwiseFeedForward" class="doc_header"><code>class</code> <code>SASPositionwiseFeedForward</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L297" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SASPositionwiseFeedForward</code>(<strong><code>d_model</code></strong>, <strong><code>d_ff</code></strong>, <strong><code>dropout</code></strong>=<em><code>0.1</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="SASTransformerBlock">SASTransformerBlock<a class="anchor-link" href="#SASTransformerBlock"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="SASTransformerBlock" class="doc_header"><code>class</code> <code>SASTransformerBlock</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L311" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SASTransformerBlock</code>(<strong><code>hidden</code></strong>, <strong><code>attn_heads</code></strong>, <strong><code>head_size</code></strong>, <strong><code>feed_forward_hidden</code></strong>, <strong><code>dropout</code></strong>, <strong><code>attn_dropout</code></strong>=<em><code>0.1</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="SelfAttention">SelfAttention<a class="anchor-link" href="#SelfAttention"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="SelfAttention" class="doc_header"><code>class</code> <code>SelfAttention</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L326" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>SelfAttention</code>(<strong><code>hidden_size</code></strong>, <strong><code>num_attention_heads</code></strong>, <strong><code>attention_probs_dropout_prob</code></strong>, <strong><code>hidden_dropout_prob</code></strong>) :: <code>Module</code></p>
+</blockquote>
+<p>References:</p>
+
+<pre><code>1. https://github.com/RecoHut-Stanzas/STOSA/blob/ee14e2eabcc60922eb52cc7d3231df4954d9ff16/modules.py#L127</code></pre>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hidden_size</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">num_attention_heads</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">hidden_dropout_prob</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">attention_probs_dropout_prob</span> <span class="o">=</span> <span class="mf">0.2</span>
+
+<span class="n">layer</span> <span class="o">=</span> <span class="n">SelfAttention</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_attention_heads</span><span class="p">,</span> <span class="n">hidden_dropout_prob</span><span class="p">,</span>
+                      <span class="n">attention_probs_dropout_prob</span><span class="p">)</span>
+
+<span class="n">input_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">attention_mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">hidden_states</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">input_tensor</span><span class="p">,</span> <span class="n">attention_mask</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">*</span><span class="mf">1e4</span><span class="p">)</span><span class="o">/</span><span class="mf">1e4</span>
+
+<span class="n">test_eq</span><span class="p">(</span><span class="n">hidden_states</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">numel</span><span class="p">(),</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">hidden_states</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">attention_probs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">input_tensor</span><span class="p">,</span> <span class="n">attention_mask</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">*</span><span class="mf">1e4</span><span class="p">)</span><span class="o">/</span><span class="mf">1e4</span>
+
+<span class="n">test_eq</span><span class="p">(</span><span class="n">attention_probs</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">numel</span><span class="p">(),</span> <span class="mi">64</span><span class="p">)</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">attention_probs</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="DistSelfAttention">DistSelfAttention<a class="anchor-link" href="#DistSelfAttention"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="DistSelfAttention" class="doc_header"><code>class</code> <code>DistSelfAttention</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L391" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DistSelfAttention</code>(<strong><code>hidden_size</code></strong>, <strong><code>num_attention_heads</code></strong>, <strong><code>hidden_dropout_prob</code></strong>, <strong><code>attention_probs_dropout_prob</code></strong>, <strong><code>distance_metric</code></strong>=<em><code>'wasserstein'</code></em>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hidden_size</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">num_attention_heads</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">hidden_dropout_prob</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">attention_probs_dropout_prob</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">distance</span> <span class="o">=</span> <span class="s1">&#39;wasserstein&#39;</span>
+
+<span class="n">layer</span> <span class="o">=</span> <span class="n">DistSelfAttention</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_attention_heads</span><span class="p">,</span> <span class="n">hidden_dropout_prob</span><span class="p">,</span>
+                          <span class="n">attention_probs_dropout_prob</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span>
+
+<span class="n">input_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">attention_mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">output</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">input_tensor</span><span class="p">,</span> <span class="n">input_tensor</span><span class="p">,</span> <span class="n">attention_mask</span><span class="p">)</span>
+
+<span class="n">mean_hidden_states</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">*</span><span class="mf">1e4</span><span class="p">)</span><span class="o">/</span><span class="mf">1e4</span>
+
+<span class="n">test_eq</span><span class="p">(</span><span class="n">mean_hidden_states</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">numel</span><span class="p">(),</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">mean_hidden_states</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">cov_hidden_states</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">*</span><span class="mf">1e4</span><span class="p">)</span><span class="o">/</span><span class="mf">1e4</span>
+
+<span class="n">test_eq</span><span class="p">(</span><span class="n">cov_hidden_states</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">numel</span><span class="p">(),</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">cov_hidden_states</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">attention_probs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">*</span><span class="mf">1e4</span><span class="p">)</span><span class="o">/</span><span class="mf">1e4</span>
+
+<span class="n">test_eq</span><span class="p">(</span><span class="n">attention_probs</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">numel</span><span class="p">(),</span> <span class="mi">64</span><span class="p">)</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">attention_probs</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="DistMeanSelfAttention">DistMeanSelfAttention<a class="anchor-link" href="#DistMeanSelfAttention"> </a></h2>
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="DistMeanSelfAttention" class="doc_header"><code>class</code> <code>DistMeanSelfAttention</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/models/layers/attention.py#L476" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>DistMeanSelfAttention</code>(<strong><code>hidden_size</code></strong>, <strong><code>num_attention_heads</code></strong>, <strong><code>attention_probs_dropout_prob</code></strong>, <strong><code>hidden_dropout_prob</code></strong>) :: <code>Module</code></p>
+</blockquote>
+<p>Base class for all neural network modules.</p>
+<p>Your models should also subclass this class.</p>
+<p>Modules can also contain other Modules, allowing to nest them in
+a tree structure. You can assign the submodules as regular attributes::</p>
+
+<pre><code>import torch.nn as nn
+import torch.nn.functional as F
+
+class Model(nn.Module):
+    def __init__(self):
+        super(Model, self).__init__()
+        self.conv1 = nn.Conv2d(1, 20, 5)
+        self.conv2 = nn.Conv2d(20, 20, 5)
+
+    def forward(self, x):
+        x = F.relu(self.conv1(x))
+        return F.relu(self.conv2(x))
+
+</code></pre>
+<p>Submodules assigned in this way will be registered, and will have their
+parameters converted too when you call :meth:<code>to</code>, etc.</p>
+<p>:ivar training: Boolean represents whether this module is in training or
+                evaluation mode.
+:vartype training: bool</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">hidden_size</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">num_attention_heads</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">hidden_dropout_prob</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="n">attention_probs_dropout_prob</span> <span class="o">=</span> <span class="mf">0.2</span>
+
+<span class="n">layer</span> <span class="o">=</span> <span class="n">DistMeanSelfAttention</span><span class="p">(</span><span class="n">hidden_size</span><span class="p">,</span> <span class="n">num_attention_heads</span><span class="p">,</span> <span class="n">hidden_dropout_prob</span><span class="p">,</span>
+                          <span class="n">attention_probs_dropout_prob</span><span class="p">)</span>
+
+<span class="n">input_tensor</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">attention_mask</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">rand</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+
+<span class="n">output</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="n">input_tensor</span><span class="p">,</span> <span class="n">input_tensor</span><span class="p">,</span> <span class="n">attention_mask</span><span class="p">)</span>
+
+<span class="n">mean_hidden_states</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">*</span><span class="mf">1e4</span><span class="p">)</span><span class="o">/</span><span class="mf">1e4</span>
+
+<span class="n">test_eq</span><span class="p">(</span><span class="n">mean_hidden_states</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">numel</span><span class="p">(),</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">mean_hidden_states</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">cov_hidden_states</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">*</span><span class="mf">1e4</span><span class="p">)</span><span class="o">/</span><span class="mf">1e4</span>
+
+<span class="n">test_eq</span><span class="p">(</span><span class="n">cov_hidden_states</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">numel</span><span class="p">(),</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">cov_hidden_states</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">attention_probs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">output</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">detach</span><span class="p">()</span><span class="o">*</span><span class="mf">1e4</span><span class="p">)</span><span class="o">/</span><span class="mf">1e4</span>
+
+<span class="n">test_eq</span><span class="p">(</span><span class="n">attention_probs</span><span class="o">.</span><span class="n">shape</span><span class="o">.</span><span class="n">numel</span><span class="p">(),</span> <span class="mi">64</span><span class="p">)</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">attention_probs</span><span class="o">.</span><span class="n">shape</span><span class="p">),</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <blockquote><p>References</p>
 <ol>
-<li><a href="https://github.com/sparsh-ai/stanza/blob/S714864/model/attention.py">https://github.com/sparsh-ai/stanza/blob/S714864/model/attention.py</a></li>
+<li><a href="https://github.com/sparsh-ai/stanza/blob/S714864/model/attention.py2">https://github.com/sparsh-ai/stanza/blob/S714864/model/attention.py2</a>. <a href="https://github.com/xue-pai/FuxiCTR/blob/main/fuxictr/pytorch/layers/attention.py">https://github.com/xue-pai/FuxiCTR/blob/main/fuxictr/pytorch/layers/attention.py</a></li>
 </ol>
 </blockquote>
 

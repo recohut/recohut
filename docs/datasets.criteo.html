@@ -29,9 +29,425 @@ nb_path: "nbs/datasets/datasets.criteo.ipynb"
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Criteo-dataset-and-datamodule">Criteo dataset and datamodule<a class="anchor-link" href="#Criteo-dataset-and-datamodule"> </a></h2>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="CriteoDataset" class="doc_header"><code>class</code> <code>CriteoDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/criteo.py#L15" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>CriteoDataset</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwds</code></strong>) :: <a href="/recohut/datasets.bases.ctr.html#CTRDataset"><code>CTRDataset</code></a></p>
+</blockquote>
+<p>An abstract class representing a :class:<a href="/recohut/datasets.base.html#Dataset"><code>Dataset</code></a>.</p>
+<p>All datasets that represent a map from keys to data samples should subclass
+it. All subclasses should overwrite :meth:<code>__getitem__</code>, supporting fetching a
+data sample for a given key. Subclasses could also optionally overwrite
+:meth:<code>__len__</code>, which is expected to return the size of the dataset by many
+:class:<code>~torch.utils.data.Sampler</code> implementations and the default options
+of :class:<code>~torch.utils.data.DataLoader</code>.</p>
+<p>.. note::
+  :class:<code>~torch.utils.data.DataLoader</code> by default constructs a index
+  sampler that yields integral indices.  To make it work with a map-style
+  dataset with non-integral indices/keys, a custom sampler must be provided.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="CriteoDataModule" class="doc_header"><code>class</code> <code>CriteoDataModule</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/criteo.py#L50" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>CriteoDataModule</code>(<strong>*<code>args</code></strong>:<code>Any</code>, <strong>**<code>kwargs</code></strong>:<code>Any</code>) :: <a href="/recohut/datasets.bases.ctr.html#CTRDataModule"><code>CTRDataModule</code></a></p>
+</blockquote>
+<p>A DataModule standardizes the training, val, test splits, data preparation and transforms. The main
+advantage is consistent data splits, data preparation and transforms across models.</p>
+<p>Example::</p>
+
+<pre><code>class MyDataModule(LightningDataModule):
+    def __init__(self):
+        super().__init__()
+    def prepare_data(self):
+        # download, split, etc...
+        # only called on 1 GPU/TPU in distributed
+    def setup(self, stage):
+        # make assignments here (val/train/test split)
+        # called on every process in DDP
+    def train_dataloader(self):
+        train_split = Dataset(...)
+        return DataLoader(train_split)
+    def val_dataloader(self):
+        val_split = Dataset(...)
+        return DataLoader(val_split)
+    def test_dataloader(self):
+        test_split = Dataset(...)
+        return DataLoader(test_split)
+    def teardown(self):
+        # clean up after fit or test
+        # called on every process in DDP
+
+</code></pre>
+<p>A DataModule implements 6 key methods:</p>
+<ul>
+<li><strong>prepare_data</strong> (things to do on 1 GPU/TPU not on every GPU/TPU in distributed mode).</li>
+<li><strong>setup</strong>  (things to do on every accelerator in distributed mode).</li>
+<li><strong>train_dataloader</strong> the training dataloader.</li>
+<li><strong>val_dataloader</strong> the val dataloader(s).</li>
+<li><strong>test_dataloader</strong> the test dataloader(s).</li>
+<li><strong>teardown</strong> (things to do on every accelerator in distributed mode when finished)</li>
+</ul>
+<p>This allows you to share a full dataset without explaining how to download, split, transform, and process the data</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Example</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;model_id&#39;</span><span class="p">:</span> <span class="s1">&#39;DCN_demo&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;data_dir&#39;</span><span class="p">:</span> <span class="s1">&#39;/content/data&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;model_root&#39;</span><span class="p">:</span> <span class="s1">&#39;./checkpoints/&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;dnn_hidden_units&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">],</span>
+              <span class="s1">&#39;dnn_activations&#39;</span><span class="p">:</span> <span class="s2">&quot;relu&quot;</span><span class="p">,</span>
+              <span class="s1">&#39;crossing_layers&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+              <span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">1e-3</span><span class="p">,</span>
+              <span class="s1">&#39;net_dropout&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="s1">&#39;batch_norm&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+              <span class="s1">&#39;optimizer&#39;</span><span class="p">:</span> <span class="s1">&#39;adamw&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;task&#39;</span><span class="p">:</span> <span class="s1">&#39;binary_classification&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;loss&#39;</span><span class="p">:</span> <span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;metrics&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;logloss&#39;</span><span class="p">,</span> <span class="s1">&#39;AUC&#39;</span><span class="p">],</span>
+              <span class="s1">&#39;embedding_dim&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+              <span class="s1">&#39;batch_size&#39;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span>
+              <span class="s1">&#39;epochs&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+              <span class="s1">&#39;shuffle&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="s1">&#39;seed&#39;</span><span class="p">:</span> <span class="mi">2019</span><span class="p">,</span>
+              <span class="s1">&#39;use_hdf5&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="s1">&#39;workers&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="s1">&#39;verbose&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>rm -r /content/data
+<span class="n">ds</span> <span class="o">=</span> <span class="n">CriteoDataModule</span><span class="p">(</span><span class="o">**</span><span class="n">params</span><span class="p">)</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">prepare_data</span><span class="p">()</span>
+<span class="n">ds</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">batch</span> <span class="ow">in</span> <span class="n">ds</span><span class="o">.</span><span class="n">train_dataloader</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
+    <span class="k">break</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/local/lib/python3.7/dist-packages/pytorch_lightning/core/datamodule.py:74: LightningDeprecationWarning: DataModule property `train_transforms` was deprecated in v1.5 and will be removed in v1.7.
+  &#34;DataModule property `train_transforms` was deprecated in v1.5 and will be removed in v1.7.&#34;
+Downloading https://github.com/RecoHut-Datasets/criteo/raw/v2/train.csv
+Downloading https://github.com/RecoHut-Datasets/criteo/raw/v2/valid.csv
+Downloading https://github.com/RecoHut-Datasets/criteo/raw/v2/test.csv
+Processing...
+Done!
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[tensor([[  4.,   1.,   2.,  ...,   2.,   0.,   0.],
+        [  0.,  16.,   0.,  ...,  52.,   0.,   0.],
+        [  0.,   2.,   0.,  ...,   5.,   0.,   0.],
+        ...,
+        [  0.,  22.,   4.,  ...,   1.,   0.,   0.],
+        [  0.,   6.,   1.,  ...,   3.,   1., 202.],
+        [  0.,   5.,   2.,  ...,  12.,   2.,   6.]], dtype=torch.float64), tensor([1., 1., 0., 0., 1., 1., 0., 1., 0., 0., 0., 1., 1., 1., 1., 1., 1., 0.,
+        1., 1., 0., 1., 0., 0., 0., 1., 0., 1., 0., 1., 1., 0., 1., 1., 0., 1.,
+        0., 0., 0., 0., 1., 1., 0., 0., 0., 1., 0., 1., 1., 1., 0., 0., 1., 1.,
+        1., 0., 0., 0., 0., 1., 0., 1., 1., 1.], dtype=torch.float64)]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">recohut.models.deepcrossing</span> <span class="kn">import</span> <span class="n">DeepCrossing</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;model_id&#39;</span><span class="p">:</span> <span class="s1">&#39;DeepCrossing&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;data_dir&#39;</span><span class="p">:</span> <span class="s1">&#39;/content/data&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;model_root&#39;</span><span class="p">:</span> <span class="s1">&#39;./checkpoints/&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;dnn_hidden_units&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">],</span>
+              <span class="s1">&#39;dnn_activations&#39;</span><span class="p">:</span> <span class="s2">&quot;relu&quot;</span><span class="p">,</span>
+              <span class="s1">&#39;learning_rate&#39;</span><span class="p">:</span> <span class="mf">1e-3</span><span class="p">,</span>
+              <span class="s1">&#39;net_dropout&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+              <span class="s1">&#39;batch_norm&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+              <span class="s1">&#39;optimizer&#39;</span><span class="p">:</span> <span class="s1">&#39;adamw&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;use_residual&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="s1">&#39;residual_blocks&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">500</span><span class="p">],</span>
+              <span class="s1">&#39;task&#39;</span><span class="p">:</span> <span class="s1">&#39;binary_classification&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;loss&#39;</span><span class="p">:</span> <span class="s1">&#39;binary_crossentropy&#39;</span><span class="p">,</span>
+              <span class="s1">&#39;metrics&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;logloss&#39;</span><span class="p">,</span> <span class="s1">&#39;AUC&#39;</span><span class="p">],</span>
+              <span class="s1">&#39;embedding_dim&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+              <span class="s1">&#39;batch_size&#39;</span><span class="p">:</span> <span class="mi">64</span><span class="p">,</span>
+              <span class="s1">&#39;epochs&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+              <span class="s1">&#39;shuffle&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="s1">&#39;seed&#39;</span><span class="p">:</span> <span class="mi">2019</span><span class="p">,</span>
+              <span class="s1">&#39;use_hdf5&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+              <span class="s1">&#39;workers&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+              <span class="s1">&#39;verbose&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">DeepCrossing</span><span class="p">(</span><span class="n">ds</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">feature_map</span><span class="p">,</span> <span class="o">**</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">recohut.trainers.pl_trainer</span> <span class="kn">import</span> <span class="n">pl_trainer</span>
+
+<span class="n">pl_trainer</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">ds</span><span class="p">,</span> <span class="n">max_epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+/usr/local/lib/python3.7/dist-packages/pytorch_lightning/core/datamodule.py:470: LightningDeprecationWarning: DataModule.setup has already been called, so it will not be called again. In v1.6 this behavior will change to always call DataModule.setup.
+  f&#34;DataModule.{name} has already been called, so it will not be called again. &#34;
+
+  | Name              | Type           | Params
+-----------------------------------------------------
+0 | embedding_layer   | EmbeddingLayer | 136 K 
+1 | crossing_layer    | Sequential     | 1.2 M 
+2 | output_activation | Sigmoid        | 0     
+-----------------------------------------------------
+1.3 M     Trainable params
+0         Non-trainable params
+1.3 M     Total params
+5.238     Total estimated model params size (MB)
+/usr/local/lib/python3.7/dist-packages/pytorch_lightning/callbacks/model_checkpoint.py:631: UserWarning: Checkpoint directory /content exists and is not empty.
+  rank_zero_warn(f&#34;Checkpoint directory {dirpath} exists and is not empty.&#34;)
+/usr/local/lib/python3.7/dist-packages/pytorch_lightning/trainer/data_loading.py:429: UserWarning: The number of training samples (32) is smaller than the logging interval Trainer(log_every_n_steps=50). Set a lower value for log_every_n_steps if you want to see logs for the training epoch.
+  f&#34;The number of training samples ({self.num_training_batches}) is smaller than the logging interval&#34;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[Metrics] logloss: 1.923407 - AUC: 0.512695
+[Metrics] logloss: 2.335812 - AUC: 0.374510
+[Metrics] logloss: 1.951746 - AUC: 0.510511
+[Metrics] logloss: 1.656238 - AUC: 0.495951
+[Metrics] logloss: 1.599615 - AUC: 0.457490
+[Metrics] logloss: 2.074813 - AUC: 0.432063
+[Metrics] logloss: 1.315625 - AUC: 0.600586
+[Metrics] logloss: 1.596338 - AUC: 0.548039
+[Metrics] logloss: 1.768354 - AUC: 0.580296
+[Metrics] logloss: 2.074194 - AUC: 0.433040
+[Metrics] logloss: 1.842569 - AUC: 0.550342
+[Metrics] logloss: 2.395853 - AUC: 0.432617
+[Metrics] logloss: 1.774030 - AUC: 0.462564
+[Metrics] logloss: 1.734166 - AUC: 0.557185
+[Metrics] logloss: 1.963507 - AUC: 0.422287
+[Metrics] logloss: 1.737491 - AUC: 0.504433
+[Metrics] logloss: 1.519305 - AUC: 0.607843
+[Metrics] logloss: 1.669249 - AUC: 0.491903
+[Metrics] logloss: 1.663352 - AUC: 0.552941
+[Metrics] logloss: 1.668330 - AUC: 0.539216
+[Metrics] logloss: 2.353048 - AUC: 0.385142
+[Metrics] logloss: 1.886832 - AUC: 0.502930
+[Metrics] logloss: 1.787228 - AUC: 0.501538
+[Metrics] logloss: 1.813736 - AUC: 0.549754
+[Metrics] logloss: 1.948717 - AUC: 0.507843
+[Metrics] logloss: 1.364824 - AUC: 0.584008
+[Metrics] logloss: 2.089619 - AUC: 0.460784
+[Metrics] logloss: 2.286810 - AUC: 0.390693
+[Metrics] logloss: 1.533276 - AUC: 0.622549
+[Metrics] logloss: 1.852024 - AUC: 0.415385
+[Metrics] logloss: 1.757749 - AUC: 0.507843
+[Metrics] logloss: 1.660756 - AUC: 0.620000
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/local/lib/python3.7/dist-packages/pytorch_lightning/core/datamodule.py:470: LightningDeprecationWarning: DataModule.setup has already been called, so it will not be called again. In v1.6 this behavior will change to always call DataModule.setup.
+  f&#34;DataModule.{name} has already been called, so it will not be called again. &#34;
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[Metrics] logloss: 1.830594 - AUC: 0.558162
+[Metrics] logloss: 2.161489 - AUC: 0.407738
+[Metrics] logloss: 1.679642 - AUC: 0.486275
+[Metrics] logloss: 1.562141 - AUC: 0.551320
+[Metrics] logloss: 1.594444 - AUC: 0.567460
+[Metrics] logloss: 1.626753 - AUC: 0.592118
+[Metrics] logloss: 1.529520 - AUC: 0.557635
+[Metrics] logloss: 1.329303 - AUC: 0.599600
+[Metrics] logloss: 2.305318 - AUC: 0.466010
+[Metrics] logloss: 1.942118 - AUC: 0.477539
+[Metrics] logloss: 2.328542 - AUC: 0.436453
+[Metrics] logloss: 2.221586 - AUC: 0.467647
+[Metrics] logloss: 1.445153 - AUC: 0.582353
+[Metrics] logloss: 1.402739 - AUC: 0.618768
+[Metrics] logloss: 2.210657 - AUC: 0.413086
+[Metrics] logloss: 1.112972 - AUC: 0.677734
+[Metrics] logloss: 1.882559 - AUC: 0.485826
+[Metrics] logloss: 1.917402 - AUC: 0.472656
+[Metrics] logloss: 2.366392 - AUC: 0.401760
+[Metrics] logloss: 1.604059 - AUC: 0.507843
+[Metrics] logloss: 2.733787 - AUC: 0.312831
+[Metrics] logloss: 1.982845 - AUC: 0.459113
+[Metrics] logloss: 2.498603 - AUC: 0.507602
+[Metrics] logloss: 1.936384 - AUC: 0.543500
+[Metrics] logloss: 1.396205 - AUC: 0.631476
+[Metrics] logloss: 1.669453 - AUC: 0.540887
+[Metrics] logloss: 1.669070 - AUC: 0.610390
+[Metrics] logloss: 2.800417 - AUC: 0.288542
+[Metrics] logloss: 1.862424 - AUC: 0.484375
+[Metrics] logloss: 1.917967 - AUC: 0.483135
+[Metrics] logloss: 1.751082 - AUC: 0.488866
+[Metrics] logloss: 3.960979 - AUC: 0.296296
+--------------------------------------------------------------------------------
+DATALOADER:0 TEST RESULTS
+{&#39;Test Metrics&#39;: {&#39;AUC&#39;: tensor(0.5042), &#39;logloss&#39;: tensor(1.8953)}}
+--------------------------------------------------------------------------------
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[{&#39;Test Metrics&#39;: {&#39;AUC&#39;: tensor(0.5042), &#39;logloss&#39;: tensor(1.8953)}}]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
 
 </div>
     {% endraw %}
@@ -46,6 +462,13 @@ nb_path: "nbs/datasets/datasets.criteo.ipynb"
     
 <div class="cell border-box-sizing code_cell rendered">
 
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
 <div class="output_wrapper">
 <div class="output">
 
@@ -53,7 +476,7 @@ nb_path: "nbs/datasets/datasets.criteo.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="CriteoSampleDataset" class="doc_header"><code>class</code> <code>CriteoSampleDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/criteo.py#L26" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>CriteoSampleDataset</code>(<strong><code>root</code></strong>, <strong><code>test_size</code></strong>=<em><code>0.2</code></em>, <strong><code>random_seed</code></strong>=<em><code>42</code></em>) :: <a href="/recohut/datasets.base.html#Dataset"><code>Dataset</code></a></p>
+<h2 id="CriteoSampleDataset" class="doc_header"><code>class</code> <code>CriteoSampleDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/criteo.py#L74" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>CriteoSampleDataset</code>(<strong><code>root</code></strong>, <strong><code>test_size</code></strong>=<em><code>0.2</code></em>, <strong><code>random_seed</code></strong>=<em><code>42</code></em>) :: <a href="/recohut/datasets.base.html#Dataset"><code>Dataset</code></a></p>
 </blockquote>
 <p>Criteo Sample Dataset</p>
 <p>Reference:</p>
@@ -200,67 +623,117 @@ epoch/epoches: 19/20, train loss: 0.354, test auc: 0.735
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-<div class="output_wrapper">
-<div class="output">
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># class CriteoDataset(torch.utils.data.Dataset):</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
+<span class="c1">#     Criteo Display Advertising Challenge Dataset</span>
+<span class="c1">#     Data prepration:</span>
+<span class="c1">#         * Remove the infrequent features (appearing in less than threshold instances) and treat them as a single feature</span>
+<span class="c1">#         * Discretize numerical values by log2 transformation which is proposed by the winner of Criteo Competition</span>
+<span class="c1">#     :param dataset_path: criteo train.txt path.</span>
+<span class="c1">#     :param cache_path: lmdb cache path.</span>
+<span class="c1">#     :param rebuild_cache: If True, lmdb cache is refreshed.</span>
+<span class="c1">#     :param min_threshold: infrequent feature threshold.</span>
+<span class="c1">#     Reference:</span>
+<span class="c1">#         https://labs.criteo.com/2014/02/kaggle-display-advertising-challenge-dataset</span>
+<span class="c1">#         https://www.csie.ntu.edu.tw/~r01922136/kaggle-2014-criteo.pdf</span>
+<span class="c1">#     &quot;&quot;&quot;</span>
 
-<div class="output_area">
+<span class="c1">#     def __init__(self, dataset_path=None, cache_path=&#39;.criteo&#39;, rebuild_cache=False, min_threshold=10):</span>
+<span class="c1">#         self.NUM_FEATS = 39</span>
+<span class="c1">#         self.NUM_INT_FEATS = 13</span>
+<span class="c1">#         self.min_threshold = min_threshold</span>
+<span class="c1">#         if rebuild_cache or not Path(cache_path).exists():</span>
+<span class="c1">#             shutil.rmtree(cache_path, ignore_errors=True)</span>
+<span class="c1">#             if dataset_path is None:</span>
+<span class="c1">#                 raise ValueError(&#39;create cache: failed: dataset_path is None&#39;)</span>
+<span class="c1">#             self.__build_cache(dataset_path, cache_path)</span>
+<span class="c1">#         self.env = lmdb.open(cache_path, create=False, lock=False, readonly=True)</span>
+<span class="c1">#         with self.env.begin(write=False) as txn:</span>
+<span class="c1">#             self.length = txn.stat()[&#39;entries&#39;] - 1</span>
+<span class="c1">#             self.field_dims = np.frombuffer(txn.get(b&#39;field_dims&#39;), dtype=np.uint32)</span>
+
+<span class="c1">#     def __getitem__(self, index):</span>
+<span class="c1">#         with self.env.begin(write=False) as txn:</span>
+<span class="c1">#             np_array = np.frombuffer(</span>
+<span class="c1">#                 txn.get(struct.pack(&#39;&gt;I&#39;, index)), dtype=np.uint32).astype(dtype=np.long)</span>
+<span class="c1">#         return np_array[1:], np_array[0]</span>
+
+<span class="c1">#     def __len__(self):</span>
+<span class="c1">#         return self.length</span>
+
+<span class="c1">#     def __build_cache(self, path, cache_path):</span>
+<span class="c1">#         feat_mapper, defaults = self.__get_feat_mapper(path)</span>
+<span class="c1">#         with lmdb.open(cache_path, map_size=int(1e11)) as env:</span>
+<span class="c1">#             field_dims = np.zeros(self.NUM_FEATS, dtype=np.uint32)</span>
+<span class="c1">#             for i, fm in feat_mapper.items():</span>
+<span class="c1">#                 field_dims[i - 1] = len(fm) + 1</span>
+<span class="c1">#             with env.begin(write=True) as txn:</span>
+<span class="c1">#                 txn.put(b&#39;field_dims&#39;, field_dims.tobytes())</span>
+<span class="c1">#             for buffer in self.__yield_buffer(path, feat_mapper, defaults):</span>
+<span class="c1">#                 with env.begin(write=True) as txn:</span>
+<span class="c1">#                     for key, value in buffer:</span>
+<span class="c1">#                         txn.put(key, value)</span>
+
+<span class="c1">#     def __get_feat_mapper(self, path):</span>
+<span class="c1">#         feat_cnts = defaultdict(lambda: defaultdict(int))</span>
+<span class="c1">#         with open(path) as f:</span>
+<span class="c1">#             pbar = tqdm(f, mininterval=1, smoothing=0.1)</span>
+<span class="c1">#             pbar.set_description(&#39;Create criteo dataset cache: counting features&#39;)</span>
+<span class="c1">#             for line in pbar:</span>
+<span class="c1">#                 values = line.rstrip(&#39;\n&#39;).split(&#39;\t&#39;)</span>
+<span class="c1">#                 if len(values) != self.NUM_FEATS + 1:</span>
+<span class="c1">#                     continue</span>
+<span class="c1">#                 for i in range(1, self.NUM_INT_FEATS + 1):</span>
+<span class="c1">#                     feat_cnts[i][convert_numeric_feature(values[i])] += 1</span>
+<span class="c1">#                 for i in range(self.NUM_INT_FEATS + 1, self.NUM_FEATS + 1):</span>
+<span class="c1">#                     feat_cnts[i][values[i]] += 1</span>
+<span class="c1">#         feat_mapper = {i: {feat for feat, c in cnt.items() if c &gt;= self.min_threshold} for i, cnt in feat_cnts.items()}</span>
+<span class="c1">#         feat_mapper = {i: {feat: idx for idx, feat in enumerate(cnt)} for i, cnt in feat_mapper.items()}</span>
+<span class="c1">#         defaults = {i: len(cnt) for i, cnt in feat_mapper.items()}</span>
+<span class="c1">#         return feat_mapper, defaults</span>
+
+<span class="c1">#     def __yield_buffer(self, path, feat_mapper, defaults, buffer_size=int(1e5)):</span>
+<span class="c1">#         item_idx = 0</span>
+<span class="c1">#         buffer = list()</span>
+<span class="c1">#         with open(path) as f:</span>
+<span class="c1">#             pbar = tqdm(f, mininterval=1, smoothing=0.1)</span>
+<span class="c1">#             pbar.set_description(&#39;Create criteo dataset cache: setup lmdb&#39;)</span>
+<span class="c1">#             for line in pbar:</span>
+<span class="c1">#                 values = line.rstrip(&#39;\n&#39;).split(&#39;\t&#39;)</span>
+<span class="c1">#                 if len(values) != self.NUM_FEATS + 1:</span>
+<span class="c1">#                     continue</span>
+<span class="c1">#                 np_array = np.zeros(self.NUM_FEATS + 1, dtype=np.uint32)</span>
+<span class="c1">#                 np_array[0] = int(values[0])</span>
+<span class="c1">#                 for i in range(1, self.NUM_INT_FEATS + 1):</span>
+<span class="c1">#                     np_array[i] = feat_mapper[i].get(convert_numeric_feature(values[i]), defaults[i])</span>
+<span class="c1">#                 for i in range(self.NUM_INT_FEATS + 1, self.NUM_FEATS + 1):</span>
+<span class="c1">#                     np_array[i] = feat_mapper[i].get(values[i], defaults[i])</span>
+<span class="c1">#                 buffer.append((struct.pack(&#39;&gt;I&#39;, item_idx), np_array.tobytes()))</span>
+<span class="c1">#                 item_idx += 1</span>
+<span class="c1">#                 if item_idx % buffer_size == 0:</span>
+<span class="c1">#                     yield buffer</span>
+<span class="c1">#                     buffer.clear()</span>
+<span class="c1">#             yield buffer</span>
 
 
-<div class="output_markdown rendered_html output_subarea ">
-<h2 id="CriteoDataset" class="doc_header"><code>class</code> <code>CriteoDataset</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/criteo.py#L98" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>CriteoDataset</code>(<strong>*<code>args</code></strong>, <strong>**<code>kwds</code></strong>) :: <a href="/recohut/datasets.base.html#Dataset"><code>Dataset</code></a></p>
-</blockquote>
-<p>Criteo Display Advertising Challenge Dataset
-Data prepration:</p>
+<span class="c1"># @lru_cache(maxsize=None)</span>
+<span class="c1"># def convert_numeric_feature(val: str):</span>
+<span class="c1">#     if val == &#39;&#39;:</span>
+<span class="c1">#         return &#39;NULL&#39;</span>
+<span class="c1">#     v = int(val)</span>
+<span class="c1">#     if v &gt; 2:</span>
+<span class="c1">#         return str(int(math.log(v) ** 2))</span>
+<span class="c1">#     else:</span>
+<span class="c1">#         return str(v - 2)</span>
+</pre></div>
 
-<pre><code>* Remove the infrequent features (appearing in less than threshold instances) and treat them as a single feature
-* Discretize numerical values by log2 transformation which is proposed by the winner of Criteo Competition
-</code></pre>
-<p>:param dataset_path: criteo train.txt path.
-:param cache_path: lmdb cache path.
-:param rebuild_cache: If True, lmdb cache is refreshed.
-:param min_threshold: infrequent feature threshold.
-Reference:
-    <a href="https://labs.criteo.com/2014/02/kaggle-display-advertising-challenge-dataset">https://labs.criteo.com/2014/02/kaggle-display-advertising-challenge-dataset</a>
-    <a href="https://www.csie.ntu.edu.tw/~r01922136/kaggle-2014-criteo.pdf">https://www.csie.ntu.edu.tw/~r01922136/kaggle-2014-criteo.pdf</a></p>
-
+    </div>
 </div>
-
 </div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-
-<div class="output_markdown rendered_html output_subarea ">
-<h4 id="convert_numeric_feature" class="doc_header"><code>convert_numeric_feature</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/datasets/criteo.py#L191" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>convert_numeric_feature</code>(<strong><code>val</code></strong>:<code>str</code>)</p>
-</blockquote>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-    {% endraw %}
-
-    {% raw %}
-    
-<div class="cell border-box-sizing code_cell rendered">
 
 </div>
     {% endraw %}

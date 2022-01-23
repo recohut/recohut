@@ -6,8 +6,8 @@ title: User Grouping
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "Generate user groups for training group recommenders."
-description: "Generate user groups for training group recommenders."
+summary: "User Grouping."
+description: "User Grouping."
 nb_path: "nbs/transforms/transforms.user_grouping.ipynb"
 ---
 <!--
@@ -36,6 +36,12 @@ nb_path: "nbs/transforms/transforms.user_grouping.ipynb"
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="User-items-sequencing">User-items sequencing<a class="anchor-link" href="#User-items-sequencing"> </a></h2>
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -47,7 +53,1250 @@ nb_path: "nbs/transforms/transforms.user_grouping.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="GroupGenerator" class="doc_header"><code>class</code> <code>GroupGenerator</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/user_grouping.py#L14" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>GroupGenerator</code>(<strong><code>user_ids</code></strong>, <strong><code>item_ids</code></strong>, <strong><code>ratings</code></strong>, <strong><code>output_path</code></strong>, <strong><code>rating_threshold</code></strong>, <strong><code>num_groups</code></strong>, <strong><code>group_sizes</code></strong>, <strong><code>min_num_ratings</code></strong>, <strong><code>train_ratio</code></strong>, <strong><code>val_ratio</code></strong>, <strong><code>negative_sample_size</code></strong>, <strong><code>verbose</code></strong>=<em><code>True</code></em>)</p>
+<h4 id="create_user_sequences" class="doc_header"><code>create_user_sequences</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/user_grouping.py#L17" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>create_user_sequences</code>(<strong><code>df</code></strong>:<code>DataFrame</code>, <strong><code>user_col</code></strong>:<code>str</code>=<em><code>'USERID'</code></em>, <strong><code>item_col</code></strong>:<code>str</code>=<em><code>'ITEMID'</code></em>, <strong><code>ts_col</code></strong>:<code>str</code>=<em><code>'TIMESTAMP'</code></em>, <strong><code>save_path</code></strong>:<code>str</code>=<em><code>'./data.txt'</code></em>)</p>
+</blockquote>
+<p>Convert interaction dataframe into user-wise sequences</p>
+<p>Args:
+    df (DataFrame): interactions dataframe
+    user_col (str): name of user id column
+    item_col (str): name of item id column
+    ts_col (str): name of timestamp column
+    save_path (str): file path for saving processed data</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Example</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ml-100k/u.data&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;USERID&#39;</span><span class="p">,</span><span class="s1">&#39;ITEMID&#39;</span><span class="p">,</span><span class="s1">&#39;RATING&#39;</span><span class="p">,</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">])</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+  <div id="df-9b431cad-47b3-4da2-986b-083a9e7c9426">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>USERID</th>
+      <th>ITEMID</th>
+      <th>RATING</th>
+      <th>TIMESTAMP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>196</td>
+      <td>242</td>
+      <td>3</td>
+      <td>881250949</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>186</td>
+      <td>302</td>
+      <td>3</td>
+      <td>891717742</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>22</td>
+      <td>377</td>
+      <td>1</td>
+      <td>878887116</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>244</td>
+      <td>51</td>
+      <td>2</td>
+      <td>880606923</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>166</td>
+      <td>346</td>
+      <td>1</td>
+      <td>886397596</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9b431cad-47b3-4da2-986b-083a9e7c9426')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-9b431cad-47b3-4da2-986b-083a9e7c9426 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-9b431cad-47b3-4da2-986b-083a9e7c9426');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">recohut.transforms.splitting</span> <span class="kn">import</span> <span class="n">chrono_split</span>
+
+<span class="c1"># We split the data chronologically in 80:20 ratio. Validated the split for user 4.</span>
+<span class="n">df_train</span><span class="p">,</span> <span class="n">df_test</span> <span class="o">=</span> <span class="n">chrono_split</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ratio</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+
+<span class="n">userid</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;USERID==@userid&quot;</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_train</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df_test</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+  <div id="df-a69da6c0-373d-4f1f-aedb-8f8596f32fe6">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>USERID</th>
+      <th>ITEMID</th>
+      <th>RATING</th>
+      <th>TIMESTAMP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1250</th>
+      <td>4</td>
+      <td>264</td>
+      <td>3</td>
+      <td>892004275</td>
+    </tr>
+    <tr>
+      <th>1329</th>
+      <td>4</td>
+      <td>303</td>
+      <td>5</td>
+      <td>892002352</td>
+    </tr>
+    <tr>
+      <th>2204</th>
+      <td>4</td>
+      <td>361</td>
+      <td>5</td>
+      <td>892002353</td>
+    </tr>
+    <tr>
+      <th>2526</th>
+      <td>4</td>
+      <td>357</td>
+      <td>4</td>
+      <td>892003525</td>
+    </tr>
+    <tr>
+      <th>3277</th>
+      <td>4</td>
+      <td>260</td>
+      <td>4</td>
+      <td>892004275</td>
+    </tr>
+    <tr>
+      <th>5960</th>
+      <td>4</td>
+      <td>356</td>
+      <td>3</td>
+      <td>892003459</td>
+    </tr>
+    <tr>
+      <th>12151</th>
+      <td>4</td>
+      <td>294</td>
+      <td>5</td>
+      <td>892004409</td>
+    </tr>
+    <tr>
+      <th>13893</th>
+      <td>4</td>
+      <td>288</td>
+      <td>4</td>
+      <td>892001445</td>
+    </tr>
+    <tr>
+      <th>16305</th>
+      <td>4</td>
+      <td>50</td>
+      <td>5</td>
+      <td>892003526</td>
+    </tr>
+    <tr>
+      <th>18930</th>
+      <td>4</td>
+      <td>354</td>
+      <td>5</td>
+      <td>892002353</td>
+    </tr>
+    <tr>
+      <th>20082</th>
+      <td>4</td>
+      <td>271</td>
+      <td>4</td>
+      <td>892001690</td>
+    </tr>
+    <tr>
+      <th>20383</th>
+      <td>4</td>
+      <td>300</td>
+      <td>5</td>
+      <td>892001445</td>
+    </tr>
+    <tr>
+      <th>24519</th>
+      <td>4</td>
+      <td>328</td>
+      <td>3</td>
+      <td>892001537</td>
+    </tr>
+    <tr>
+      <th>24743</th>
+      <td>4</td>
+      <td>258</td>
+      <td>5</td>
+      <td>892001374</td>
+    </tr>
+    <tr>
+      <th>24866</th>
+      <td>4</td>
+      <td>210</td>
+      <td>3</td>
+      <td>892003374</td>
+    </tr>
+    <tr>
+      <th>35313</th>
+      <td>4</td>
+      <td>329</td>
+      <td>5</td>
+      <td>892002352</td>
+    </tr>
+    <tr>
+      <th>48826</th>
+      <td>4</td>
+      <td>11</td>
+      <td>4</td>
+      <td>892004520</td>
+    </tr>
+    <tr>
+      <th>51203</th>
+      <td>4</td>
+      <td>327</td>
+      <td>5</td>
+      <td>892002352</td>
+    </tr>
+    <tr>
+      <th>64091</th>
+      <td>4</td>
+      <td>324</td>
+      <td>5</td>
+      <td>892002353</td>
+    </tr>
+    <tr>
+      <th>68273</th>
+      <td>4</td>
+      <td>359</td>
+      <td>5</td>
+      <td>892002352</td>
+    </tr>
+    <tr>
+      <th>71055</th>
+      <td>4</td>
+      <td>362</td>
+      <td>5</td>
+      <td>892002352</td>
+    </tr>
+    <tr>
+      <th>76722</th>
+      <td>4</td>
+      <td>358</td>
+      <td>2</td>
+      <td>892004275</td>
+    </tr>
+    <tr>
+      <th>86815</th>
+      <td>4</td>
+      <td>360</td>
+      <td>5</td>
+      <td>892002352</td>
+    </tr>
+    <tr>
+      <th>88891</th>
+      <td>4</td>
+      <td>301</td>
+      <td>5</td>
+      <td>892002353</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-a69da6c0-373d-4f1f-aedb-8f8596f32fe6')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-a69da6c0-373d-4f1f-aedb-8f8596f32fe6 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-a69da6c0-373d-4f1f-aedb-8f8596f32fe6');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+  <div id="df-8051fb8c-46fa-4ddd-b472-945f643a90d0">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>USERID</th>
+      <th>ITEMID</th>
+      <th>RATING</th>
+      <th>TIMESTAMP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>24743</th>
+      <td>4</td>
+      <td>258</td>
+      <td>5</td>
+      <td>892001374</td>
+    </tr>
+    <tr>
+      <th>13893</th>
+      <td>4</td>
+      <td>288</td>
+      <td>4</td>
+      <td>892001445</td>
+    </tr>
+    <tr>
+      <th>20383</th>
+      <td>4</td>
+      <td>300</td>
+      <td>5</td>
+      <td>892001445</td>
+    </tr>
+    <tr>
+      <th>24519</th>
+      <td>4</td>
+      <td>328</td>
+      <td>3</td>
+      <td>892001537</td>
+    </tr>
+    <tr>
+      <th>20082</th>
+      <td>4</td>
+      <td>271</td>
+      <td>4</td>
+      <td>892001690</td>
+    </tr>
+    <tr>
+      <th>68273</th>
+      <td>4</td>
+      <td>359</td>
+      <td>5</td>
+      <td>892002352</td>
+    </tr>
+    <tr>
+      <th>71055</th>
+      <td>4</td>
+      <td>362</td>
+      <td>5</td>
+      <td>892002352</td>
+    </tr>
+    <tr>
+      <th>1329</th>
+      <td>4</td>
+      <td>303</td>
+      <td>5</td>
+      <td>892002352</td>
+    </tr>
+    <tr>
+      <th>51203</th>
+      <td>4</td>
+      <td>327</td>
+      <td>5</td>
+      <td>892002352</td>
+    </tr>
+    <tr>
+      <th>35313</th>
+      <td>4</td>
+      <td>329</td>
+      <td>5</td>
+      <td>892002352</td>
+    </tr>
+    <tr>
+      <th>86815</th>
+      <td>4</td>
+      <td>360</td>
+      <td>5</td>
+      <td>892002352</td>
+    </tr>
+    <tr>
+      <th>2204</th>
+      <td>4</td>
+      <td>361</td>
+      <td>5</td>
+      <td>892002353</td>
+    </tr>
+    <tr>
+      <th>18930</th>
+      <td>4</td>
+      <td>354</td>
+      <td>5</td>
+      <td>892002353</td>
+    </tr>
+    <tr>
+      <th>88891</th>
+      <td>4</td>
+      <td>301</td>
+      <td>5</td>
+      <td>892002353</td>
+    </tr>
+    <tr>
+      <th>64091</th>
+      <td>4</td>
+      <td>324</td>
+      <td>5</td>
+      <td>892002353</td>
+    </tr>
+    <tr>
+      <th>24866</th>
+      <td>4</td>
+      <td>210</td>
+      <td>3</td>
+      <td>892003374</td>
+    </tr>
+    <tr>
+      <th>5960</th>
+      <td>4</td>
+      <td>356</td>
+      <td>3</td>
+      <td>892003459</td>
+    </tr>
+    <tr>
+      <th>2526</th>
+      <td>4</td>
+      <td>357</td>
+      <td>4</td>
+      <td>892003525</td>
+    </tr>
+    <tr>
+      <th>16305</th>
+      <td>4</td>
+      <td>50</td>
+      <td>5</td>
+      <td>892003526</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-8051fb8c-46fa-4ddd-b472-945f643a90d0')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-8051fb8c-46fa-4ddd-b472-945f643a90d0 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-8051fb8c-46fa-4ddd-b472-945f643a90d0');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+
+  <div id="df-0fa589b6-38f1-4592-b95f-a14ce054f040">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>USERID</th>
+      <th>ITEMID</th>
+      <th>RATING</th>
+      <th>TIMESTAMP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>76722</th>
+      <td>4</td>
+      <td>358</td>
+      <td>2</td>
+      <td>892004275</td>
+    </tr>
+    <tr>
+      <th>3277</th>
+      <td>4</td>
+      <td>260</td>
+      <td>4</td>
+      <td>892004275</td>
+    </tr>
+    <tr>
+      <th>1250</th>
+      <td>4</td>
+      <td>264</td>
+      <td>3</td>
+      <td>892004275</td>
+    </tr>
+    <tr>
+      <th>12151</th>
+      <td>4</td>
+      <td>294</td>
+      <td>5</td>
+      <td>892004409</td>
+    </tr>
+    <tr>
+      <th>48826</th>
+      <td>4</td>
+      <td>11</td>
+      <td>4</td>
+      <td>892004520</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-0fa589b6-38f1-4592-b95f-a14ce054f040')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-0fa589b6-38f1-4592-b95f-a14ce054f040 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-0fa589b6-38f1-4592-b95f-a14ce054f040');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">create_user_sequences</span><span class="p">(</span><span class="n">df_train</span><span class="p">,</span> <span class="n">save_path</span><span class="o">=</span><span class="s1">&#39;./train.txt&#39;</span><span class="p">)</span>
+<span class="o">!</span>head train.txt
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0 167 171 164 155 165 195 186 13 249 126 180 116 108 0 245 256 247 49 248 252 261 92 223 123 18 122 136 145 6 234 14 244 259 23 263 125 236 12 24 120 250 235 239 117 129 64 189 46 30 27 113 38 51 237 198 182 10 68 160 94 59 82 178 21 97 63 134 162 25 201 88 7 213 181 47 98 159 174 191 179 127 142 184 67 54 203 55 95 80 78 150 211 22 69 83 93 196 190 183 133 206 144 187 185 96 84 35 143 158 16 173 251 104 147 107 146 219 105 242 121 106 103 246 119 44 267 266 258 260 262 9 149 233 91 70 41 175 90 192 216 176 215 193 72 58 132 40 194 217 169 212 156 222 26 226 79 230 66 118 199 3 214 163 1 205 76 52 135 45 39 152 268 253 114 172 210 228 154 202 61 89 218 166 229 34 161 60 264 111 56 48 29 232 130 151 81 140 71 32 157 197 224 112 20 148 87 100 109 102 238 33 28 42 131 209 204 115 124
+1 285 257 304 306 287 311 300 305 291 302 268 298 314 295 0 18 296 292 274 256 294 276 286 254 297 289 279 273 275 272 290 277 293 24 278 13 110 9 281 12 236 283 99 126 312 284 301 282 250 310
+2 301 332 343 299 267 336 302 344 353 257 287 318 340 351 271 349 352 333 342 338 341 335 298 325 293 306 331 270 244 354 323 348 322 321 334 263 324 337 329 350 346 339 328
+3 257 287 299 327 270 358 361 302 326 328 359 360 353 300 323 209 355 356 49
+4 266 454 221 120 404 362 256 249 24 20 99 108 368 234 411 406 410 104 367 224 150 0 180 49 405 423 412 78 396 372 230 398 228 225 175 449 182 434 88 1 227 229 226 448 209 430 173 171 143 402 397 390 384 16 371 385 392 395 166 366 89 400 389 41 152 185 455 69 383 109 79 380 363 208 450 381 427 382 429 210 432 238 172 207 203 413 167 153 421 431 422 418 142 416 414 373 28 433 364 365 379 391 386 428 424 213 134 61 374 97 447 184 233 435 199 442 444 446 218 443 378 369 440 144 445 401 240 370 215 65 420 426 377 94 419 101 415 417 98 403
+5 285 241 301 268 305 257 339 302 303 320 309 258 267 308 537 260 181 247 407 274 6 296 126 275 99 8 458 123 13 514 14 136 292 533 535 12 116 284 220 474 0 256 110 476 245 507 470 150 297 283 124 409 532 236 457 293 471 459 534 404 531 472 20 475 300 307 63 523 7 513 97 426 164 222 134 78 530 509 177 486 176 135 88 49 526 204 512 480 461 186 191 46 168 173 519 317 483 488 497 142 70 11 478 190 496 479 491 503 511 495 210 468 524 196 481 198 529 55 536 499 473 68 520 203 506 31 179 182 518 489 188 22 193 463 494 510 460 184 165 174 487 485 69 132 528 482 215 521 522 434 192 462 431 492 237 493 58 208 130 21 94 502 527 86 490 316 467 505 155
+6 268 677 681 258 680 306 265 285 267 682 299 287 263 679 308 63 173 186 602 514 175 179 85 366 264 227 522 434 617 185 418 215 446 529 177 642 31 650 171 649 181 100 473 172 615 428 97 233 487 49 92 525 196 88 99 481 495 513 21 611 203 610 652 658 96 143 483 190 402 656 131 170 180 633 7 494 222 95 22 645 654 635 55 8 490 195 435 81 200 498 655 632 167 422 603 134 272 430 67 204 384 165 614 660 510 182 214 155 607 647 643 197 212 670 68 126 189 43 595 355 542 236 526 512 3 284 135 163 497 237 151 484 592 193 482 612 91 478 491 191 317 392 156 381 583 479 509 420 496 202 429 486 590 6 426 662 152 207 501 567 587 631 78 460 178 629 504 480 27 506 130 228 213 503 433 657 10 588 24 646 160 613 549 469 628 206 210 98 69 626 601 194 528 80 555 673 527 651 70 26 46 547 608 150 536 187 508 216 667 618 274 518 431 627 606 634 9 470 176 120 401 605 209 403 674 201 50 630 89 621 377 211 659 415 454 609 548 153 139 520 678 464 124 462 132 419 125 648 442 543 669 404 604 76 378 229 471 565 117 500 162 161 545 140 580 488 199 636 639 505 644 38 225 591 638 280 383 546 600 596 672 364 231 594 597 51 28 572 447 451 598 90 105 623 619 450 570 586 502 663 71 240 379 561 141 577 599 388 593 77 622 440 400 395 443 571 398 79 414 664 563 676
+7 257 293 300 258 335 259 687 242 357 456 340 686 337 688 650 171 186 126 49 384 88 21 55 189 181 180 95 173 510 509 567 176 10 434 175 182 402 143 54 227 78 272 209 6 194 228 685
+8 339 241 478 520 401 506 614 526 689 275 293 6 370 49 384 5 297 200
+9 301 285 268 288 318 244 333 332 653 526 429 55 512 662 63 31 173 126 492 193 152 557 58 185 517 701 610 628 417 473 384 692 602 706 155 504 655 587 485 663 22 11 403 530 685 370 81 222 123 474 49 708 190 272 609 487 220 705 174 274 696 10 177 21 710 700 167 204 650 184 605 181 233 15 510 697 0 479 196 460 159 115 477 134 178 156 8 508 495 197 601 47 194 210 651 175 3 98 133 68 136 284 356 154 462 97 434 501 496 217 691 199 481 482 215 179 273 163 169 497 69 446 461 99 469 275 132 466 654 483 588 191 478 413 128 202 704 12 198 703 160 694 518 702 656 520 603
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>wget -q https://github.com/RecoHut-Datasets/amazon_beauty/raw/v1/amazon-ratings.zip
+<span class="o">!</span>unzip -qq amazon-ratings.zip
+<span class="o">!</span>head ratings_Beauty.csv
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>UserId,ProductId,Rating,Timestamp
+A39HTATAQ9V7YF,0205616461,5.0,1369699200
+A3JM6GV9MNOF9X,0558925278,3.0,1355443200
+A1Z513UWSAAO0F,0558925278,5.0,1404691200
+A1WMRR494NWEWV,0733001998,4.0,1382572800
+A3IAAVS479H7M7,0737104473,1.0,1274227200
+AKJHHD5VEH7VG,0762451459,5.0,1404518400
+A1BG8QW55XHN6U,1304139212,5.0,1371945600
+A22VW0P4VZHDE3,1304139220,5.0,1373068800
+A3V3RE4132GKRO,130414089X,5.0,1401840000
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;ratings_Beauty.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;USERID&#39;</span><span class="p">,</span><span class="s1">&#39;ITEMID&#39;</span><span class="p">,</span><span class="s1">&#39;RATING&#39;</span><span class="p">,</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">]</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+
+  <div id="df-6db2d1ef-d78e-483c-9c77-ef3c95d2c0fa">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>USERID</th>
+      <th>ITEMID</th>
+      <th>RATING</th>
+      <th>TIMESTAMP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A39HTATAQ9V7YF</td>
+      <td>0205616461</td>
+      <td>5.0</td>
+      <td>1369699200</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>A3JM6GV9MNOF9X</td>
+      <td>0558925278</td>
+      <td>3.0</td>
+      <td>1355443200</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>A1Z513UWSAAO0F</td>
+      <td>0558925278</td>
+      <td>5.0</td>
+      <td>1404691200</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A1WMRR494NWEWV</td>
+      <td>0733001998</td>
+      <td>4.0</td>
+      <td>1382572800</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A3IAAVS479H7M7</td>
+      <td>0737104473</td>
+      <td>1.0</td>
+      <td>1274227200</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-6db2d1ef-d78e-483c-9c77-ef3c95d2c0fa')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+        
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+      
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-6db2d1ef-d78e-483c-9c77-ef3c95d2c0fa button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-6db2d1ef-d78e-483c-9c77-ef3c95d2c0fa');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+  
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">create_user_sequences</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">save_path</span><span class="o">=</span><span class="s1">&#39;./beautydata.txt&#39;</span><span class="p">)</span>
+<span class="o">!</span>head beautydata.txt
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>0 50409
+1 187288 166945
+2 108830 18755
+3 219697
+4 164112 91390
+5 199346
+6 135197
+7 67762 177122
+8 52050
+9 169601
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="GroupGenerator">GroupGenerator<a class="anchor-link" href="#GroupGenerator"> </a></h2><p>Generate user groups for training group recommenders.</p>
+
+</div>
+</div>
+</div>
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h2 id="GroupGenerator" class="doc_header"><code>class</code> <code>GroupGenerator</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/transforms/user_grouping.py#L63" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>GroupGenerator</code>(<strong><code>user_ids</code></strong>, <strong><code>item_ids</code></strong>, <strong><code>ratings</code></strong>, <strong><code>output_path</code></strong>, <strong><code>rating_threshold</code></strong>, <strong><code>num_groups</code></strong>, <strong><code>group_sizes</code></strong>, <strong><code>min_num_ratings</code></strong>, <strong><code>train_ratio</code></strong>, <strong><code>val_ratio</code></strong>, <strong><code>negative_sample_size</code></strong>, <strong><code>verbose</code></strong>=<em><code>True</code></em>)</p>
 </blockquote>
 <p>Group Data Generator</p>
 
@@ -68,6 +1317,13 @@ nb_path: "nbs/transforms/transforms.user_grouping.ipynb"
 </div>
     {% endraw %}
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Example</p>
+
+</div>
+</div>
+</div>
     {% raw %}
     
 <div class="cell border-box-sizing code_cell rendered">

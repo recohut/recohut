@@ -47,7 +47,7 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="NDCG" class="doc_header"><code>NDCG</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L9" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>NDCG</code>(<strong><code>true</code></strong>, <strong><code>pred</code></strong>)</p>
+<h4 id="NDCG" class="doc_header"><code>NDCG</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>NDCG</code>(<strong><code>true</code></strong>, <strong><code>pred</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -71,7 +71,7 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="APAK" class="doc_header"><code>APAK</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L16" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>APAK</code>(<strong><code>true</code></strong>, <strong><code>pred</code></strong>)</p>
+<h4 id="APAK" class="doc_header"><code>APAK</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L19" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>APAK</code>(<strong><code>true</code></strong>, <strong><code>pred</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -95,7 +95,7 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="HR" class="doc_header"><code>HR</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L23" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>HR</code>(<strong><code>true</code></strong>, <strong><code>pred</code></strong>)</p>
+<h4 id="HR" class="doc_header"><code>HR</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L26" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>HR</code>(<strong><code>true</code></strong>, <strong><code>pred</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -119,7 +119,7 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_eval_metrics" class="doc_header"><code>get_eval_metrics</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L28" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_eval_metrics</code>(<strong><code>scores</code></strong>, <strong><code>true</code></strong>, <strong><code>k</code></strong>=<em><code>10</code></em>)</p>
+<h4 id="get_eval_metrics" class="doc_header"><code>get_eval_metrics</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L31" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_eval_metrics</code>(<strong><code>scores</code></strong>, <strong><code>true</code></strong>, <strong><code>k</code></strong>=<em><code>10</code></em>)</p>
 </blockquote>
 
 </div>
@@ -244,6 +244,454 @@ nb_path: "nbs/evaluation/evaluation.metrics.ipynb"
 
 </div>
 
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="get_eval_metrics_v2" class="doc_header"><code>get_eval_metrics_v2</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L44" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_eval_metrics_v2</code>(<strong><code>pred_list</code></strong>, <strong><code>topk</code></strong>=<em><code>10</code></em>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">get_eval_metrics_v2</span><span class="p">(</span><span class="n">pred_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">topk</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.67</span><span class="p">,</span> <span class="mf">0.38</span><span class="p">,</span> <span class="mf">0.28</span><span class="p">]))</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">get_eval_metrics_v2</span><span class="p">(</span><span class="n">pred_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="n">topk</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.21</span><span class="p">,</span> <span class="mf">0.17</span><span class="p">]))</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">get_eval_metrics_v2</span><span class="p">(</span><span class="n">pred_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">topk</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]))</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">get_eval_metrics_v2</span><span class="p">(</span><span class="n">pred_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="n">topk</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="precision_at_k_per_sample" class="doc_header"><code>precision_at_k_per_sample</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L56" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>precision_at_k_per_sample</code>(<strong><code>actual</code></strong>, <strong><code>predicted</code></strong>, <strong><code>topk</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">actual</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">precision_at_k_per_sample</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">]))</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">precision_at_k_per_sample</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.67</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="precision_at_k" class="doc_header"><code>precision_at_k</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L64" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>precision_at_k</code>(<strong><code>actual</code></strong>, <strong><code>predicted</code></strong>, <strong><code>topk</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+<span class="n">actual</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">precision_at_k</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.75</span><span class="p">]))</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">precision_at_k</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="ap_at_k" class="doc_header"><code>ap_at_k</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L75" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ap_at_k</code>(<strong><code>actual</code></strong>, <strong><code>predicted</code></strong>, <strong><code>topk</code></strong>=<em><code>10</code></em>)</p>
+</blockquote>
+<p>Computes the average precision at topk.
+This function computes the average precision at topk between two lists of
+items.</p>
+<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>actual : list
+         A list of elements that are to be predicted (order doesn't matter)
+predicted : list
+            A list of predicted elements (order does matter)
+topk : int, optional
+    The maximum number of predicted elements</p>
+<h2 id="Returns">Returns<a class="anchor-link" href="#Returns"> </a></h2><p>score : double
+        The average precision at topk over the input lists</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">actual</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">ap_at_k</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">]))</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">ap_at_k</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.67</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="map_at_k" class="doc_header"><code>map_at_k</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L110" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>map_at_k</code>(<strong><code>actual</code></strong>, <strong><code>predicted</code></strong>, <strong><code>topk</code></strong>=<em><code>10</code></em>)</p>
+</blockquote>
+<p>Computes the mean average precision at topk.
+This function computes the mean average prescision at topk between two lists
+of lists of items.</p>
+<h2 id="Parameters">Parameters<a class="anchor-link" href="#Parameters"> </a></h2><p>actual : list
+         A list of lists of elements that are to be predicted
+         (order doesn't matter in the lists)
+predicted : list
+            A list of lists of predicted elements
+            (order matters in the lists)
+topk : int, optional
+    The maximum number of predicted elements</p>
+<h2 id="Returns">Returns<a class="anchor-link" href="#Returns"> </a></h2><p>score : double
+        The mean average precision at topk over the input lists</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+<span class="n">actual</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">map_at_k</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.75</span><span class="p">]))</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">map_at_k</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">3</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.5</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="recall_at_k" class="doc_header"><code>recall_at_k</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L133" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>recall_at_k</code>(<strong><code>actual</code></strong>, <strong><code>predicted</code></strong>, <strong><code>topk</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+<span class="n">actual</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">recall_at_k</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">2</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.42</span><span class="p">]))</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">recall_at_k</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">3</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.42</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="cal_mrr" class="doc_header"><code>cal_mrr</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L150" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>cal_mrr</code>(<strong><code>actual</code></strong>, <strong><code>predicted</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+<span class="n">actual</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cal_mrr</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="ndcg_at_k" class="doc_header"><code>ndcg_at_k</code><a href="https://github.com/RecoHut-Projects/recohut/tree/master/recohut/evaluation/metrics.py#L176" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>ndcg_at_k</code>(<strong><code>actual</code></strong>, <strong><code>predicted</code></strong>, <strong><code>topk</code></strong>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">predicted</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]]</span>
+<span class="n">actual</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">ndcg_at_k</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">2</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">2.63</span><span class="p">]))</span>
+<span class="n">test_eq</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">ndcg_at_k</span><span class="p">(</span><span class="n">actual</span><span class="p">,</span> <span class="n">predicted</span><span class="p">,</span> <span class="n">topk</span><span class="o">=</span><span class="mi">3</span><span class="p">)[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">2.9</span><span class="p">]))</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 

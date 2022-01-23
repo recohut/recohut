@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you want to cite the framework, feel free to use this (but only if you loved it 😊)"
+title: "recohut"
+abstract: "Library for building Recommender Systems."
+date-released: 2022-01-23
+authors:
+  - family-names: "Agarwal"
+    given-names: "Sparsh"
+  - name: "The Recohut team"
+version: 0.0.12
+# doi: 10.5281/zenodo.3828935
+license: "Apache-2.0"
+url: "https://github.com/RecoHut-Projects/recohut"
+keywords:
+  - recommender systems
+  - recsys
+  - machine learning
+  - deep learning
+  - artificial intelligence

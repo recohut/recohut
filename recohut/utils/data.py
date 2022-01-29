@@ -3,6 +3,13 @@
 __all__ = ['music30', 'music30_sample', 'DATASETS', 'list_datasets', 'load_dataset']
 
 # Cell
+import pandas as pd
+import tempfile
+import os
+
+from .common_utils import download_url
+
+# Cell
 music30 = {
         'url': 'https://github.com/RecoHut-Datasets/30music/raw/v3/sessions.parquet.snappy',
         'type': 'pandas_df',

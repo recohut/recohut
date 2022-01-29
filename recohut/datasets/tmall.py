@@ -7,12 +7,12 @@ import numpy as np
 import scipy.sparse as sp
 import pickle
 
-from .bases import common as base
+from .bases.session_graph import SessionGraphDataset
 from .bases.common import Dataset
 from ..utils.common_utils import *
 
 # Cell
-class TmallDataset(base.SessionGraphDataset):
+class TmallDataset(SessionGraphDataset):
     train_url = "https://github.com/RecoHut-Datasets/tmall/raw/v1/train.txt"
     test_url = "https://github.com/RecoHut-Datasets/tmall/raw/v1/test.txt"
     all_train_seq_url = "https://github.com/RecoHut-Datasets/tmall/raw/v1/all_train_seq.txt"

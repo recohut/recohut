@@ -16,10 +16,11 @@ from datetime import timezone, datetime, timedelta
 import time
 
 from ..utils.common_utils import download_url, extract_zip, makedirs
-from .bases import common as base
+from .bases.common import Dataset
+from .bases.session_graph import SessionGraphDataset
 
 # Cell
-class RetailRocketDataset(base.SessionGraphDataset):
+class RetailRocketDataset(SessionGraphDataset):
     train_url = "https://github.com/RecoHut-Datasets/retail_rocket/raw/v1/train.txt"
     test_url = "https://github.com/RecoHut-Datasets/retail_rocket/raw/v1/test.txt"
     all_train_seq_url = "https://github.com/RecoHut-Datasets/retail_rocket/raw/v1/all_train_seq.txt"
@@ -56,7 +57,7 @@ def files_exist(files: List[str]) -> bool:
     return len(files) != 0 and all([osp.exists(f) for f in files])
 
 # Cell
-class RetailRocketDatasetv2(base.Dataset):
+class RetailRocketDatasetv2(Dataset):
     r"""Load and process RetailRocket dataset.
 
     Args:

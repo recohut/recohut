@@ -3,7 +3,7 @@
 __all__ = ['wget_download', 'download_url', 'extract_tar', 'extract_zip', 'extract_bz2', 'extract_gz',
            'print_result_as_table', 'list_files', 'seed_everything', 'map_column', 'get_context', 'pad_arr', 'pad_list',
            'mask_list', 'mask_last_elements_list', 'masked_accuracy', 'masked_ce', 'explode', 'explode_mult',
-           'group_concat', 'get_coo_matrix']
+           'group_concat', 'get_coo_matrix', 'count_a_in_b_unique', 'remove_duplicates']
 
 # Cell
 import sys
@@ -324,3 +324,20 @@ def get_coo_matrix(df,
         )
     ))
     return interaction_matrix
+
+# Cell
+def count_a_in_b_unique(a, b):
+    """
+    :param a: list of lists
+    :param b: list of lists
+    :return: number of elements of a in b
+    """
+    count = 0
+    for el in a:
+        if el in b:
+            count += 1
+    return count
+
+# Cell
+def remove_duplicates(l):
+    return [list(x) for x in set(tuple(x) for x in l)]

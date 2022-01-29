@@ -4,6 +4,7 @@ __all__ = ['eval_seqreveal', 'eval_staticprofile', 'eval_reclength', 'eval_profi
 
 # Cell
 import pandas as pd
+import numpy as np
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 

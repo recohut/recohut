@@ -22,7 +22,7 @@ from pytorch_lightning import LightningDataModule
 
 from ...utils.common_utils import *
 from .. import base
-from ...transforms.splitting import random_split, stratified_split
+from ...utils.splitting import random_split, stratified_split
 
 import warnings
 warnings.filterwarnings('ignore')

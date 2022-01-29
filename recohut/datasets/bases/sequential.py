@@ -20,8 +20,8 @@ from pytorch_lightning import LightningDataModule
 from ...utils.common_utils import *
 from .common import Dataset as BaseDataset
 
-from ...transforms.user_grouping import create_user_sequences
-from ...transforms.matrix import generate_rating_matrix
+from ...utils.grouping import create_user_sequences
+from ...utils.matrix import generate_rating_matrix
 from ...utils.negative_sampling import random_neg_sample
 
 # Cell

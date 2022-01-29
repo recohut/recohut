@@ -18,7 +18,7 @@ from ..utils.common_utils import *
 from .bases.common import Dataset
 from .bases.interactions import InteractionsDataset, InteractionsDataModule
 from .bases.sequential import SequentialDataset, SequentialDataModule
-from ..transforms.splitting import stratified_split_v2
+from ..utils.splitting import stratified_split_v2
 
 # Cell
 class ML1mDataset(InteractionsDataset):

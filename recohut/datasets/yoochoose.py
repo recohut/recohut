@@ -9,7 +9,7 @@ import datetime
 import os
 import os.path as osp
 
-from .bases.common import SessionDataset
+from .bases.session import SessionDataset
 from ..utils.common_utils import extract_zip
 
 # Cell

@@ -18,11 +18,12 @@ import numpy as np
 from datetime import timezone, datetime, timedelta
 import time
 
-from .bases import common as base
+from .bases.session import SessionDatasetv2
+from .bases.session_graph import SessionGraphDataset
 from ..utils.common_utils import download_url
 
 # Cell
-class SampleDataset(base.SessionDatasetv2):
+class SampleDataset(SessionDatasetv2):
     url = 'https://github.com/RecoHut-Datasets/sample_session/raw/v1/sample_train-item-views.csv'
 
     def __init__(self, root, column_names={'SESSION_ID':'session_id',
@@ -61,7 +62,7 @@ def split_validation(train_set, valid_portion):
     return (train_set_x, train_set_y), (valid_set_x, valid_set_y)
 
 # Cell
-class SampleDatasetv2(base.SessionGraphDataset):
+class SampleDatasetv2(SessionGraphDataset):
     train_url = "https://github.com/RecoHut-Datasets/sample_session/raw/v2/train.txt"
     test_url = "https://github.com/RecoHut-Datasets/sample_session/raw/v2/test.txt"
     all_train_seq_url = "https://github.com/RecoHut-Datasets/sample_session/raw/v2/all_train_seq.txt"

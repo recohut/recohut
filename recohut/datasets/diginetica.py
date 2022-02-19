@@ -5,11 +5,12 @@ __all__ = ['DigineticaDataset', 'DigineticaDatasetv2']
 # Cell
 import numpy as np
 
-from .bases import common as base
+from .bases.session import SessionDatasetv2
+from .bases.session_graph import SessionGraphDataset
 from ..utils.common_utils import download_url
 
 # Cell
-class DigineticaDataset(base.SessionDatasetv2):
+class DigineticaDataset(SessionDatasetv2):
     url = 'https://github.com/RecoHut-Datasets/diginetica/raw/main/train-item-views.csv'
 
     def __init__(self, root, column_names={'SESSION_ID':'sessionId',
@@ -26,7 +27,7 @@ class DigineticaDataset(base.SessionDatasetv2):
         path = download_url(self.url, self.raw_dir)
 
 # Cell
-class DigineticaDatasetv2(base.SessionGraphDataset):
+class DigineticaDatasetv2(SessionGraphDataset):
     train_url = "https://github.com/RecoHut-Datasets/diginetica/raw/v2/train.txt"
     test_url = "https://github.com/RecoHut-Datasets/diginetica/raw/v2/test.txt"
     all_train_seq_url = "https://github.com/RecoHut-Datasets/diginetica/raw/v2/all_train_seq.txt"

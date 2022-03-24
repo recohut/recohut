@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-basics/processes",
+  "id": "concept-basics/processes",
+  "title": "Processes",
+  "description": "Retrieval and Ranking",
+  "source": "@site/docs/concept-basics/processes.mdx",
+  "sourceDirName": "concept-basics",
+  "slug": "/concept-basics/processes",
+  "permalink": "/ai/docs/concept-basics/processes",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-basics/processes.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "User Feedback",
+    "permalink": "/ai/docs/concept-basics/implicit-feedback"
+  },
+  "next": {
+    "title": "Session-based Recommenders",
+    "permalink": "/ai/docs/concept-basics/session-based-recommenders"
+  }
+}

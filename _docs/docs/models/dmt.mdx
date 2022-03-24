@@ -1,0 +1,20 @@
+# DMT
+
+> Deep Multifaceted Transformers for Multi-objective Ranking in Large-Scale E-commerce Recommender Systems.
+
+Recommender Systems have been playing essential roles in ecommerce portals. Existing recommendation algorithms usually learn the ranking scores of items by optimizing a single task (e.g., Click-through rate prediction) based on users’ historical click sequences, but they generally pay few attention to simultaneously modeling users’ multiple types of behaviors or jointly optimize multiple objectives (e.g., both Click-through rate and Conversion rate), which are both vital for e-commerce sites. In DMT (Deep Multifaceted Transformers for Multi-objective Ranking in Large-Scale E-commerce Recommender Systems), authors argued that it is crucial to formulate users’ different interests based on multiple types of behaviors and perform multi-task learning for significant improvement in multiple objectives simultaneously. DMT models users’ multiple types of behavior sequences simultaneously with multiple Transformers. It utilizes Multi-gate Mixture-of-Experts to optimize multiple objectives. Besides, it exploits unbiased learning to reduce the selection bias in the training data. Experiments on JD real production dataset demonstrate the effectiveness of DMT, which significantly outperforms state-of-the-art methods. DMT has been successfully deployed to serve the main traffic in the commercial Recommender System in [JD.com](http://jd.com/).
+
+## Architecture
+
+It utilizes Deep Multifaceted Transformers (bottom), which is consisted of multiple Deep Interest Transformers (right), to extract users’ multifaceted interests from their diverse behavior sequences, exploits Multi-gate Mixture-of-Experts (MMoE) (top) to simultaneously optimize multiple objectives, and uses a Bias Deep Neural Network (left) to reduce the bias in training data.
+
+<figure><p><center><img src='https://github.com/recohut/transformer-rec/raw/132decd8b7004cd43163b71d70a501bc150fd5f2/docs/_images/C776172_1.png'/><figcaption>DMT architecture</figcaption></center></p></figure>
+
+### Performance
+
+<p><center><img src='https://github.com/recohut/transformer-rec/raw/132decd8b7004cd43163b71d70a501bc150fd5f2/docs/_images/C776172_2.png'/></center></p>
+
+## References
+
+1. [Paper on ResearchGate](https://www.researchgate.net/profile/Yulong-Gu-5/publication/344752297_Deep_Multifaceted_Transformers_for_Multi-objective_Rank-ing_in_Large-Scale_E-commerce_Recommender_Systems/links/5f8dbf1f299bf1b53e32af1c/Deep-Multifaceted-Transformers-for-Multi-objective-Rank-ing-in-Large-Scale-E-commerce-Recommender-Systems.pdf)
+2. [Git Repo](https://github.com/guyulongcs/CIKM2020_DMT)

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/hmlet",
+  "id": "models/hmlet",
+  "title": "HMLET",
+  "description": "HMLET stands for Hybrid Method of Linear and nonlinEar collaborative filTering (HMLET, pronounced as Hamlet). It is a GCN-based CF method.",
+  "source": "@site/docs/models/hmlet.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/hmlet",
+  "permalink": "/ai/docs/models/hmlet",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/hmlet.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "GRU4Rec",
+    "permalink": "/ai/docs/models/gru4rec"
+  },
+  "next": {
+    "title": "IncCTR",
+    "permalink": "/ai/docs/models/incctr"
+  }
+}

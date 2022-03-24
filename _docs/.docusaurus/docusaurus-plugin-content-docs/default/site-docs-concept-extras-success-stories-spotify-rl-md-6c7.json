@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/spotify-rl",
+  "id": "concept-extras/success-stories/spotify-rl",
+  "title": "Spotify RL",
+  "description": "https://towardsdatascience.com/recommendation-system-with-reinforcement-learning-3362cb4422c8",
+  "source": "@site/docs/concept-extras/success-stories/spotify-rl.md",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/spotify-rl",
+  "permalink": "/ai/docs/concept-extras/success-stories/spotify-rl",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/spotify-rl.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Spotify Contextual Bandits",
+    "permalink": "/ai/docs/concept-extras/success-stories/spotify-contextual-bandits"
+  },
+  "next": {
+    "title": "StitchFix Multi-armed Bandit",
+    "permalink": "/ai/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit"
+  }
+}

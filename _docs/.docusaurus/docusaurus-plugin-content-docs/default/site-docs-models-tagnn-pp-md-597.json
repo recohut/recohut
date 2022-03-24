@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/tagnn-pp",
+  "id": "models/tagnn-pp",
+  "title": "TAGNN-PP",
+  "description": "TAGNN-PP models item interactions with GNN, and both local and global user interactions with  a Transformer.",
+  "source": "@site/docs/models/tagnn-pp.md",
+  "sourceDirName": "models",
+  "slug": "/models/tagnn-pp",
+  "permalink": "/ai/docs/models/tagnn-pp",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/tagnn-pp.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "TAaMR",
+    "permalink": "/ai/docs/models/taamr"
+  },
+  "next": {
+    "title": "TAGNN",
+    "permalink": "/ai/docs/models/tagnn"
+  }
+}

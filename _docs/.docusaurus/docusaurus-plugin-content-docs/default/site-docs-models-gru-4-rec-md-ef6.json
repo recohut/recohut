@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/gru4rec",
+  "id": "models/gru4rec",
+  "title": "GRU4Rec",
+  "description": "It uses session-parallel mini-batch approach where we first create an order for the sessions and then, we use the first event of the first X sessions to form the input of the first mini-batch (the desired output is the second events of our active sessions). The second mini-batch is formed from the second events and so on. If any of the sessions end, the next available session is put in its place. Sessions are assumed to be independent, thus we reset the appropriate hidden state when this switch occurs.",
+  "source": "@site/docs/models/gru4rec.md",
+  "sourceDirName": "models",
+  "slug": "/models/gru4rec",
+  "permalink": "/ai/docs/models/gru4rec",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/gru4rec.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "GLMix",
+    "permalink": "/ai/docs/models/glmix"
+  },
+  "next": {
+    "title": "HMLET",
+    "permalink": "/ai/docs/models/hmlet"
+  }
+}

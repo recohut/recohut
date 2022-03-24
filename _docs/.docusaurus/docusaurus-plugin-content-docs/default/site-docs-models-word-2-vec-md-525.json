@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/word2vec",
+  "id": "models/word2vec",
+  "title": "Word2vec",
+  "description": "/img/content-models-raw-mp2-word2vec-untitled.png",
+  "source": "@site/docs/models/word2vec.md",
+  "sourceDirName": "models",
+  "slug": "/models/word2vec",
+  "permalink": "/ai/docs/models/word2vec",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/word2vec.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Wide and Deep",
+    "permalink": "/ai/docs/models/wide-and-deep"
+  },
+  "next": {
+    "title": "xDeepFM",
+    "permalink": "/ai/docs/models/xdeepfm"
+  }
+}

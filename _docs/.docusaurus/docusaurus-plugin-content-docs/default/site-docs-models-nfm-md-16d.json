@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/nfm",
+  "id": "models/nfm",
+  "title": "NFM",
+  "description": "NFM stands for Neural Factorization Machine.",
+  "source": "@site/docs/models/nfm.md",
+  "sourceDirName": "models",
+  "slug": "/models/nfm",
+  "permalink": "/ai/docs/models/nfm",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/nfm.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "NeuMF",
+    "permalink": "/ai/docs/models/neumf"
+  },
+  "next": {
+    "title": "NGCF",
+    "permalink": "/ai/docs/models/ngcf"
+  }
+}

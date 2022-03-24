@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/matn",
+  "id": "models/matn",
+  "title": "MATN",
+  "description": "Multiplex Behavioral Relation Learning for Recommendation via Memory Augmented Transformer Network.",
+  "source": "@site/docs/models/matn.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/matn",
+  "permalink": "/ai/docs/models/matn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/matn.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Markov Chains",
+    "permalink": "/ai/docs/models/markov-chains"
+  },
+  "next": {
+    "title": "MB-GMN",
+    "permalink": "/ai/docs/models/mb-gmn"
+  }
+}

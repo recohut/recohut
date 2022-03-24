@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tools/river",
+  "id": "tools/river",
+  "title": "River",
+  "description": "River is a Python library for online machine learning. It is the result of a merger between creme and scikit-multiflow. River's ambition is to be the go-to library for doing machine learning on streaming data.",
+  "source": "@site/docs/tools/river.mdx",
+  "sourceDirName": "tools",
+  "slug": "/tools/river",
+  "permalink": "/ai/docs/tools/river",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tools/river.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "PySpark",
+    "permalink": "/ai/docs/tools/pyspark"
+  },
+  "next": {
+    "title": "Datasets",
+    "permalink": "/ai/docs/datasets"
+  }
+}

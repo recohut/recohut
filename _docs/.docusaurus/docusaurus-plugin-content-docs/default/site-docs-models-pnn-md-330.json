@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/pnn",
+  "id": "models/pnn",
+  "title": "PNN",
+  "description": "PNN stands for Product-based Neural Network.",
+  "source": "@site/docs/models/pnn.md",
+  "sourceDirName": "models",
+  "slug": "/models/pnn",
+  "permalink": "/ai/docs/models/pnn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/pnn.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Node2vec",
+    "permalink": "/ai/docs/models/node2vec"
+  },
+  "next": {
+    "title": "PPO",
+    "permalink": "/ai/docs/models/ppo"
+  }
+}

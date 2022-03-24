@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/siren",
+  "id": "models/siren",
+  "title": "SiReN",
+  "description": "Existing literature often ignores the negative feedback e.g. dislikes on YouTube videos, and only capture the homophily (or assortativity) patterns by positive feedback. This is a missed opportunity situation. Performance of GNN-based Recommender Systems can be improved by including negative feedbacks. Disassortivity patterns can be learned by negative feedback. LightGCN can capture the assortativity patterns. and the MLP network can capture the disassortivity patterns.",
+  "source": "@site/docs/models/siren.md",
+  "sourceDirName": "models",
+  "slug": "/models/siren",
+  "permalink": "/ai/docs/models/siren",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/siren.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Shared Bottom",
+    "permalink": "/ai/docs/models/shared-bottom"
+  },
+  "next": {
+    "title": "SLIST",
+    "permalink": "/ai/docs/models/slist"
+  }
+}

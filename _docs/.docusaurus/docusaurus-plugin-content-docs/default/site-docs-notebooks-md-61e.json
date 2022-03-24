@@ -1,0 +1,23 @@
+{
+  "unversionedId": "notebooks",
+  "id": "notebooks",
+  "title": "notebooks",
+  "description": "|  Notebook name                           |   Colab button  |     nbviewer    |",
+  "source": "@site/docs/notebooks.md",
+  "sourceDirName": ".",
+  "slug": "/notebooks",
+  "permalink": "/ai/docs/notebooks",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/notebooks.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Datasets",
+    "permalink": "/ai/docs/datasets"
+  },
+  "next": {
+    "title": "Projects",
+    "permalink": "/ai/docs/projects"
+  }
+}

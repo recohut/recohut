@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-basics/implicit-feedback",
+  "id": "concept-basics/implicit-feedback",
+  "title": "User Feedback",
+  "description": "Explicit vs. implicit users feedback",
+  "source": "@site/docs/concept-basics/implicit-feedback.mdx",
+  "sourceDirName": "concept-basics",
+  "slug": "/concept-basics/implicit-feedback",
+  "permalink": "/ai/docs/concept-basics/implicit-feedback",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-basics/implicit-feedback.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Evaluation",
+    "permalink": "/ai/docs/concept-basics/evaluation"
+  },
+  "next": {
+    "title": "Processes",
+    "permalink": "/ai/docs/concept-basics/processes"
+  }
+}

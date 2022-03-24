@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/shared-bottom",
+  "id": "models/shared-bottom",
+  "title": "Shared Bottom",
+  "description": "The shared-bottom model is the simplest and most common multi-task learning architecture. The model has a single base (the shared bottom) from which all of the task-specific subnetworks begin from. This means that this single representation is used for all tasks, and there is no way for individual tasks to adjust what information they get out of the shared bottom compared to other tasks.",
+  "source": "@site/docs/models/shared-bottom.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/shared-bottom",
+  "permalink": "/ai/docs/models/shared-bottom",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/shared-bottom.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SGL",
+    "permalink": "/ai/docs/models/sgl"
+  },
+  "next": {
+    "title": "SiReN",
+    "permalink": "/ai/docs/models/siren"
+  }
+}

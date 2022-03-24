@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tutorials/vector-search",
+  "id": "tutorials/vector-search",
+  "title": "Vector Search",
+  "description": "Faiss",
+  "source": "@site/docs/tutorials/vector-search.mdx",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/vector-search",
+  "permalink": "/ai/docs/tutorials/vector-search",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/vector-search.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Resale Price Prediction",
+    "permalink": "/ai/docs/tutorials/resale-price-prediction"
+  },
+  "next": {
+    "title": "Word2vec",
+    "permalink": "/ai/docs/tutorials/word2vec"
+  }
+}

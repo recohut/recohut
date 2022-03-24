@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/tagnn",
+  "id": "models/tagnn",
+  "title": "TAGNN",
+  "description": "TAGNN stands for Target Attentive Graph Neural Network. Session-based recommendations are challenging due to limited user-item interactions. Typical sequential models are not able to capture complex patterns from all previous interactions. SessionGraph (a graph representation of sessions) can capture the complex patterns from all previous interactions.",
+  "source": "@site/docs/models/tagnn.md",
+  "sourceDirName": "models",
+  "slug": "/models/tagnn",
+  "permalink": "/ai/docs/models/tagnn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/tagnn.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "TAGNN-PP",
+    "permalink": "/ai/docs/models/tagnn-pp"
+  },
+  "next": {
+    "title": "TGIN",
+    "permalink": "/ai/docs/models/tgin"
+  }
+}

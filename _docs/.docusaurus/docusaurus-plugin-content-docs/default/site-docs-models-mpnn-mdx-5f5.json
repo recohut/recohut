@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/mpnn",
+  "id": "models/mpnn",
+  "title": "MPNN",
+  "description": "Message Passing Neural Networks",
+  "source": "@site/docs/models/mpnn.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/mpnn",
+  "permalink": "/ai/docs/models/mpnn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/mpnn.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "MMoE",
+    "permalink": "/ai/docs/models/mmoe"
+  },
+  "next": {
+    "title": "NeuMF",
+    "permalink": "/ai/docs/models/neumf"
+  }
+}

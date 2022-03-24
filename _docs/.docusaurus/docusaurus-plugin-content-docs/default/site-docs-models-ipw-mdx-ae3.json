@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/ipw",
+  "id": "models/ipw",
+  "title": "IPW",
+  "description": "Inverse Propensity Weighting",
+  "source": "@site/docs/models/ipw.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/ipw",
+  "permalink": "/ai/docs/models/ipw",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/ipw.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "IncCTR",
+    "permalink": "/ai/docs/models/incctr"
+  },
+  "next": {
+    "title": "ItemPop",
+    "permalink": "/ai/docs/models/itempop"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tutorials/pdf-to-wordcloud-mail",
+  "id": "tutorials/pdf-to-wordcloud-mail",
+  "title": "PDF to WordCloud via Email",
+  "description": "Receive a pdf via outlook mail and send back the wordcloud of that pdf in the reply",
+  "source": "@site/docs/tutorials/pdf-to-wordcloud-mail.mdx",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/pdf-to-wordcloud-mail",
+  "permalink": "/ai/docs/tutorials/pdf-to-wordcloud-mail",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/pdf-to-wordcloud-mail.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Negative Implicit Feedback in Recommendations",
+    "permalink": "/ai/docs/tutorials/negative-implicit-feedback-rec"
+  },
+  "next": {
+    "title": "Recommender System Evaluation",
+    "permalink": "/ai/docs/tutorials/recsys-evaluation"
+  }
+}

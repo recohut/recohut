@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/ar",
+  "id": "models/ar",
+  "title": "AR",
+  "description": "Simple Association Rules (AR) are a simplified version of the association rule mining technique [Agrawal et al. 1993] with a maximum rule size of two. The method is designed to capture the frequency of two co-occurring events, e.g., “Customers who bought . . . also bought”.",
+  "source": "@site/docs/models/ar.md",
+  "sourceDirName": "models",
+  "slug": "/models/ar",
+  "permalink": "/ai/docs/models/ar",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/ar.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AFN",
+    "permalink": "/ai/docs/models/afn"
+  },
+  "next": {
+    "title": "ASMG",
+    "permalink": "/ai/docs/models/asmg"
+  }
+}

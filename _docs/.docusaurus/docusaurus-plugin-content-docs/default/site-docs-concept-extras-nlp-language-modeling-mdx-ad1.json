@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/nlp/language-modeling",
+  "id": "concept-extras/nlp/language-modeling",
+  "title": "Language Modeling",
+  "description": "Language Models (LMs) estimate the probability of different linguistic units: symbols, tokens, token sequences.",
+  "source": "@site/docs/concept-extras/nlp/language-modeling.mdx",
+  "sourceDirName": "concept-extras/nlp",
+  "slug": "/concept-extras/nlp/language-modeling",
+  "permalink": "/ai/docs/concept-extras/nlp/language-modeling",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/nlp/language-modeling.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chatbot",
+    "permalink": "/ai/docs/concept-extras/nlp/chatbot"
+  },
+  "next": {
+    "title": "Named Entity Recognition",
+    "permalink": "/ai/docs/concept-extras/nlp/named-entity-recognition"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/dr",
+  "id": "models/dr",
+  "title": "Doubly Robust",
+  "description": "The doubly robust technique combines the direct method with inverse propensity scores. An intuitive way to think about it is to consider that it uses the predicted rewards from the direct method, and if there is additional information (i.e. exploration and target policy actions match) then the inverse propensity score correction is applied. This is illustrated below.",
+  "source": "@site/docs/models/dr.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/dr",
+  "permalink": "/ai/docs/models/dr",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/dr.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "DQN",
+    "permalink": "/ai/docs/models/dqn"
+  },
+  "next": {
+    "title": "DRQN",
+    "permalink": "/ai/docs/models/drqn"
+  }
+}

@@ -1,0 +1,27 @@
+# NMRN
+
+NMRN is a streaming recommender model based on neural memory networks with external memories to capture and store both long-term stable interests and short-term dynamic interests in a unified way. An adaptive negative sampling framework based on Generative Adversarial Nets (GAN) is developed to optimize our proposed streaming recommender model, which effectively overcomes the limitations of classical negative sampling approaches and improves the effectiveness of the model parameter inference.
+
+<p><center><img src='https://github.com/recohut/incremental-learning/raw/a6fdcde2e8af7ebfd9f5efd278c487e0e9560cb3/docs/_images/L926913_1.png'/></center></p>
+
+Specifically, the external memories of NMRN compose the key memory and the value memory. Given a new user-item interaction pair(u , v) arriving at the system in real time, NMRN first generates a soft address from the key memory, activated by u. The addressing process is inspired by recent advances in attention mechanism. The attention mechanism applied in recommender systems is useful to improve the retrieval accuracy and model interpretability. The fundamental idea of this attention design is to learn a weighted representation across the key memory, which is converted into a probability distribution by the Softmax function as the soft address.Then, NMRN reads from the value memory based on the soft address, resulting in a vector that represents both long-term stable and short-term emerging interests of user u. Inspired by the success of pairwise personalized ranking models (e.g., BPR) in top-k recommendations, we adopt the Hinge-loss in our model optimization. As the number of unobserved examples is very huge, we use the negative sampling method to improve the training efficiency.
+
+Most existing negative sampling approaches use either random sampling or popularity-biased sampling strategies. However, the majority of negative examples generated in these sampling strategies can be easily discriminated from observed examples, and will contribute little towards the training, because sampled items could be completely unrelated to the target user. Besides, these sampling approaches are not adaptive enough to generate adversarial negative examples, because (1) they are static and thus do not consider that the estimated similarity or proximity between a user and an item changes during the learning process. For example, the similarity between user u and a sampled noise item v is high at the beginning, but after several gradient descent steps it becomes low; and (2) these samplers are global and do not reflect how informative a noise item is w.r.t. a specific user.
+
+In light of this, we use an adaptive noise sampler based on a Generative Adversarial Network (GAN) to optimize the model, which considers both the specific user and the current values of the model parameters to adaptively generate “difficult” and informative negative examples. Moreover, in order to simultaneously capture the first-order similarity between users and items as well as the second-order similarities between users and between items to learn robust representations of users and items, we use the Euclidean distance to measure the similarity between a user and an item instead of the widely adopted dot product.
+
+<p><center><img src='https://github.com/recohut/incremental-learning/raw/a6fdcde2e8af7ebfd9f5efd278c487e0e9560cb3/docs/_images/L926913_2.png'/></center></p>
+
+The Architecture of the model. The total numbers of users and items are denoted as $N$ and $M$. We denote a user-item interaction pair at time $t$ as $(u_t , v_t)$ while $v_t^-$ is a sampled negative item for a specific user at time $t$.
+
+## Training procedure
+
+<p><center><img src='https://github.com/recohut/incremental-learning/raw/a6fdcde2e8af7ebfd9f5efd278c487e0e9560cb3/docs/_images/L926913_3.png'/></center></p>
+
+<p><center><img src='https://github.com/recohut/incremental-learning/raw/a6fdcde2e8af7ebfd9f5efd278c487e0e9560cb3/docs/_images/L926913_4.png'/></center></p>
+
+## Links
+
+[https://github.com/lzzscl/KBGAN-KV_MemNN/tree/master](https://github.com/lzzscl/KBGAN-KV_MemNN/tree/master/)
+
+[Neural Memory Streaming Recommender Networks with Adversarial Training](https://dl.acm.org/doi/epdf/10.1145/3219819.3220004)

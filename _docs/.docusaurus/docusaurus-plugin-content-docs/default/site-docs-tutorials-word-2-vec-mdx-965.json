@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tutorials/word2vec",
+  "id": "tutorials/word2vec",
+  "title": "Word2vec",
+  "description": "| Description | Notebook |",
+  "source": "@site/docs/tutorials/word2vec.mdx",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/word2vec",
+  "permalink": "/ai/docs/tutorials/word2vec",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/word2vec.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Vector Search",
+    "permalink": "/ai/docs/tutorials/vector-search"
+  },
+  "next": {
+    "title": "Python code",
+    "permalink": "/ai/docs/snippets/python-snippets"
+  }
+}

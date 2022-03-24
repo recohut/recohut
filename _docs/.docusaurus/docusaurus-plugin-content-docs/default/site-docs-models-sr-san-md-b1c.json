@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/sr-san",
+  "id": "models/sr-san",
+  "title": "SR-SAN",
+  "description": "SR-SAN stands for Session-based Recommendation with Self-Attention Networks.",
+  "source": "@site/docs/models/sr-san.md",
+  "sourceDirName": "models",
+  "slug": "/models/sr-san",
+  "permalink": "/ai/docs/models/sr-san",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sr-san.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SR-GNN",
+    "permalink": "/ai/docs/models/sr-gnn"
+  },
+  "next": {
+    "title": "SSE-PT",
+    "permalink": "/ai/docs/models/sse-pt"
+  }
+}

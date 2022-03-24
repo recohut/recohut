@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/wide-and-deep",
+  "id": "models/wide-and-deep",
+  "title": "Wide and Deep",
+  "description": "Wide and Deep Learning Model, proposed by Google, 2016, is a DNN-Linear mixed model, which combines the strength of memorization and generalization. It's useful for generic large-scale regression and classification problems with sparse input features (e.g., categorical features with a large number of possible feature values). It has been used for Google App Store for their app recommendation.",
+  "source": "@site/docs/models/wide-and-deep.md",
+  "sourceDirName": "models",
+  "slug": "/models/wide-and-deep",
+  "permalink": "/ai/docs/models/wide-and-deep",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/wide-and-deep.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "VSKNN",
+    "permalink": "/ai/docs/models/vsknn"
+  },
+  "next": {
+    "title": "Word2vec",
+    "permalink": "/ai/docs/models/word2vec"
+  }
+}

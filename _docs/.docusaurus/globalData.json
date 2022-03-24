@@ -1,0 +1,975 @@
+{
+  "@cmfcmf/docusaurus-search-local": {
+    "default": {
+      "titleBoost": 5,
+      "contentBoost": 1,
+      "parentCategoriesBoost": 2,
+      "indexDocSidebarParentCategories": 0
+    }
+  },
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/ai/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/ai/docs",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "concept-basics/challenges",
+              "path": "/ai/docs/concept-basics/challenges",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-basics/collaborative-filtering",
+              "path": "/ai/docs/concept-basics/collaborative-filtering",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-basics/concept-basics",
+              "path": "/ai/docs/concept-basics/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-basics/evaluation",
+              "path": "/ai/docs/concept-basics/evaluation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-basics/implicit-feedback",
+              "path": "/ai/docs/concept-basics/implicit-feedback",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-basics/processes",
+              "path": "/ai/docs/concept-basics/processes",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-basics/session-based-recommenders",
+              "path": "/ai/docs/concept-basics/session-based-recommenders",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-basics/tasks",
+              "path": "/ai/docs/concept-basics/tasks",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-basics/types-of-recommender-systems",
+              "path": "/ai/docs/concept-basics/types-of-recommender-systems",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/amazon-personalize",
+              "path": "/ai/docs/concept-extras/amazon-personalize",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/apps",
+              "path": "/ai/docs/concept-extras/apps",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/bias-&-fairness",
+              "path": "/ai/docs/concept-extras/bias-&-fairness",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/causal-inference",
+              "path": "/ai/docs/concept-extras/causal-inference",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/cold-start",
+              "path": "/ai/docs/concept-extras/cold-start",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/concept-extras",
+              "path": "/ai/docs/concept-extras/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/cross-domain",
+              "path": "/ai/docs/concept-extras/cross-domain",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/data-science",
+              "path": "/ai/docs/concept-extras/data-science",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/diversity",
+              "path": "/ai/docs/concept-extras/diversity",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/emerging-concepts-in-recommender-systems",
+              "path": "/ai/docs/concept-extras/emerging-concepts-in-recommender-systems",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/graph-embeddings",
+              "path": "/ai/docs/concept-extras/graph-embeddings",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/graph-networks",
+              "path": "/ai/docs/concept-extras/graph-networks",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/incremental-learning",
+              "path": "/ai/docs/concept-extras/incremental-learning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/jensen-shannon-divergence",
+              "path": "/ai/docs/concept-extras/jensen-shannon-divergence",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/meta-learning",
+              "path": "/ai/docs/concept-extras/meta-learning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/mlops",
+              "path": "/ai/docs/concept-extras/mlops",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/model-deployment",
+              "path": "/ai/docs/concept-extras/model-deployment",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/model-retraining",
+              "path": "/ai/docs/concept-extras/model-retraining",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/multi-objective-optimization",
+              "path": "/ai/docs/concept-extras/multi-objective-optimization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/multi-task-learning",
+              "path": "/ai/docs/concept-extras/multi-task-learning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/multitask-learning",
+              "path": "/ai/docs/concept-extras/multitask-learning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/nlp/chatbot",
+              "path": "/ai/docs/concept-extras/nlp/chatbot",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/nlp/language-modeling",
+              "path": "/ai/docs/concept-extras/nlp/language-modeling",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/nlp/named-entity-recognition",
+              "path": "/ai/docs/concept-extras/nlp/named-entity-recognition",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/nlp/text-analysis",
+              "path": "/ai/docs/concept-extras/nlp/text-analysis",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/nlp/text-classification",
+              "path": "/ai/docs/concept-extras/nlp/text-classification",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/nlp/text-generation",
+              "path": "/ai/docs/concept-extras/nlp/text-generation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/nlp/text-similarity",
+              "path": "/ai/docs/concept-extras/nlp/text-similarity",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/nlp/text-style-transfer",
+              "path": "/ai/docs/concept-extras/nlp/text-style-transfer",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/nlp/text-summarization",
+              "path": "/ai/docs/concept-extras/nlp/text-summarization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/nlp/topic-modeling",
+              "path": "/ai/docs/concept-extras/nlp/topic-modeling",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/nlp/transformers",
+              "path": "/ai/docs/concept-extras/nlp/transformers",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/offline-learning",
+              "path": "/ai/docs/concept-extras/offline-learning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/scalarization",
+              "path": "/ai/docs/concept-extras/scalarization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/1mg-prod2vec",
+              "path": "/ai/docs/concept-extras/success-stories/1mg-prod2vec",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/airbnb-experiences",
+              "path": "/ai/docs/concept-extras/success-stories/airbnb-experiences",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/alipay-ctr",
+              "path": "/ai/docs/concept-extras/success-stories/alipay-ctr",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/doordash-contextual-bandit",
+              "path": "/ai/docs/concept-extras/success-stories/doordash-contextual-bandit",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/etsy-personalization",
+              "path": "/ai/docs/concept-extras/success-stories/etsy-personalization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/huawei-appgallery",
+              "path": "/ai/docs/concept-extras/success-stories/huawei-appgallery",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/linkedin-glmix",
+              "path": "/ai/docs/concept-extras/success-stories/linkedin-glmix",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/marketcloud-real-time",
+              "path": "/ai/docs/concept-extras/success-stories/marketcloud-real-time",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/netflix-personalize-images",
+              "path": "/ai/docs/concept-extras/success-stories/netflix-personalize-images",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/pinterest-multi-task-learning",
+              "path": "/ai/docs/concept-extras/success-stories/pinterest-multi-task-learning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/santander-banking-products",
+              "path": "/ai/docs/concept-extras/success-stories/santander-banking-products",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/scribd-real-time",
+              "path": "/ai/docs/concept-extras/success-stories/scribd-real-time",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/spotify-contextual-bandits",
+              "path": "/ai/docs/concept-extras/success-stories/spotify-contextual-bandits",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/spotify-rl",
+              "path": "/ai/docs/concept-extras/success-stories/spotify-rl",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/stitchfix-multi-armed-bandit",
+              "path": "/ai/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/success-stories",
+              "path": "/ai/docs/concept-extras/success-stories/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/taobao-bst",
+              "path": "/ai/docs/concept-extras/success-stories/taobao-bst",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/the-long-tail",
+              "path": "/ai/docs/concept-extras/success-stories/the-long-tail",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/ubereats-personalization",
+              "path": "/ai/docs/concept-extras/success-stories/ubereats-personalization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/success-stories/walmart-model-selection",
+              "path": "/ai/docs/concept-extras/success-stories/walmart-model-selection",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/vision/facial-analytics",
+              "path": "/ai/docs/concept-extras/vision/facial-analytics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/vision/image-segmentation",
+              "path": "/ai/docs/concept-extras/vision/image-segmentation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/vision/image-similarity",
+              "path": "/ai/docs/concept-extras/vision/image-similarity",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/vision/object-detection",
+              "path": "/ai/docs/concept-extras/vision/object-detection",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/vision/object-tracking",
+              "path": "/ai/docs/concept-extras/vision/object-tracking",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/vision/pose-estimation",
+              "path": "/ai/docs/concept-extras/vision/pose-estimation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/vision/scene-text-recognition",
+              "path": "/ai/docs/concept-extras/vision/scene-text-recognition",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "concept-extras/vision/video-action-recognition",
+              "path": "/ai/docs/concept-extras/vision/video-action-recognition",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "datasets",
+              "path": "/ai/docs/datasets",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/ai/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/a3c",
+              "path": "/ai/docs/models/a3c",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/afm",
+              "path": "/ai/docs/models/afm",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/afn",
+              "path": "/ai/docs/models/afn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/ar",
+              "path": "/ai/docs/models/ar",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/asmg",
+              "path": "/ai/docs/models/asmg",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/attrec",
+              "path": "/ai/docs/models/attrec",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/aush",
+              "path": "/ai/docs/models/aush",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/autoint",
+              "path": "/ai/docs/models/autoint",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/basr",
+              "path": "/ai/docs/models/basr",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/bcq",
+              "path": "/ai/docs/models/bcq",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/beh-prop",
+              "path": "/ai/docs/models/beh-prop",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/biasonly",
+              "path": "/ai/docs/models/biasonly",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/biggraph",
+              "path": "/ai/docs/models/biggraph",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/bpr",
+              "path": "/ai/docs/models/bpr",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/bst",
+              "path": "/ai/docs/models/bst",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/caser",
+              "path": "/ai/docs/models/caser",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/cigc",
+              "path": "/ai/docs/models/cigc",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/coke",
+              "path": "/ai/docs/models/coke",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/dcn",
+              "path": "/ai/docs/models/dcn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/ddpg",
+              "path": "/ai/docs/models/ddpg",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/deepcross",
+              "path": "/ai/docs/models/deepcross",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/deepfm",
+              "path": "/ai/docs/models/deepfm",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/deepwalk",
+              "path": "/ai/docs/models/deepwalk",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/dgtn",
+              "path": "/ai/docs/models/dgtn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/dm",
+              "path": "/ai/docs/models/dm",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/dmt",
+              "path": "/ai/docs/models/dmt",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/dpadl",
+              "path": "/ai/docs/models/dpadl",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/dqn",
+              "path": "/ai/docs/models/dqn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/drqn",
+              "path": "/ai/docs/models/drqn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/drr",
+              "path": "/ai/docs/models/drr",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/dueling-dqn",
+              "path": "/ai/docs/models/dueling-dqn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/ffm",
+              "path": "/ai/docs/models/ffm",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/fgnn",
+              "path": "/ai/docs/models/fgnn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/fm",
+              "path": "/ai/docs/models/fm",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/gat",
+              "path": "/ai/docs/models/gat",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/gc-san",
+              "path": "/ai/docs/models/gc-san",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/gce-gnn",
+              "path": "/ai/docs/models/gce-gnn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/glmix",
+              "path": "/ai/docs/models/glmix",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/gru4rec",
+              "path": "/ai/docs/models/gru4rec",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/hmlet",
+              "path": "/ai/docs/models/hmlet",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/incctr",
+              "path": "/ai/docs/models/incctr",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/ipw",
+              "path": "/ai/docs/models/ipw",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/itempop",
+              "path": "/ai/docs/models/itempop",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/khgt",
+              "path": "/ai/docs/models/khgt",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/lessr",
+              "path": "/ai/docs/models/lessr",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/lightfm-warp",
+              "path": "/ai/docs/models/lightfm-warp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/lightgcn",
+              "path": "/ai/docs/models/lightgcn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/line",
+              "path": "/ai/docs/models/line",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/lird",
+              "path": "/ai/docs/models/lird",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/markov-chains",
+              "path": "/ai/docs/models/markov-chains",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/matn",
+              "path": "/ai/docs/models/matn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/mb-gmn",
+              "path": "/ai/docs/models/mb-gmn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/mdp",
+              "path": "/ai/docs/models/mdp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/mf",
+              "path": "/ai/docs/models/mf",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/mian",
+              "path": "/ai/docs/models/mian",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/mmoe",
+              "path": "/ai/docs/models/mmoe",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/models",
+              "path": "/ai/docs/models/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/mpnn",
+              "path": "/ai/docs/models/mpnn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/neumf",
+              "path": "/ai/docs/models/neumf",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/ngcf",
+              "path": "/ai/docs/models/ngcf",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/nmrn",
+              "path": "/ai/docs/models/nmrn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/node2vec",
+              "path": "/ai/docs/models/node2vec",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/pnn",
+              "path": "/ai/docs/models/pnn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/ppo",
+              "path": "/ai/docs/models/ppo",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/q-learning",
+              "path": "/ai/docs/models/q-learning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/random_walk",
+              "path": "/ai/docs/models/random_walk",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/rkmf",
+              "path": "/ai/docs/models/rkmf",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/sac",
+              "path": "/ai/docs/models/sac",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/sarsa",
+              "path": "/ai/docs/models/sarsa",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/sasrec",
+              "path": "/ai/docs/models/sasrec",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/sdne",
+              "path": "/ai/docs/models/sdne",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/sgl",
+              "path": "/ai/docs/models/sgl",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/shared-bottom",
+              "path": "/ai/docs/models/shared-bottom",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/siren",
+              "path": "/ai/docs/models/siren",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/slist",
+              "path": "/ai/docs/models/slist",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/sml",
+              "path": "/ai/docs/models/sml",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/spop",
+              "path": "/ai/docs/models/spop",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/sr-gnn",
+              "path": "/ai/docs/models/sr-gnn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/sr-san",
+              "path": "/ai/docs/models/sr-san",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/sse-pt",
+              "path": "/ai/docs/models/sse-pt",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/stamp",
+              "path": "/ai/docs/models/stamp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/struc2vec",
+              "path": "/ai/docs/models/struc2vec",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/svae",
+              "path": "/ai/docs/models/svae",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/taamr",
+              "path": "/ai/docs/models/taamr",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/tagnn",
+              "path": "/ai/docs/models/tagnn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/tagnn-pp",
+              "path": "/ai/docs/models/tagnn-pp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/tgin",
+              "path": "/ai/docs/models/tgin",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/vncf",
+              "path": "/ai/docs/models/vncf",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/vsknn",
+              "path": "/ai/docs/models/vsknn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/wide-and-deep",
+              "path": "/ai/docs/models/wide-and-deep",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/word2vec",
+              "path": "/ai/docs/models/word2vec",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "models/xdeepfm",
+              "path": "/ai/docs/models/xdeepfm",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "notebooks",
+              "path": "/ai/docs/notebooks",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "projects",
+              "path": "/ai/docs/projects",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "snippets/python-snippets",
+              "path": "/ai/docs/snippets/python-snippets",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "snippets/unix-shell-snippets",
+              "path": "/ai/docs/snippets/unix-shell-snippets",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tools/obp",
+              "path": "/ai/docs/tools/obp",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tools/pyspark",
+              "path": "/ai/docs/tools/pyspark",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tools/river",
+              "path": "/ai/docs/tools/river",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tools/tools",
+              "path": "/ai/docs/tools/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/amazon-personalize",
+              "path": "/ai/docs/tutorials/amazon-personalize",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/database-conn",
+              "path": "/ai/docs/tutorials/database-conn",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/email-classification",
+              "path": "/ai/docs/tutorials/email-classification",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/graph",
+              "path": "/ai/docs/tutorials/graph",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/mathematics",
+              "path": "/ai/docs/tutorials/mathematics",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/matrix-factorizations",
+              "path": "/ai/docs/tutorials/matrix-factorizations",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/mlops",
+              "path": "/ai/docs/tutorials/mlops",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/multi-touch-attribution",
+              "path": "/ai/docs/tutorials/multi-touch-attribution",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/name-address-parsing",
+              "path": "/ai/docs/tutorials/name-address-parsing",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/negative-implicit-feedback-rec",
+              "path": "/ai/docs/tutorials/negative-implicit-feedback-rec",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/pdf-to-wordcloud-mail",
+              "path": "/ai/docs/tutorials/pdf-to-wordcloud-mail",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/recsys-evaluation",
+              "path": "/ai/docs/tutorials/recsys-evaluation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/resale-price-prediction",
+              "path": "/ai/docs/tutorials/resale-price-prediction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/vector-search",
+              "path": "/ai/docs/tutorials/vector-search",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "tutorials/word2vec",
+              "path": "/ai/docs/tutorials/word2vec",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/ai/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

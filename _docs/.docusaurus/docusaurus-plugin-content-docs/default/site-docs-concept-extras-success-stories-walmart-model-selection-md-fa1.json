@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/walmart-model-selection",
+  "id": "concept-extras/success-stories/walmart-model-selection",
+  "title": "Walmart Model Selection",
+  "description": "In this paper, Walmart researchers briefly discussed their approach and experiment details.",
+  "source": "@site/docs/concept-extras/success-stories/walmart-model-selection.md",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/walmart-model-selection",
+  "permalink": "/ai/docs/concept-extras/success-stories/walmart-model-selection",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/walmart-model-selection.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "UberEats Personalization",
+    "permalink": "/ai/docs/concept-extras/success-stories/ubereats-personalization"
+  },
+  "next": {
+    "title": "Facial Analytics",
+    "permalink": "/ai/docs/concept-extras/vision/facial-analytics"
+  }
+}

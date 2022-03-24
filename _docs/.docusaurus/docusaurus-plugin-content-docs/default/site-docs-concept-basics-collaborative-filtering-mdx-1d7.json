@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-basics/collaborative-filtering",
+  "id": "concept-basics/collaborative-filtering",
+  "title": "Collaborative Filtering",
+  "description": "Similarity methods",
+  "source": "@site/docs/concept-basics/collaborative-filtering.mdx",
+  "sourceDirName": "concept-basics",
+  "slug": "/concept-basics/collaborative-filtering",
+  "permalink": "/ai/docs/concept-basics/collaborative-filtering",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-basics/collaborative-filtering.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Challenges",
+    "permalink": "/ai/docs/concept-basics/challenges"
+  },
+  "next": {
+    "title": "Evaluation",
+    "permalink": "/ai/docs/concept-basics/evaluation"
+  }
+}

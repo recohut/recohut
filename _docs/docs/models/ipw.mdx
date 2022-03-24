@@ -1,0 +1,34 @@
+# IPW
+
+> Inverse Propensity Weighting
+
+One way to correct for the bias due to the difference between exploration and target policies is to re-weight each historical instance by its probability of occurring under the exploration policy.
+
+With this technique, a synthetic dataset is created, which only contains instances where the recommended actions from the exploration policy and target policy match (by chance). Instances where they do not match are discarded. This synthetic dataset represents counterfactual results, as they approximate what would have happened if the target policy had been deployed. However, a correction needs to be applied to this dataset, due to the aforementioned difference between exploration and target policies. This correction is applied by dividing the reward of each instance by the probability of occurring under the exploration policy (or multiplying by its inverse propensity). This is illustrated below.
+
+<p><center><img src='https://github.com/recohut/ope-rec/raw/ded0ee7c461d3ddfaf0b136d19189f6eb89af26e/docs/_images/C674274_1.png'/></center></p>
+
+The expected average reward is sum of the re-weighted rewards divided by the number of historical instance (not just the ones with matching actions).
+
+While this technique is unbiased, it uses the historical data inefficiently, because instances where the actions under exploration and target policies do not match must be discarded. The resulting synthetic dataset tends to be much smaller than the historical dataset, which results in higher uncertainty (variance) in the corresponding reward estimates.
+
+IPS evaluates a new policy by correcting the action distribution mismatch between the new policy and the policy that generated the data (logging policy). To put it another way, if your existing logging policy had a high chance of doing something good, but your new policy has a small chance of taking that same action, the new policy would be penalized. Conversely, if your existing logging policy had a high chance of taking a bad action and your new policy has a lower chance, this is good for the new policy. Reward for more good, penalize for more bad.
+
+<p><center><img src='https://github.com/recohut/ope-rec/raw/ded0ee7c461d3ddfaf0b136d19189f6eb89af26e/docs/_images/C674274_2.png'/></center></p>
+
+Formally, the IPS estimate is defined as follows:
+
+$$\hat{V}_{IPS} = \dfrac{1}{n}\sum_{k=1}^{n}\dfrac{\pi_e(a_k\vert x_k)}{\pi_0(a_k\vert x_k)}\cdot{r_k}‎
+$$
+
+Where,
+
+- $\hat{V}_{IPS}$ = the expected average reward per decision under the new policy
+- $n$ = the number of samples in your historical data
+- $\pi_e(a_k\vert x_k)$ = the probability that your new policy takes the logged action given the logged context
+- $\pi_0(a_k\vert x_k)$ = the probability that your logging policy takes the logged action given the logged context
+- $r_k$ = the logged reward from taking that action given that context
+
+**IPS Corrects Probability Shift**
+
+<p><center><img src='https://github.com/recohut/ope-rec/raw/ded0ee7c461d3ddfaf0b136d19189f6eb89af26e/docs/_images/C674274_3.png'/></center></p>

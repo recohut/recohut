@@ -1,0 +1,26 @@
+# User Feedback
+
+## Explicit vs. implicit users feedback
+
+- **Explicit feedback**: This is a dataset collected primarily based on the user’s behavior or explicitly posted by the user in the system. Examples include movie ratings on Netflix, or product ratings by users on Amazon.com, which are provided explicitly by the users.
+- **Implicit feedback**: Rather than relying on explicit user feedback, the system can indirectly use user behavior and interactions to learn about their interests and choices. For instance, a user purchasing or browsing an or even the number of times they played a particular song would be implicit feedback.
+
+## Implicit Feedback
+
+The numerical values of implicit feedback describe the frequency of actions e.g. how many times you click Data Science job posts, how long you watch a TV series on Netflix, number of times you listen to a song etc. We leverage these implicit numbers given by the users to capture the confidence of user’s preferences or no preferences. Preferences are assumed to be the inner products: $p_{ui} = U^T.X$. The preference (pui) of user ‘u’ to item ‘i’ is captured by the following equation:
+
+$$
+p_{ui} = \begin{cases} 1 & r_{ui} \gt 0 \\ 0 & r_{ui}=0\end{cases}
+$$
+
+where $r_{ui}$ is the recorded value of the item (e.g. number of times you listen to a song). So, if the recorded value is greater than 0, the preference is 1 and if it is equal to 0, the preference is 0. Now, let’s say if you just listen to a song only once, it might not mean you liked it, it could have been on auto-play mode in your YouTube. Similarly, if the recorded value is zero, does not mean you don’t like the song, it might mean you never knew that song even existed or you haven’t discovered it yet. So, in order to capture this relation of preferences, we need to specify the notion of confidence:
+
+$$
+c_{ui} = 1 + \alpha r_{ui}
+$$
+
+Embedding/factors are computed by minimizing the following cost function:
+
+$$
+\min_{x_*,y_*} \sum_{u,i}c_{ui}(p_{ui}-x_u^Ty_i)^2 + \lambda \left( \sum_u||x_u||^2 + \sum_i||y_i||^2 \right)
+$$

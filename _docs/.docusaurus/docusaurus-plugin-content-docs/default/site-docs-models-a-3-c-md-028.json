@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/a3c",
+  "id": "models/a3c",
+  "title": "A3C",
+  "description": "A3C stands for Asynchronous Advantage Actor-Critic. The A3C algorithm builds upon the Actor-Critic class of algorithms by using a neural network to approximate the actor (and critic). The actor learns the policy function using a deep neural network, while the critic estimates the value function. The asynchronous nature of the algorithm allows the agent to learn from different parts of the state space, allowing parallel learning and faster convergence. Unlike DQN agents, which use an experience replay memory, the A3C agent uses multiple workers to gather more samples for learning.",
+  "source": "@site/docs/models/a3c.md",
+  "sourceDirName": "models",
+  "slug": "/models/a3c",
+  "permalink": "/ai/docs/models/a3c",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/a3c.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Models",
+    "permalink": "/ai/docs/models/"
+  },
+  "next": {
+    "title": "AFM",
+    "permalink": "/ai/docs/models/afm"
+  }
+}

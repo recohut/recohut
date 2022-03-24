@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/ddpg",
+  "id": "models/ddpg",
+  "title": "DDPG",
+  "description": "Deterministic Policy Gradient (DPG) is a type of Actor-Critic RL algorithm that uses two neural networks: one for estimating the action value function, and the other for estimating the optimal target policy. The Deep Deterministic Policy Gradient (DDPG) agent builds upon the idea of DPG and is quite efficient compared to vanilla Actor-Critic agents due to the use of deterministic action policies.",
+  "source": "@site/docs/models/ddpg.md",
+  "sourceDirName": "models",
+  "slug": "/models/ddpg",
+  "permalink": "/ai/docs/models/ddpg",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/ddpg.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "DCN",
+    "permalink": "/ai/docs/models/dcn"
+  },
+  "next": {
+    "title": "DeepCross",
+    "permalink": "/ai/docs/models/deepcross"
+  }
+}

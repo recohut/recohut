@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/caser",
+  "id": "models/caser",
+  "title": "CASER",
+  "description": "CASER stands for Convolutional Sequence Embedding Recommendation. Top-N sequential recommendation models each user as a sequence of items interacted in the past and aims to predict top-N ranked items that a user will likely interact in a 'near future'. The order of interaction implies that sequential patterns play an important role where more recent items in a sequence have a larger impact on the next item. Convolutional Sequence Embedding Recommendation Model (Caser) address this requirement by embedding a sequence of recent items into an image' in the time and latent spaces and learn sequential patterns as local features of the image using convolutional filters. This approach provides a unified and flexible network structure for capturing both general preferences and sequential patterns. In other words, Caser adopts convolutional neural networks capture the dynamic pattern influences of users’ recent activities.",
+  "source": "@site/docs/models/caser.md",
+  "sourceDirName": "models",
+  "slug": "/models/caser",
+  "permalink": "/ai/docs/models/caser",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/caser.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "BST",
+    "permalink": "/ai/docs/models/bst"
+  },
+  "next": {
+    "title": "CIGC",
+    "permalink": "/ai/docs/models/cigc"
+  }
+}

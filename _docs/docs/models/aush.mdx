@@ -1,0 +1,31 @@
+# AUSH
+
+> Attacking Recommender Systems with Augmented User Profiles
+
+AUSH is capable of tailoring attacks against RS according to budget and complex attack goals, such as targeting a specific user group. Specifically, the generator acts like an “attacker” and generates fake user profiles by augmenting the “template” of existing real user profiles. Moreover, the generator is able to achieve secondary attack goals by incorporating a shilling loss. On the other hand, the discriminator module performs like a “defender”. It distinguishes fake user profiles from real user profiles and provides guidance to train the generator to generate undetectable fake user profiles. Each of the generator and the discriminator strikes to enhance itself to beat the other one at every round of the minimax competition.
+
+We divide the items in a fake user profile into one target item (i.e., the attacker wants to assign it a malicious rating), a number of filler items (i.e., a group of randomly sampled items which have been rated by the real user and will be used to obstruct detection of the attack), a number of selected items (i.e., a group of human-selected items for special treatment to form the characteristics of the attack), and unrated items (i.e., the rest of the items in the RS). Selected items are the same across all fake user profiles, while each fake user profile has its own filler items.
+
+Attacking RS is costly. As such, in designing a practical attack model against RS, we have to take into account the following attack budget and goal:
+
+- Attack budget: we consider two factors
+    - Attack size is the number of fake user profiles
+    - Profile size is the number of non-zero ratings. The larger the attack size / profile size is, the more effective and expensive the attack could be.
+- Attack goal: the goal an adversarial party wants to achieve could be complex and we mainly consider the following aspects
+    - Attack type indicates whether it is a push attack (i.e., assign a maximal rating on target item to promote it) or a nuke attack (i.e., assign a minimal rating on target item to demote it). Since the two types are similar and can be exchanged (i.e., change a maximal rating to a minimal rating), we consider push attacks in the sequel for simplicity.
+    - Target user group is the group of users that an attack aims at.
+    - Ancillary effects (e.g., demoting competitors, bias the ratings of a special user groups on selected items) are also desired in the attack. Such intentions will manifest in choosing selected items.
+
+<figure><p><center><img src='https://github.com/recohut/recsys-attacks/raw/d7472b7296515249c1bd1bbb8ea0afa9b07f6d9d/docs/_images/C900563_1.png'/><figcaption>Pipeline of AUSH. We use binary ratings for illustration, though AUSH can handle a five-point scale. Red and blue indicate a high rating and a low rating, respectively.</figcaption></center></p></figure>
+
+<figure><p><center><img src='https://github.com/recohut/recsys-attacks/raw/d7472b7296515249c1bd1bbb8ea0afa9b07f6d9d/docs/_images/C900563_2.png'/><figcaption>AUSH algorithm.</figcaption></center></p></figure>
+
+### Performance Comparison
+
+<figure><p><center><img src='https://github.com/recohut/recsys-attacks/raw/d7472b7296515249c1bd1bbb8ea0afa9b07f6d9d/docs/_images/C900563_3.png'/><figcaption>Attack performance against NMF. Best results are marked in bold, and AUSH results are also marked in bold if they are the second best in each category.</figcaption></center></p></figure>
+
+<figure><p><center><img src='https://github.com/recohut/recsys-attacks/raw/d7472b7296515249c1bd1bbb8ea0afa9b07f6d9d/docs/_images/C900563_4.png'/><figcaption>Attack performance against NNMF. Best results are marked in bold, and AUSH results are also marked in bold if they are the second best in each category.</figcaption></center></p></figure>
+
+<figure><p><center><img src='https://github.com/recohut/recsys-attacks/raw/d7472b7296515249c1bd1bbb8ea0afa9b07f6d9d/docs/_images/C900563_5.png'/><figcaption>Attack performance against U-Autoencoder. Best results are marked in bold, and AUSH results are also marked in bold if they are the second best in each category</figcaption></center></p></figure>
+
+<figure><p><center><img src='https://github.com/recohut/recsys-attacks/raw/d7472b7296515249c1bd1bbb8ea0afa9b07f6d9d/docs/_images/C900563_6.png'/><figcaption>Attack performance against I-Autoencoder. Best results are marked in bold, and AUSH results are also marked in bold if they are the second best in each category.</figcaption></center></p></figure>

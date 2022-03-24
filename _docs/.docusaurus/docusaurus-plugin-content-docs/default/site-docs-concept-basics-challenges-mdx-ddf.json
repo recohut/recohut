@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-basics/challenges",
+  "id": "concept-basics/challenges",
+  "title": "Challenges",
+  "description": "The construction of effective Recommender Systems (RS) is a complex process, mainly due to the nature of RSs which involves large scale software-systems and human interactions. Iterative development processes require deep understanding of a current baseline as well as the ability to estimate the impact of changes in multiple variables of interest. Simulations are well suited to address both challenges and potentially leading to a high velocity construction process, a fundamental requirement in commercial contexts. Recently, there has been significant interest in RS Simulation Platforms, which allow RS developers to easily craft simulated environments where their systems can be analyzed.",
+  "source": "@site/docs/concept-basics/challenges.mdx",
+  "sourceDirName": "concept-basics",
+  "slug": "/concept-basics/challenges",
+  "permalink": "/ai/docs/concept-basics/challenges",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-basics/challenges.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Concept - Basics",
+    "permalink": "/ai/docs/concept-basics/"
+  },
+  "next": {
+    "title": "Collaborative Filtering",
+    "permalink": "/ai/docs/concept-basics/collaborative-filtering"
+  }
+}

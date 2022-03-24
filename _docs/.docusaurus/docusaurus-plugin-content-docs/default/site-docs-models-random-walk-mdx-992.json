@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/random_walk",
+  "id": "models/random_walk",
+  "title": "Random Walk",
+  "description": "The term \"random walk\" was first mentioned by Karl Pearson in 1905 in a letter to Nature magazine titled The Problem of the Random Walk. Study of random walks date back even further to the Gambler’s ruin problem, where it could be used to show that a gambler would eventually go bankrupt against an opponent with infinite wealth. It’s only in the last couple of decades, however, that researchers have studied them with respect to networks.",
+  "source": "@site/docs/models/random_walk.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/random_walk",
+  "permalink": "/ai/docs/models/random_walk",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/random_walk.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Q-learning",
+    "permalink": "/ai/docs/models/q-learning"
+  },
+  "next": {
+    "title": "RKMF",
+    "permalink": "/ai/docs/models/rkmf"
+  }
+}

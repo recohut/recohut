@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/taamr",
+  "id": "models/taamr",
+  "title": "TAaMR",
+  "description": "Targeted Adversarial Attack against Multimedia Recommender Systems",
+  "source": "@site/docs/models/taamr.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/taamr",
+  "permalink": "/ai/docs/models/taamr",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/taamr.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SVAE",
+    "permalink": "/ai/docs/models/svae"
+  },
+  "next": {
+    "title": "TAGNN-PP",
+    "permalink": "/ai/docs/models/tagnn-pp"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/sarsa",
+  "id": "models/sarsa",
+  "title": "SARSA",
+  "description": "The SARSA algorithm can be applied to model-free control problems and allows us to optimize the value function of an unknown MDP. SARSA is an on-policy temporal difference learning-based control algorithm. The SARSA algorithm can be summarized as follows:",
+  "source": "@site/docs/models/sarsa.md",
+  "sourceDirName": "models",
+  "slug": "/models/sarsa",
+  "permalink": "/ai/docs/models/sarsa",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sarsa.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SAC",
+    "permalink": "/ai/docs/models/sac"
+  },
+  "next": {
+    "title": "SASRec",
+    "permalink": "/ai/docs/models/sasrec"
+  }
+}

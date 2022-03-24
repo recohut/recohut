@@ -1,0 +1,33 @@
+# DM
+
+The direct method (DM) involves training a model on the historical data to predict the reward for each context-action instance. In this model, the reward is the target variable, while the context and action are the input features. Using this model, we can predict the rewards for each context-action instance associated with the target policy. This is illustrated below.
+
+<p><center><img src='https://github.com/recohut/ope-rec/raw/ded0ee7c461d3ddfaf0b136d19189f6eb89af26e/docs/_images/C862189_1.png'/></center></p>
+
+The expected average reward is the sum of the predicted rewards divided by the number of historical instances.
+
+While this technique is straightforward, it can be highly biased, due to bias in the model and in the historical data logged by the exploration policy. For example, if a particular action was rarely selected by the exploration policy, then reward predictions for this action in the resulting model will be inaccurate. This problem is exacerbated if there is a large difference between exploration and target policies.
+
+The DM takes a different approach to OPE. It builds a predictive model of reward given context and action using historical data, rather than trying to correct for the mismatched action distribution like IPS. Using this reward model to predict the reward, the new policy can be evaluated across all the historical contexts and the expected reward for each logged example can be computed under the new policy.
+
+Formally, the DM estimate is defined as follows:
+
+$$\hat{V}_{DM} = \dfrac{1}{n}\sum_{k=1}^{n}\sum_{\alpha \in \mathcal{A}}{\nu(a\vert x_k)}\hat{r}(x_k,a)‎
+$$
+
+Where,
+
+- $\hat{V}_{DM}$ = the expected average reward per decision under the new policy
+- $n$ = the number of samples in your historical data
+- ${\nu(a\vert x_k)}$ = the probability that your new policy takes an action given the logged context
+- $\hat{r}(x_k,a)‎$ = the predicted reward given a context and action
+
+The idea is to learn a reward model to impute the missing rewards. Then the estimator will use the imputed rewards for actions selected by evaluation policy to calculate the value of that counterfactual policy. 
+
+$$\hat{V}_{DM} (\pi_e;\mathcal{D}_0, \hat{r}) \coloneqq \dfrac{1}{n}\sum_{i=1}^n \sum_{a \in \mathcal{A}} \pi_e(a \vert x_i)\hat{r}(x_i,a)$$
+
+Since we have logged data $\mathcal{D} \coloneqq \{(x_i,a_i,r_i)\}_{i=1}^n$, this is just a supervised machine learning problem. 
+
+$$\hat{r} \in \operatorname{argmin_r} \dfrac{1}{n} \sum_{i=1}^n (r_i - r(x_i,a_i))^2$$
+
+It can be ridge regression, gradient boosting, deep net etc.

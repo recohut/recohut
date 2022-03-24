@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/success-stories",
+  "id": "concept-extras/success-stories/success-stories",
+  "title": "Success Stories",
+  "description": "In the following sections, we will learn more about the following success stories:",
+  "source": "@site/docs/concept-extras/success-stories/success-stories.mdx",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/",
+  "permalink": "/ai/docs/concept-extras/success-stories/",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/success-stories.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Scalarization",
+    "permalink": "/ai/docs/concept-extras/scalarization"
+  },
+  "next": {
+    "title": "1mg Prod2vec",
+    "permalink": "/ai/docs/concept-extras/success-stories/1mg-prod2vec"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/slist",
+  "id": "models/slist",
+  "title": "SLIST",
+  "description": "SLIST stands for Session-aware Linear Similarity/Transition. It is built by unifying two linear models - SLIS and SLIT.",
+  "source": "@site/docs/models/slist.md",
+  "sourceDirName": "models",
+  "slug": "/models/slist",
+  "permalink": "/ai/docs/models/slist",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/slist.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SiReN",
+    "permalink": "/ai/docs/models/siren"
+  },
+  "next": {
+    "title": "SML",
+    "permalink": "/ai/docs/models/sml"
+  }
+}

@@ -1,0 +1,39 @@
+# SML
+
+## Problem formulation
+
+There are two major components in this SML framework: (1) building an expressive component that transfers the knowledge gained in previous training to the training on new interactions, and (2) optimizing the transfer component towards the recommendation performance in the near future.
+
+Formally, 
+
+$$(D_t, W_{t-1}) \xrightarrow{\text{get}} W_t \xleftarrow{\text{test}}D_{t+1}$$
+
+## Model overview
+
+![](https://github.com/recohut/incremental-learning/raw/a6fdcde2e8af7ebfd9f5efd278c487e0e9560cb3/docs/_images/L753817_1.png)
+
+*Model overview of transfer-based retraining for the t-th time period. $W_{t−1}$ represents the previous recommender, $\hat{W}_t$ is a recommender learned on new data $D_t$ only. The transfer component is to combine the “knowledge” in $W_{t−1}$ and $\hat{W}_t$ to obtain the new recommender $W_t$ for serving the next period.*
+
+We propose a new retraining method with two major considerations: 1) building an expressive component that transfers the knowledge gained in previous training to the training on new interactions, and, 2) optimizing the transfer component towards the recommendation performance in the near future.
+
+To achieve the first goal, we devise the transfer component as a convolutional neural network (CNN), which inputs the previous model parameters as constant and the present model as trainable parameters. The rationality is that the knowledge gained in previous training is condensed in model parameters, such that an expressive neural network should be able to distill the knowledge towards the desired purpose. To achieve the second goal, in addition to normal training on newly collected interactions, we further train the transfer CNN on the future interactions of next time period. As such, the CNN can learn how to combine the old parameters with present parameters, with the objective of predicting the user interactions of the near future.
+
+In real-world recommender systems, user interaction data streams in continuously. To keep the predictive model fresh with recent data, a common choice is to retrain the model periodically. We represent the data as $\{D_0, . . . ,D_t ,D_{t+1}, . . . \}$, where $D_t$ denotes the data newly collected in the time period t. Assume each retraining is triggered right after $D_t$ is collected. A period can be any length of time, e.g., daily, weekly or until a certain number of interactions are collected, depending on the system requirement and implementation ability. In the retraining of time period t, the system has access to all previous data, i.e., $\{D_0, . . . ,D_t ,D_{t+1}\}$, and the new data $D_t$ . Since the retrained model is used to serve for the near future, it is reasonable to judge its effectiveness based on $D_{t+1}$ — the data collected in the next time period. As such, we set the recommendation performance on $D_{t+1}$ as the generalization goal of the t-th period retraining. Let the model parameters after the t-th period retraining be $W_t$. We treat each retraining as a task, formulating it as: $(\{D_m : m ≤ t\},W_{t−1})$ $\xrightarrow{get}$ $W_t$ $\xleftarrow{test}$ $D_{t+1}$. In this work, we aim to utilize the newly collected data $D_t$ only plus the previous model parameters $W_{t−1}$, so as to pursue a good retrained model as evaluated on $D_{t+1}$. Thus we reformulate the retraining process as: $(D_t,W_{t−1})$ $\xrightarrow{get}$ $W_t$ $\xleftarrow{test}$ $D_{t+1}$.
+
+## Training procedure
+
+![](https://github.com/recohut/incremental-learning/raw/a6fdcde2e8af7ebfd9f5efd278c487e0e9560cb3/docs/_images/L753817_2.png)
+
+*Sequential training procedure of SML.*
+
+## Evaluation procedure
+
+![](https://github.com/recohut/incremental-learning/raw/a6fdcde2e8af7ebfd9f5efd278c487e0e9560cb3/docs/_images/L753817_3.png)
+
+*Model evaluation and update procedure.*
+
+## Performance
+
+![](https://github.com/recohut/incremental-learning/raw/a6fdcde2e8af7ebfd9f5efd278c487e0e9560cb3/docs/_images/L753817_4.png)
+
+*Average recommendation performance over online testing periods on Adressa and Yelp. “RI” indicates the relative improvement of SML over the corresponding baseline.*

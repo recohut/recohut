@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/deepcross",
+  "id": "models/deepcross",
+  "title": "DeepCross",
+  "description": "Shan, Y., Hoens, T., Jiao, J., Wang, H., Yu, D. and Mao, J., 2016. Deep Crossing: Web-Scale Modeling without Manually Crafted Combinatorial Features. [online] Kdd.org.",
+  "source": "@site/docs/models/deepcross.md",
+  "sourceDirName": "models",
+  "slug": "/models/deepcross",
+  "permalink": "/ai/docs/models/deepcross",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/deepcross.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "DDPG",
+    "permalink": "/ai/docs/models/ddpg"
+  },
+  "next": {
+    "title": "DeepFM",
+    "permalink": "/ai/docs/models/deepfm"
+  }
+}

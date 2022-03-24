@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/sml",
+  "id": "models/sml",
+  "title": "SML",
+  "description": "Problem formulation",
+  "source": "@site/docs/models/sml.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/sml",
+  "permalink": "/ai/docs/models/sml",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sml.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SLIST",
+    "permalink": "/ai/docs/models/slist"
+  },
+  "next": {
+    "title": "SPop",
+    "permalink": "/ai/docs/models/spop"
+  }
+}

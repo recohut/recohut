@@ -1,0 +1,46 @@
+{
+  "permalink": "/ai/blog/2021/10/01/finding-hardware-parts-in-warehouse",
+  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-finding-hardware-parts-in-warehouse.mdx",
+  "source": "@site/blog/2021-10-01-finding-hardware-parts-in-warehouse.mdx",
+  "title": "Finding Hardware Parts in Warehouse",
+  "description": "Imagine a customer visits a store to buy hardware parts (e.g. a PVC  pipe or a concrete block) and describe the requirements in a natural language like 'I need 2\" x 5\" concrete block' but the exact description of this part might be different in the seller's database e.g. 'concrete block solid of width 2 inch and height 5 inches'. So the objective is to build a system that will help the store owner to find and offer the right item from the database for the description given by the customer.",
+  "date": "2021-10-01T00:00:00.000Z",
+  "formattedDate": "October 1, 2021",
+  "tags": [
+    {
+      "label": "nlp",
+      "permalink": "/ai/blog/tags/nlp"
+    },
+    {
+      "label": "similarity",
+      "permalink": "/ai/blog/tags/similarity"
+    }
+  ],
+  "readingTime": 1.35,
+  "truncated": false,
+  "authors": [
+    {
+      "name": "Sparsh Agarwal",
+      "title": "Principal Developer",
+      "url": "https://github.com/sparsh-ai",
+      "imageURL": "https://avatars.githubusercontent.com/u/62965911?v=4",
+      "key": "sparsh"
+    }
+  ],
+  "frontMatter": {
+    "title": "Finding Hardware Parts in Warehouse",
+    "authors": "sparsh",
+    "tags": [
+      "nlp",
+      "similarity"
+    ]
+  },
+  "prevItem": {
+    "title": "Fake Voice Detection",
+    "permalink": "/ai/blog/2021/10/01/fake-voice-detection"
+  },
+  "nextItem": {
+    "title": "Image Similarity System",
+    "permalink": "/ai/blog/2021/10/01/image-similarity-system"
+  }
+}

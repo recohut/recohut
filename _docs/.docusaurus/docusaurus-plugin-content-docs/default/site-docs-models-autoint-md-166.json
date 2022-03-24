@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/autoint",
+  "id": "models/autoint",
+  "title": "AutoInt",
+  "description": "Song et. al., “Automatic Feature Interaction Learning via Self-Attentive Neural Networks”. CIKM, 2018.",
+  "source": "@site/docs/models/autoint.md",
+  "sourceDirName": "models",
+  "slug": "/models/autoint",
+  "permalink": "/ai/docs/models/autoint",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/autoint.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AUSH",
+    "permalink": "/ai/docs/models/aush"
+  },
+  "next": {
+    "title": "BASR",
+    "permalink": "/ai/docs/models/basr"
+  }
+}

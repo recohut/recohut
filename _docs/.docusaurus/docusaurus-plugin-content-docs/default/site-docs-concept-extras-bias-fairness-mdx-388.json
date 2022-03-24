@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/bias-&-fairness",
+  "id": "concept-extras/bias-&-fairness",
+  "title": "Bias & Fairness",
+  "description": "It can’t be denied that there is bias all around us. A bias is a prejudice against a person or group of people, including, but not limited to their gender, race, and beliefs. Many of these biases arise from emergent behavior in social interactions, events in history, and cultural and political views around the world. These biases affect the data that we collect. Because AI algorithms work with this data, it is an inherent problem that the machine will “learn” these biases. From a technical perspective, we can engineer the system perfectly, but at the end of the day, humans interact with these systems, and it’s our responsibility to minimize bias and prejudice as much as possible. The algorithms we use are only as good as the data provided to them. Understanding the data and the context in which it is being used is the first step in battling bias, and this understanding will help you build better solutions—because you will be well versed in the problem space. Providing balanced data with as little bias as possible should result in better solutions.",
+  "source": "@site/docs/concept-extras/bias-&-fairness.mdx",
+  "sourceDirName": "concept-extras",
+  "slug": "/concept-extras/bias-&-fairness",
+  "permalink": "/ai/docs/concept-extras/bias-&-fairness",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/bias-&-fairness.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Apps",
+    "permalink": "/ai/docs/concept-extras/apps"
+  },
+  "next": {
+    "title": "Causal Inference",
+    "permalink": "/ai/docs/concept-extras/causal-inference"
+  }
+}

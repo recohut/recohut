@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-basics/session-based-recommenders",
+  "id": "concept-basics/session-based-recommenders",
+  "title": "Session-based Recommenders",
+  "description": "Recommender systems help users find relevant items of interest, for example on e-commerce or media streaming sites. Most academic research is concerned with approaches that personalize the recommendations according to long-term user profiles. In many real-world applications, however, such long-term profiles often do not exist and recommendations, therefore, have to be made solely based on the observed behavior of a user during an ongoing session.",
+  "source": "@site/docs/concept-basics/session-based-recommenders.md",
+  "sourceDirName": "concept-basics",
+  "slug": "/concept-basics/session-based-recommenders",
+  "permalink": "/ai/docs/concept-basics/session-based-recommenders",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-basics/session-based-recommenders.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Processes",
+    "permalink": "/ai/docs/concept-basics/processes"
+  },
+  "next": {
+    "title": "Tasks",
+    "permalink": "/ai/docs/concept-basics/tasks"
+  }
+}

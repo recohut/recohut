@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/graph-networks",
+  "id": "concept-extras/graph-networks",
+  "title": "Graph Networks",
+  "description": "Item-Item Co-Occurrence Graph",
+  "source": "@site/docs/concept-extras/graph-networks.mdx",
+  "sourceDirName": "concept-extras",
+  "slug": "/concept-extras/graph-networks",
+  "permalink": "/ai/docs/concept-extras/graph-networks",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/graph-networks.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Graph Embeddings",
+    "permalink": "/ai/docs/concept-extras/graph-embeddings"
+  },
+  "next": {
+    "title": "Incremental Learning",
+    "permalink": "/ai/docs/concept-extras/incremental-learning"
+  }
+}

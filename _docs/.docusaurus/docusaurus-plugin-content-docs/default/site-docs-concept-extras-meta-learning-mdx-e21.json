@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/meta-learning",
+  "id": "concept-extras/meta-learning",
+  "title": "Meta Learning",
+  "description": "Meta learning covers a wide range of topics and has contributed to a booming study trend. Few-shot learning is one of successful branches of meta learning. We retrospect some representative meta-learning models with strong connections to our work.",
+  "source": "@site/docs/concept-extras/meta-learning.mdx",
+  "sourceDirName": "concept-extras",
+  "slug": "/concept-extras/meta-learning",
+  "permalink": "/ai/docs/concept-extras/meta-learning",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/meta-learning.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Jensen–Shannon divergence",
+    "permalink": "/ai/docs/concept-extras/jensen-shannon-divergence"
+  },
+  "next": {
+    "title": "MLOps",
+    "permalink": "/ai/docs/concept-extras/mlops"
+  }
+}

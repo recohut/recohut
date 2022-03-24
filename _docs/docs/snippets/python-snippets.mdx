@@ -1,0 +1,70 @@
+# Python code
+
+## Clean filenames in a folder
+
+```python
+import re
+import os
+import pathlib
+import glob
+
+nbs = glob.glob('/content/docs/docs/tutorials/*.md')
+
+def process(path):
+    x = str(pathlib.Path(path).stem)
+    x = x.lower()
+    x = re.sub(r'[^a-z]','-',x)
+    x = re.sub(r'-+','-',x)
+    x = x.strip('-')
+    x = os.path.join(str(pathlib.Path(path).parent), x+'.mdx')
+    x = re.sub('/[a-z]\-','/',x)
+    os.rename(path, x)
+
+_ = [process(x) for x in nbs]
+```
+
+## Converting Jupyter notebooks into markdown
+
+```python
+!cd /content && git clone https://github.com/recohut/nbs.git
+!pip install -q jupytext
+!cd /content/nbs && jupytext *.ipynb --to markdown
+```
+
+```python
+import glob
+import os
+
+nbs = glob.glob('/content/nbs/*.ipynb')
+
+for x in nbs:
+    mds = x[:-6]+'.md'
+    if not os.path.exists(mds):
+        try:
+          !jupyter nbconvert --to markdown "{x}"
+        except:
+            print('error in {}'.format(x))
+```
+
+## Scraping
+
+### BS4
+
+<a href="https://nbviewer.org/github/recohut/nbs/blob/main/2020-06-20-simple-scraping-nlp-bs4-distilbert.ipynb" alt=""> <img src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
+
+```python
+import bs4
+import requests
+import lxml.etree as xml
+
+URLs = ["https://www.flexjobs.com/blog/post/job-search-strategies-for-success-v2/",
+        "https://www.monster.com/career-advice/article/five-ps-of-job-search-progress"]
+
+i = 0
+web_page = bs4.BeautifulSoup(requests.get(URLs[i], {}).text, "lxml")
+df.loc[i,'title'] = web_page.head.title.text
+sub_web_page = web_page.find_all(name="article", attrs={"class": "single-post-page"})[0]
+article = '. '.join([wp.text for wp in sub_web_page.find_all({"h2","p"})])
+df.loc[i,'text'] = article
+        
+```

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/nlp/transformers",
+  "id": "concept-extras/nlp/transformers",
+  "title": "Transformers",
+  "description": "The old, obsolete, 1980 architecture of Recurrent Neural Networks(RNNs) including the LSTMs were simply not producing good results anymore. In less than two years, transformer models wiped RNNs off the map and even outperformed human baselines for many tasks.",
+  "source": "@site/docs/concept-extras/nlp/transformers.mdx",
+  "sourceDirName": "concept-extras/nlp",
+  "slug": "/concept-extras/nlp/transformers",
+  "permalink": "/ai/docs/concept-extras/nlp/transformers",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/nlp/transformers.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Topic Modeling",
+    "permalink": "/ai/docs/concept-extras/nlp/topic-modeling"
+  },
+  "next": {
+    "title": "Off-Policy Learning",
+    "permalink": "/ai/docs/concept-extras/offline-learning"
+  }
+}

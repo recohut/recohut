@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/ngcf",
+  "id": "models/ngcf",
+  "title": "NGCF",
+  "description": "NGCF stands for Neural Graph Collaborative Filtering. This GNN-based approach follows basic operations inherited from the standard GCN to explore the high-order connectivity information. More specifically, NGCF stacks embedding layers and concatenates embeddings obtained in all layers to constitute the final embeddings.",
+  "source": "@site/docs/models/ngcf.md",
+  "sourceDirName": "models",
+  "slug": "/models/ngcf",
+  "permalink": "/ai/docs/models/ngcf",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/ngcf.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "NeuMF",
+    "permalink": "/ai/docs/models/neumf"
+  },
+  "next": {
+    "title": "NMRN",
+    "permalink": "/ai/docs/models/nmrn"
+  }
+}

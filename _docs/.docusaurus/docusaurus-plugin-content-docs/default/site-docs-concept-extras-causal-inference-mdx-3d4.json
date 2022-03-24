@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/causal-inference",
+  "id": "concept-extras/causal-inference",
+  "title": "Causal Inference",
+  "description": "Typical recommender systems frame the recommendation task as either a distance learning problem between pairs of products, or between pairs of users and products, or as a next item prediction problem. However, a recommender system should not only attempt to model organic user behavior but influence it. This is where causal techniques help, potentially via simple modifications of standard matrix factorization methods.",
+  "source": "@site/docs/concept-extras/causal-inference.mdx",
+  "sourceDirName": "concept-extras",
+  "slug": "/concept-extras/causal-inference",
+  "permalink": "/ai/docs/concept-extras/causal-inference",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/causal-inference.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Bias & Fairness",
+    "permalink": "/ai/docs/concept-extras/bias-&-fairness"
+  },
+  "next": {
+    "title": "Cold Start",
+    "permalink": "/ai/docs/concept-extras/cold-start"
+  }
+}

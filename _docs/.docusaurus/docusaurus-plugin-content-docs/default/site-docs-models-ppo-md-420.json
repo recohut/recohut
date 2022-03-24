@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/ppo",
+  "id": "models/ppo",
+  "title": "PPO",
+  "description": "The PPO (Proximal Policy Optimization) algorithm was introduced by the OpenAI team in 2017 and quickly became one of the most popular Reinforcement Learning method that pushed all other RL methods at that moment aside. PPO involves collecting a small batch of experiences interacting with the environment and using that batch to update its decision-making policy. Once the policy is updated with that batch, the experiences are thrown away and a newer batch is collected with the newly updated policy. This is the reason why it is an “on-policy learning” approach where the experience samples collected are only useful for updating the current policy.",
+  "source": "@site/docs/models/ppo.md",
+  "sourceDirName": "models",
+  "slug": "/models/ppo",
+  "permalink": "/ai/docs/models/ppo",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/ppo.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "PNN",
+    "permalink": "/ai/docs/models/pnn"
+  },
+  "next": {
+    "title": "Q-learning",
+    "permalink": "/ai/docs/models/q-learning"
+  }
+}

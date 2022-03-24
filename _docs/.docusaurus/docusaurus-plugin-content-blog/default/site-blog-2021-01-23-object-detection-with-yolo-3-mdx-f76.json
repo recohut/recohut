@@ -1,0 +1,53 @@
+{
+  "permalink": "/ai/blog/2021/01/23/object-detection-with-yolo3",
+  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-01-23-object-detection-with-yolo3.mdx",
+  "source": "@site/blog/2021-01-23-object-detection-with-yolo3.mdx",
+  "title": "Object detection with YOLO3",
+  "description": "Live app",
+  "date": "2021-01-23T00:00:00.000Z",
+  "formattedDate": "January 23, 2021",
+  "tags": [
+    {
+      "label": "app",
+      "permalink": "/ai/blog/tags/app"
+    },
+    {
+      "label": "vision",
+      "permalink": "/ai/blog/tags/vision"
+    },
+    {
+      "label": "streamlit",
+      "permalink": "/ai/blog/tags/streamlit"
+    }
+  ],
+  "readingTime": 1.975,
+  "truncated": false,
+  "authors": [
+    {
+      "name": "Sparsh Agarwal",
+      "title": "Principal Developer",
+      "url": "https://github.com/sparsh-ai",
+      "imageURL": "https://avatars.githubusercontent.com/u/62965911?v=4",
+      "key": "sparsh"
+    }
+  ],
+  "frontMatter": {
+    "title": "Object detection with YOLO3",
+    "authors": [
+      "sparsh"
+    ],
+    "tags": [
+      "app",
+      "vision",
+      "streamlit"
+    ]
+  },
+  "prevItem": {
+    "title": "What is Livestream Ecommerce",
+    "permalink": "/ai/blog/2021/10/01/what-is-livestream-ecommerce"
+  },
+  "nextItem": {
+    "title": "MobileNet SSD Caffe Pre-trained model",
+    "permalink": "/ai/blog/2020/01/19/mobilenet-ssd-caffe-pre-trained-model"
+  }
+}

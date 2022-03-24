@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/sgl",
+  "id": "models/sgl",
+  "title": "SGL",
+  "description": "SGL is the latest baseline for top-k recommendations. It introduces self-supervised learning into the recommendation system based on the contrastive learning framework. It is implemented on LightGCN and uses a multitask approach that unites the contrastive loss and the BPR loss function. SGL mainly benefits from graph contrastive learning to reinforce user and item representations.",
+  "source": "@site/docs/models/sgl.md",
+  "sourceDirName": "models",
+  "slug": "/models/sgl",
+  "permalink": "/ai/docs/models/sgl",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sgl.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SDNE",
+    "permalink": "/ai/docs/models/sdne"
+  },
+  "next": {
+    "title": "Shared Bottom",
+    "permalink": "/ai/docs/models/shared-bottom"
+  }
+}

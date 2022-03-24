@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/sr",
+  "id": "models/sr",
+  "title": "SR",
+  "description": "SR stands for Sequential Rules. The SR method is a variation of MC and AR. It also takes the order of actions into account, but in a less restrictive manner. In contrast to the MC method, we create a rule when an item q appeared after an item p in a session even when other events happened between p and q. When assigning weights to the rules, we consider the number of elements appearing between p and q in the session.",
+  "source": "@site/docs/models/sr.md",
+  "sourceDirName": "models",
+  "slug": "/models/sr",
+  "permalink": "/ai/docs/models/sr",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sr.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SR-SAN",
+    "permalink": "/ai/docs/models/sr-san"
+  },
+  "next": {
+    "title": "SSE-PT",
+    "permalink": "/ai/docs/models/sse-pt"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/bcq",
+  "id": "models/bcq",
+  "title": "BCQ",
+  "description": "Current off-policy deep reinforcement learning algorithms fail to address extrapolation error by selecting actions with respect to a learned value estimate, without consideration of the accuracy of the estimate. As a result, certain outof-distribution actions can be erroneously extrapolated to higher values. However, the value of an off-policy agent can be accurately evaluated in regions where data is available.",
+  "source": "@site/docs/models/bcq.md",
+  "sourceDirName": "models",
+  "slug": "/models/bcq",
+  "permalink": "/ai/docs/models/bcq",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/bcq.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "BASR",
+    "permalink": "/ai/docs/models/basr"
+  },
+  "next": {
+    "title": "Behavior Propensity Modeling",
+    "permalink": "/ai/docs/models/beh-prop"
+  }
+}

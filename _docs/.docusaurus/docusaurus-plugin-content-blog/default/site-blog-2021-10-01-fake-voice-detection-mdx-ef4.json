@@ -1,0 +1,46 @@
+{
+  "permalink": "/ai/blog/2021/10/01/fake-voice-detection",
+  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-fake-voice-detection.mdx",
+  "source": "@site/blog/2021-10-01-fake-voice-detection.mdx",
+  "title": "Fake Voice Detection",
+  "description": "/img/content-blog-raw-blog-fake-voice-detection-untitled.png",
+  "date": "2021-10-01T00:00:00.000Z",
+  "formattedDate": "October 1, 2021",
+  "tags": [
+    {
+      "label": "audio",
+      "permalink": "/ai/blog/tags/audio"
+    },
+    {
+      "label": "deepfake",
+      "permalink": "/ai/blog/tags/deepfake"
+    }
+  ],
+  "readingTime": 2.88,
+  "truncated": false,
+  "authors": [
+    {
+      "name": "Sparsh Agarwal",
+      "title": "Principal Developer",
+      "url": "https://github.com/sparsh-ai",
+      "imageURL": "https://avatars.githubusercontent.com/u/62965911?v=4",
+      "key": "sparsh"
+    }
+  ],
+  "frontMatter": {
+    "title": "Fake Voice Detection",
+    "authors": "sparsh",
+    "tags": [
+      "audio",
+      "deepfake"
+    ]
+  },
+  "prevItem": {
+    "title": "Document Recommendation",
+    "permalink": "/ai/blog/2021/10/01/document-recommendation"
+  },
+  "nextItem": {
+    "title": "Image Similarity System",
+    "permalink": "/ai/blog/2021/10/01/image-similarity-system"
+  }
+}

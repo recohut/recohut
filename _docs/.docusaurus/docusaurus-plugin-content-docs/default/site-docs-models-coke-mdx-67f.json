@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/coke",
+  "id": "models/coke",
+  "title": "CoKE",
+  "description": "Contextualized Knowledge Graph Embedding",
+  "source": "@site/docs/models/coke.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/coke",
+  "permalink": "/ai/docs/models/coke",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/coke.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "CIGC",
+    "permalink": "/ai/docs/models/cigc"
+  },
+  "next": {
+    "title": "DCN",
+    "permalink": "/ai/docs/models/dcn"
+  }
+}

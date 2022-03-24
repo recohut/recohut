@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/concept-extras",
+  "id": "concept-extras/concept-extras",
+  "title": "Concept - Extras",
+  "description": "In the following sections, we will more systematically introduce the following extra concepts:",
+  "source": "@site/docs/concept-extras/concept-extras.mdx",
+  "sourceDirName": "concept-extras",
+  "slug": "/concept-extras/",
+  "permalink": "/ai/docs/concept-extras/",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/concept-extras.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Types of Recommender Systems",
+    "permalink": "/ai/docs/concept-basics/types-of-recommender-systems"
+  },
+  "next": {
+    "title": "Amazon Personalize",
+    "permalink": "/ai/docs/concept-extras/amazon-personalize"
+  }
+}

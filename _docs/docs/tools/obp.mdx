@@ -1,0 +1,11 @@
+# OBP
+
+## Process flow
+
+<p><center><img src='https://github.com/recohut/ope-rec/raw/ded0ee7c461d3ddfaf0b136d19189f6eb89af26e/docs/_images/L910228_1.png'/></center></p>
+
+<p><center><img src='https://github.com/recohut/ope-rec/raw/ded0ee7c461d3ddfaf0b136d19189f6eb89af26e/docs/_images/L910228_2.png'/></center></p>
+
+Counterfactual estimators enable the use of existing log data to estimate how some new target recommendation policy would have performed, if it had been used instead of the policy that logged the data. We say that those estimators work "off-policy", since the policy that logged the data is different from the target policy. In this way, counterfactual estimators enable Off-policy Evaluation (OPE) akin to an unbiased offline A/B test, as well as learning new recommendation policies through Off-policy Learning (OPL).
+
+Exploiting log bandit data is more difficult than conventional supervised machine learning, since the result is only observed for the action chosen by the system, but not for all the other actions that the system could have taken. The logs are also biased in that they over-represent the actions favored by the system. A potential solution to this problem is an A/B test that compares the performance of competing systems in an online environment. However, A/B testing systems is often difficult because deploying a new policy is time- and money-consuming and entails the risk of failure. This motivates the problem of OPE/OPL, which aims to estimate the performance of a new policy or to train it using only the log data collected by a past policy.

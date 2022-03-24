@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/sdne",
+  "id": "models/sdne",
+  "title": "SDNE",
+  "description": "Structural Deep Network Embedding",
+  "source": "@site/docs/models/sdne.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/sdne",
+  "permalink": "/ai/docs/models/sdne",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sdne.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SASRec",
+    "permalink": "/ai/docs/models/sasrec"
+  },
+  "next": {
+    "title": "SGL",
+    "permalink": "/ai/docs/models/sgl"
+  }
+}

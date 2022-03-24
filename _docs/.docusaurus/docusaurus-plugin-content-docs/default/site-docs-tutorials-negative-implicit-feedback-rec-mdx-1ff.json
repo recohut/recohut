@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tutorials/negative-implicit-feedback-rec",
+  "id": "tutorials/negative-implicit-feedback-rec",
+  "title": "Negative Implicit Feedback in Recommendations",
+  "description": "A tutorial to demonstrate the process of training and evaluating various recommender models on a online retail store data. Along with the positive feedbacks like view, add-to-cart, we also have a negative event 'remove-from-cart'.",
+  "source": "@site/docs/tutorials/negative-implicit-feedback-rec.mdx",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/negative-implicit-feedback-rec",
+  "permalink": "/ai/docs/tutorials/negative-implicit-feedback-rec",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/negative-implicit-feedback-rec.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Name and Address Parsing",
+    "permalink": "/ai/docs/tutorials/name-address-parsing"
+  },
+  "next": {
+    "title": "PDF to WordCloud via Email",
+    "permalink": "/ai/docs/tutorials/pdf-to-wordcloud-mail"
+  }
+}

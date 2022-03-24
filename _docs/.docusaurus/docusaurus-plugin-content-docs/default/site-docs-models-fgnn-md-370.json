@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/fgnn",
+  "id": "models/fgnn",
+  "title": "FGNN",
+  "description": "Ruihong Qiu, Jingjing Li, Zi Huang and Hongzhi Yin, “Rethinking the Item Order in Session-based Recommendation with Graph Neural Networks”. CIKM, 2019.",
+  "source": "@site/docs/models/fgnn.md",
+  "sourceDirName": "models",
+  "slug": "/models/fgnn",
+  "permalink": "/ai/docs/models/fgnn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/fgnn.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "FFM",
+    "permalink": "/ai/docs/models/ffm"
+  },
+  "next": {
+    "title": "FM",
+    "permalink": "/ai/docs/models/fm"
+  }
+}

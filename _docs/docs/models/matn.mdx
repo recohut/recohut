@@ -1,0 +1,21 @@
+# MATN
+
+> Multiplex Behavioral Relation Learning for Recommendation via Memory Augmented Transformer Network.
+
+Capturing users' precise preferences is of great importance in various recommender systems (eg., e-commerce platforms), which is the basis of how to present personalized interesting product lists to individual users. In spite of significant progress has been made to consider relations between users and items, most of the existing recommendation techniques solely focus on singular type of user-item interactions. However, user-item interactive behavior is often exhibited with multi-type (e.g., page view, add-to-favorite and purchase) and interdependent in nature. The overlook of multiplex behavior relations can hardly recognize the multi-modal contextual signals across different types of interactions, which limit the feasibility of current recommendation methods. To tackle the above challenge, this work proposes a Memory-Augmented Transformer Networks (MATN), to enable the recommendation with multiplex behavioral relational information, and joint modeling of type-specific behavioral context and type-wise behavior inter-dependencies, in a fully automatic manner. In MATN framework, we first develop a transformer-based multi-behavior relation encoder, to make the learned interaction representations be reflective of the cross-type behavior relations. Furthermore, a memory attention network is proposed to supercharge MATN capturing the contextual signals of different types of behavior into the category-specific latent embedding space. Finally, a cross-behavior aggregation component is introduced to promote the comprehensive collaboration across type-aware interaction behavior representations, and discriminate their inherent contributions in assisting recommendations.
+
+## Multi-Behavior Tensor X
+
+In tensor $\mathcal{X}$, each entry $\mathcal{x}_{𝑖,𝑗,𝑙}$ = 1 if user $𝑢_𝑖$ is interacted with item $𝑡_𝑗$ given the 𝑙-th behavior type. For example, if user $𝑢_𝑖$ purchases item $𝑡_𝑗$ , the corresponding element $\mathcal{x}_{𝑖,𝑗,𝑙}$ will be set as 1 in the purchase behavior matrix $\mathcal{X}_l$.
+
+## Architecture
+
+<figure><p><center><img src='https://github.com/recohut/transformer-rec/raw/132decd8b7004cd43163b71d70a501bc150fd5f2/docs/_images/C879945_1.png'/><figcaption>The model architecture of the proposed MATN framework.</figcaption></center></p></figure>
+
+## Algorithm
+
+<p><center><img src='https://github.com/recohut/transformer-rec/raw/132decd8b7004cd43163b71d70a501bc150fd5f2/docs/_images/C879945_2.png'/></center></p>
+
+## Performance
+
+<p><center><img src='https://github.com/recohut/transformer-rec/raw/132decd8b7004cd43163b71d70a501bc150fd5f2/docs/_images/C879945_3.png'/></center></p>

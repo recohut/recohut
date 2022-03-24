@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/sasrec",
+  "id": "models/sasrec",
+  "title": "SASRec",
+  "description": "SASRec stands for Self-Attentive Sequential Recommendation. It relies on the sequence modeling capabilities of self-attentive neural networks to predict the occurence of the next item in a user’s consumption sequence. To be precise, given a user 𝑢 and their time-ordered consumption history $S^𝑢 = (S1^u, S2^u, \\dots, S_{|S^u|}^𝑢),$ SASRec first applies self-attention on $S^𝑢$ followed by a series of non-linear feed-forward layers to finally obtain the next item likelihood.",
+  "source": "@site/docs/models/sasrec.md",
+  "sourceDirName": "models",
+  "slug": "/models/sasrec",
+  "permalink": "/ai/docs/models/sasrec",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sasrec.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SARSA",
+    "permalink": "/ai/docs/models/sarsa"
+  },
+  "next": {
+    "title": "SDNE",
+    "permalink": "/ai/docs/models/sdne"
+  }
+}

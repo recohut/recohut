@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/santander-banking-products",
+  "id": "concept-extras/success-stories/santander-banking-products",
+  "title": "Santander Banking Products",
+  "description": "The goal of the bank is to predict which new products customers will purchase. The data starts on 2015–01–28, and has monthly records of the products each customer has, such as a credit card, savings account, etc. In addition, the dataset also records user personal data such as average income, age, gender, and so on. The monthly statistics are provided until 2015–05–28. Finally, the model predicts which additional products a customer will start using from the following month, 2016–06–28. Thus, the dataset spans 17 months from 2015–01–28 to 2016–05–28, and the output set contains only the timestamp corresponding to 2016–06–28. Models are therefore trained on sequences of 16 months to predict products acquired on their respective last month.",
+  "source": "@site/docs/concept-extras/success-stories/santander-banking-products.md",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/santander-banking-products",
+  "permalink": "/ai/docs/concept-extras/success-stories/santander-banking-products",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/santander-banking-products.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Pinterest Multi-task Learning",
+    "permalink": "/ai/docs/concept-extras/success-stories/pinterest-multi-task-learning"
+  },
+  "next": {
+    "title": "Scribd Real-time",
+    "permalink": "/ai/docs/concept-extras/success-stories/scribd-real-time"
+  }
+}

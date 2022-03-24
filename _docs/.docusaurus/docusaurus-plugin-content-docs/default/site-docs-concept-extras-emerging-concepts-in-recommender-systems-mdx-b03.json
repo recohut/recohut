@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/emerging-concepts-in-recommender-systems",
+  "id": "concept-extras/emerging-concepts-in-recommender-systems",
+  "title": "Emerging Concepts in Recommender Systems",
+  "description": "Real-time Learning and Inference",
+  "source": "@site/docs/concept-extras/emerging-concepts-in-recommender-systems.mdx",
+  "sourceDirName": "concept-extras",
+  "slug": "/concept-extras/emerging-concepts-in-recommender-systems",
+  "permalink": "/ai/docs/concept-extras/emerging-concepts-in-recommender-systems",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/emerging-concepts-in-recommender-systems.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Diversity",
+    "permalink": "/ai/docs/concept-extras/diversity"
+  },
+  "next": {
+    "title": "Graph Embeddings",
+    "permalink": "/ai/docs/concept-extras/graph-embeddings"
+  }
+}

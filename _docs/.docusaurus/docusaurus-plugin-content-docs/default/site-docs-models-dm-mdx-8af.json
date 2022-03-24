@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/dm",
+  "id": "models/dm",
+  "title": "DM",
+  "description": "The direct method (DM) involves training a model on the historical data to predict the reward for each context-action instance. In this model, the reward is the target variable, while the context and action are the input features. Using this model, we can predict the rewards for each context-action instance associated with the target policy. This is illustrated below.",
+  "source": "@site/docs/models/dm.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/dm",
+  "permalink": "/ai/docs/models/dm",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/dm.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "DGTN",
+    "permalink": "/ai/docs/models/dgtn"
+  },
+  "next": {
+    "title": "DMT",
+    "permalink": "/ai/docs/models/dmt"
+  }
+}

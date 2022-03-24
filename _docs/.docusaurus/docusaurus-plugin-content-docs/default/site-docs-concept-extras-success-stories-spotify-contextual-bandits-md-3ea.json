@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/spotify-contextual-bandits",
+  "id": "concept-extras/success-stories/spotify-contextual-bandits",
+  "title": "Spotify Contextual Bandits",
+  "description": "Read more in this paper",
+  "source": "@site/docs/concept-extras/success-stories/spotify-contextual-bandits.md",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/spotify-contextual-bandits",
+  "permalink": "/ai/docs/concept-extras/success-stories/spotify-contextual-bandits",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/spotify-contextual-bandits.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Scribd Real-time",
+    "permalink": "/ai/docs/concept-extras/success-stories/scribd-real-time"
+  },
+  "next": {
+    "title": "Spotify RL",
+    "permalink": "/ai/docs/concept-extras/success-stories/spotify-rl"
+  }
+}

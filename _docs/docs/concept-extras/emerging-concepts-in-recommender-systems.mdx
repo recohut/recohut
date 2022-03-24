@@ -1,0 +1,196 @@
+# Emerging Concepts in Recommender Systems
+
+## Real-time Learning and Inference
+
+### Batch vs. Real-time
+
+Batch recommendations are computationally cheaper. They are usually generated once a day and benefit from batch processing’s economies of scale. Batch recommendations are also simpler ops-wise. In contrast, real-time recommendations usually require more computation. For example, we might aggregate streamed events (e.g., click, like, purchase) and generate new recommendations on-demand, based on user interactions. Operating real-time recommendations in production is also far tricker and the ops burden also increases. 
+
+### **Why real-time recommendations then?**
+
+Real-time recommenders are useful when the customer journey is mission-centric and depends on the context. Such missions are often time-sensitive. Real-time demand fades quickly; demand could be met (on a competitor site) or the user might lose interest. For example, real-time recommendations are useful when the majority of our customers are new (i.e., cold-start). This happens when we’re in the customer acquisition stage, such as when we’ve just launched a new product or entered a new market (e.g., e-commerce in Southeast Asia in 2013 - 2015).
+
+### Example
+
+Imagine you’ve just downloaded an e-commerce app. Since we’re uncertain of your gender, the home page will have a mix of categories catering to each gender, from dresses to men’s shirts, from GPUs to makeup. If you click on a dress, we can immediately build a persona (that you’re female) and personalize your shopping experience. In this case, the u2i recommendations on your home page will tilt towards female products.
+
+To understand the drawbacks of batch-processed recommendation, imagine that a customer visits your online store, and adds pair of sunglasses to her basket. What does your offline engine typically suggest her to add next? The answer, in most cases, is more sunglasses.Your engine knows customer’s past purchase but it doesn’t know what she’s about to purchase, and it can’t adjust to accommodate this new knowledge. As a result, its subsequent recommendations will not be interesting, and the customer is likely to ignore them. A better approach would be to react to the customer’s actions while they are still browsing your site, and recalculate their recommendations in real time, for example, to suggest accessories, pants or shirt to match the new pair of sunglasses. This would give the customer the feel as talking to a sales assistant in-store and make her experience more personalized.
+
+### Industry examples
+
+- [Alibaba](https://102.alibaba.com/detail?id=183)
+- [Tencent](https://dl.acm.org/doi/10.1145/2723372.2742785)
+- [YouTube](https://dl.acm.org/doi/10.1145/2959100.2959190)
+- [Instagram](https://ai.facebook.com/blog/powered-by-ai-instagrams-explore-recommender-system/)
+- [Netflix](https://dl.acm.org/doi/10.1145/2959100.2959174)
+- [Tiktok](https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you)
+- [Weibo](https://youtu.be/WQ520rWgd9A)
+- [Sephora](https://logicai.io/blog/building-real-time-recommendations-e-commercie-giant/)
+
+### Interesting reads
+
+- [Temporal-contextual recommendation in real-time](https://www.amazon.science/publications/temporal-contextual-recommendation-in-real-time)
+
+## Contextual Bandits
+
+An active area of research is recommender systems that incorporate bandit-based approaches. A bandit algorithm is a form of reinforcement learning (RL) that tries to balance exploration of new possibilities with exploitation of profitable ones already discovered. They have been frequently used as an alternative to static A/B testing: a key advantage is their ability to adapt in real time. This could help to overcome the cold start problem. In fact, bandit algorithms could be used to make real-time selections between several recommender systems based on how users respond to the different recommendations provided by each system. An increasingly important application of bandits is in systems that take into account multiple objectives and metrics related to user satisfaction, and/or multiple stakeholders (a “marketplace” – users, advertisers, platform holders, content owners etc.). For example, in a music content recommender system, an additional objective might be to provide “fairness” for long-tail artists and content by ensuring they receive at least some recommendations.
+
+### Online learning with multi-armed bandits
+
+Why are we even building an n-armed bandit in the first place? Why not just use an A/B/n test? Or maybe get your customer on the phone and ask a question? We have data on what customers buy. So you might own a store that sells perfume or cologne, and you know what people are buying. Here’s the thing though, **things change**; something might be trendy last week isn’t popular next. Season’s shift tastes change, and people change as well. Some people are very open to experience while others aren’t. Some are open to exploration, while others want the same thing every time.
+
+In many recommendation domains, such as that of recommending news articles, the cold-start problem is pervasive. New articles and stories appear all the time, and the effectiveness of various algorithms may also vary with time. In such cases, it is crucial for the approach to continuously explore the space of various choices as new data are received. At the same time, the learned data are exploited in order to optimize the payoff in terms of the conversion rate. This type of trade-off between exploration and exploitation is managed with the help of multi-armed bandit algorithms.
+
+### **Multi-armed bandit algorithms can...**
+
+- recommend products with the highest expected value while still exploring other products.
+- do not suffer from the cold-start problem and therefore don’t require customer preferences or information about products.
+- take into account the limitations of how much data you have as well as the cost of gathering data (the opportunity cost of sub-optimal recommendations).
+
+### Contextual bandits
+
+The contextual bandit problem is a generalization of the multi-armed bandit that extends the model by making actions conditional on the state of the environment. A common real-world contextual bandit example is a news recommendation system. Given a set of presented news articles, a reward is determined by the click-through behavior of the user. If she clicks on the article, a payout of 1 is incurred and 0 otherwise. Click-through-rate (CRT) is used to determine the selection and placement of ads within the news recommendation application.
+
+Now suppose rewards are determined by CTR in conjunction with metadata about the user (e.g., age and gender), so recommendations can be further personalized. Take a 65 year old female and an 18 year male for example, both who read news articles from their mobile device. The recommendations for these two users should reflect their contrasting profiles. It wouldn’t make sense to show ads for retirement plans or mature women clothing stores to the 18 year old male.
+
+### A/B Testing v. Multi-Armed Bandits
+
+Experiments based on multi-armed bandits are typically much more efficient than “classical” A-B experiments based on statistical-hypothesis testing. They’re just as statistically valid, and in many circumstances they can produce answers far more quickly. They’re more efficient because they move traffic towards winning variations gradually, instead of forcing you to wait for a “final answer” at the end of an experiment. They’re faster because samples that would have gone to obviously inferior variations can be assigned to potential winners. The extra data collected on the high-performing variations can help separate the “good” arms from the “best” ones more quickly.
+
+Basically, bandits make experiments more efficient, so you can try more of them. You can also allocate a larger fraction of your traffic to your experiments, because traffic will be automatically steered to better performing pages.
+
+![/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled.png](/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled.png)
+
+As you can see from the plot above, A/B testing does not adapt throughout the stages of the experiment, since the exploration and exploitation phases are static and distinct, whereas the multi-armed bandit adjusts through simultaneous exploration and exploitation. Furthermore, with multi-armed bandits, less time and resources are allocated to inferior arms/slices. Instead, traffic is gradually allocated to more optimal slices throughout the duration of the experiment. One of the big benefits of bandit testing is that bandits mitigate ‘regret,’ which is basically the lost conversion you experience while exploring a potentially worse variation in a test.
+
+The key idea is that improvement of the recommender policy is achieved in a trial-and-error fashion by taking user features into account. In general, bandit algorithms can be thought of as “online self-improving A/B testing”. A somewhat cartoonish way of comparison of the usual A/B testing, standard multi-armed bandit approach (online improvement not taking individual user features into account) and contextual bandit approach (online improvement taking individual user features into account) could be viewed as follows.
+
+![/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-1.png](/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-1.png)
+
+Mathematically the player wishes to minimize the regret: $R_n := n \mu_* - E[\sum_{t=1}^n  R_t],$ where μ∗ is the expected reward of the best arm (again, a priori this information is obviously unknown)  and E[…] is the expected value. Given this data and assuming that the distributions Pi are sufficiently nice (e.g. Gaussian), one can efficiently solve this problem by exploring and exploiting the given actions.
+
+### Hands-on
+
+- BEARS: Towards an Evaluation Framework for Bandit-based Interactive Recommender Systems [[Video](https://youtu.be/GIH_ArJ-ylk)] [[GitLab](https://gitlab.insight-centre.org/andbar/bears/tree/ee55fc872603efc127966b96373d375c0d9e4474/tutorials/RECSYS2020)]
+- Build a Product Recommender Using Multi-Armed Bandit Algorithms [[Blog](https://www.offerzen.com/blog/how-to-build-a-product-recommender-using-multi-armed-bandit-algorithms)] [[Colab](https://nbviewer.jupyter.org/gist/sparsh-ai/e591aebd23d4bf8864aa6f93b89fc290)]
+- Bandit Algorithms for Website Optimization [[eBook O'reilly](https://learning.oreilly.com/library/view/bandit-algorithms-for/9781449341565/)] [[GitHub](https://github.com/johnmyleswhite/BanditsBook)] [[Colab](https://nbviewer.jupyter.org/gist/sparsh-ai/b42056d45ca8238fe912baad036597a8)]
+
+## Graphs Networks and Embeddings
+
+In recommender systems, most information has a graph structure. For example, the social relationships among users and knowledge graphs related to items are naturally graph data. In addition, the interactions between users and items can be considered as the bipartite graph, and the item transitions in sequences can be constructed as graphs as well. Therefore, graph learning approaches have been leveraged to get user/item embeddings. Among graph learning methods, graph neural network (GNN) enjoys a massive hype at the moment.
+
+![/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-2.png](/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-2.png)
+
+### Graph Neural Networks
+
+GNN models exploit graph structure to guide representation learning. The basic idea is the embedding propagation mechanism, which aggregates the embeddings of neighbors to update the target node’s embedding. By recursively performing such propagations, the information from multihop neighbors is encoded into the representation of the target node. GNN models have been widely used in many fundamental tasks due to their strong representation ability, spanning from node classification, link prediction, to graph classification, and achieved remarkable improvements.
+
+Graph neural network is able to capture the higher-order interaction in user-item relationships through iterative propagation. Moreover, if the information of social relationship or knowledge graph is available, it enables to integrate such side information in network structure efficiently.
+
+### Models
+
+![/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-3.png](/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-3.png)
+
+### Industrial examples
+
+![/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-4.png](/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-4.png)
+
+### Hands-on
+
+- Simple recommender with matrix factorization, graph, and NLP [[Git](https://github.com/eugeneyan/recsys-nlp-graph)]
+- Application of graph embeddings in recommendation system [[Git](https://github.com/januverma/Graph-Embeddings-Recommendations-DHS2019)]
+
+## Conversational Recommenders
+
+Recent years have witnessed the emerging of conversational systems, including both physical devices and mobile-based applications. Both the research community and industry believe that conversational systems will have a major impact on human-computer interaction, and specifically, the RecSys community has begun to explore Conversational Recommendation Systems.
+
+Conversational recommendation aims at finding or recommending the most relevant information (e.g., web pages, answers, movies, products) for users based on textual- or spoken-dialogs, through which users can communicate with the system more efficiently using natural language conversations. Due to users’ constant need to look for information to support both work and daily life, conversational recommendation system will be one of the key techniques towards an intelligent web. A personalized conversational sales agent could have much commercial potential. E-commerce companies such as Amazon, eBay, JD, Alibaba etc. are piloting such kind of agents with their users.
+
+### System designs
+
+![Typical architecture of a conversational recommender system](/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-5.png)
+
+Typical architecture of a conversational recommender system
+
+![Typical Structure of Task-oriented Dialogue System](/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-6.png)
+
+Typical Structure of Task-oriented Dialogue System
+
+### Interesting reads
+
+[](http://staff.ustc.edu.cn/~hexn/slides/sigir20-tutorial-CRS-slides.pdf)
+
+### Hands-on
+
+- [CRSLab is an open-source toolkit for building Conversational Recommender System (CRS)](https://github.com/RUCAIBox/CRSLab)
+
+## Context-aware Recommenders
+
+The importance of contextual information has been recognized by researchers and practitioners in many disciplines, including e-commerce personalization, information retrieval, ubiquitous and mobile computing, data mining, marketing, and management. While a substantial amount of research has already been performed in the area of recommender systems, many existing approaches focus on recommending the most relevant items to users without taking into account any additional contextual information, such as time, location, or the company of other people (e.g., for watching movies or dining out). There is growing understanding that relevant contextual information does matter in recommender systems and that it is important to take this information into account when providing recommendations.
+
+![/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-7.png](/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-7.png)
+
+Context-aware recommendation systems represent an emerging area of experimentation and research, aiming to provide even more precise content given the context of the user in a particular moment in time. For example, is the user at home, or on the go? Using a larger or smaller screen? Is it morning or night? Given the data available on a certain user, context-aware systems may be able to provide recommendations a user is more likely to take in those scenarios.
+
+### Interesting hands-on
+
+- Contextual movie recommender [[Git](https://github.com/yadavgaurav251/Context-Aware-Recommender)]
+- Music recommendation system using Facial Expression and Factorization Machines [[Git](https://github.com/Pager07/Context-aware-music-recommendation-system)]
+
+![/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-8.png](/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-8.png)
+
+## AutoML approach to Recommenders
+
+![/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-9.png](/img/content-concept-raw-emerging-concepts-in-recommender-systems-untitled-9.png)
+
+### Hands-on
+
+- AutoML: Taking TPOT to the Movies [[Colab](https://colab.research.google.com/drive/1nsFIhZ13uOkHjBzv_26IqAHXcfBeB9rV?usp=sharing)]
+
+## Multi-task recommenders
+
+In many applications, however, there are multiple rich sources of feedback to draw upon. For example, an e-commerce site may record user visits to product pages (abundant, but relatively low signal), image clicks, adding to cart, and, finally, purchases. It may even record post-purchase signals such as reviews and returns.
+
+Integrating all these different forms of feedback is critical to building systems that users love to use, and that do not optimize for any one metric at the expense of overall performance.
+
+In addition, building a joint model for multiple tasks may produce better results than building a number of task-specific models. This is especially true where some data is abundant (for example, clicks), and some data is sparse (purchases, returns, manual reviews). In those scenarios, a joint model may be able to use representations learned from the abundant task to improve its predictions on the sparse task via a phenomenon known as [transfer learning](https://en.wikipedia.org/wiki/Transfer_learning). For example, [this paper](https://openreview.net/pdf?id=SJxPVcSonN) shows that a model predicting explicit user ratings from sparse user surveys can be substantially improved by adding an auxiliary task that uses abundant click log data.
+
+### Multi-task learning
+
+Multi-task learning is an approach in which multiple learning tasks are solved at the same time while exploiting commonalities and differences across tasks. It has been used successfully in many computer vision and natural language processing tasks. There are many advantages to using deep neural networks based on multi-task learning. It helps prevent overfitting by generalizing the shared hidden representations. It provides interpretable outputs for explaining the recommendation. It implicitly augments the data and thus alleviates the sparsity problem. Finally, we can deploy multi-task learning for cross-domain recommendations with each specific task generating recommendations for each domain.
+
+### Joint Representation Learning
+
+A recent framework called Joint Representation Learning is capable of learning multi-modal representations of users and items. In this framework, each type of information source (review text, product image, numerical rating, etc) is adopted to learn the corresponding user and item representations based on available (deep) representation learning architectures. Representations from different sources are integrated with an extra layer to obtain the joint representations for users and items. In the end, both the per-source and the joint representations are trained as a whole using pair-wise learning to rank for the top-N recommendation. By representing users and items into embeddings offline, and using a simple vector multiplication for ranking score calculation online, JRL also has the advantage of fast online prediction compared with other deep learning approaches to a recommendation that learn a complex prediction network for online calculation. Therefore, another promising research direction is to design better inductive biases in an end-to-end pipeline, which can reason over different modalities data for better recommendation performance.
+
+### Hands-on
+
+- Multi-objective recommender for Movielens [[Code](https://www.tensorflow.org/recommenders/examples/multitask/)]
+
+## References
+
+| Name | Link |
+| --- | --- |
+| Real-time Machine Learning For Recommendations | https://eugeneyan.com/writing/real-time-recommendations/ |
+| Using Navigation to Improve Recommendations in Real-Time | https://dl.acm.org/doi/10.1145/2959100.2959174 |
+| Powered by AI: Instagram's Explore recommender system | https://ai.facebook.com/blog/powered-by-ai-instagrams-explore-recommender-system/ |
+| Deep Neural Networks for YouTube Recommendations | https://dl.acm.org/doi/10.1145/2959100.2959190 |
+| TencentRec | Proceedings of the 2015 ACM SIGMOD International Conference on Management of Data | https://dl.acm.org/doi/10.1145/2723372.2742785 |
+| Machine learning is going real-time | https://huyenchip.com/2020/12/27/real-time-machine-learning.html |
+| https://www.veed.io/grow/reverse-engineering-how-tiktok-algorithm-works/ |  |
+| http://datasadak.com/what-makes-tiktok-recommendation-system-so-powerful/ |  |
+| https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you |  |
+| https://techcrunch.com/2020/06/18/tiktok-explains-how-the-recommendation-system-behind-its-for-you-feed-works/ |  |
+| "Reinforcement Learning for Recommender Systems: A Case Study on Youtube," by Minmin Chen | https://youtu.be/HEqQ2_1XRTs?list=PLN7ADELDRRhjH-LXON13wyKGN7nDOhcL1 |
+| Top-K Off-Policy Correction for a REINFORCE Recommender System | AISC | https://youtu.be/Ys3YY7sSmIA |
+| Contextual Bandits for In-App Recommendation | https://engineering.nordeus.com/contextual-bandits-for-in-app-recommendation/ |
+|  | https://arxiv.org/pdf/2011.02260v1.pdf |
+| RecSys 2020 Keynote: Conversational AI Agents That Can Truly Understand and Help Users | https://youtu.be/V5xBqcMqT2o?list=PLaZufLfJumb-cVIEsyg4CFocuq4WsvjED |
+| RecSys 2020 Tutorial: Conversational Recommender Systems | https://youtu.be/RdGnJSRA0aw |
+| Towards Conversational Recommender Systems | https://youtu.be/nLUfAJqXFUI |
+|  | https://arxiv.org/pdf/2004.00646.pdf |
+| Yisong Miao | https://yisong.me/readpapers/convrec/ |
+| Déjà vu: A Contextualized Temporal Attention Mechanism for Sequential Recommendation | https://arxiv.org/abs/2002.00741v1 |
+| Context-Aware Recommendation Systems | https://youtu.be/TBg9FSAb8zw |
+| AutoML for predictive modeling | https://towardsdatascience.com/automl-for-predictive-modeling-32b84c5a18f6 |
+| Multi-task Learning for Recommender Systems | http://glaros.dtc.umn.edu/gkhome/node/747 |

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/lird",
+  "id": "models/lird",
+  "title": "LIRD",
+  "description": "Existing reinforcement learning recommender methods also could recommend a list of items. E.g. DQN can calculate Q-values of all recalled items separately, and recommend a list of items with highest Q-values. But these recommendations are similar in Euclidean space and we want to find similarity in associative space. For instance, for a bread 🍞, I want egg 🥚, milk 🥛 in my recommendation list instead of white bread 🍞, brown bread 🥪, bun 🫓 etc.",
+  "source": "@site/docs/models/lird.md",
+  "sourceDirName": "models",
+  "slug": "/models/lird",
+  "permalink": "/ai/docs/models/lird",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/lird.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "LINE",
+    "permalink": "/ai/docs/models/line"
+  },
+  "next": {
+    "title": "Markov Chains",
+    "permalink": "/ai/docs/models/markov-chains"
+  }
+}

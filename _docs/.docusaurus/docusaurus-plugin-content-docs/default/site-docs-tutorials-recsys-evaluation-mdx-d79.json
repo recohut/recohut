@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tutorials/recsys-evaluation",
+  "id": "tutorials/recsys-evaluation",
+  "title": "Recommender System Evaluation",
+  "description": "| Description | Notebook |",
+  "source": "@site/docs/tutorials/recsys-evaluation.mdx",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/recsys-evaluation",
+  "permalink": "/ai/docs/tutorials/recsys-evaluation",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/recsys-evaluation.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "PDF to WordCloud via Email",
+    "permalink": "/ai/docs/tutorials/pdf-to-wordcloud-mail"
+  },
+  "next": {
+    "title": "Resale Price Prediction",
+    "permalink": "/ai/docs/tutorials/resale-price-prediction"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tutorials/email-classification",
+  "id": "tutorials/email-classification",
+  "title": "Email Classification",
+  "description": "Fetching data from MS-Sql",
+  "source": "@site/docs/tutorials/email-classification.mdx",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/email-classification",
+  "permalink": "/ai/docs/tutorials/email-classification",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/email-classification.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Database Connections",
+    "permalink": "/ai/docs/tutorials/database-conn"
+  },
+  "next": {
+    "title": "Graph-based Modeling",
+    "permalink": "/ai/docs/tutorials/graph"
+  }
+}

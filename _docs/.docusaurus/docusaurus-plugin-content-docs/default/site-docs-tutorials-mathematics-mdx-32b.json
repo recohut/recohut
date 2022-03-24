@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tutorials/mathematics",
+  "id": "tutorials/mathematics",
+  "title": "Mathematics",
+  "description": "Probability and Statistics",
+  "source": "@site/docs/tutorials/mathematics.mdx",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/mathematics",
+  "permalink": "/ai/docs/tutorials/mathematics",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/mathematics.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Graph-based Modeling",
+    "permalink": "/ai/docs/tutorials/graph"
+  },
+  "next": {
+    "title": "Matrix Factorizations",
+    "permalink": "/ai/docs/tutorials/matrix-factorizations"
+  }
+}

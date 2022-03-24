@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/stitchfix-multi-armed-bandit",
+  "id": "concept-extras/success-stories/stitchfix-multi-armed-bandit",
+  "title": "StitchFix Multi-armed Bandit",
+  "description": "Read more on official blog",
+  "source": "@site/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit.md",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/stitchfix-multi-armed-bandit",
+  "permalink": "/ai/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Spotify RL",
+    "permalink": "/ai/docs/concept-extras/success-stories/spotify-rl"
+  },
+  "next": {
+    "title": "Taobao BST",
+    "permalink": "/ai/docs/concept-extras/success-stories/taobao-bst"
+  }
+}

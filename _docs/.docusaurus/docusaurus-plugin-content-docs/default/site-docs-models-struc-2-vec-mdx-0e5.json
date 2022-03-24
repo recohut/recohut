@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/struc2vec",
+  "id": "models/struc2vec",
+  "title": "Struc2Vec",
+  "description": "Learning Node Representations from Structural Identity",
+  "source": "@site/docs/models/struc2vec.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/struc2vec",
+  "permalink": "/ai/docs/models/struc2vec",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/struc2vec.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "STAMP",
+    "permalink": "/ai/docs/models/stamp"
+  },
+  "next": {
+    "title": "SVAE",
+    "permalink": "/ai/docs/models/svae"
+  }
+}

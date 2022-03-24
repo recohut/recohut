@@ -1,0 +1,4 @@
+# Pachyderm
+
+If you are familiar with Git, a version control and life cycle system for code, you will find many similarities between the most important Git and Pachyderm concepts. Version control systems such as Git and its hosted version GitHub have become an industry standard for thousands of developers worldwide. Git enables you to keep a history of changes in your code and go back when needed. Data scientists deserve a platform that will let them track the versions of their experiments, reproduce results when needed, and investigate and correct bias that might crawl into one of the stages of the data science life cycle. Pachyderm provides benefits similar to Git that enable data scientists to reproduce their experiments and effortlessly manage the complete life cycle of the data science workflow.
+

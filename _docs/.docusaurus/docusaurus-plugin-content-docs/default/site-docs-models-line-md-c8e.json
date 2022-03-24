@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/line",
+  "id": "models/line",
+  "title": "LINE",
+  "description": "Large-scale Information Network Embedding",
+  "source": "@site/docs/models/line.md",
+  "sourceDirName": "models",
+  "slug": "/models/line",
+  "permalink": "/ai/docs/models/line",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/line.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "LightGCN",
+    "permalink": "/ai/docs/models/lightgcn"
+  },
+  "next": {
+    "title": "LIRD",
+    "permalink": "/ai/docs/models/lird"
+  }
+}

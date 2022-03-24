@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/the-long-tail",
+  "id": "concept-extras/success-stories/the-long-tail",
+  "title": "The Long Tail",
+  "description": "Here is an excerpt from the book The Long Tail by Chris Anderson: \"In 1988, a British mountain climber named Joe Simpson wrote a book called Touching the Void, a harrowing account of near-death in the Peruvian Andes. It got good reviews but, only a modest success, it was soon forgotten. Then, a decade later, a strange thing happened. Jon Krakauer wrote Into Thin Air, another book about a mountain-cämbing tragedy, which became a publishing sensation. Suddenly Touching the Void started to sell again\".",
+  "source": "@site/docs/concept-extras/success-stories/the-long-tail.mdx",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/the-long-tail",
+  "permalink": "/ai/docs/concept-extras/success-stories/the-long-tail",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/the-long-tail.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Taobao BST",
+    "permalink": "/ai/docs/concept-extras/success-stories/taobao-bst"
+  },
+  "next": {
+    "title": "UberEats Personalization",
+    "permalink": "/ai/docs/concept-extras/success-stories/ubereats-personalization"
+  }
+}

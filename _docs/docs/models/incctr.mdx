@@ -1,0 +1,31 @@
+# IncCTR
+
+Recently, various deep CTR models are proposed, such as DeepFM, Wide & Deep, PIN, DIN, and DIEN. Generally, deep CTR models include three parts: embedding layer, interaction layer, and prediction layer.
+
+## Embedding layer
+
+In most CTR prediction tasks, data is collected in a multi-field categorical form. Each data instance is transformed into a high-dimensional sparse (binary) vector via one-hot encoding. For example, the raw data instance (Gender=Male, Height=185, Age=18, Name=Bob) can be represented as:
+
+$$\underbrace{(0,1)}_\text{gender=Male}\underbrace{(0,...,1,0,0)}_\text{height=185}\underbrace{(0,1,...,0,0)}_\text{age=18}\underbrace{(1,0,0,0,...,0)}_\text{name=Bob}$$
+
+An embedding layer is applied to compress the raw features to low-dimensional vectors before feeding them into neural networks. For a univalent field, (e.g., “Gender=Male”), its embedding is the feature embedding; For a multivalent field (e.g., “Interest=Football, Basketball”), the field embedding is the average of the feature embeddings.
+
+## Interaction and Prediction Layers
+
+The key challenge in CTR prediction is modelling feature interactions. Existing deep CTR models utilize product operation and multilayer perceptron (MLP) to model the explicit and implicit feature interactions, respectively. For example, DeepFM adopts Factorization Machine to model the order-2 feature interactions and MLP to model the high-order feature interactions. After the interaction layer, the prediction $\hat{y}$ is generated as the probability of the user will click on a specific item within such context. Then, the cross-entropy loss is used as the objective function: $L_{CE}(y,\hat{y}) = −y \log \hat{y} − (1−y) \log (1−\hat{y})$ with $y$ as the label.
+
+## Batch Mode vs Incremental Mode
+
+The model trained in the batch mode is iteratively learned based on the data from a fixed-size time window. When new data is arriving, the time window slides forward. As shown in following figure, “model 0” is trained based on data from day 1 to day 10. Then when new data (namely “day 11”) is arriving, a new model (namely “model 1”) is trained based on data from day 2 to day 11. For similar procedure, “model 2” is trained on data from day 3 to day 12. 
+
+<p><center><img src='https://github.com/recohut/incremental-learning/raw/a6fdcde2e8af7ebfd9f5efd278c487e0e9560cb3/docs/_images/L832818_1.png'/></center></p>
+
+With incremental mode, the model is trained based on the existing model and new data. As shown in the above figure, the “Model 1” is trained based on the existing model “Model 0” (which is trained on data from day 1 to day 10), and data from day 11. Then “Model 1” turns into the existing model. Consequently, when data from day 12 arrives, “Model 2” is trained based on the “Model 1” and data from day 12.
+
+As can be seen, when training with batch mode, two consecutive time window of training data overlap most of the volume. For instance, data from day 1 to day 10 and data from day 2 to day 11 overlap the part from day 2 to day 10, where 80% of the volume are shared. Under such circumstance, replacing batch mode with incremental mode improves the efficiency significantly, while such replacement is highly possible to retain the performance.
+
+## Framework
+
+<p><center><img src='https://github.com/recohut/incremental-learning/raw/a6fdcde2e8af7ebfd9f5efd278c487e0e9560cb3/docs/_images/L832818_2.png'/></center></p>
+
+Three modules are designed from the perspective of feature, model and data respectively to balance the trade-off between learning from historical data and incoming data. **Data module** mimics the functionality of a reservoir, constructing training data from both historical data and incoming data. **Feature module** is designed to handle new features from incoming data and initialize both existing features and new features wisely. **Model module** employs knowledge distillation to fine-tune the model parameters, balancing learning knowledge from the previous model and from incoming data.

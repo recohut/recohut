@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/afm",
+  "id": "models/afm",
+  "title": "AFM",
+  "description": "AFM stands for Attentional Factorization Machines. It Improves FM by discriminating the importance of different feature interactions, and learns the importance of each feature interaction from data via a neural attention network. Empirically, it is shown on regression task that AFM performs betters than FM with a 8.6% relative improvement, and consistently outperforms the state-of-the-art deep learning methods Wide&Deep and DeepCross with a much simpler structure and fewer model parameters.",
+  "source": "@site/docs/models/afm.md",
+  "sourceDirName": "models",
+  "slug": "/models/afm",
+  "permalink": "/ai/docs/models/afm",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/afm.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "A3C",
+    "permalink": "/ai/docs/models/a3c"
+  },
+  "next": {
+    "title": "AFN",
+    "permalink": "/ai/docs/models/afn"
+  }
+}

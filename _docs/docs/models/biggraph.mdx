@@ -1,0 +1,7 @@
+# BigGraph
+
+> PyTorch-BigGraph: A Large-scale Graph Embedding System
+
+[PyTorch BigGraph](https://github.com/facebookresearch/PyTorch-BigGraph) handles the second approach, and we will do so as well below. Just for reference let’s talk about the size aspect for a second. Graphs are usually encoded by their [adjacency matrix](https://en.wikipedia.org/wiki/Adjacency_matrix). If you have a graph with 3,000 nodes and an edge between each node, you end up with around 10,000,000 entries in your matrix. Even if that’s sparse, apparently this bursts most GPUs according to [the paper](https://arxiv.org/abs/1609.02907) linked above. If you think about the usual graphs used in recommendation systems, you’ll realize they are typically much larger than that.
+
+BigGraph is made to work around the memory limit of machines, so it’s completely file based. You’ll have to trigger processes to create the appropriate file structure. And if you want run an example again, you’ll have to delete the checkpoints.

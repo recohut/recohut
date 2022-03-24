@@ -1,0 +1,24 @@
+# SSE-PT
+
+Temporal information is crucial for recommendation problems because user preferences are naturally dynamic in the real world. Recent advances in deep learning, especially the discovery of various attention mechanisms and newer architectures in addition to widely used RNN and CNN in natural language processing, have allowed for better use of the temporal ordering of items that each user has engaged with. In particular, the SASRec model, inspired by the popular Transformer model in natural languages processing, has achieved state-of-the-art results. However, SASRec, just like the original Transformer model, is inherently an un-personalized model and does not include personalized user embeddings. SSE-PT overcomes this limitation by employing a Personalized Transformer.
+
+Transformer-based methods has achieved state-of-the-art results in sequential recommendation problems and enjoyed more than 10x speed-up when compared to earlier CNN/RNN-based methods. However, these are standard transformer models which are mostly un-personalized. SASRec authors found that adding additional personalized embeddings did not improve the performance of their Transformer model, and postulate that the failure of adding personalization is due to the fact that they already use the user history and the user embeddings only contribute to overfitting. In this paper, authors propose a novel method, Personalized Transformer (SSEPT), that successfully introduces personalization into self-attentive neural network architectures.
+
+Introducing user embeddings into the standard transformer model is intrinsically difficult with existing regularization techniques, as unavoidably a large number of user parameters are introduced, which is often at the same scale of the number of training data. But this model shows that personalization can greatly improve ranking performance with a recent regularization technique called Stochastic Shared Embeddings (SSE).
+
+## Architecture
+
+<figure><p><center><img src='https://github.com/recohut/transformer-rec/raw/main/docs/_images/C655229_1.png'/><figcaption>SSE-PT model architecture</figcaption></center></p></figure>
+
+## Attention illutration
+
+<figure><p><center><img src='https://github.com/recohut/transformer-rec/raw/main/docs/_images/C655229_2.png'/><figcaption>Illustration of how SASRec (Left) and SSE-PT (Right) differs on utilizing the Engagement History of A Random User in Movielens1M Dataset.</figcaption></center></p></figure>
+
+## References
+1. [https://github.com/SSE-PT/SSE-PT](https://github.com/SSE-PT/SSE-PT)
+2. [https://github.com/wuliwei9278/SSE-PT](https://github.com/wuliwei9278/SSE-PT)
+3. [https://openreview.net/forum?id=HkeuD34KPH](https://openreview.net/forum?id=HkeuD34KPH)
+4. [https://arxiv.org/abs/1905.10630](https://arxiv.org/abs/1905.10630)
+5. [https://arxiv.org/abs/1908.05435](https://arxiv.org/abs/1908.05435)
+6. [https://dl.acm.org/doi/abs/10.1145/3383313.3412258](https://dl.acm.org/doi/abs/10.1145/3383313.3412258)
+7. [https://vimeo.com/455947093](https://vimeo.com/455947093)

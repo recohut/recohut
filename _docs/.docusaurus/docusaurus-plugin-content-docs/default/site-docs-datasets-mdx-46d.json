@@ -1,0 +1,23 @@
+{
+  "unversionedId": "datasets",
+  "id": "datasets",
+  "title": "Datasets",
+  "description": "| Title | Link | Description |",
+  "source": "@site/docs/datasets.mdx",
+  "sourceDirName": ".",
+  "slug": "/datasets",
+  "permalink": "/ai/docs/datasets",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/datasets.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "River",
+    "permalink": "/ai/docs/tools/river"
+  },
+  "next": {
+    "title": "notebooks",
+    "permalink": "/ai/docs/notebooks"
+  }
+}

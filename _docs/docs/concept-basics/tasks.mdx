@@ -1,0 +1,66 @@
+# Tasks
+
+## Top-K Recommendation
+
+Given a list of products. Recommend K products to the user that they like
+
+## Item Ranking
+
+Given a list of goods. You need to rank it in descending order of interest for the user
+
+## Search for Similar Products
+
+Given 1 product. You need to find the most similar products
+
+- "You May Also Like"
+- Similar users liked
+- You may be familiar
+
+## Additional Product Recommendation
+
+- Given 1 product. Find products that are buying with this product.
+- Frequently bought with this product
+
+## Next Basket Recommendation
+
+Next Basket Recommendation (NBR) is a sequential recommendation task where the goal is to recommend a set of items based on a user’s purchase history. NBR is of great interest to the e-commerce and retail industry, where we want to recommend a set of items to fill a user’s shopping basket. A basket ***b*** is a set of items, i.e., ***b*** = $\{𝑖_1,𝑖_2,\dots,𝑖_𝑗,\dots,𝑖_{|𝒃|}\}$, where $𝑖_𝑗 \in I$, and where $I$ denotes the universe of all items. For a given user, we have access to a sequence of 𝑛 historical baskets (in increasing chronological order, such that more recent items are at the tail) denoted as $H = [𝒃_1, 𝒃_2, \dots, 𝒃_𝒊 , \dots, 𝒃_𝒏]$, where $𝒃_i \subset I$. The goal of NBR is then to a find a model which takes the historical baskets $H$ as input and predicts the next basket $𝒃_{𝒏+1}$ as recommendation.
+
+## Learning to rank (LTR)
+
+Learning to rank is an machine learning approach to train models for ranking tasks. Its application in IR-related areas range from ad-hoc retrieval, Web search, question answering, to recommendation. The goal of learning to rank is to predict a ranking score of an item given its features as inputs. Sorting these scores produces the final ranking list that best capture the system’s or the user’s information need.
+
+There are currently two methodologies for ranking models classification based on their structures and definitions. The first one and also the most well known uses models training loss functions as the criteria for categorization. Learning to rank algorithms can be categorized as pointwise, pairwise, or listwise approaches depend on how many items are considered in the loss function for each training step. Pointwise approaches essentially take a single document and train a classification or regression model to directly predict the relevance label of the document. Pairwise approaches look at a pair of documents and try to optimize the ordering of the pair relative to the ground truth. Listwise approaches extend pairwise by looking at the entire list of document and try to optimize the ordering of it.
+
+The second classification methodology for learning to rank models is to categorize them based on the structure of ranking or scoring functions. Learning to rank algorithms can be classified as univariate method or multivariate method base on the number of items pass into the scoring function in each step. Univariate methods assumption is that documents’ relevance are independent of each other. Thus, the learning to rank models’ scoring function only need to score one document. Multivariate methods assumption, on the other hand, is that documents’ context contributes to their ranking. Thus, the scoring functions of learning to rank models take and compare multiple documents together to determine their final ranking scores.
+
+## CTR prediction
+
+In recent years, click-through rate prediction for online advertising has become one of the hot research topics. Inspired by the success of deep learning in computer vision and natural language processing, deep learning-based methods have been proposed to improve the performance of the click-through rate prediction task. As the pioneer works, YoutubeNet and DeepFM present their potential of modeling complex interaction between users and items. Later, DIN learns adaptive representations of historical behavior sequences to infer user preference. Inspired by DIN, the majority of subsequent works adopt this type of paradigm, such as DIEN, SDM, DSIN, MIMN, and DMIN. Though these methods bring great improvements, they summarize user interests only based on historical behaviors. It suffers greatly from the sparsity of user behaviors. Besides, they cannot jump out of user specific historical behaviors so that users lose their opportunities for possible interest exploration.
+
+Some researchers attempt to integrate graph structures for enriching relationships among user behaviors and items. GIN is the first work of end-to-end joint training of graph learning and CTR prediction tasks. It introduces item-item co-occurrence graphs to enrich user historical behaviors. Typically, they sample neighbors with higher weights of clicked items in the graph. Then they model user behaviors by aggregating information from these neighbors. Also, some works introduce knowledge graphs to explores their potential interests, such as RippleNet, KGAT, ATBRG and MTBRN. However, most of these existing works still lack an effective mechanism to capture implicit user interests. In addition, due to the weakness of their sampling strategy from graphs, they are more biased towards the popular or similar commodities. Therefore, it is difficult to make diverse recommendations beyond user existing behaviors.
+
+The objective of CTR prediction is to predict the probability that a user will click a given item. Yet, how to improve the accuracy of CTR prediction is a challenging research problem. In contrast to other data types, such as images and texts, data in CTR prediction problems are typically in tabular format, comprising either numerical, categorical, or multi-valued (or sequence) features of multiple different fields. The sample size is often large, yet the feature space is highly sparse. For example, app recommendation in Google Play involves billions of samples with millions of features. In general, a CTR prediction model consists of the following key parts.
+
+### Feature Embedding
+
+Input instances for CTR prediction generally contain three groups of features, i.e., user profile, item profile, and context information. Each group has a number of fields as follows:
+
+- User profile: age, gender, city, occupation, interests, etc.
+- Item profile: item ID, category, tags, brand, seller, price, etc.
+- Context: weekday, hour, position, slot id, etc.
+
+Features in each field may be categorical, numeric, or multi-valued (e.g., multiple tags of a single item). Since most features are very sparse, leading to high-dimensional feature space after one-hot or multi-hot encoding, it is common to apply feature embedding to mapping these features into low-dimensional dense vectors.
+
+### Feature Interaction
+
+It is straightforward to apply any classification model for CTR prediction after feature embedding. Nevertheless, for CTR prediction tasks, interactions between features (a.k.a., feature conjunctions) are central to boost classification performance. In factorization machines (FM), inner products are shown as a simple yet effective way to capture pairwise feature interactions. Since the success of FM, a large body of research has been devoted to capturing interactions among features in different manners. Typical examples include inner product and outer product layers in PNN, Bi-interaction in NFM, cross network in DCN, compressed interaction in xDeepFM, convolution in FGCNN, circular convolution in HFM, bilinear interaction in FiBiNET, self-attention in AutoInt, graph neural network in FiGNN, hierarchical attention in InterHAt, just to name a few. Furthermore, most current work investigates the way to combine both explicit and implicit features interactions with vanilla fully-connected networks (i.e., MLPs).
+
+### Loss Function
+
+The binary cross-entropy loss is widely used in CTR prediction tasks, which is defined as follows:
+
+$$
+\mathcal{L} = -\dfrac{1}{N}\sum_\mathbb{D}(y\log{\hat{y}}+(1-y)\log (1-\hat{y}))
+$$
+
+where $\mathbb{D}$ is the training set with 𝑁 samples. $y$ and $\hat{y}$ denote the ground truth and the estimated click probability, respectively. We define $\hat{𝑦} = \sigma(\phi(𝑥))$, where 𝜙 (𝑥) represents the model function given input features 𝑥 and 𝜎(·) is the sigmoid function to map $\hat{𝑦}$ to [0, 1]. The core of CTR prediction modeling lies in how to construct the model 𝜙 (𝑥) and learn its parameters from training data.

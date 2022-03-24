@@ -1,0 +1,11 @@
+# PPO
+
+The PPO (Proximal Policy Optimization) algorithm was [introduced by the OpenAI team in 2017](https://arxiv.org/pdf/1707.06347.pdf) and quickly became one of the most popular Reinforcement Learning method that pushed all other RL methods at that moment aside. PPO involves collecting a small batch of experiences interacting with the environment and using that batch to update its decision-making policy. Once the policy is updated with that batch, the experiences are thrown away and a newer batch is collected with the newly updated policy. This is the reason why it is an “on-policy learning” approach where the experience samples collected are only useful for updating the current policy.
+
+The PPO Agent uses convolutional neural network layers to process the high-dimensional visual inputs in the Actor and Critic classes. The PPO algorithm updates the Agent's policy parameters using a surrogate loss function that prevents the policy parameters from being drastically updated. It then keeps the policy updates within the trust region, which makes it robust to hyperparameter choices and a few other factors that may lead to instability during the Agent's training regime.
+
+The main idea is that after an update, the new policy should be not too far from the old policy. For that, PPO uses clipping to avoid too large updates. This leads to less variance in training at the cost of some bias, but ensures smoother training and also makes sure the agent does not go down to an unrecoverable path of taking senseless actions.
+
+Why is the goal of the agent to maximize the expected cumulative reward? Well, Reinforcement Learning is based on the idea of the reward hypothesis. All goals can be described by the maximization of the expected cumulative reward. **That’s why in Reinforcement Learning, to have the best behavior, we need to maximize the expected cumulative reward.**
+
+The **Proximal Policy Optimization** (**PPO**) algorithm builds upon the work of **Trust Region Policy Optimization** (**TRPO**) to constrain the new policy to be within a trust region from the old policy. PPO simplifies the implementation of this core idea by using a clipped surrogate objective function that is easier to implement, yet quite powerful and efficient. It is one of the most widely used RL algorithms, especially for continuous control problems.

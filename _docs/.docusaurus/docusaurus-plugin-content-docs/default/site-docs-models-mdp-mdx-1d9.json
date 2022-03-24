@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/mdp",
+  "id": "models/mdp",
+  "title": "MDP",
+  "description": "The Markov decision process (MDP), a reinforcement learning (RL) algorithm, perfectly illustrates how machines have become intelligent in their own unique way. Humans build their decision process on experience. MDPs are memoryless. Humans use logic and reasoning to think problems through. MDPs apply random decisions 100% of the time. Humans think in words, labeling everything they perceive. MDPs have an unsupervised approach that uses no labels or training data. MDPs boost the machine thought process of self-driving cars (SDCs), translation tools, scheduling software, and more. This memoryless, random, and unlabeled machine thought process marks a historical change in the way a former human problem was solved.",
+  "source": "@site/docs/models/mdp.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/mdp",
+  "permalink": "/ai/docs/models/mdp",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/mdp.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "MB-GMN",
+    "permalink": "/ai/docs/models/mb-gmn"
+  },
+  "next": {
+    "title": "MF",
+    "permalink": "/ai/docs/models/mf"
+  }
+}

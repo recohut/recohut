@@ -1,0 +1,546 @@
+# Resale Price Prediction
+
+
+<a href="https://nbviewer.org/github/recohut/nbs/blob/main/2022-01-06-resale-prediction.ipynb" alt=""> <img src="https://colab.research.google.com/assets/colab-badge.svg" /></a>
+
+
+
+```
+# import the libraries
+import re
+import scipy
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from sklearn.pipeline import make_pipeline
+from sklearn.decomposition import TruncatedSVD
+from sklearn.model_selection import train_test_split
+from scipy.sparse import coo_matrix, hstack
+from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from sklearn.preprocessing import OneHotEncoder
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
+
+from keras import backend as K
+import tensorflow as tf
+from tensorflow import keras
+from keras.layers import Dense, Input, Dropout
+from keras.models import Model
+
+from utils import *
+
+import warnings
+warnings.filterwarnings("ignore")
+
+plt.style.use('fivethirtyeight')
+plt.style.use('seaborn-notebook')
+
+%config InlineBackend.figure_format = 'retina'
+%reload_ext autoreload
+%autoreload 2
+```
+
+
+```
+df = pd.read_pickle('./data/df_cleaned.p')
+```
+
+
+```
+colname_map = {'PRC':'BRAND', 'PARTNO':'PARTNO','UNIT RESALE':'UNITRESALE',
+               'ORIG ORDER QTY':'ORDERQTY', 'NEW UNIT COST':'UNITCOST'}
+df = prepare_data(df, colname_map)
+```
+
+
+```
+df.head()
+```
+
+
+
+|   | BRAND | PARTNO           | QUANTITY | UNITRESALE | UNITCOST |
+| - | ----- | ---------------- | -------- | ---------- | -------- |
+| 0 | 2     | 53001176-1 REV A | 25-49    | 209.66     | 107.65   |
+| 1 | 2     | 53001176-1 REV A | 25-49    | 209.66     | 99.51    |
+| 2 | 2     | 61-82477-8       | 25-49    | 76.75      | 60       |
+| 3 | 2     | AA1208K08        | 25-49    | 66.12      | 50.8     |
+| 4 | 2     | AA1208K08X       | 50-99    | 66.21      | 52       |
+
+
+
+
+```
+df, fitted_lambda = scale_price(df)
+```
+
+
+```
+df.head()
+```
+
+
+
+
+|   | BRAND | PARTNO      | QUANTITY | UNITCOST | RESALE   |
+| - | ----- | ----------- | -------- | -------- | -------- |
+| 0 | 2     | 61-82477-8  | 25-49    | 60       | 3.850272 |
+| 1 | 2     | AA1208K08   | 25-49    | 50.8     | 3.733058 |
+| 2 | 2     | AA1208K08X  | 50-99    | 52       | 3.734132 |
+| 3 | 2     | AA67006-4KA | 50-99    | 13.9     | 2.559783 |
+| 4 | 2     | AA67006-4KA | 25-49    | 13.5     | 2.686291 |
+
+
+
+
+```
+CV1 = CountVectorizer(stop_words=None, 
+                      max_df=1.0, 
+                      min_df=100, 
+                      ngram_range=(1,1),
+                      binary=True, 
+                      analyzer='char')
+
+CV1.fit(list(set(df['PARTNO'].tolist())))
+X1 = CV1.transform(df['PARTNO'].tolist())
+X1
+```
+
+
+
+
+    <432960x45 sparse matrix of type '<class 'numpy.int64'>'
+    	with 3493797 stored elements in Compressed Sparse Row format>
+
+
+
+
+```
+# CV1.vocabulary_
+```
+
+
+```
+CV2 = CountVectorizer(stop_words=None, 
+                      max_df=0.8, 
+                      min_df=100, 
+                      ngram_range=(2,6), 
+                      binary=True,
+                      analyzer='char')
+CV2.fit(list(set(df['PARTNO'].tolist())))
+X2 = CV2.transform(df['PARTNO'].tolist())
+X2
+```
+
+
+
+
+    <432960x5430 sparse matrix of type '<class 'numpy.int64'>'
+    	with 9427277 stored elements in Compressed Sparse Row format>
+
+
+
+
+```
+def tokenizer(text):
+  text = text.lower()
+  rx1 = r"(?i)(?:(?<=\d)(?=[a-z])|(?<=[a-z])(?=\d))"
+  text = re.sub(rx1,' ', text)
+  text = re.sub(r'[^a-z0-9]',' ', text)
+  text = ' '.join(text.split())
+  text = text.split()
+  return text
+```
+
+
+```
+CV3 = TfidfVectorizer(stop_words=None, 
+                      max_df=0.5, 
+                      min_df=100, 
+                      ngram_range=(1,5), 
+                      binary=False,
+                      analyzer='word',
+                      tokenizer=tokenizer)
+CV3.fit(list(set(df['PARTNO'].tolist())))
+X3 = CV3.transform(df['PARTNO'].tolist())
+X3
+```
+
+
+
+
+    <432960x1007 sparse matrix of type '<class 'numpy.float64'>'
+    	with 1715717 stored elements in Compressed Sparse Row format>
+
+
+
+
+```
+enc = OneHotEncoder()
+ohecols = ['BRAND','QUANTITY']
+enc.fit(df[ohecols])
+X4 = enc.transform(df[ohecols])
+X4
+```
+
+
+
+
+    <432960x577 sparse matrix of type '<class 'numpy.float64'>'
+    	with 865920 stored elements in Compressed Sparse Row format>
+
+
+
+
+```
+X = hstack([X1, X2, X3, X4])
+X
+```
+
+
+
+
+    <432960x7059 sparse matrix of type '<class 'numpy.float64'>'
+    	with 15502711 stored elements in COOrdinate format>
+
+
+
+
+```
+Y = df['RESALE'].values
+Y = Y.reshape(-1,1)
+```
+
+
+```
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.1, random_state=40)
+print("Training Records {}, Testing Records: {}".format(X_train.shape[0],
+                                                        X_test.shape[0]))
+```
+
+    Training Records 389664, Testing Records: 43296
+
+
+
+```
+batch_size = 2048
+epochs = 75
+
+inputs = Input(shape=(X_train.shape[1],), sparse=True)
+L = Dense(512, activation='relu')(inputs)
+L = Dropout(0.5)(L)
+L = Dense(10, activation='relu')(L)
+outputs = Dense(y_train.shape[1])(L)
+model = Model(inputs=inputs, outputs=outputs)
+model.compile(loss='mse', optimizer='adam', metrics=['mae'])
+model.summary()
+```
+
+    Model: "functional_3"
+    _________________________________________________________________
+    Layer (type)                 Output Shape              Param #   
+    =================================================================
+    input_2 (InputLayer)         [(None, 7059)]            0         
+    _________________________________________________________________
+    dense_3 (Dense)              (None, 512)               3614720   
+    _________________________________________________________________
+    dropout_1 (Dropout)          (None, 512)               0         
+    _________________________________________________________________
+    dense_4 (Dense)              (None, 10)                5130      
+    _________________________________________________________________
+    dense_5 (Dense)              (None, 1)                 11        
+    =================================================================
+    Total params: 3,619,861
+    Trainable params: 3,619,861
+    Non-trainable params: 0
+    _________________________________________________________________
+
+
+
+```
+history = model.fit(nn_batch_generator(X_train, y_train, batch_size),
+          steps_per_epoch=len(y_train)//batch_size, 
+          validation_data=nn_batch_generator(X_test, y_test, batch_size),
+          validation_steps=len(y_test)//batch_size, 
+          epochs=100,
+          workers=-1, 
+          use_multiprocessing=True)
+```
+
+    Epoch 1/100
+    190/190 [==============================] - 22s 114ms/step - loss: 0.8163 - mae: 0.6779 - val_loss: 0.4789 - val_mae: 0.5142
+    Epoch 2/100
+    190/190 [==============================] - 21s 111ms/step - loss: 0.4670 - mae: 0.5137 - val_loss: 0.4088 - val_mae: 0.4675
+    Epoch 3/100
+    190/190 [==============================] - 21s 111ms/step - loss: 0.3991 - mae: 0.4744 - val_loss: 0.3682 - val_mae: 0.4406
+    Epoch 4/100
+    190/190 [==============================] - 21s 112ms/step - loss: 0.3548 - mae: 0.4472 - val_loss: 0.3426 - val_mae: 0.4222
+    Epoch 5/100
+    190/190 [==============================] - 21s 111ms/step - loss: 0.3244 - mae: 0.4278 - val_loss: 0.3288 - val_mae: 0.4123
+    Epoch 6/100
+    190/190 [==============================] - 21s 112ms/step - loss: 0.3011 - mae: 0.4124 - val_loss: 0.3146 - val_mae: 0.4022
+    Epoch 7/100
+    190/190 [==============================] - 22s 115ms/step - loss: 0.2838 - mae: 0.4004 - val_loss: 0.3066 - val_mae: 0.3963
+    Epoch 8/100
+    190/190 [==============================] - 21s 112ms/step - loss: 0.2701 - mae: 0.3905 - val_loss: 0.3014 - val_mae: 0.3924
+    Epoch 9/100
+    190/190 [==============================] - 21s 111ms/step - loss: 0.2593 - mae: 0.3820 - val_loss: 0.2951 - val_mae: 0.3861
+    Epoch 10/100
+    190/190 [==============================] - 22s 115ms/step - loss: 0.2493 - mae: 0.3746 - val_loss: 0.2937 - val_mae: 0.3852
+    Epoch 11/100
+    190/190 [==============================] - 21s 112ms/step - loss: 0.2419 - mae: 0.3688 - val_loss: 0.2899 - val_mae: 0.3798
+    Epoch 12/100
+    190/190 [==============================] - 21s 113ms/step - loss: 0.2353 - mae: 0.3633 - val_loss: 0.2867 - val_mae: 0.3771
+    Epoch 13/100
+    190/190 [==============================] - 22s 116ms/step - loss: 0.2279 - mae: 0.3574 - val_loss: 0.2877 - val_mae: 0.3767
+    Epoch 14/100
+    190/190 [==============================] - 21s 112ms/step - loss: 0.2238 - mae: 0.3538 - val_loss: 0.2823 - val_mae: 0.3730
+    Epoch 15/100
+    190/190 [==============================] - 21s 112ms/step - loss: 0.2196 - mae: 0.3498 - val_loss: 0.2821 - val_mae: 0.3720
+    Epoch 16/100
+    190/190 [==============================] - 22s 114ms/step - loss: 0.2142 - mae: 0.3460 - val_loss: 0.2788 - val_mae: 0.3696
+    Epoch 17/100
+    190/190 [==============================] - 21s 111ms/step - loss: 0.2105 - mae: 0.3426 - val_loss: 0.2801 - val_mae: 0.3698
+    Epoch 18/100
+    190/190 [==============================] - 21s 112ms/step - loss: 0.2072 - mae: 0.3397 - val_loss: 0.2770 - val_mae: 0.3669
+    Epoch 19/100
+    190/190 [==============================] - 22s 115ms/step - loss: 0.2039 - mae: 0.3369 - val_loss: 0.2790 - val_mae: 0.3690
+    Epoch 20/100
+    190/190 [==============================] - 21s 112ms/step - loss: 0.2014 - mae: 0.3345 - val_loss: 0.2755 - val_mae: 0.3657
+    Epoch 21/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1980 - mae: 0.3314 - val_loss: 0.2754 - val_mae: 0.3660
+    Epoch 22/100
+    190/190 [==============================] - 21s 108ms/step - loss: 0.1952 - mae: 0.3290 - val_loss: 0.2757 - val_mae: 0.3649
+    Epoch 23/100
+    190/190 [==============================] - 22s 114ms/step - loss: 0.1933 - mae: 0.3275 - val_loss: 0.2731 - val_mae: 0.3633
+    Epoch 24/100
+    190/190 [==============================] - 21s 111ms/step - loss: 0.1913 - mae: 0.3254 - val_loss: 0.2734 - val_mae: 0.3632
+    Epoch 25/100
+    190/190 [==============================] - 20s 104ms/step - loss: 0.1880 - mae: 0.3225 - val_loss: 0.2721 - val_mae: 0.3617
+    Epoch 26/100
+    190/190 [==============================] - 21s 111ms/step - loss: 0.1870 - mae: 0.3213 - val_loss: 0.2732 - val_mae: 0.3626
+    Epoch 27/100
+    190/190 [==============================] - 22s 114ms/step - loss: 0.1838 - mae: 0.3186 - val_loss: 0.2698 - val_mae: 0.3588
+    Epoch 28/100
+    190/190 [==============================] - 21s 113ms/step - loss: 0.1823 - mae: 0.3173 - val_loss: 0.2708 - val_mae: 0.3589
+    Epoch 29/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1808 - mae: 0.3155 - val_loss: 0.2712 - val_mae: 0.3599
+    Epoch 30/100
+    190/190 [==============================] - 19s 102ms/step - loss: 0.1790 - mae: 0.3140 - val_loss: 0.2727 - val_mae: 0.3607
+    Epoch 31/100
+    190/190 [==============================] - 21s 111ms/step - loss: 0.1772 - mae: 0.3126 - val_loss: 0.2698 - val_mae: 0.3588
+    Epoch 32/100
+    190/190 [==============================] - 20s 108ms/step - loss: 0.1756 - mae: 0.3108 - val_loss: 0.2703 - val_mae: 0.3584
+    Epoch 33/100
+    190/190 [==============================] - 19s 99ms/step - loss: 0.1747 - mae: 0.3099 - val_loss: 0.2693 - val_mae: 0.3575
+    Epoch 34/100
+    190/190 [==============================] - 21s 111ms/step - loss: 0.1733 - mae: 0.3085 - val_loss: 0.2703 - val_mae: 0.3578
+    Epoch 35/100
+    190/190 [==============================] - 21s 108ms/step - loss: 0.1724 - mae: 0.3077 - val_loss: 0.2704 - val_mae: 0.3583
+    Epoch 36/100
+    190/190 [==============================] - 19s 99ms/step - loss: 0.1706 - mae: 0.3063 - val_loss: 0.2694 - val_mae: 0.3580
+    Epoch 37/100
+    190/190 [==============================] - 21s 111ms/step - loss: 0.1689 - mae: 0.3045 - val_loss: 0.2687 - val_mae: 0.3573
+    Epoch 38/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1678 - mae: 0.3033 - val_loss: 0.2690 - val_mae: 0.3572
+    Epoch 39/100
+    190/190 [==============================] - 19s 98ms/step - loss: 0.1668 - mae: 0.3023 - val_loss: 0.2698 - val_mae: 0.3578
+    Epoch 40/100
+    190/190 [==============================] - 21s 110ms/step - loss: 0.1655 - mae: 0.3008 - val_loss: 0.2687 - val_mae: 0.3556
+    Epoch 41/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1643 - mae: 0.3001 - val_loss: 0.2702 - val_mae: 0.3569
+    Epoch 42/100
+    190/190 [==============================] - 19s 98ms/step - loss: 0.1637 - mae: 0.2992 - val_loss: 0.2698 - val_mae: 0.3567
+    Epoch 43/100
+    190/190 [==============================] - 21s 111ms/step - loss: 0.1626 - mae: 0.2980 - val_loss: 0.2703 - val_mae: 0.3570
+    Epoch 44/100
+    190/190 [==============================] - 21s 113ms/step - loss: 0.1616 - mae: 0.2973 - val_loss: 0.2695 - val_mae: 0.3552
+    Epoch 45/100
+    190/190 [==============================] - 20s 104ms/step - loss: 0.1610 - mae: 0.2965 - val_loss: 0.2666 - val_mae: 0.3532
+    Epoch 46/100
+    190/190 [==============================] - 19s 101ms/step - loss: 0.1594 - mae: 0.2948 - val_loss: 0.2683 - val_mae: 0.3530
+    Epoch 47/100
+    190/190 [==============================] - 19s 102ms/step - loss: 0.1587 - mae: 0.2939 - val_loss: 0.2688 - val_mae: 0.3532
+    Epoch 48/100
+    190/190 [==============================] - 21s 110ms/step - loss: 0.1576 - mae: 0.2931 - val_loss: 0.2676 - val_mae: 0.3528
+    Epoch 49/100
+    190/190 [==============================] - 21s 112ms/step - loss: 0.1565 - mae: 0.2918 - val_loss: 0.2679 - val_mae: 0.3528
+    Epoch 50/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1558 - mae: 0.2911 - val_loss: 0.2676 - val_mae: 0.3522
+    Epoch 51/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1549 - mae: 0.2900 - val_loss: 0.2684 - val_mae: 0.3535
+    Epoch 52/100
+    190/190 [==============================] - 21s 108ms/step - loss: 0.1543 - mae: 0.2895 - val_loss: 0.2707 - val_mae: 0.3553
+    Epoch 53/100
+    190/190 [==============================] - 21s 110ms/step - loss: 0.1535 - mae: 0.2886 - val_loss: 0.2673 - val_mae: 0.3528
+    Epoch 54/100
+    190/190 [==============================] - 20s 106ms/step - loss: 0.1531 - mae: 0.2880 - val_loss: 0.2672 - val_mae: 0.3523
+    Epoch 55/100
+    190/190 [==============================] - 20s 108ms/step - loss: 0.1519 - mae: 0.2870 - val_loss: 0.2673 - val_mae: 0.3528
+    Epoch 56/100
+    190/190 [==============================] - 21s 109ms/step - loss: 0.1513 - mae: 0.2862 - val_loss: 0.2670 - val_mae: 0.3528
+    Epoch 57/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1503 - mae: 0.2852 - val_loss: 0.2684 - val_mae: 0.3535
+    Epoch 58/100
+    190/190 [==============================] - 20s 108ms/step - loss: 0.1497 - mae: 0.2847 - val_loss: 0.2678 - val_mae: 0.3526
+    Epoch 59/100
+    190/190 [==============================] - 21s 110ms/step - loss: 0.1489 - mae: 0.2837 - val_loss: 0.2668 - val_mae: 0.3514
+    Epoch 60/100
+    190/190 [==============================] - 20s 106ms/step - loss: 0.1480 - mae: 0.2828 - val_loss: 0.2681 - val_mae: 0.3531
+    Epoch 61/100
+    190/190 [==============================] - 21s 108ms/step - loss: 0.1476 - mae: 0.2822 - val_loss: 0.2675 - val_mae: 0.3520
+    Epoch 62/100
+    190/190 [==============================] - 21s 110ms/step - loss: 0.1474 - mae: 0.2818 - val_loss: 0.2674 - val_mae: 0.3518
+    Epoch 63/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1465 - mae: 0.2809 - val_loss: 0.2670 - val_mae: 0.3508
+    Epoch 64/100
+    190/190 [==============================] - 21s 108ms/step - loss: 0.1462 - mae: 0.2808 - val_loss: 0.2655 - val_mae: 0.3499
+    Epoch 65/100
+    190/190 [==============================] - 21s 110ms/step - loss: 0.1455 - mae: 0.2800 - val_loss: 0.2678 - val_mae: 0.3510
+    Epoch 66/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1445 - mae: 0.2789 - val_loss: 0.2679 - val_mae: 0.3507
+    Epoch 67/100
+    190/190 [==============================] - 20s 103ms/step - loss: 0.1438 - mae: 0.2780 - val_loss: 0.2680 - val_mae: 0.3507
+    Epoch 68/100
+    190/190 [==============================] - 20s 106ms/step - loss: 0.1434 - mae: 0.2777 - val_loss: 0.2683 - val_mae: 0.3514
+    Epoch 69/100
+    190/190 [==============================] - 22s 113ms/step - loss: 0.1424 - mae: 0.2769 - val_loss: 0.2693 - val_mae: 0.3516
+    Epoch 70/100
+    190/190 [==============================] - 20s 108ms/step - loss: 0.1426 - mae: 0.2768 - val_loss: 0.2679 - val_mae: 0.3508
+    Epoch 71/100
+    190/190 [==============================] - 20s 105ms/step - loss: 0.1410 - mae: 0.2752 - val_loss: 0.2672 - val_mae: 0.3505
+    Epoch 72/100
+    190/190 [==============================] - 21s 113ms/step - loss: 0.1410 - mae: 0.2749 - val_loss: 0.2663 - val_mae: 0.3493
+    Epoch 73/100
+    190/190 [==============================] - 20s 108ms/step - loss: 0.1404 - mae: 0.2742 - val_loss: 0.2681 - val_mae: 0.3512
+    Epoch 74/100
+    190/190 [==============================] - 20s 105ms/step - loss: 0.1398 - mae: 0.2738 - val_loss: 0.2666 - val_mae: 0.3490
+    Epoch 75/100
+    190/190 [==============================] - 22s 114ms/step - loss: 0.1400 - mae: 0.2736 - val_loss: 0.2663 - val_mae: 0.3497
+    Epoch 76/100
+    190/190 [==============================] - 20s 108ms/step - loss: 0.1393 - mae: 0.2731 - val_loss: 0.2665 - val_mae: 0.3494
+    Epoch 77/100
+    190/190 [==============================] - 20s 105ms/step - loss: 0.1388 - mae: 0.2724 - val_loss: 0.2672 - val_mae: 0.3505
+    Epoch 78/100
+    190/190 [==============================] - 22s 114ms/step - loss: 0.1386 - mae: 0.2720 - val_loss: 0.2678 - val_mae: 0.3499
+    Epoch 79/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1382 - mae: 0.2717 - val_loss: 0.2678 - val_mae: 0.3497
+    Epoch 80/100
+    190/190 [==============================] - 20s 104ms/step - loss: 0.1377 - mae: 0.2711 - val_loss: 0.2675 - val_mae: 0.3497
+    Epoch 81/100
+    190/190 [==============================] - 22s 113ms/step - loss: 0.1374 - mae: 0.2709 - val_loss: 0.2669 - val_mae: 0.3495
+    Epoch 82/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1370 - mae: 0.2702 - val_loss: 0.2674 - val_mae: 0.3496
+    Epoch 83/100
+    190/190 [==============================] - 20s 104ms/step - loss: 0.1362 - mae: 0.2692 - val_loss: 0.2675 - val_mae: 0.3504
+    Epoch 84/100
+    190/190 [==============================] - 21s 113ms/step - loss: 0.1358 - mae: 0.2690 - val_loss: 0.2664 - val_mae: 0.3496
+    Epoch 85/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1351 - mae: 0.2681 - val_loss: 0.2692 - val_mae: 0.3511
+    Epoch 86/100
+    190/190 [==============================] - 20s 104ms/step - loss: 0.1352 - mae: 0.2679 - val_loss: 0.2671 - val_mae: 0.3498
+    Epoch 87/100
+    190/190 [==============================] - 21s 113ms/step - loss: 0.1346 - mae: 0.2675 - val_loss: 0.2687 - val_mae: 0.3503
+    Epoch 88/100
+    190/190 [==============================] - 20s 108ms/step - loss: 0.1343 - mae: 0.2672 - val_loss: 0.2691 - val_mae: 0.3494
+    Epoch 89/100
+    190/190 [==============================] - 20s 103ms/step - loss: 0.1337 - mae: 0.2667 - val_loss: 0.2687 - val_mae: 0.3503
+    Epoch 90/100
+    190/190 [==============================] - 20s 104ms/step - loss: 0.1335 - mae: 0.2660 - val_loss: 0.2689 - val_mae: 0.3502
+    Epoch 91/100
+    190/190 [==============================] - 20s 106ms/step - loss: 0.1334 - mae: 0.2659 - val_loss: 0.2686 - val_mae: 0.3494
+    Epoch 92/100
+    190/190 [==============================] - 20s 108ms/step - loss: 0.1331 - mae: 0.2657 - val_loss: 0.2674 - val_mae: 0.3489
+    Epoch 93/100
+    190/190 [==============================] - 20s 104ms/step - loss: 0.1326 - mae: 0.2649 - val_loss: 0.2664 - val_mae: 0.3486
+    Epoch 94/100
+    190/190 [==============================] - 20s 105ms/step - loss: 0.1320 - mae: 0.2644 - val_loss: 0.2668 - val_mae: 0.3486
+    Epoch 95/100
+    190/190 [==============================] - 20s 107ms/step - loss: 0.1322 - mae: 0.2645 - val_loss: 0.2683 - val_mae: 0.3494
+    Epoch 96/100
+    190/190 [==============================] - 20s 104ms/step - loss: 0.1313 - mae: 0.2637 - val_loss: 0.2675 - val_mae: 0.3496
+    Epoch 97/100
+    190/190 [==============================] - 20s 106ms/step - loss: 0.1313 - mae: 0.2636 - val_loss: 0.2666 - val_mae: 0.3485
+    Epoch 98/100
+    190/190 [==============================] - 20s 108ms/step - loss: 0.1309 - mae: 0.2633 - val_loss: 0.2679 - val_mae: 0.3493
+    Epoch 99/100
+    190/190 [==============================] - 20s 103ms/step - loss: 0.1309 - mae: 0.2629 - val_loss: 0.2670 - val_mae: 0.3487
+    Epoch 100/100
+    190/190 [==============================] - 20s 106ms/step - loss: 0.1301 - mae: 0.2622 - val_loss: 0.2667 - val_mae: 0.3485
+
+
+
+```
+model.save('./models/model_201203.h5')
+```
+
+
+```
+hist_df = pd.DataFrame(history.history) 
+hist_csv_file = './outputs/history.csv'
+with open(hist_csv_file, mode='w') as f:
+  hist_df.to_csv(f)
+```
+
+
+```
+from scipy.special import inv_boxcox
+from sklearn.metrics import r2_score, median_absolute_error, mean_absolute_error
+
+y_pred = model.predict(X_test).flatten()
+a = inv_boxcox(y_test.flatten(), fitted_lambda)
+b = inv_boxcox(y_pred.flatten(), fitted_lambda)
+print('r2_score: ', r2_score(a, b))
+print('median_absolute_error: ', median_absolute_error(a, b))
+print('mean_absolute_error', mean_absolute_error(a, b))
+out2 = pd.DataFrame({'y_true':inv_boxcox(y_test.flatten(), fitted_lambda), 'y_pred':inv_boxcox(y_pred.flatten(), fitted_lambda)})
+```
+
+    r2_score:  0.7725025811056968
+    median_absolute_error:  0.49407594919204767
+    mean_absolute_error 3.357431710265042
+
+
+
+```
+out2.head()
+```
+
+
+
+|   | y_true | y_pred   |
+| - | ------- | --------- |
+| 0 | 4.65    | 10.811751 |
+| 1 | 7.6     | 7.666917  |
+| 2 | 1.1     | 0.746361  |
+| 3 | 0.72    | 0.291657  |
+| 4 | 41.4    | 31.236202 |
+
+
+```
+_, out1 = train_test_split(df, test_size=0.1, random_state=40)
+out1['RESALE'] = out2.y_true.values
+out1['PRED'] = out2.y_pred.values
+out1.to_csv('./outputs/result.csv', index=False)
+```
+
+
+```
+out1.sample(10)
+```
+
+
+|        | BRAND | PARTNO         | QUANTITY  | UNITCOST | RESALE | PRED      |
+| ------ | ----- | -------------- | --------- | -------- | ------ | --------- |
+| 174877 | 155   | TLM-6X1C-12    | 2500-4999 | 0.09     | 0.15   | 0.170021  |
+| 39616  | 59    | MS3498-9       | 500-999   | 1.12     | 1.5    | 1.150005  |
+| 18036  | 30    | 8106-A-0440-17 | 500-999   | 0.17     | 0.4    | 0.61341   |
+| 406828 | 662   | 250-0201-01    | 50-99     | 3.01     | 5      | 4.733656  |
+| 78736  | 78    | SC-16-SB       | 05-Sep    | 59.05    | 84.35  | 91.922928 |
+| 116973 | 116   | NAS6206-18     | 01-Apr    | 2.18     | 25     | 24.017282 |
+| 59365  | 63    | MS21087-4      | 25-49     | 3.5      | 5.22   | 7.015954  |
+| 256983 | 350   | 0326010.HXP    | Oct-24    | 0.4      | 4.5    | 4.300601  |
+| 211941 | 212   | MS91528-1F2B   | 25-49     | 2.55     | 4.4    | 4.558315  |
+| 334493 | 525   | M24243/1A404   | 5000-9999 | 0.12     | 0.26   | 0.203509  |

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/vsknn",
+  "id": "models/vsknn",
+  "title": "VSKNN",
+  "description": "VSKNN stands for Vector Multiplication Session-Based kNN. The idea of this variant is to put more emphasis on the more recent events of a session when computing the similarities. Instead of encoding a session as a binary vector, we use real-valued vectors to encode the current session. Only the very last element of the session obtains a value of “1”; the weights of the other elements are determined using a linear decay function that depends on the position of the element within the session, where elements appearing earlier in the session obtain a lower weight. As a result, when using the dot product as a similarity function between the current weight-encoded session and a binary-encoded past session, more emphasis is given to elements that appear later in the sessions.",
+  "source": "@site/docs/models/vsknn.md",
+  "sourceDirName": "models",
+  "slug": "/models/vsknn",
+  "permalink": "/ai/docs/models/vsknn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/vsknn.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "VNCF",
+    "permalink": "/ai/docs/models/vncf"
+  },
+  "next": {
+    "title": "Wide and Deep",
+    "permalink": "/ai/docs/models/wide-and-deep"
+  }
+}

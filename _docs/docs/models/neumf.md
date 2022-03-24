@@ -1,0 +1,3 @@
+# NeuMF
+
+NMF Leverages the representation power of deep neural-networks to capture nonlinear correlations between user and item embeddings. Formally, the rating/relevance for user 𝑢 and item 𝑖 is modeled as $\hat{r}_i^u = \alpha + \beta_u + \beta_i + f(\gamma_u || \gamma_i || \gamma_u \cdot \gamma_i)$ where $\gamma_u , \gamma_i \in \mathbb{R}^d$, ‘||’ represents the concatenation operation, and $f: \mathbb{R}^{3d} \rightarrow \mathbb{R}$ represents an arbitrarily complex neural network.

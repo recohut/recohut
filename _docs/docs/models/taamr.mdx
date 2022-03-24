@@ -1,0 +1,18 @@
+# TAaMR
+
+> Targeted Adversarial Attack against Multimedia Recommender Systems
+
+## Research Questions
+
+1. Can targeted adversarial attacks against images of a low recommended category of products be exploited to modify the recommendation lists of multimedia recommender systems in terms of probability of being more recommended?
+2. What are the effects of adversarial perturbations against these attacked images for human-perceptions?
+
+<p><center><img src='https://github.com/recohut/recsys-attacks/raw/d7472b7296515249c1bd1bbb8ea0afa9b07f6d9d/docs/_images/C378133_1.png'/></center></p>
+
+## Definition of the Targeted Adversarial Attack
+
+Let $C$ be a set of classes for a classifier $F$. Let $c \in C$ be the source class such that $F(x) = c$, and $t \in C$ be a target class with $t \neq c$. A Targeted Adversarial Attack finds the adversarial examples $x^∗$ as following:
+
+$$\begin{align*} min_{d\leq\epsilon}d(x,x^*)\\{such\ that\ F(x^*) = t} \end{align*}$$
+
+<figure><p><center><img src='https://github.com/recohut/recsys-attacks/raw/d7472b7296515249c1bd1bbb8ea0afa9b07f6d9d/docs/_images/C378133_2.png'/><figcaption>Example of a product image before (a) and after (b) a PGD attack ( = 8) against VBPR on Amazon Men.</figcaption></center></p></figure>

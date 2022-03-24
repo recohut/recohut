@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/model-deployment",
+  "id": "concept-extras/model-deployment",
+  "title": "Model Deployment",
+  "description": "modeldeployment",
+  "source": "@site/docs/concept-extras/model-deployment.md",
+  "sourceDirName": "concept-extras",
+  "slug": "/concept-extras/model-deployment",
+  "permalink": "/ai/docs/concept-extras/model-deployment",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/model-deployment.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "MLOps",
+    "permalink": "/ai/docs/concept-extras/mlops"
+  },
+  "next": {
+    "title": "Model Retraining",
+    "permalink": "/ai/docs/concept-extras/model-retraining"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/jensen-shannon-divergence",
+  "id": "concept-extras/jensen-shannon-divergence",
+  "title": "Jensen–Shannon divergence",
+  "description": "In probability theory and statistics, the **Jensen)–Shannon divergence is a method of measuring the similarity between two probability distributions. It is also known as information radius (IRad)[1] or total divergence to the average.[2] It is based on the Kullback–Leibler divergence, with some notable (and useful) differences, including that it is symmetric and it always has a finite value. The square root of the Jensen–Shannon divergence is a metric) often referred to as Jensen-Shannon distance.",
+  "source": "@site/docs/concept-extras/jensen-shannon-divergence.mdx",
+  "sourceDirName": "concept-extras",
+  "slug": "/concept-extras/jensen-shannon-divergence",
+  "permalink": "/ai/docs/concept-extras/jensen-shannon-divergence",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/jensen-shannon-divergence.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Incremental Learning",
+    "permalink": "/ai/docs/concept-extras/incremental-learning"
+  },
+  "next": {
+    "title": "Meta Learning",
+    "permalink": "/ai/docs/concept-extras/meta-learning"
+  }
+}

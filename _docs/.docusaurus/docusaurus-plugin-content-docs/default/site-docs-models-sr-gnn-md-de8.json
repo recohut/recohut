@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/sr-gnn",
+  "id": "models/sr-gnn",
+  "title": "SR-GNN",
+  "description": "SR-GNN stands for Session-based Recommendation with Graph Neural Networks.",
+  "source": "@site/docs/models/sr-gnn.md",
+  "sourceDirName": "models",
+  "slug": "/models/sr-gnn",
+  "permalink": "/ai/docs/models/sr-gnn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sr-gnn.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SPop",
+    "permalink": "/ai/docs/models/spop"
+  },
+  "next": {
+    "title": "SR-SAN",
+    "permalink": "/ai/docs/models/sr-san"
+  }
+}

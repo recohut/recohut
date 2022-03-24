@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/tgin",
+  "id": "models/tgin",
+  "title": "TGIN",
+  "description": "Jiang et. al., “Triangle Graph Interest Network for Click-through Rate Prediction”. WSDM, 2022.",
+  "source": "@site/docs/models/tgin.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/tgin",
+  "permalink": "/ai/docs/models/tgin",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/tgin.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "TAGNN",
+    "permalink": "/ai/docs/models/tagnn"
+  },
+  "next": {
+    "title": "VNCF",
+    "permalink": "/ai/docs/models/vncf"
+  }
+}

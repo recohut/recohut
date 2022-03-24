@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/etsy-personalization",
+  "id": "concept-extras/success-stories/etsy-personalization",
+  "title": "Etsy Personalization",
+  "description": "Two-sided marketplaces such as eBay, Etsy and Taobao have two distinct groups of customers: buyers who use the platform to seek the most relevant and interesting item to purchase and sellers who view the same platform as a tool to reach out to their audience and grow their business. Additionally, platforms have their own objectives ranging from growing both buyer and seller user bases to revenue maximization. It is not difficult to see that it would be challenging to obtain a globally favorable outcome for all parties. Taking the search experience as an example, any interventions are likely to impact either buyers or sellers unfairly to course correct for a greater perceived need.",
+  "source": "@site/docs/concept-extras/success-stories/etsy-personalization.md",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/etsy-personalization",
+  "permalink": "/ai/docs/concept-extras/success-stories/etsy-personalization",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/etsy-personalization.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Doordash Contextual Bandit",
+    "permalink": "/ai/docs/concept-extras/success-stories/doordash-contextual-bandit"
+  },
+  "next": {
+    "title": "Huawei AppGallery",
+    "permalink": "/ai/docs/concept-extras/success-stories/huawei-appgallery"
+  }
+}

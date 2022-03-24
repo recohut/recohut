@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/nlp/text-analysis",
+  "id": "concept-extras/nlp/text-analysis",
+  "title": "Text Analysis",
+  "description": "Rapid text analysis can save lives. Let’s consider a real-world incident when US soldiers stormed a terrorist compound. In the compound, they discovered a computer containing terabytes of archived data. The data included documents, text messages, and emails pertaining to terrorist activities. The documents were too numerous to be read by any single human being. Fortunately, the soldiers were equipped with special software that could perform very fast text analysis. The software allowed the soldiers to process all of the text data without even having to leave the compound. The onsite analysis immediately revealed an active terrorist plot in a nearby neighborhood. The soldiers instantly responded to the plot and prevented a terrorist attack.",
+  "source": "@site/docs/concept-extras/nlp/text-analysis.mdx",
+  "sourceDirName": "concept-extras/nlp",
+  "slug": "/concept-extras/nlp/text-analysis",
+  "permalink": "/ai/docs/concept-extras/nlp/text-analysis",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/nlp/text-analysis.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Named Entity Recognition",
+    "permalink": "/ai/docs/concept-extras/nlp/named-entity-recognition"
+  },
+  "next": {
+    "title": "Text Classification",
+    "permalink": "/ai/docs/concept-extras/nlp/text-classification"
+  }
+}

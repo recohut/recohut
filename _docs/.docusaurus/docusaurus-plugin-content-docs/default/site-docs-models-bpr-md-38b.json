@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/bpr",
+  "id": "models/bpr",
+  "title": "BPR",
+  "description": "BPR stands for Bayesian Personalized Ranking. In matrix factorization (MF), to compute the prediction we have to multiply the user factors to the item factors:",
+  "source": "@site/docs/models/bpr.md",
+  "sourceDirName": "models",
+  "slug": "/models/bpr",
+  "permalink": "/ai/docs/models/bpr",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/bpr.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "BigGraph",
+    "permalink": "/ai/docs/models/biggraph"
+  },
+  "next": {
+    "title": "BST",
+    "permalink": "/ai/docs/models/bst"
+  }
+}

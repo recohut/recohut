@@ -1,0 +1,51 @@
+{
+  "permalink": "/ai/blog/2021/10/01/vehicle-suggestions",
+  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-vehicle-suggestions.mdx",
+  "source": "@site/blog/2021-10-01-vehicle-suggestions.mdx",
+  "title": "Vehicle Suggestions",
+  "description": "/img/content-blog-raw-blog-vehicle-suggestions-untitled.png",
+  "date": "2021-10-01T00:00:00.000Z",
+  "formattedDate": "October 1, 2021",
+  "tags": [
+    {
+      "label": "nlp",
+      "permalink": "/ai/blog/tags/nlp"
+    },
+    {
+      "label": "similarity",
+      "permalink": "/ai/blog/tags/similarity"
+    },
+    {
+      "label": "vision",
+      "permalink": "/ai/blog/tags/vision"
+    }
+  ],
+  "readingTime": 13.92,
+  "truncated": false,
+  "authors": [
+    {
+      "name": "Sparsh Agarwal",
+      "title": "Principal Developer",
+      "url": "https://github.com/sparsh-ai",
+      "imageURL": "https://avatars.githubusercontent.com/u/62965911?v=4",
+      "key": "sparsh"
+    }
+  ],
+  "frontMatter": {
+    "title": "Vehicle Suggestions",
+    "authors": "sparsh",
+    "tags": [
+      "nlp",
+      "similarity",
+      "vision"
+    ]
+  },
+  "prevItem": {
+    "title": "Tools for building recommender systems",
+    "permalink": "/ai/blog/2021/10/01/tools-for-building-recommender-systems"
+  },
+  "nextItem": {
+    "title": "Web Scraping using Scrapy, BS4, and Selenium",
+    "permalink": "/ai/blog/2021/10/01/web-scraping-using-scrapy-bs4-and-selenium"
+  }
+}

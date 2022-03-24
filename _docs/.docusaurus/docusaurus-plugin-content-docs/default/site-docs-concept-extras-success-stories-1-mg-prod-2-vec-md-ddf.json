@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/1mg-prod2vec",
+  "id": "concept-extras/success-stories/1mg-prod2vec",
+  "title": "1mg Prod2vec",
+  "description": "Gurgaon (India) based 1mg is an online pharmacy and healthcare platform that offers medicines, lab tests, and doctor consultations. Launched in 2013 as Healthkartplus, 1mg initially focussed on the alternative medicine space with AYUSH products. Over the years, it rebranded itself as 1mg which is an online pharmacy and healthcare platform that offers medicines, lab tests, and doctor consultations. Today, 1mg provides a wide range of healthcare services. 1mg also provides information on medicines. It facilitates lab tests at home. At present, the platform has about 2,000 tests and 120 verified labs listed and users can consult a doctor across 20 specialties. The company earns from its services like diagnostics, sale of medicines, preventive healthcare, and online consultations, as well as through native ads on its platform.",
+  "source": "@site/docs/concept-extras/success-stories/1mg-prod2vec.md",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/1mg-prod2vec",
+  "permalink": "/ai/docs/concept-extras/success-stories/1mg-prod2vec",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/1mg-prod2vec.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Success Stories",
+    "permalink": "/ai/docs/concept-extras/success-stories/"
+  },
+  "next": {
+    "title": "Airbnb Experiences",
+    "permalink": "/ai/docs/concept-extras/success-stories/airbnb-experiences"
+  }
+}

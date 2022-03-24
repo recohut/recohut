@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/biggraph",
+  "id": "models/biggraph",
+  "title": "BigGraph",
+  "description": "PyTorch-BigGraph: A Large-scale Graph Embedding System",
+  "source": "@site/docs/models/biggraph.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/biggraph",
+  "permalink": "/ai/docs/models/biggraph",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/biggraph.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "BiasOnly",
+    "permalink": "/ai/docs/models/biasonly"
+  },
+  "next": {
+    "title": "BPR",
+    "permalink": "/ai/docs/models/bpr"
+  }
+}

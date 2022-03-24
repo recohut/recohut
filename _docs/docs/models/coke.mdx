@@ -1,0 +1,39 @@
+# CoKE
+
+> Contextualized Knowledge Graph Embedding
+
+CoKE takes a sequence as input and uses a Transformer encoder to obtain contextualized representations. The model is then trained by predicting a missing component in the sequence, based on these contextualized representations.
+
+Unlike sequential left-to-right or right-to-left encoding strategies, Transformer uses a multi-head self-attention mechanism, which allows each element to attend to all elements in the sequence, and thus is more effective in context modeling.
+
+<figure><p><center><img src='https://github.com/recohut/graph-embeddings/raw/3ae14e9b7e26389dede9d33d96465a674b8acd21/docs/_images/C652166_1.png'/><figcaption>An example of Barack Obama, where the left subgraph shows his political role (dashed blue) and the right one his family role (solid orange).</figcaption></center></p></figure>
+
+Take relation HasPart as an example, which also presents contextualized meanings, e.g., composition-related as (Table, HasPart, Leg) and location-related as (Atlantics, HasPart, NewYorkBay) (Xiao et al., 2016). Learning entity and relation representations that could effectively capture their contextual meanings poses a new challenge to KG embedding.
+
+### Problem Formulation
+
+We are given a KG composed of subject-relation-object triples {(s, r, o)}. Each triple indicates a relation r ∈ R between two entities s, o ∈ E, e.g., (Barack Obama, Has Child, Sasha Obama). Here, E is the entity vocabulary and R the relation set. These entities and relations form rich, varied graph contexts. Two types of graph contexts are considered here: edges and paths, both formalized as sequences composed of entities and relations.
+
+- An edge s → r → o is a sequence formed by a triple, e.g., Barack Obama → Has Child → Sasha Obama. This is the basic unit of a KG, and also the simplest form of graph contexts.
+- A path $s → r_1 → · · · → r_k → o$ is a sequence formed by a list of relations linking two entities, e.g., Barack Obama → Has Child (Sasha) −−−−−→ Lives In (US) −−→ Official Language → English. The length of a path is defined as the number of relations therein. The example above is a path of length 3. Edges can be viewed as special paths of length 1.
+
+Given a graph context, i.e., an edge or a path, we unify the input as a sequence $X = (x_1, x_2, · · · , x_n)$, where the first and last elements are entities from $E$, and the others in between are relations from $R$. For each element $x_i$ in $X$, we construct its input representation as:
+
+$$h_i^0 = x_i^{ele} + x_i^{pos},$$
+
+where $x_i^{ele}$ is the element embedding and $x_i^{pos}$ the position embedding. The former is used to identify the current element, and the latter its position in the sequence. We allow an element embedding for each entity/relation in E ∪ R, and a position embedding for each position within length K. After constructing all input representations, we feed them into a stack of L successive Transformer encoders (Vaswani et al., 2017) to encode the sequence and obtain:
+
+$$h_i^l = Transformer(h_i^{l−1}),\ l= 1, 2, · · · , L$$
+
+where $h_i^l$ is the hidden state of xi after the $l$-th layer.
+
+### Training Tasks
+
+To train the model, we design an entity prediction task, i.e., to predict a missing entity from a given graph context. This task amounts to single-hop or multi-hop question answering on KGs.
+
+- Each edge s → r → o is associated with two training instances: ? → r → o and s → r →?. It is a single-hop question answering task, e.g., Barack Obama → Has Child →? is to answer “Who is the child of Barack Obama?”.
+- Each path $s → r_1 → · · · → r_k → o$ is also associated with two training instances, one to predict s and the other to predict o. This is a multi-hop question answering task, e.g., Barack Obama → Has Child → Lives In → Official Language →? is to answer “What is the official language of the country where Barack Obama’s child lives in?”.
+
+This entity prediction task resembles the masked language model (MLM) task studied in (Devlin et al., 2019). But unlike MLM that randomly picks some input tokens to mask and predict, we restrict the masking and prediction solely to entities in a given edge/path, so as to create meaningful question answering instances. Moreover, many downstream tasks considered in the evaluation phase, e.g., link prediction and path query answering, can be formulated exactly in the same way as entity prediction, which avoids training-test discrepancy.
+
+<p><center><img src='https://github.com/recohut/graph-embeddings/raw/3ae14e9b7e26389dede9d33d96465a674b8acd21/docs/_images/C652166_2.png'/></center></p>

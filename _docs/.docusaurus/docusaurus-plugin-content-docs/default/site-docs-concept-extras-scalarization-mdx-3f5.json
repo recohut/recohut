@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/scalarization",
+  "id": "concept-extras/scalarization",
+  "title": "Scalarization",
+  "description": "| Method | Idea | Scalarization | Characteristic |",
+  "source": "@site/docs/concept-extras/scalarization.mdx",
+  "sourceDirName": "concept-extras",
+  "slug": "/concept-extras/scalarization",
+  "permalink": "/ai/docs/concept-extras/scalarization",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/scalarization.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Off-Policy Learning",
+    "permalink": "/ai/docs/concept-extras/offline-learning"
+  },
+  "next": {
+    "title": "Success Stories",
+    "permalink": "/ai/docs/concept-extras/success-stories/"
+  }
+}

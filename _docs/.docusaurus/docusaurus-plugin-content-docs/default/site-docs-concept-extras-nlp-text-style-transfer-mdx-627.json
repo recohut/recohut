@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/nlp/text-style-transfer",
+  "id": "concept-extras/nlp/text-style-transfer",
+  "title": "Text Style Transfer",
+  "description": "How to adapt the text to different situations, audiences and purposes by making some changes? The style of the text usually includes many aspects such as morphology, grammar, emotion, complexity, fluency, tense, tone and so on.",
+  "source": "@site/docs/concept-extras/nlp/text-style-transfer.mdx",
+  "sourceDirName": "concept-extras/nlp",
+  "slug": "/concept-extras/nlp/text-style-transfer",
+  "permalink": "/ai/docs/concept-extras/nlp/text-style-transfer",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/nlp/text-style-transfer.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Text Similarity",
+    "permalink": "/ai/docs/concept-extras/nlp/text-similarity"
+  },
+  "next": {
+    "title": "Text Summarization",
+    "permalink": "/ai/docs/concept-extras/nlp/text-summarization"
+  }
+}

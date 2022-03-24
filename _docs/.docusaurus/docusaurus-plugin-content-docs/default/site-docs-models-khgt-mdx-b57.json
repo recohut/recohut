@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/khgt",
+  "id": "models/khgt",
+  "title": "KHGT",
+  "description": "Knowledge-Enhanced Hierarchical Graph Transformer Network for Multi-Behavior Recommendation",
+  "source": "@site/docs/models/khgt.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/khgt",
+  "permalink": "/ai/docs/models/khgt",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/khgt.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ItemPop",
+    "permalink": "/ai/docs/models/itempop"
+  },
+  "next": {
+    "title": "LESSR",
+    "permalink": "/ai/docs/models/lessr"
+  }
+}

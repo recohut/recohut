@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-basics/tasks",
+  "id": "concept-basics/tasks",
+  "title": "Tasks",
+  "description": "Top-K Recommendation",
+  "source": "@site/docs/concept-basics/tasks.mdx",
+  "sourceDirName": "concept-basics",
+  "slug": "/concept-basics/tasks",
+  "permalink": "/ai/docs/concept-basics/tasks",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-basics/tasks.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Session-based Recommenders",
+    "permalink": "/ai/docs/concept-basics/session-based-recommenders"
+  },
+  "next": {
+    "title": "Types of Recommender Systems",
+    "permalink": "/ai/docs/concept-basics/types-of-recommender-systems"
+  }
+}

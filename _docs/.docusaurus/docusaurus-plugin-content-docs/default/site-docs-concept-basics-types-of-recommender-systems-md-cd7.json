@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-basics/types-of-recommender-systems",
+  "id": "concept-basics/types-of-recommender-systems",
+  "title": "Types of Recommender Systems",
+  "description": "Group Recommender System",
+  "source": "@site/docs/concept-basics/types-of-recommender-systems.md",
+  "sourceDirName": "concept-basics",
+  "slug": "/concept-basics/types-of-recommender-systems",
+  "permalink": "/ai/docs/concept-basics/types-of-recommender-systems",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-basics/types-of-recommender-systems.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tasks",
+    "permalink": "/ai/docs/concept-basics/tasks"
+  },
+  "next": {
+    "title": "Concept - Extras",
+    "permalink": "/ai/docs/concept-extras/"
+  }
+}

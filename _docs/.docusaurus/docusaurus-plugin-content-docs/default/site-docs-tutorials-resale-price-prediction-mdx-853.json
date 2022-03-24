@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tutorials/resale-price-prediction",
+  "id": "tutorials/resale-price-prediction",
+  "title": "Resale Price Prediction",
+  "description": "|   | BRAND | PARTNO           | QUANTITY | UNITRESALE | UNITCOST |",
+  "source": "@site/docs/tutorials/resale-price-prediction.mdx",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/resale-price-prediction",
+  "permalink": "/ai/docs/tutorials/resale-price-prediction",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/resale-price-prediction.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Recommender System Evaluation",
+    "permalink": "/ai/docs/tutorials/recsys-evaluation"
+  },
+  "next": {
+    "title": "Vector Search",
+    "permalink": "/ai/docs/tutorials/vector-search"
+  }
+}

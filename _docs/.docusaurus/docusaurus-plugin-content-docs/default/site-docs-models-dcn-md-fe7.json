@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/dcn",
+  "id": "models/dcn",
+  "title": "DCN",
+  "description": "DCN stands for Deep and Cross Network. Manual explicit feature crossing process is very laborious and inefficient. On the other hand, automatic implicit feature crossing methods like MLPs cannot efficiently approximate even 2nd or 3rd-order feature crosses. Deep-cross networks provides a solution to this problem. DCN was designed to learn explicit and bounded-degree cross features more effectively. It starts with an input layer (typically an embedding layer), followed by a cross network containing multiple cross layers that models explicit feature interactions, and then combines with a deep network that models implicit feature interactions.",
+  "source": "@site/docs/models/dcn.md",
+  "sourceDirName": "models",
+  "slug": "/models/dcn",
+  "permalink": "/ai/docs/models/dcn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/dcn.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "CoKE",
+    "permalink": "/ai/docs/models/coke"
+  },
+  "next": {
+    "title": "DDPG",
+    "permalink": "/ai/docs/models/ddpg"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/sac",
+  "id": "models/sac",
+  "title": "SAC",
+  "description": "SAS stands for Soft Actor-Critic. It not only boasts of being more sample efficient than traditional RL algorithms but also promises to be robust to brittleness in convergence.",
+  "source": "@site/docs/models/sac.md",
+  "sourceDirName": "models",
+  "slug": "/models/sac",
+  "permalink": "/ai/docs/models/sac",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sac.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "RKMF",
+    "permalink": "/ai/docs/models/rkmf"
+  },
+  "next": {
+    "title": "SARSA",
+    "permalink": "/ai/docs/models/sarsa"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/linkedin-glmix",
+  "id": "concept-extras/success-stories/linkedin-glmix",
+  "title": "LinkedIn GLMix",
+  "description": "A snapshot of the LinkedIn jobs homepage.",
+  "source": "@site/docs/concept-extras/success-stories/linkedin-glmix.md",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/linkedin-glmix",
+  "permalink": "/ai/docs/concept-extras/success-stories/linkedin-glmix",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/linkedin-glmix.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Huawei AppGallery",
+    "permalink": "/ai/docs/concept-extras/success-stories/huawei-appgallery"
+  },
+  "next": {
+    "title": "MarketCloud Real-time",
+    "permalink": "/ai/docs/concept-extras/success-stories/marketcloud-real-time"
+  }
+}

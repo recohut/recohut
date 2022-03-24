@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/stamp",
+  "id": "models/stamp",
+  "title": "STAMP",
+  "description": "/img/content-models-raw-mp2-stamp-untitled.png",
+  "source": "@site/docs/models/stamp.md",
+  "sourceDirName": "models",
+  "slug": "/models/stamp",
+  "permalink": "/ai/docs/models/stamp",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/stamp.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SSE-PT",
+    "permalink": "/ai/docs/models/sse-pt"
+  },
+  "next": {
+    "title": "Struc2Vec",
+    "permalink": "/ai/docs/models/struc2vec"
+  }
+}

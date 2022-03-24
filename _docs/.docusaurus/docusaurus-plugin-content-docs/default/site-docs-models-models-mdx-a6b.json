@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/models",
+  "id": "models/models",
+  "title": "Models",
+  "description": "In the following sections, we will more systematically introduce the following models:",
+  "source": "@site/docs/models/models.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/",
+  "permalink": "/ai/docs/models/",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/models.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Video Action Recognition",
+    "permalink": "/ai/docs/concept-extras/vision/video-action-recognition"
+  },
+  "next": {
+    "title": "A3C",
+    "permalink": "/ai/docs/models/a3c"
+  }
+}

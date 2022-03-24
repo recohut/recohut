@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/xdeepfm",
+  "id": "models/xdeepfm",
+  "title": "xDeepFM",
+  "description": "xDeepFM stands for Extreme Deep Factorization Machines.",
+  "source": "@site/docs/models/xdeepfm.md",
+  "sourceDirName": "models",
+  "slug": "/models/xdeepfm",
+  "permalink": "/ai/docs/models/xdeepfm",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/xdeepfm.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Word2vec",
+    "permalink": "/ai/docs/models/word2vec"
+  },
+  "next": {
+    "title": "Amazon Personalize",
+    "permalink": "/ai/docs/tutorials/amazon-personalize"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "snippets/unix-shell-snippets",
+  "id": "snippets/unix-shell-snippets",
+  "title": "Unix shell",
+  "description": "Replace file extension of all files in a folder",
+  "source": "@site/docs/snippets/unix-shell-snippets.mdx",
+  "sourceDirName": "snippets",
+  "slug": "/snippets/unix-shell-snippets",
+  "permalink": "/ai/docs/snippets/unix-shell-snippets",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/snippets/unix-shell-snippets.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Python code",
+    "permalink": "/ai/docs/snippets/python-snippets"
+  },
+  "next": {
+    "title": "Tools",
+    "permalink": "/ai/docs/tools/"
+  }
+}

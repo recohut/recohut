@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/nlp/chatbot",
+  "id": "concept-extras/nlp/chatbot",
+  "title": "Chatbot",
+  "description": "/img/content-concepts-raw-nlp-chatbot-img.png",
+  "source": "@site/docs/concept-extras/nlp/chatbot.mdx",
+  "sourceDirName": "concept-extras/nlp",
+  "slug": "/concept-extras/nlp/chatbot",
+  "permalink": "/ai/docs/concept-extras/nlp/chatbot",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/nlp/chatbot.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Multi-task Learning",
+    "permalink": "/ai/docs/concept-extras/multitask-learning"
+  },
+  "next": {
+    "title": "Language Modeling",
+    "permalink": "/ai/docs/concept-extras/nlp/language-modeling"
+  }
+}

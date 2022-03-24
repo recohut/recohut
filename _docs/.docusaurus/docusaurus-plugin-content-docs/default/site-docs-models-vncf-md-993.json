@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/vncf",
+  "id": "models/vncf",
+  "title": "VNCF",
+  "description": "VNCF stands for Variational Neural Collaborative Filtering.",
+  "source": "@site/docs/models/vncf.md",
+  "sourceDirName": "models",
+  "slug": "/models/vncf",
+  "permalink": "/ai/docs/models/vncf",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/vncf.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "TGIN",
+    "permalink": "/ai/docs/models/tgin"
+  },
+  "next": {
+    "title": "VSKNN",
+    "permalink": "/ai/docs/models/vsknn"
+  }
+}

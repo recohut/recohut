@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/deepwalk",
+  "id": "models/deepwalk",
+  "title": "DeepWalk",
+  "description": "DeepWalk learns representations of online social networks graphs. By performing random walks to generate sequences, the paper demonstrated that it was able to learn vector representations of nodes (e.g., profiles, content) in the graph.",
+  "source": "@site/docs/models/deepwalk.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/deepwalk",
+  "permalink": "/ai/docs/models/deepwalk",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/deepwalk.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "DeepFM",
+    "permalink": "/ai/docs/models/deepfm"
+  },
+  "next": {
+    "title": "DGTN",
+    "permalink": "/ai/docs/models/dgtn"
+  }
+}

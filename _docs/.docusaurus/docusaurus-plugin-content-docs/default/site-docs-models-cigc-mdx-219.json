@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/cigc",
+  "id": "models/cigc",
+  "title": "CIGC",
+  "description": "To pursue high efficiency, we set the target as using only new data for model updating, meanwhile not sacrificing the recommendation accuracy compared with full model retraining. This is non-trivial to achieve, since the interaction data participates in both the graph structure for model construction and the loss function for model learning, whereas the old graph structure is not allowed to use in model updating. Causal Incremental Graph Convolution (CIGC) estimates the output of full graph convolution. Incremental Graph Convolution (IGC) ingeniously combine the old representations and the incremental graph and effectively fuse the long-term and short-term preference signals. Colliding Effect Distillation (CED) aims to avoid the out-of-date issue of inactive nodes that are not in the incremental graph, which connects the new data with inactive nodes through causal inference. In particular, CED estimates the causal effect of new data on the representation of inactive nodes through the control of their collider.",
+  "source": "@site/docs/models/cigc.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/cigc",
+  "permalink": "/ai/docs/models/cigc",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/cigc.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "CASER",
+    "permalink": "/ai/docs/models/caser"
+  },
+  "next": {
+    "title": "CoKE",
+    "permalink": "/ai/docs/models/coke"
+  }
+}

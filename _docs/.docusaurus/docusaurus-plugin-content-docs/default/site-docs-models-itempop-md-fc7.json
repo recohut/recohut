@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/itempop",
+  "id": "models/itempop",
+  "title": "ItemPop",
+  "description": "Itempop is a naïve baseline that simply ranks items according to overall train-set popularity. Note that this method is unaffected by the user for which items are being recommended, and has the same global ranking of all items",
+  "source": "@site/docs/models/itempop.md",
+  "sourceDirName": "models",
+  "slug": "/models/itempop",
+  "permalink": "/ai/docs/models/itempop",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/itempop.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "IPW",
+    "permalink": "/ai/docs/models/ipw"
+  },
+  "next": {
+    "title": "KHGT",
+    "permalink": "/ai/docs/models/khgt"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/nlp/text-generation",
+  "id": "concept-extras/nlp/text-generation",
+  "title": "Text Generation",
+  "description": "Natural language generation (NLG) can actually tell a story – exactly like that of a human analyst – by writing the sentences and paragraphs for you. It can also summarize reports.",
+  "source": "@site/docs/concept-extras/nlp/text-generation.mdx",
+  "sourceDirName": "concept-extras/nlp",
+  "slug": "/concept-extras/nlp/text-generation",
+  "permalink": "/ai/docs/concept-extras/nlp/text-generation",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/nlp/text-generation.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Text Classification",
+    "permalink": "/ai/docs/concept-extras/nlp/text-classification"
+  },
+  "next": {
+    "title": "Text Similarity",
+    "permalink": "/ai/docs/concept-extras/nlp/text-similarity"
+  }
+}

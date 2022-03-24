@@ -1,0 +1,10 @@
+# Unix shell
+
+## Replace file extension of all files in a folder
+
+```bash
+for file in *.html
+do
+  mv "$file" "${file%.html}.txt"
+done
+```

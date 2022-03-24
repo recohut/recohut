@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/pinterest-multi-task-learning",
+  "id": "concept-extras/success-stories/pinterest-multi-task-learning",
+  "title": "Pinterest Multi-task Learning",
+  "description": "Multi-task Learning for Related Products Recommendations at Pinterest",
+  "source": "@site/docs/concept-extras/success-stories/pinterest-multi-task-learning.md",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/pinterest-multi-task-learning",
+  "permalink": "/ai/docs/concept-extras/success-stories/pinterest-multi-task-learning",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/pinterest-multi-task-learning.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Netflix Personalize Images",
+    "permalink": "/ai/docs/concept-extras/success-stories/netflix-personalize-images"
+  },
+  "next": {
+    "title": "Santander Banking Products",
+    "permalink": "/ai/docs/concept-extras/success-stories/santander-banking-products"
+  }
+}

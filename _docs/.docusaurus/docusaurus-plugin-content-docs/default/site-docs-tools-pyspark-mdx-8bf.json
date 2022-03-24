@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tools/pyspark",
+  "id": "tools/pyspark",
+  "title": "PySpark",
+  "description": "",
+  "source": "@site/docs/tools/pyspark.mdx",
+  "sourceDirName": "tools",
+  "slug": "/tools/pyspark",
+  "permalink": "/ai/docs/tools/pyspark",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tools/pyspark.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "OBP",
+    "permalink": "/ai/docs/tools/obp"
+  },
+  "next": {
+    "title": "River",
+    "permalink": "/ai/docs/tools/river"
+  }
+}

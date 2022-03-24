@@ -1,0 +1,19 @@
+{
+  "unversionedId": "projects",
+  "id": "projects",
+  "title": "Projects",
+  "description": "| Project Id | Title | Links |",
+  "source": "@site/docs/projects.mdx",
+  "sourceDirName": ".",
+  "slug": "/projects",
+  "permalink": "/ai/docs/projects",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/projects.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "notebooks",
+    "permalink": "/ai/docs/notebooks"
+  }
+}

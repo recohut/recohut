@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/sse-pt",
+  "id": "models/sse-pt",
+  "title": "SSE-PT",
+  "description": "Temporal information is crucial for recommendation problems because user preferences are naturally dynamic in the real world. Recent advances in deep learning, especially the discovery of various attention mechanisms and newer architectures in addition to widely used RNN and CNN in natural language processing, have allowed for better use of the temporal ordering of items that each user has engaged with. In particular, the SASRec model, inspired by the popular Transformer model in natural languages processing, has achieved state-of-the-art results. However, SASRec, just like the original Transformer model, is inherently an un-personalized model and does not include personalized user embeddings. SSE-PT overcomes this limitation by employing a Personalized Transformer.",
+  "source": "@site/docs/models/sse-pt.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/sse-pt",
+  "permalink": "/ai/docs/models/sse-pt",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sse-pt.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SR-SAN",
+    "permalink": "/ai/docs/models/sr-san"
+  },
+  "next": {
+    "title": "STAMP",
+    "permalink": "/ai/docs/models/stamp"
+  }
+}

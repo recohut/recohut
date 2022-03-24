@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/attrec",
+  "id": "models/attrec",
+  "title": "AttRec",
+  "description": "AttRec stands for Self-Attentive Sequential Recommendation.",
+  "source": "@site/docs/models/attrec.md",
+  "sourceDirName": "models",
+  "slug": "/models/attrec",
+  "permalink": "/ai/docs/models/attrec",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/attrec.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ASMG",
+    "permalink": "/ai/docs/models/asmg"
+  },
+  "next": {
+    "title": "AUSH",
+    "permalink": "/ai/docs/models/aush"
+  }
+}

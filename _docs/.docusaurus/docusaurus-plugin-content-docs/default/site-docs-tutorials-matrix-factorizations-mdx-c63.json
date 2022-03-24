@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tutorials/matrix-factorizations",
+  "id": "tutorials/matrix-factorizations",
+  "title": "Matrix Factorizations",
+  "description": "Neural Matrix Factorization (NMF)",
+  "source": "@site/docs/tutorials/matrix-factorizations.mdx",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/matrix-factorizations",
+  "permalink": "/ai/docs/tutorials/matrix-factorizations",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/matrix-factorizations.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Mathematics",
+    "permalink": "/ai/docs/tutorials/mathematics"
+  },
+  "next": {
+    "title": "MLOps",
+    "permalink": "/ai/docs/tutorials/mlops"
+  }
+}

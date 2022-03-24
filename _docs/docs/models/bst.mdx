@@ -1,0 +1,19 @@
+# BST
+
+It stands for Behavior Sequence Transformer.
+
+Deep learning based methods have been widely used in industrial recommendation systems (RSs). Previous works adopt an Embedding & MLP paradigm: raw features are embedded into low-dimensional vectors, which are then fed onto MLP for final recommendations. However, most of these works just concatenate different features, ignoring the sequential nature of users' behaviors. BST model uses the powerful Transformer model to capture the sequential signals underlying users' behavior sequences for recommendation.
+
+Inspired by the great success of the Transformer for machine translation task in natural language processing (NLP) , this model applies the self-attention mechanism to learn a better representation for each item in a user’s behavior sequence by considering the sequential information in embedding stage, and then feed them into MLPs to predict users’ responses to candidate items. The key advantage of the Transformer is that it can better capture the dependency among words in sentences by the self-attention mechanism, and intuitively speaking, the “dependency” among items in users’ behavior sequences can also be extracted by the Transformer.
+
+<p><center><img src='https://github.com/recohut/transformer-rec/raw/132decd8b7004cd43163b71d70a501bc150fd5f2/docs/_images/C220331_1.png'/></center></p>
+
+## References
+1. [Qiwei Chen, Huan Zhao, Wei Li, Pipei Huang, Wenwu Ou. 2019. arXiv.](https://arxiv.org/abs/1905.06874)
+2. [D-Roberts (2021) Transformer based recommendation systems [Source code].](https://github.com/D-Roberts/transformer-recommender)
+3. [shenweichen (2021) Easy-to-use,Modular and Extendible package of deep-learning based CTR models [Source code]](https://github.com/shenweichen/DeepCTR)
+4. [jiwidi (2021) Behavior-Sequence-Transformer-Pytorch [Source code].](https://github.com/jiwidi/Behavior-Sequence-Transformer-Pytorch)
+5. [nihalsangeeth (2021) Behaviour Sequence Transformers [Source code].](https://github.com/nihalsangeeth/behaviour-seq-transformer)
+6. [Khalid Salama (2020) A Transformer-based recommendation system [Source code].](https://keras.io/examples/structured_data/movielens_recommendations_transformers)
+7. [BST DeepCTR library](https://deepctr-doc.readthedocs.io/en/latest/deepctr.models.sequence.bst.html)
+8. [https://github.com/PaddlePaddle/PaddleRec/tree/release/1.8.5/models/rank/BST/](https://github.com/PaddlePaddle/PaddleRec/tree/release/1.8.5/models/rank/BST/)

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/glmix",
+  "id": "models/glmix",
+  "title": "GLMix",
+  "description": "Generalized Linear Mixed Effects model (GLMix) decomposes a personalized recommender system into 2 submodels we first train the fixed effects model, and then train random effects models on the residuals after scoring the fixed effects model, and go back to fixed effects model training again until convergence (Zhang et al., 2016).",
+  "source": "@site/docs/models/glmix.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/glmix",
+  "permalink": "/ai/docs/models/glmix",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/glmix.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "GCE-GNN",
+    "permalink": "/ai/docs/models/gce-gnn"
+  },
+  "next": {
+    "title": "GRU4Rec",
+    "permalink": "/ai/docs/models/gru4rec"
+  }
+}

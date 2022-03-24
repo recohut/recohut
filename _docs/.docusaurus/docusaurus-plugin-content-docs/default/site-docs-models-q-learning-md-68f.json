@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/q-learning",
+  "id": "models/q-learning",
+  "title": "Q-learning",
+  "description": "Q-learning can be applied to model-free RL problems. It supports off-policy learning and therefore provides a practical solution to problems where available experiences were/are collected using some other policy or by some other agent (even humans).",
+  "source": "@site/docs/models/q-learning.md",
+  "sourceDirName": "models",
+  "slug": "/models/q-learning",
+  "permalink": "/ai/docs/models/q-learning",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/q-learning.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "PPO",
+    "permalink": "/ai/docs/models/ppo"
+  },
+  "next": {
+    "title": "Random Walk",
+    "permalink": "/ai/docs/models/random_walk"
+  }
+}

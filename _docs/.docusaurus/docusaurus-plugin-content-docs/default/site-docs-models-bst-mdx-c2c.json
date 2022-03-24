@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/bst",
+  "id": "models/bst",
+  "title": "BST",
+  "description": "It stands for Behavior Sequence Transformer.",
+  "source": "@site/docs/models/bst.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/bst",
+  "permalink": "/ai/docs/models/bst",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/bst.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "BPR",
+    "permalink": "/ai/docs/models/bpr"
+  },
+  "next": {
+    "title": "CASER",
+    "permalink": "/ai/docs/models/caser"
+  }
+}

@@ -1,0 +1,27 @@
+# Evaluation
+
+## Online vs Offline Evaluation
+
+If we deploy the policy $\pi_e$ for a while (say, a week) on a real system to get an online estimate of the performance, we can get the log data and estimate the value as average reward as follows:
+
+$$\hat{V}_{A/B} (\pi_e;\mathcal{D}_e) := \dfrac{1}{n}\sum_{i=1}^nr_i$$
+
+In case of off-policy evaluation, the goal is to evaluate policy $\pi_e$ with data collected from different policy $\pi_0$. 
+
+$$V_{OPE} (\pi_e) \approx \hat{V} (\pi_e;\mathcal{D}_0)$$
+
+where,
+
+- $\hat{V}$ is the off-policy estimator
+- $\pi_e$ is the new evaluation policy
+- $\mathcal{D}_0$ is the logged data collected with logging policy $\pi_0$
+
+## Flow
+
+Policy Learning -> Offline Evaluation -> Online Evaluation
+
+<p><center><img src='https://github.com/recohut/ope-rec/raw/ded0ee7c461d3ddfaf0b136d19189f6eb89af26e/docs/_images/L036590_1.png'/></center></p>
+
+## Stages
+
+<p><center><img src='https://github.com/recohut/ope-rec/raw/ded0ee7c461d3ddfaf0b136d19189f6eb89af26e/docs/_images/L036590_2.png'/></center></p>

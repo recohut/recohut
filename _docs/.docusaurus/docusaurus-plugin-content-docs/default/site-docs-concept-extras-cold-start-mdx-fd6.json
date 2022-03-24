@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/cold-start",
+  "id": "concept-extras/cold-start",
+  "title": "Cold Start",
+  "description": "One long-standing challenge for Collaborative Filtering (CF) based recommendation methods is the cold start problem, i.e., to provide recommendations for new users or items who have no historical interaction record. The cold start problem is common in real world applications. For example, 500 hours of new videos are uploaded to YouTube every minute, 500,000 new users register in Facebook every day, and web/mobile apps face the daily challenge of onboarding new users and subscribers. To provide recommendations for these new users and items, many content-based methods and heuristic methods have been deployed, e.g., recommending popular items or geographically near items. However, recent research efforts that tackle the cold start problem from the perspective of machine learning have made promising strides.",
+  "source": "@site/docs/concept-extras/cold-start.mdx",
+  "sourceDirName": "concept-extras",
+  "slug": "/concept-extras/cold-start",
+  "permalink": "/ai/docs/concept-extras/cold-start",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/cold-start.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Causal Inference",
+    "permalink": "/ai/docs/concept-extras/causal-inference"
+  },
+  "next": {
+    "title": "Cross-domain",
+    "permalink": "/ai/docs/concept-extras/cross-domain"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/deepfm",
+  "id": "models/deepfm",
+  "title": "DeepFM",
+  "description": "DeepFM stands for Deep Factorization Machines. It consists of an FM component and a deep component which are integrated in a parallel structure. The FM component is the same as the 2-way factorization machines which is used to model the low-order feature interactions. The deep component is a multi-layered perceptron that is used to capture high-order feature interactions and nonlinearities. These two components share the same inputs/embeddings and their outputs are summed up as the final prediction.",
+  "source": "@site/docs/models/deepfm.md",
+  "sourceDirName": "models",
+  "slug": "/models/deepfm",
+  "permalink": "/ai/docs/models/deepfm",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/deepfm.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "DeepCross",
+    "permalink": "/ai/docs/models/deepcross"
+  },
+  "next": {
+    "title": "DeepWalk",
+    "permalink": "/ai/docs/models/deepwalk"
+  }
+}

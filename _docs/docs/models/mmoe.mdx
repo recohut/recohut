@@ -1,0 +1,42 @@
+# MMoE
+
+MMoE stands for Multi-gate Mixture-of-Experts.
+
+<figure><p><center><img src='https://github.com/recohut/multiobjective-optimizations/raw/098954ea18e25506b6320039c85d09385c70f37b/docs/_images/L485744_1.png'/><figcaption>A multi-gate MoE for learning two tasks simultaneously.</figcaption></center></p></figure>
+
+<p><center><img src='https://github.com/recohut/multiobjective-optimizations/raw/098954ea18e25506b6320039c85d09385c70f37b/docs/_images/L485744_2.png'/></center></p>
+
+## Type of gates
+
+### Softmax gate
+
+A classical model for $g(x)$ is the softmax gate: $σ(Ax+b)$, where $σ(.)$ is the softmax function, $A ∈ {\rm I\!R}^{n×p}$
+ is a trainable weight matrix, and $b ∈ {\rm I\!R}^n$ is a bias vector. This gate is dense, in the sense that all experts are assigned nonzero probabilities. Note that static gating (i.e., gating which does not depend on the input example) can be obtained by setting $A = 0$.
+
+### Sparse gate
+
+Assign nonzero weights to only a small subset of the experts. Sparsity in gating can have various advantages, including better computational efficiency, interpretability, and improved statistical performance in certain settings.
+
+## Data partitioning into subsets for each expert
+
+Partitioning based on input alone versus partitioning based on input-output relationship
+
+The MMoE architecture is similar to the MoE architecture, except that it has an individual gating network for each task, rather than a single one for the entire model.
+
+This allows the model to learn a per-task and per-sample weighting of each of the expert networks, instead of just a per-sample weighting. This allows the MMoE to learn to model the relationships between different tasks. Tasks which have little in common with each other will result in the gating networks of each task learning to use different expert networks.
+
+The authors of the MMoE validate this conclusion by comparing the shared-bottom, MoE, and MMoE architectures on synthetic data-sets with varying levels of task correlation.
+
+<p><center><img src='https://github.com/recohut/multiobjective-optimizations/raw/098954ea18e25506b6320039c85d09385c70f37b/docs/_images/L485744_3.png'/></center></p>
+
+First, we see that the shared-bottom model underperforms in all cases relative to the MoE and MMoE models.
+
+Next, we can see that the performance gap between the MoE and MMoE models increases as correlation between the tasks decreases.
+
+This shows that the MMoE is better able to handle situations in which tasks are unrelated to each other. The larger the task diversity, the more benefit the MMoE is likely to have over the shared-bottom or MoE architectures.
+
+## References
+
+1. [https://youtu.be/Dweg47Tswxw](https://youtu.be/Dweg47Tswxw)
+2. [https://smt.readthedocs.io/en/latest/_src_docs/applications/moe.html](https://smt.readthedocs.io/en/latest/_src_docs/applications/moe.html)
+3. [https://towardsdatascience.com/multi-task-learning-with-multi-gate-mixture-of-experts-b46efac3268](https://towardsdatascience.com/multi-task-learning-with-multi-gate-mixture-of-experts-b46efac3268)

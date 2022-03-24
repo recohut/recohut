@@ -1,0 +1,21 @@
+# Node2vec
+
+Nodes in networks could be organized based on communities they belong to (i.e., homophily); in other cases, the organization could be based on the structural roles of nodes in the network (i.e., structural equivalence). For instance, in the below figure, we observe nodes $u$ and $s_1$ belonging to the same tightly knit community of nodes, while the nodes $u$ and $s_6$ in the two distinct communities share the same structural role of a hub node. Real-world networks commonly exhibit a mixture of such equivalences.
+
+<figure><p><center><img src='https://github.com/recohut/graph-embeddings/raw/3ae14e9b7e26389dede9d33d96465a674b8acd21/docs/_images/C039027_1.png'/><figcaption>BFS and DFS search strategies from node u (k = 3).</figcaption></center></p></figure>
+
+The node2vec framework learns low-dimensional representations for nodes in a graph by optimizing a neighborhood preserving objective. The objective is flexible, and the algorithm accommodates for various definitions of network neighborhoods by simulating biased random walks. Specifically, it provides a way of balancing the exploration-exploitation tradeoff that in turn leads to representations obeying a spectrum of equivalences from homophily to structural equivalence.
+
+Node2vec is a graph embedding method that comprehensively considers the DFS neighborhood and the BFS neighborhood. Simply put, it can be seen as an extension of deep walk, which combines DFS and BFS random walk.
+
+Node2Vec extends the skip-gram architecture to networks by maximizing the log-probability of observing a network neighborhood $\mathcal{N}_S(u)$ for a node $u$ conditioned on its feature representation given by f:
+
+$$\max_f \sum_{u \in V}logP(N_S(u) \vert f(u))$$
+
+## References
+
+1. [PyTorch Geometric (2021) [Source code]](https://pytorch-geometric.readthedocs.io/en/latest/modules/nn.html?highlight=node2vec#torch_geometric.nn.models.Node2Vec)
+2. [https://github.com/shenweichen/GraphEmbedding](https://github.com/shenweichen/GraphEmbedding) (2020) [Source code]
+3. [https://github.com/benedekrozemberczki/karateclub](https://github.com/benedekrozemberczki/karateclub) (2021) [Source code]
+4. [https://github.com/eliorc/node2vec](https://github.com/eliorc/node2vec) (2021) [Source code]
+5. http://snap.stanford.edu/node2vec

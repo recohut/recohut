@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tutorials/graph",
+  "id": "tutorials/graph",
+  "title": "Graph-based Modeling",
+  "description": "General",
+  "source": "@site/docs/tutorials/graph.mdx",
+  "sourceDirName": "tutorials",
+  "slug": "/tutorials/graph",
+  "permalink": "/ai/docs/tutorials/graph",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/graph.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Email Classification",
+    "permalink": "/ai/docs/tutorials/email-classification"
+  },
+  "next": {
+    "title": "Mathematics",
+    "permalink": "/ai/docs/tutorials/mathematics"
+  }
+}

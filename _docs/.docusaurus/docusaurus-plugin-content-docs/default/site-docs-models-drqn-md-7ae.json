@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/drqn",
+  "id": "models/drqn",
+  "title": "DRQN",
+  "description": "DRQN stands for Deep Recurrent Q-Learning. It is a combination of a recurrent neural network (RNN) and a deep Q-network (DQN). The idea being that the RNN will be able to retain information from states further back in time and incorporate that into predicting better Q values and thus performing better on games that require long term planning.",
+  "source": "@site/docs/models/drqn.md",
+  "sourceDirName": "models",
+  "slug": "/models/drqn",
+  "permalink": "/ai/docs/models/drqn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/drqn.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "DQN",
+    "permalink": "/ai/docs/models/dqn"
+  },
+  "next": {
+    "title": "DRR",
+    "permalink": "/ai/docs/models/drr"
+  }
+}

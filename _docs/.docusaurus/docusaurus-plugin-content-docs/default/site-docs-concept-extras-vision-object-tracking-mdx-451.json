@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/vision/object-tracking",
+  "id": "concept-extras/vision/object-tracking",
+  "title": "Object Tracking",
+  "description": "/img/content-concepts-raw-computer-vision-object-tracking-img.png",
+  "source": "@site/docs/concept-extras/vision/object-tracking.mdx",
+  "sourceDirName": "concept-extras/vision",
+  "slug": "/concept-extras/vision/object-tracking",
+  "permalink": "/ai/docs/concept-extras/vision/object-tracking",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/vision/object-tracking.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Object Detection",
+    "permalink": "/ai/docs/concept-extras/vision/object-detection"
+  },
+  "next": {
+    "title": "Pose Estimation",
+    "permalink": "/ai/docs/concept-extras/vision/pose-estimation"
+  }
+}

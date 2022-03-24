@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/amazon-personalize",
+  "id": "concept-extras/amazon-personalize",
+  "title": "Amazon Personalize",
+  "description": "This page is a random dump of my notes on Amazon Personalize. Proceed accordingly.",
+  "source": "@site/docs/concept-extras/amazon-personalize.mdx",
+  "sourceDirName": "concept-extras",
+  "slug": "/concept-extras/amazon-personalize",
+  "permalink": "/ai/docs/concept-extras/amazon-personalize",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/amazon-personalize.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Concept - Extras",
+    "permalink": "/ai/docs/concept-extras/"
+  },
+  "next": {
+    "title": "Apps",
+    "permalink": "/ai/docs/concept-extras/apps"
+  }
+}

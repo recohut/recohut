@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/rkmf",
+  "id": "models/rkmf",
+  "title": "RKMF",
+  "description": "A kernel function allows to transform the product of the factor matrices. Kernels like the s-shaped logistic function allow to impose bounds on the prediction (e.g. one to five stars) while still being differentiable.",
+  "source": "@site/docs/models/rkmf.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/rkmf",
+  "permalink": "/ai/docs/models/rkmf",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/rkmf.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Random Walk",
+    "permalink": "/ai/docs/models/random_walk"
+  },
+  "next": {
+    "title": "SAC",
+    "permalink": "/ai/docs/models/sac"
+  }
+}

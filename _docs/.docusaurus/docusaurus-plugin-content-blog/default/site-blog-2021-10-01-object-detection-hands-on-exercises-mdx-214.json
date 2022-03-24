@@ -1,0 +1,46 @@
+{
+  "permalink": "/ai/blog/2021/10/01/object-detection-hands-on-exercises",
+  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-object-detection-hands-on-exercises.mdx",
+  "source": "@site/blog/2021-10-01-object-detection-hands-on-exercises.mdx",
+  "title": "Object Detection Hands-on Exercises",
+  "description": "We are going to discuss the following 4 use cases:",
+  "date": "2021-10-01T00:00:00.000Z",
+  "formattedDate": "October 1, 2021",
+  "tags": [
+    {
+      "label": "object detection",
+      "permalink": "/ai/blog/tags/object-detection"
+    },
+    {
+      "label": "vision",
+      "permalink": "/ai/blog/tags/vision"
+    }
+  ],
+  "readingTime": 3.165,
+  "truncated": false,
+  "authors": [
+    {
+      "name": "Sparsh Agarwal",
+      "title": "Principal Developer",
+      "url": "https://github.com/sparsh-ai",
+      "imageURL": "https://avatars.githubusercontent.com/u/62965911?v=4",
+      "key": "sparsh"
+    }
+  ],
+  "frontMatter": {
+    "title": "Object Detection Hands-on Exercises",
+    "authors": "sparsh",
+    "tags": [
+      "object detection",
+      "vision"
+    ]
+  },
+  "prevItem": {
+    "title": "Name & Address Parsing",
+    "permalink": "/ai/blog/2021/10/01/name-&-address-parsing"
+  },
+  "nextItem": {
+    "title": "Object detection with OpenCV",
+    "permalink": "/ai/blog/2021/10/01/object-detection-with-opencv"
+  }
+}

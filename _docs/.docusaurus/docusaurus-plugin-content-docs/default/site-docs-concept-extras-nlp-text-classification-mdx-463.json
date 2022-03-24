@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/nlp/text-classification",
+  "id": "concept-extras/nlp/text-classification",
+  "title": "Text Classification",
+  "description": "/img/content-concepts-raw-text-classification-img.png",
+  "source": "@site/docs/concept-extras/nlp/text-classification.mdx",
+  "sourceDirName": "concept-extras/nlp",
+  "slug": "/concept-extras/nlp/text-classification",
+  "permalink": "/ai/docs/concept-extras/nlp/text-classification",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/nlp/text-classification.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Text Analysis",
+    "permalink": "/ai/docs/concept-extras/nlp/text-analysis"
+  },
+  "next": {
+    "title": "Text Generation",
+    "permalink": "/ai/docs/concept-extras/nlp/text-generation"
+  }
+}

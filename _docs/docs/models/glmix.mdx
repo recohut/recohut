@@ -1,0 +1,3 @@
+# GLMix
+
+Generalized Linear Mixed Effects model (GLMix) decomposes a personalized recommender system into 2 submodels: one fixed effects model to capture the general trend which is invariant to different entities, and random effects models to build individual linear models for different types of sparse Id features. Compared with deep learning models, GLMix trains faster because it incorporates a divide-and-conquer approach: we first train the fixed effects model, and then train random effects models on the residuals after scoring the fixed effects model, and go back to fixed effects model training again until convergence (Zhang et al., 2016).

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/ffm",
+  "id": "models/ffm",
+  "title": "FFM",
+  "description": "FFM stands for Field-aware Factorization Machines. In the official FFM paper, it is empirically proven that for large, sparse datasets with many categorical features, FFM performs better. Conversely, for small and dense datasets or numerical datasets, FFM may not be as effective as FM. FFM is also prone to overfitting on the training dataset, hence one should use a standalone validation set and use early stopping when the loss increases.",
+  "source": "@site/docs/models/ffm.md",
+  "sourceDirName": "models",
+  "slug": "/models/ffm",
+  "permalink": "/ai/docs/models/ffm",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/ffm.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Dueling DQN",
+    "permalink": "/ai/docs/models/dueling-dqn"
+  },
+  "next": {
+    "title": "FGNN",
+    "permalink": "/ai/docs/models/fgnn"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/afn",
+  "id": "models/afn",
+  "title": "AFN",
+  "description": "AFN stands for Adaptive Factorization Network.",
+  "source": "@site/docs/models/afn.md",
+  "sourceDirName": "models",
+  "slug": "/models/afn",
+  "permalink": "/ai/docs/models/afn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/afn.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "AFM",
+    "permalink": "/ai/docs/models/afm"
+  },
+  "next": {
+    "title": "AR",
+    "permalink": "/ai/docs/models/ar"
+  }
+}

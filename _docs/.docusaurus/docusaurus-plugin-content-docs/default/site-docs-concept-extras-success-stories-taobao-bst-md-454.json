@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/taobao-bst",
+  "id": "concept-extras/success-stories/taobao-bst",
+  "title": "Taobao BST",
+  "description": "The BST has been deployed in rank stage for Taobao recommendation, which provides recommending service for hundreds of millions of consumers everyday. In this paper, Alibaba described its usage and technical details in Taobao platform.",
+  "source": "@site/docs/concept-extras/success-stories/taobao-bst.md",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/taobao-bst",
+  "permalink": "/ai/docs/concept-extras/success-stories/taobao-bst",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/taobao-bst.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "StitchFix Multi-armed Bandit",
+    "permalink": "/ai/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit"
+  },
+  "next": {
+    "title": "The Long Tail",
+    "permalink": "/ai/docs/concept-extras/success-stories/the-long-tail"
+  }
+}

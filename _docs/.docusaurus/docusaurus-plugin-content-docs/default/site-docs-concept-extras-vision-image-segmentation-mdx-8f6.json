@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/vision/image-segmentation",
+  "id": "concept-extras/vision/image-segmentation",
+  "title": "Image Segmentation",
+  "description": "/img/content-concepts-raw-computer-vision-image-segmentation-slide46.png",
+  "source": "@site/docs/concept-extras/vision/image-segmentation.mdx",
+  "sourceDirName": "concept-extras/vision",
+  "slug": "/concept-extras/vision/image-segmentation",
+  "permalink": "/ai/docs/concept-extras/vision/image-segmentation",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/vision/image-segmentation.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Facial Analytics",
+    "permalink": "/ai/docs/concept-extras/vision/facial-analytics"
+  },
+  "next": {
+    "title": "Image Similarity",
+    "permalink": "/ai/docs/concept-extras/vision/image-similarity"
+  }
+}

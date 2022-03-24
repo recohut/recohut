@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-extras/success-stories/huawei-appgallery",
+  "id": "concept-extras/success-stories/huawei-appgallery",
+  "title": "Huawei AppGallery",
+  "description": "Untitled",
+  "source": "@site/docs/concept-extras/success-stories/huawei-appgallery.md",
+  "sourceDirName": "concept-extras/success-stories",
+  "slug": "/concept-extras/success-stories/huawei-appgallery",
+  "permalink": "/ai/docs/concept-extras/success-stories/huawei-appgallery",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/huawei-appgallery.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Etsy Personalization",
+    "permalink": "/ai/docs/concept-extras/success-stories/etsy-personalization"
+  },
+  "next": {
+    "title": "LinkedIn GLMix",
+    "permalink": "/ai/docs/concept-extras/success-stories/linkedin-glmix"
+  }
+}

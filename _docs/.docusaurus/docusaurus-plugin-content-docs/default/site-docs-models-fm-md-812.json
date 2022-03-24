@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/fm",
+  "id": "models/fm",
+  "title": "FM",
+  "description": "Factorization Machines (FMs) are a supervised learning approach that enhances the linear regression model by incorporating the second-order feature interactions. Factorization Machine type algorithms are a combination of linear regression and matrix factorization, the cool idea behind this type of algorithm is it aims model interactions between features (a.k.a attributes, explanatory variables) using factorized parameters. By doing so it has the ability to estimate all interactions between features even with extremely sparse data.",
+  "source": "@site/docs/models/fm.md",
+  "sourceDirName": "models",
+  "slug": "/models/fm",
+  "permalink": "/ai/docs/models/fm",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/fm.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "FGNN",
+    "permalink": "/ai/docs/models/fgnn"
+  },
+  "next": {
+    "title": "GAT",
+    "permalink": "/ai/docs/models/gat"
+  }
+}

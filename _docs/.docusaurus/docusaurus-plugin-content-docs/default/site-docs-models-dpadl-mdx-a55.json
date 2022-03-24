@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/dpadl",
+  "id": "models/dpadl",
+  "title": "DPADL",
+  "description": "Data Poisoning Attacks to Deep Learning Based Recommender Systems",
+  "source": "@site/docs/models/dpadl.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/dpadl",
+  "permalink": "/ai/docs/models/dpadl",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/dpadl.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "DMT",
+    "permalink": "/ai/docs/models/dmt"
+  },
+  "next": {
+    "title": "DQN",
+    "permalink": "/ai/docs/models/dqn"
+  }
+}

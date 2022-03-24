@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/mb-gmn",
+  "id": "models/mb-gmn",
+  "title": "MB-GMN",
+  "description": "MB-GMN stands for Multi-behavior pattern modeling with meta-knowledge learner.",
+  "source": "@site/docs/models/mb-gmn.md",
+  "sourceDirName": "models",
+  "slug": "/models/mb-gmn",
+  "permalink": "/ai/docs/models/mb-gmn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/mb-gmn.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "MATN",
+    "permalink": "/ai/docs/models/matn"
+  },
+  "next": {
+    "title": "MDP",
+    "permalink": "/ai/docs/models/mdp"
+  }
+}

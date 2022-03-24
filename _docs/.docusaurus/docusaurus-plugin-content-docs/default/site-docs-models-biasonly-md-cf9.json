@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/biasonly",
+  "id": "models/biasonly",
+  "title": "BiasOnly",
+  "description": "BiasOnly is a simple baseline that assumes no interactions between users and items. Formally, it learns: (1) a global bias 𝛼; (2) scalar biases $\\betau$ for each user 𝑢 ∈ U; and (3) scalar biases $\\betai$ for each item 𝑖 ∈ I. Ultimately, the rating/relevance for user 𝑢 and item 𝑖 is modeled as $\\hati^u = \\alpha + \\betau + \\beta_i$.",
+  "source": "@site/docs/models/biasonly.md",
+  "sourceDirName": "models",
+  "slug": "/models/biasonly",
+  "permalink": "/ai/docs/models/biasonly",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/biasonly.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Behavior Propensity Modeling",
+    "permalink": "/ai/docs/models/beh-prop"
+  },
+  "next": {
+    "title": "BigGraph",
+    "permalink": "/ai/docs/models/biggraph"
+  }
+}

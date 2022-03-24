@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/incctr",
+  "id": "models/incctr",
+  "title": "IncCTR",
+  "description": "Recently, various deep CTR models are proposed, such as DeepFM, Wide & Deep, PIN, DIN, and DIEN. Generally, deep CTR models include three parts: embedding layer, interaction layer, and prediction layer.",
+  "source": "@site/docs/models/incctr.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/incctr",
+  "permalink": "/ai/docs/models/incctr",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/incctr.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "HMLET",
+    "permalink": "/ai/docs/models/hmlet"
+  },
+  "next": {
+    "title": "IPW",
+    "permalink": "/ai/docs/models/ipw"
+  }
+}

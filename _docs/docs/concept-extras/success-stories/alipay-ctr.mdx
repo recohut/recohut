@@ -1,0 +1,23 @@
+# Alibaba
+
+## Alipay CTR
+
+An online A/B testing was conducted in the production environment of Alipay for 10 days. The candidate items recommended to users include cash reward, coupons, prizes and member credits. The goal is to increase the CTR of the candidate items while constraining the total cost due to limited budget. The recommendation system serves at the scale of tens of millions of users in real traffic, hence the traffic is very expensive in the business view.
+
+![Online A/B testing results of MIAN and DCN.](/img/content-concepts-case-studies-raw-case-studies-alipay-ctr-untitled.png)
+
+Online A/B testing results of MIAN and DCN.
+
+MIAN model brings a 0.41% gain in CTR while a 0.27% drop in cost compared to the best baseline method DCN in a statistically significant level which contributes a considerable business revenue growth. Note that, on a large scale commercial platform, an increase like 0.1% in CTR value can bring huge benefits. Besides, as shown in above figure, the CTR gain of the model is consistent during the 10-days online experiment, which demonstrates the effectiveness and stability of this model.
+
+## TGIN model deployment for online CTR
+
+![Untitled](/img/docs/alibaba-tgin-100222.png)
+
+From April 10 to April 17 in 2021, careful online A/B testing was conducted in the merchant advertising system of AliExpress (one of the biggest global e-commerce platform). During almost a week’s testing, TGIN improved UV L-P by 3.62% and L-GMV by 3.16% compared to the base model. Besides, TGIN has improved commission earn per user (EPU) by 3.20%. TGIN has been deployed online and serves the merchant traffic, which contributes a significant business revenue growth. 
+
+In practice, it employ the TPP platform to handle real-time user requests. ABFS (Ali Basic Feature Service) is used to obtain real-time behaviors and user portraits. Then it obtain the recall candidates via BE (Basic Engine). Item attribute information and the corresponding triangle index is requested via iGraph (GRAPH ENGINE). Finally, it calculate the CTR score through the TGIN model service deployed by RTP (REAL-TIME PREDICTION) and recommend items to users for online display. The average response time is about 30 milliseconds, which is sufficient to meet the timeliness requirement of the CTR prediction task. Meantime, the user behavior log is returned to ABFS through FLINK real-time data.
+
+In particular, all the triangle indexes are established offline. Firstly, a large-scale item-item co-occurrence graph is built for AliExpress. The triangle extraction and selection algorithm is implemented using Alibaba MaxCompute and MapReduce. To improve the efficiency, we restrict the number of triangles strictly.
+
+For more information, you can read [this](https://arxiv.org/pdf/2202.02698v1.pdf) research paper.

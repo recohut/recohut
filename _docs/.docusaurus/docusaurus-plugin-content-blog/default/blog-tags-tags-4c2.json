@@ -1,0 +1,184 @@
+{
+  "/blog/tags/recsys": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/recsys",
+    "name": "recsys",
+    "count": 4,
+    "permalink": "/blog/tags/recsys"
+  },
+  "/blog/tags/tool": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/tool",
+    "name": "tool",
+    "count": 3,
+    "permalink": "/blog/tags/tool"
+  },
+  "/blog/tags/classification": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/classification",
+    "name": "classification",
+    "count": 1,
+    "permalink": "/blog/tags/classification"
+  },
+  "/blog/tags/healthcare": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/healthcare",
+    "name": "healthcare",
+    "count": 2,
+    "permalink": "/blog/tags/healthcare"
+  },
+  "/blog/tags/vision": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/vision",
+    "name": "vision",
+    "count": 9,
+    "permalink": "/blog/tags/vision"
+  },
+  "/blog/tags/distributed": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/distributed",
+    "name": "distributed",
+    "count": 1,
+    "permalink": "/blog/tags/distributed"
+  },
+  "/blog/tags/nlp": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/nlp",
+    "name": "nlp",
+    "count": 6,
+    "permalink": "/blog/tags/nlp"
+  },
+  "/blog/tags/similarity": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/similarity",
+    "name": "similarity",
+    "count": 5,
+    "permalink": "/blog/tags/similarity"
+  },
+  "/blog/tags/audio": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/audio",
+    "name": "audio",
+    "count": 1,
+    "permalink": "/blog/tags/audio"
+  },
+  "/blog/tags/deepfake": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/deepfake",
+    "name": "deepfake",
+    "count": 1,
+    "permalink": "/blog/tags/deepfake"
+  },
+  "/blog/tags/aws-beanstalk": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/aws-beanstalk",
+    "name": "aws beanstalk",
+    "count": 1,
+    "permalink": "/blog/tags/aws-beanstalk"
+  },
+  "/blog/tags/flask": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/flask",
+    "name": "flask",
+    "count": 2,
+    "permalink": "/blog/tags/flask"
+  },
+  "/blog/tags/insurance": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/insurance",
+    "name": "insurance",
+    "count": 1,
+    "permalink": "/blog/tags/insurance"
+  },
+  "/blog/tags/personalization": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/personalization",
+    "name": "personalization",
+    "count": 4,
+    "permalink": "/blog/tags/personalization"
+  },
+  "/blog/tags/app": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/app",
+    "name": "app",
+    "count": 4,
+    "permalink": "/blog/tags/app"
+  },
+  "/blog/tags/ner": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/ner",
+    "name": "ner",
+    "count": 1,
+    "permalink": "/blog/tags/ner"
+  },
+  "/blog/tags/object-detection": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/object-detection",
+    "name": "object detection",
+    "count": 2,
+    "permalink": "/blog/tags/object-detection"
+  },
+  "/blog/tags/opencv": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/opencv",
+    "name": "opencv",
+    "count": 1,
+    "permalink": "/blog/tags/opencv"
+  },
+  "/blog/tags/streamlit": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/streamlit",
+    "name": "streamlit",
+    "count": 3,
+    "permalink": "/blog/tags/streamlit"
+  },
+  "/blog/tags/ocr": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/ocr",
+    "name": "ocr",
+    "count": 1,
+    "permalink": "/blog/tags/ocr"
+  },
+  "/blog/tags/regression": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/regression",
+    "name": "regression",
+    "count": 1,
+    "permalink": "/blog/tags/regression"
+  },
+  "/blog/tags/realtime": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/realtime",
+    "name": "realtime",
+    "count": 1,
+    "permalink": "/blog/tags/realtime"
+  },
+  "/blog/tags/insight": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/insight",
+    "name": "insight",
+    "count": 1,
+    "permalink": "/blog/tags/insight"
+  },
+  "/blog/tags/scraping": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/scraping",
+    "name": "scraping",
+    "count": 2,
+    "permalink": "/blog/tags/scraping"
+  },
+  "/blog/tags/chatbot": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/chatbot",
+    "name": "chatbot",
+    "count": 1,
+    "permalink": "/blog/tags/chatbot"
+  },
+  "/blog/tags/trend": {
+    "allTagsPath": "/blog/tags",
+    "slug": "/blog/tags/trend",
+    "name": "trend",
+    "count": 1,
+    "permalink": "/blog/tags/trend"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "permalink": "/ai/blog/2021/10/01/clinical-decision-making",
+  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-clinical-decision-making.mdx",
+  "source": "@site/blog/2021-10-01-clinical-decision-making.mdx",
+  "title": "Clinical Decision Making",
+  "description": "Health insurance can be complicated—especially when it comes to prior authorization (also referred to as pre-approval, pre-authorization, and pre-certification). The manual labor involved in obtaining prior authorizations (PAs) is a well-recognized burden among providers. Up to 46% of PA requests are still submitted by fax, and 60% require a telephone call, according to America’s Health Insurance Plans (AHIP). A 2018 survey by the American Medical Association (AMA) found that doctors and their staff spend an average of 2 days a week completing PAs. In addition to eating up time that physicians could spend with patients, PAs also contribute to burnout.",
+  "date": "2021-10-01T00:00:00.000Z",
+  "formattedDate": "October 1, 2021",
+  "tags": [
+    {
+      "label": "classification",
+      "permalink": "/ai/blog/tags/classification"
+    },
+    {
+      "label": "healthcare",
+      "permalink": "/ai/blog/tags/healthcare"
+    }
+  ],
+  "readingTime": 1.46,
+  "truncated": false,
+  "authors": [
+    {
+      "name": "Sparsh Agarwal",
+      "title": "Principal Developer",
+      "url": "https://github.com/sparsh-ai",
+      "imageURL": "https://avatars.githubusercontent.com/u/62965911?v=4",
+      "key": "sparsh"
+    }
+  ],
+  "frontMatter": {
+    "title": "Clinical Decision Making",
+    "authors": "sparsh",
+    "tags": [
+      "classification",
+      "healthcare"
+    ]
+  },
+  "nextItem": {
+    "title": "Detectron 2",
+    "permalink": "/ai/blog/2021/10/01/detectron-2"
+  }
+}

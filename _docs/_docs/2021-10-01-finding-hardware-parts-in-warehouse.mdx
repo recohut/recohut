@@ -1,0 +1,50 @@
+---
+title: Finding Hardware Parts in Warehouse
+authors: sparsh
+tags: [nlp, similarity]
+---
+
+# Problem Statement
+
+Imagine a customer visits a store to buy hardware parts (e.g. a PVC  pipe or a concrete block) and describe the requirements in a natural language like `'I need 2" x 5" concrete block'` but the exact description of this part might be different in the seller's database e.g. `'concrete block solid of width 2 inch and height 5 inches'`. So the objective is to build a system that will help the store owner to find and offer the right item from the database for the description given by the customer. 
+
+# Proposed Solution
+
+Semantic text similarity to map the queries. Bag-of-words based Count vectorizer model with different types of tokenization process and n-gram range. 
+
+# Modeling Approach
+
+### Data Description
+
+Data 1 - Core training data with 2 columns - Part ID and Description, to find top similar queries
+
+Data 2 - Lookup data to find the top most similar query
+
+Data 3 - Lookup data to fetch the exact description if description is exactly matching in the database
+
+Data 4 - List of keywords for a tokenizer
+
+Data 5 - List of substitutions for more accurate similarity
+
+Data 6 - Test data with 2 columns - Description and part ID (optional)
+
+### Modeling
+
+Count vectorizer models
+
+- Unigram, Bigram and Trigram tokens
+- Non-alphabet tokens
+- Keyword tokens
+- M1 - Text similarity model trained on small file
+- M2 - Text similarity model trained on large file
+- M3 - Text similarity model trained on mixed file
+
+### Algorithm
+
+- 1-gram and 2-gram tokenization
+- Count vectorization
+- Cosine or Euclidean distance
+
+# Final Repository Structure
+
+![/img/content-blog-raw-blog-finding-hardware-parts-in-warehouse-untitled.png](/img/content-blog-raw-blog-finding-hardware-parts-in-warehouse-untitled.png)

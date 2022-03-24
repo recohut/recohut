@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/gat",
+  "id": "models/gat",
+  "title": "GAT",
+  "description": "GAT stands for Graph Attention Networks. This is a special GNN model that addresses several key challenges of spectral models, such as poor ability of generalization from a specific graph structure to another and sophisticated computation of matrix inverse. GAT utilizes attention mechanisms to aggregate neighborhood features (embeddings) by specifying different weights to different nodes.",
+  "source": "@site/docs/models/gat.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/gat",
+  "permalink": "/ai/docs/models/gat",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/gat.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "FM",
+    "permalink": "/ai/docs/models/fm"
+  },
+  "next": {
+    "title": "GC-SAN",
+    "permalink": "/ai/docs/models/gc-san"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/nmrn",
+  "id": "models/nmrn",
+  "title": "NMRN",
+  "description": "NMRN is a streaming recommender model based on neural memory networks with external memories to capture and store both long-term stable interests and short-term dynamic interests in a unified way. An adaptive negative sampling framework based on Generative Adversarial Nets (GAN) is developed to optimize our proposed streaming recommender model, which effectively overcomes the limitations of classical negative sampling approaches and improves the effectiveness of the model parameter inference.",
+  "source": "@site/docs/models/nmrn.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/nmrn",
+  "permalink": "/ai/docs/models/nmrn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/nmrn.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "NGCF",
+    "permalink": "/ai/docs/models/ngcf"
+  },
+  "next": {
+    "title": "Node2vec",
+    "permalink": "/ai/docs/models/node2vec"
+  }
+}

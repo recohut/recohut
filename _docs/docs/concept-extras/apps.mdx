@@ -1,0 +1,121 @@
+# Apps
+
+## Streamlit
+
+### **Amazon Fashion Recommender**
+
+```python
+#@markdown **Amazon Fashion Recommender**
+!git clone https://github.com/sparsh-ai/amazon-fashion-recommendation.git
+%cd amazon-fashion-recommendation
+!pip install -q -r requirements.txt
+!nohup streamlit run app.py &
+!pip install -q colab-everything
+from colab_everything import ColabStreamlit
+ColabStreamlit('app.py')
+```
+
+### **Twitter Sentiment Analysis**
+
+```python
+#@markdown **Twitter Sentiment Analysis**
+!git clone https://github.com/sparsh-ai/streamlit-05af01d0.git
+%cd streamlit-05af01d0
+!pip install -q -r requirements.txt
+!nohup streamlit run app.py &
+!pip install -q colab-everything
+from colab_everything import ColabStreamlit
+ColabStreamlit('app.py')
+```
+
+### **Object Detection**
+
+```python
+#@markdown **Object Detection**
+!git clone https://github.com/sparsh-ai/streamlit-489fbbb7.git
+%cd streamlit-489fbbb7
+!pip install -q -r requirements.txt
+!nohup streamlit run app.py &
+!pip install -q colab-everything
+from colab_everything import ColabStreamlit
+ColabStreamlit('app.py')
+```
+
+### Object Detection
+
+```python
+#@markdown **Object Detection**
+!git clone https://github.com/sparsh-ai/streamlit-5a407279.git
+%cd streamlit-5a407279
+!pip install -q -r requirements.txt
+!nohup streamlit run app.py &
+!pip install -q colab-everything
+from colab_everything import ColabStreamlit
+ColabStreamlit('app.py')
+```
+
+### Logistic Regression
+
+```python
+#@markdown **Logistic Regression**
+!git clone https://github.com/sparsh-ai/streamlit-2d900058.git
+%cd streamlit-2d900058
+!pip install -q -r requirements.txt
+!nohup streamlit run app.py &
+!pip install -q colab-everything
+from colab_everything import ColabStreamlit
+ColabStreamlit('app.py')
+```
+
+## Dash
+
+### RecoFront
+
+```python
+#@markdown **RecoFront**
+!git clone https://github.com/sparsh-ai/reco-front.git
+%cd reco-front
+!pip install dash dash-html-components dash-core-components dash_auth
+!pip install dash-table jupyter-dash dash_daq dash_bootstrap_components visdcc
+# !kill -9 $(lsof -t -i:8081)
+!pip install -q colab-everything
+from colab_everything import ColabCustom
+ColabCustom("python3 app1.py", port=8051)
+```
+
+## Flask
+
+### **Shazam API Song Analytics**
+
+```python
+#@markdown **Shazam API Song Analytics**
+!git clone https://github.com/jonaxmc/title-song-recommender.git
+%cd title-song-recommender
+!pip install -r requirements.txt
+!pip install -q colab-everything
+from colab_everything import ColabFlask
+ColabFlask('app.py') # Flask app path
+```
+
+### **CareerVillage Questions Recommender**
+
+```python
+#@markdown **Career Village Questions Recommender**
+!git clone https://github.com/dataroot/Kaggle-CV.git
+%cd Kaggle-CV
+!pip install -r requirements.txt
+import nltk
+nltk.download('stopwords')
+!pip install -q -U kaggle
+!pip install --upgrade --force-reinstall --no-deps kaggle
+!mkdir ~/.kaggle
+!cp /content/drive/MyDrive/kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
+!kaggle competitions download -c data-science-for-good-careervillage
+!mkdir data && unzip /content/data-science-for-good-careervillage.zip -d ./data
+%tensorflow_version 1.x
+!pip install 'h5py==2.10.0' --force-reinstall
+!pip install -q colab-everything
+from colab_everything import ColabFlask
+ColabFlask('app.py') # Flask app path
+```

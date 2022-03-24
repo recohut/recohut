@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/spop",
+  "id": "models/spop",
+  "title": "SPop",
+  "description": "SPop stands for Session-based Popularity. It is a session popularity predictor that gives higher scores to items with higher number of occurrences in the session. Ties are broken up by adding the popularity score of the item.",
+  "source": "@site/docs/models/spop.md",
+  "sourceDirName": "models",
+  "slug": "/models/spop",
+  "permalink": "/ai/docs/models/spop",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/spop.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SML",
+    "permalink": "/ai/docs/models/sml"
+  },
+  "next": {
+    "title": "SR-GNN",
+    "permalink": "/ai/docs/models/sr-gnn"
+  }
+}

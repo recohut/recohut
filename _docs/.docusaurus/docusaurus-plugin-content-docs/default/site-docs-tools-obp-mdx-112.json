@@ -1,0 +1,23 @@
+{
+  "unversionedId": "tools/obp",
+  "id": "tools/obp",
+  "title": "OBP",
+  "description": "Process flow",
+  "source": "@site/docs/tools/obp.mdx",
+  "sourceDirName": "tools",
+  "slug": "/tools/obp",
+  "permalink": "/ai/docs/tools/obp",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/tools/obp.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tools",
+    "permalink": "/ai/docs/tools/"
+  },
+  "next": {
+    "title": "PySpark",
+    "permalink": "/ai/docs/tools/pyspark"
+  }
+}

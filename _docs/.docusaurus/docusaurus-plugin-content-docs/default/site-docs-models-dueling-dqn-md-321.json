@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/dueling-dqn",
+  "id": "models/dueling-dqn",
+  "title": "Dueling DQN",
+  "description": "A Dueling DQN agent explicitly estimates two quantities through a modified network architecture:",
+  "source": "@site/docs/models/dueling-dqn.md",
+  "sourceDirName": "models",
+  "slug": "/models/dueling-dqn",
+  "permalink": "/ai/docs/models/dueling-dqn",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/dueling-dqn.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "DRR",
+    "permalink": "/ai/docs/models/drr"
+  },
+  "next": {
+    "title": "FFM",
+    "permalink": "/ai/docs/models/ffm"
+  }
+}

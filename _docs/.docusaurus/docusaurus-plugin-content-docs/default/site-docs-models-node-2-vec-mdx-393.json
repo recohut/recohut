@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/node2vec",
+  "id": "models/node2vec",
+  "title": "Node2vec",
+  "description": "Nodes in networks could be organized based on communities they belong to (i.e., homophily); in other cases, the organization could be based on the structural roles of nodes in the network (i.e., structural equivalence). For instance, in the below figure, we observe nodes $u$ and $s1$ belonging to the same tightly knit community of nodes, while the nodes $u$ and $s6$ in the two distinct communities share the same structural role of a hub node. Real-world networks commonly exhibit a mixture of such equivalences.",
+  "source": "@site/docs/models/node2vec.mdx",
+  "sourceDirName": "models",
+  "slug": "/models/node2vec",
+  "permalink": "/ai/docs/models/node2vec",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/node2vec.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "NMRN",
+    "permalink": "/ai/docs/models/nmrn"
+  },
+  "next": {
+    "title": "PNN",
+    "permalink": "/ai/docs/models/pnn"
+  }
+}

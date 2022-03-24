@@ -1,0 +1,23 @@
+{
+  "unversionedId": "concept-basics/concept-basics",
+  "id": "concept-basics/concept-basics",
+  "title": "Concept - Basics",
+  "description": "In the following sections, we will more systematically introduce the following concepts:",
+  "source": "@site/docs/concept-basics/concept-basics.mdx",
+  "sourceDirName": "concept-basics",
+  "slug": "/concept-basics/",
+  "permalink": "/ai/docs/concept-basics/",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-basics/concept-basics.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Introduction",
+    "permalink": "/ai/docs/intro"
+  },
+  "next": {
+    "title": "Challenges",
+    "permalink": "/ai/docs/concept-basics/challenges"
+  }
+}

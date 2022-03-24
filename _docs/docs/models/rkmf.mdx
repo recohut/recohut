@@ -1,0 +1,19 @@
+# RKMF
+
+A kernel function allows to transform the product of the factor matrices. Kernels like the s-shaped logistic function allow to impose bounds on the prediction (e.g. one to five stars) while still being differentiable.
+
+The matrix factorization can be expressed as:
+
+$$\hat{r}_{ui} = b_{u,i} + \sum_{f=1}^kw_{u,f}h_{i,f}$$
+
+Like matrix factorization, kernel matrix factorization (KMF) uses two feature matrices that contain the features for users and items, respectively. But the interactions between the feature vector $w_u$ of a user and the feature vector $h_i$ of an item are kernelized:
+
+$$\hat{r}_{ui} = a + c\ \cdot \ K(w_u,h_i)$$
+
+The terms $a$ and $c$ are introduced to allow re-scaling the predictions. For the kernel $K : \mathbb{R}^k × \mathbb{R}^k → \mathbb{R}$ one can use any of the well-known kernels like linear, polynomial, RBF, logistic etc.
+
+It is obvious that normal matrix factorization can be expressed with $a = b_{u,i}$ and $c = 1$ and the linear kernel $K_l$.
+
+## Training procedure
+
+<p><center><img src='https://github.com/recohut/incremental-learning/raw/a6fdcde2e8af7ebfd9f5efd278c487e0e9560cb3/docs/_images/L766388_1.png'/></center></p>

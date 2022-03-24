@@ -1,0 +1,22 @@
+{
+  "unversionedId": "intro",
+  "id": "intro",
+  "title": "Introduction",
+  "description": "It is evident that the pace that technology advances have been increased over the last decades. Scientific discoveries and technological growth introduced to people a huge variety of options and possibilities. One of the most important advantages that technology offers is the direct and easy access to information. Nowadays access to vast networks of information is easy and people can be informed about almost anything they desire. Even though ease of access provided people with the ability to acquire the needed information, they are now facing a new obstacle: this of easily finding what they need. On one hand, information abundance covers the majority of needs but on the other hinders accessibility to information truly valuable to the user. The term that describes this phenomenon is “Information Overload”. Often users are presented with seemingly similar information to their inquiry but irrelevant to their actual needs, rendering this way the discovery of the desired knowledge a difficult task. Continuous expanding of information overload necessitated the development of systems that aim to alleviate such problems. Such systems were introduced in order to filter or retrieve the desired information. Recommendation systems is an example. Recommenders aim to filter out all the unnecessary and irrelevant information and present those that fit the user’s needs. This way the user is relieved of the burden of discovering what he needs making this way information truly accessible.",
+  "source": "@site/docs/intro.mdx",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/ai/docs/intro",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/intro.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "Concept - Basics",
+    "permalink": "/ai/docs/concept-basics/"
+  }
+}

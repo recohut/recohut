@@ -1,0 +1,36 @@
+# TIFU-kNN
+
+TIFU-kNN (Temporal Item Frequency-based User-kNN) is a nearest neighbor-based state-of-the-art next basket recommendation model, which outperforms neural networks in the NBR task, despite its simplicity. This method builds on the user-based collaborative filtering approach. A target user is first modeled by an embedding vector, and then recommendations are made based on a weighted combination of the aggregated representations of similar users and the target user’s own vector embedding. TIFU-kNN calculates user vector representations during the training phase leveraging repeated purchase patterns commonly observed in e-commerce, under the assumption that recent purchases have more predictive power than older ones.
+
+:::info research paper
+
+[Haoji Hu, Xiangnan He, Jinyang Gao and Zhi-Li Zhang “*Modeling Personalized Item Frequency Information for Next-basket Recommendation*”. arXiv, 2020.](https://arxiv.org/abs/1808.06414)
+
+> Next-basket recommendation (NBR) is prevalent in e-commerce and retail industry. In this scenario, a user purchases a set of items (a basket) at a time. NBR performs sequential modeling and recommendation based on a sequence of baskets. NBR is in general more complex than the widely studied sequential (session-based) recommendation which recommends the next item based on a sequence of items. Recurrent neural network (RNN) has proved to be very effective for sequential modeling, and thus been adapted for NBR. However, we argue that existing RNNs cannot directly capture item frequency information in the recommendation scenario. Through careful analysis of real-world datasets, we find that personalized item frequency (PIF) information (which records the number of times that each item is purchased by a user) provides two critical signals for NBR. But, this has been largely ignored by existing methods. Even though existing methods such as RNN based methods have strong representation ability, our empirical results show that they fail to learn and capture PIF. As a result, existing methods cannot fully exploit the critical signals contained in PIF. Given this inherent limitation of RNNs, we propose a simple item frequency based k-nearest neighbors (kNN) method to directly utilize these critical signals. We evaluate our method on four public real-world datasets. Despite its relative simplicity, our method frequently outperforms the state-of-the-art NBR methods – including deep learning based methods using RNNs – when patterns associated with PIF play an important role in the data.
+> 
+
+:::
+
+## User-vector Representation
+
+A user vector is calculated to represent a user’s past purchase patterns, with a time-decayed window to assign a higher weight to recent items. However, a single time decayed weight is not flexible enough to model another property of temporal dynamics: consecutive steps have small changes while steps far from each other have large changes. Therefore, TIFU-kNN applies a hierarchical structure where user baskets are first divided into groups, baskets within a group are aggregated with time decayed weights to obtain a group vector, and afterwards, these group vectors are aggregated again with time decayed weights to obtain a final user vector. In detail, the algorithm applies the following steps:
+
+1. Multi-hot encoding: For example, suppose we have a corpus containing four items, i.e., I = {1, 2, 3, 4}, and a user’s history with two baskets H = [{1, 4}, {1, 2, 3}]. The corresponding multi-hot vector would then look as follows: $[\{1,4\},\{1,2,3\}] \rightarrow_{\{1,2,3,4\}}^{\text{multi-hot encoding}} [[1,0,0,1],[1,1,1,0]]$.
+2. Group vector generation: For example, suppose there are 10 baskets and if we decide group size of 4, then 3 groups would be created, first and second group would contain 4 baskets each and third one with two baskets. Now for each group, TIFU-kNN calculates the group vector by sum-product of the basket vectors (a basket vector is a multi-hot encoded vector that we calculated above) with time-decay weights.
+3. User vector generation: Similar to how a group vector is calculated from basket vectors, TIFU-kNN calculates the final target user vector representation based on a time-decay weighted average of the group vectors.
+
+## Personalized Collaborative Filtering Recommendation
+
+TIFU-kNN calculates the final prediction vector via a linear combination of user vector and the mean of k-nearest neighbor vectors.
+
+:::note
+
+The numeric values in the prediction vector ***p*** indicate the strength of preference of the user towards a certain item ***p***, and the highest scored items are typically leveraged for recommendation.
+
+:::
+
+## Links
+
+- [Efficiently Maintaining Next Basket Recommendations under Additions and Deletions of Baskets and Items](https://arxiv.org/abs/2201.13313v1)
+- [https://github.com/0xeeff/amnesiac_recsys](https://github.com/0xeeff/amnesiac_recsys)
+- [https://github.com/HaojiHu/TIFUKNN](https://github.com/HaojiHu/TIFUKNN)

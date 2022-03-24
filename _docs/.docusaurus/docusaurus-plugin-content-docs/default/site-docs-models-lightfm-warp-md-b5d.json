@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/lightfm-warp",
+  "id": "models/lightfm-warp",
+  "title": "LightFM WARP",
+  "description": "LightFM is probably the only recommender package implementing the WARP (Weighted Approximate-Rank Pairwise) loss for implicit feedback learning-to-rank. Generally, it performs better than the more popular BPR (Bayesian Personalised Ranking) loss --- often by a large margin.",
+  "source": "@site/docs/models/lightfm-warp.md",
+  "sourceDirName": "models",
+  "slug": "/models/lightfm-warp",
+  "permalink": "/ai/docs/models/lightfm-warp",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/lightfm-warp.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "LESSR",
+    "permalink": "/ai/docs/models/lessr"
+  },
+  "next": {
+    "title": "LightGCN",
+    "permalink": "/ai/docs/models/lightgcn"
+  }
+}

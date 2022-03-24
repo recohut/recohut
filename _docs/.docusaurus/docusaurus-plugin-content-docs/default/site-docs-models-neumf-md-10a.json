@@ -1,0 +1,23 @@
+{
+  "unversionedId": "models/neumf",
+  "id": "models/neumf",
+  "title": "NeuMF",
+  "description": "NMF Leverages the representation power of deep neural-networks to capture nonlinear correlations between user and item embeddings. Formally, the rating/relevance for user 𝑢 and item 𝑖 is modeled as $\\hati^u = \\alpha + \\betau + \\betai + f(\\gammau || \\gammai || \\gammau \\cdot \\gammai)$ where $\\gammau , \\gamma_i \\in \\mathbb{R}^d$, ‘||’ represents the concatenation operation, and $f: \\mathbb{R}^{3d} \\rightarrow \\mathbb{R}$ represents an arbitrarily complex neural network.",
+  "source": "@site/docs/models/neumf.md",
+  "sourceDirName": "models",
+  "slug": "/models/neumf",
+  "permalink": "/ai/docs/models/neumf",
+  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/neumf.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "MPNN",
+    "permalink": "/ai/docs/models/mpnn"
+  },
+  "next": {
+    "title": "NGCF",
+    "permalink": "/ai/docs/models/ngcf"
+  }
+}

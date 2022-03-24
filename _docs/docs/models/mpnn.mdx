@@ -1,0 +1,14 @@
+# MPNN
+
+> Message Passing Neural Networks
+
+One of the first work on this topic was published by Duvenaud et al. (2015). He defined the model as a stack of differentiable layers where each layer is another round of passing the messages. He used the message passing architecture to extract valuable information from graph molecules and then transform it into a single feature vector. At that time, his work was groundbreaking because he made the architecture differentiable. It was de-facto one of the first convolutional neural network architectures that could operate on graphs.
+
+Another attempt on this architecture was done by Li et al. (2016). Here, they focus on the sequential output from graphs, for example finding an optimal path in graph. To achieve that, they embedded GRU (Gated Recurrent Unit) into their algorithm.
+
+Although these algorithms seem to be quite different, they have the same underlying concept in common which is a message passing between nodes in the graph. We will next see how those models can be combined into a single framework.
+
+<figure><p><center><img src='https://github.com/recohut/graph-embeddings/raw/3ae14e9b7e26389dede9d33d96465a674b8acd21/docs/_images/L883045_1.png'/><figcaption>A very simple example of message passing architecture for node V1. In this case a message is a sum of neighbour’s hidden states. The update function is an average between a message m and h1.</figcaption></center></p></figure>
+
+## References
+1. [Simple Message Passing on Graphs](https://youtu.be/ijmxpItkRjc)

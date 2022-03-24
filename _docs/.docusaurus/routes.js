@@ -300,7 +300,7 @@ export default [
   },
   {
     path: '/ai/docs',
-    component: ComponentCreator('/ai/docs','98f'),
+    component: ComponentCreator('/ai/docs','8de'),
     routes: [
       {
         path: '/ai/docs/concept-basics/',
@@ -1325,6 +1325,12 @@ export default [
       {
         path: '/ai/docs/tools/obp',
         component: ComponentCreator('/ai/docs/tools/obp','d90'),
+        exact: true,
+        'sidebar': "tutorialSidebar"
+      },
+      {
+        path: '/ai/docs/tools/pachyderm',
+        component: ComponentCreator('/ai/docs/tools/pachyderm','7d8'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },

@@ -14,14 +14,14 @@ export default {
   "organizationName": "sparsh-ai",
   "projectName": "ai",
   "plugins": [
-    "/Users/sparshagarwal/Desktop/up/o289458/main/node_modules/@cmfcmf/docusaurus-search-local/lib/server/index.js"
+    "/Users/sparshagarwal/Desktop/up/o289458/recohut-main/_docs/node_modules/@cmfcmf/docusaurus-search-local/lib/server/index.js"
   ],
   "presets": [
     [
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "/Users/sparshagarwal/Desktop/up/o289458/main/sidebars.js",
+          "sidebarPath": "/Users/sparshagarwal/Desktop/up/o289458/recohut-main/_docs/sidebars.js",
           "editUrl": "https://github.com/sparsh-ai/ai",
           "remarkPlugins": [
             null
@@ -35,7 +35,7 @@ export default {
           "editUrl": "https://github.com/sparsh-ai/ai/blog/"
         },
         "theme": {
-          "customCss": "/Users/sparshagarwal/Desktop/up/o289458/main/src/css/custom.css"
+          "customCss": "/Users/sparshagarwal/Desktop/up/o289458/recohut-main/_docs/src/css/custom.css"
         }
       }
     ]

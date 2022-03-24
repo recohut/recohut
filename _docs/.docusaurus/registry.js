@@ -202,6 +202,7 @@ export default {
   'a5992364': [() => import(/* webpackChunkName: 'a5992364' */ '~blog/default/ai-blog-tags-streamlit-409.json'), '~blog/default/ai-blog-tags-streamlit-409.json', require.resolveWeak('~blog/default/ai-blog-tags-streamlit-409.json')],
   'a6aa9e1f': [() => import(/* webpackChunkName: 'a6aa9e1f' */ '@theme/BlogListPage'), '@theme/BlogListPage', require.resolveWeak('@theme/BlogListPage')],
   'a6bb01ad': [() => import(/* webpackChunkName: 'a6bb01ad' */ '@site/docs/models/models.mdx'), '@site/docs/models/models.mdx', require.resolveWeak('@site/docs/models/models.mdx')],
+  'a6c44403': [() => import(/* webpackChunkName: 'a6c44403' */ '@site/docs/tools/pachyderm.md'), '@site/docs/tools/pachyderm.md', require.resolveWeak('@site/docs/tools/pachyderm.md')],
   'a76264cd': [() => import(/* webpackChunkName: 'a76264cd' */ '@site/docs/concept-extras/nlp/text-similarity.mdx'), '@site/docs/concept-extras/nlp/text-similarity.mdx', require.resolveWeak('@site/docs/concept-extras/nlp/text-similarity.mdx')],
   'a87219ab': [() => import(/* webpackChunkName: 'a87219ab' */ '@site/docs/models/deepwalk.mdx'), '@site/docs/models/deepwalk.mdx', require.resolveWeak('@site/docs/models/deepwalk.mdx')],
   'a999e6ba': [() => import(/* webpackChunkName: 'a999e6ba' */ '@site/blog/2021-10-01-real-time-news-personalization-with-flink.mdx'), '@site/blog/2021-10-01-real-time-news-personalization-with-flink.mdx', require.resolveWeak('@site/blog/2021-10-01-real-time-news-personalization-with-flink.mdx')],

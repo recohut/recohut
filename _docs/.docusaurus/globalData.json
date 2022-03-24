@@ -869,6 +869,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "tools/pachyderm",
+              "path": "/ai/docs/tools/pachyderm",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "tools/pyspark",
               "path": "/ai/docs/tools/pyspark",
               "sidebar": "tutorialSidebar"

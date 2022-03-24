@@ -13,7 +13,7 @@ const config = {
   title: 'AI',
   tagline: 'AI and ML utils',
   url: 'https://docs.recohut.com',
-  baseUrl: '/ai/',
+  baseUrl: '/recohut/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.svg',
@@ -27,7 +27,7 @@ const config = {
       ({
           docs: {
               sidebarPath: require.resolve('./sidebars.js'),
-              editUrl: 'https://github.com/sparsh-ai/ai',
+              editUrl: 'https://github.com/sparsh-ai/recohut',
               remarkPlugins: [math],
               rehypePlugins: [katex],
             //   lastVersion: 'current',
@@ -42,7 +42,7 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/sparsh-ai/ai/blog/',
+            'https://github.com/sparsh-ai/recohut/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -83,7 +83,7 @@ const config = {
         //     dropdownActiveClassDisabled: true,
         //   },
           {
-            href: 'https://github.com/sparsh-ai/ai',
+            href: 'https://github.com/sparsh-ai/recohut',
             label: 'GitHub',
             position: 'right',
           },
@@ -122,7 +122,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/sparsh-ai/ai',
+                href: 'https://github.com/sparsh-ai/recohut',
               },
               {
                 label: 'Jupyter Notebooks',

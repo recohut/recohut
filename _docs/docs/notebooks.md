@@ -1,7 +1,7 @@
 # Notebooks
 
 
-|  Notebook name                           |   Colab button  |     nbviewer    |
+|  Notebook                           |   Colab  |     nbviewer    |
 |------------------------------------------|-----------------|-----------------|
 |  T469984-Neural-Network-from-scratch.ipynb  |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sparsh-ai/ai/blob/main/nbs/T469984-Neural-Network-from-scratch.ipynb)  |  [![Open In nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.jupyter.org/github/sparsh-ai/ai/blob/main/nbs/T469984-Neural-Network-from-scratch.ipynb)  |
 |  2022-01-03-face-landmarks.ipynb  |  [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sparsh-ai/ai/blob/main/nbs/2022-01-03-face-landmarks.ipynb)  |  [![Open In nbviewer](https://raw.githubusercontent.com/jupyter/design/master/logos/Badges/nbviewer_badge.svg)](https://nbviewer.jupyter.org/github/sparsh-ai/ai/blob/main/nbs/2022-01-03-face-landmarks.ipynb)  |

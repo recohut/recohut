@@ -625,7 +625,7 @@
     "component": "1f391b9e",
     "content": "4c678320"
   },
-  "/ai/docs-98f": {
+  "/ai/docs-8de": {
     "component": "1be78505",
     "versionMetadata": "935f2afb"
   },
@@ -1312,6 +1312,10 @@
   "/ai/docs/tools/obp-d90": {
     "component": "17896441",
     "content": "1127d87b"
+  },
+  "/ai/docs/tools/pachyderm-7d8": {
+    "component": "17896441",
+    "content": "a6c44403"
   },
   "/ai/docs/tools/pyspark-218": {
     "component": "17896441",

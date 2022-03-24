@@ -1,8 +1,8 @@
 {
   "unversionedId": "notebooks",
   "id": "notebooks",
-  "title": "notebooks",
-  "description": "|  Notebook name                           |   Colab button  |     nbviewer    |",
+  "title": "Notebooks",
+  "description": "|  Notebook                           |   Colab  |     nbviewer    |",
   "source": "@site/docs/notebooks.md",
   "sourceDirName": ".",
   "slug": "/notebooks",

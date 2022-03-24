@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[2429],{89612:function(a){a.exports=JSON.parse('{"allTagsPath":"/ai/blog/tags","slug":"/ai/blog/tags/insurance","name":"insurance","count":1,"permalink":"/ai/blog/tags/insurance"}')}}]);

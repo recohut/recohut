@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[4316],{76135:function(e){e.exports=JSON.parse('{"allTagsPath":"/ai/blog/tags","slug":"/ai/blog/tags/object-detection","name":"object detection","count":2,"permalink":"/ai/blog/tags/object-detection"}')}}]);

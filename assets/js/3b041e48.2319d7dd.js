@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[4647],{73684:function(a){a.exports=JSON.parse('{"allTagsPath":"/ai/blog/tags","slug":"/ai/blog/tags/classification","name":"classification","count":1,"permalink":"/ai/blog/tags/classification"}')}}]);

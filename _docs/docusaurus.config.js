@@ -18,7 +18,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/logo.svg',
   organizationName: 'sparsh-ai',
-  projectName: 'ai',
+  projectName: 'recohut',
   plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
   presets: [
     [

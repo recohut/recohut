@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[9615],{50001:function(s){s.exports=JSON.parse('{"allTagsPath":"/recohut/blog/tags","slug":"/recohut/blog/tags/recsys","name":"recsys","count":3,"permalink":"/recohut/blog/tags/recsys"}')}}]);

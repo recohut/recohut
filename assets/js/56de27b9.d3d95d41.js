@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[2399],{58838:function(o){o.exports=JSON.parse('{"allTagsPath":"/recohut/blog/tags","slug":"/recohut/blog/tags/ocr","name":"ocr","count":1,"permalink":"/recohut/blog/tags/ocr"}')}}]);

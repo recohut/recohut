@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[7185],{14518:function(t){t.exports=JSON.parse('{"allTagsPath":"/recohut/blog/tags","slug":"/recohut/blog/tags/chatbot","name":"chatbot","count":1,"permalink":"/recohut/blog/tags/chatbot"}')}}]);

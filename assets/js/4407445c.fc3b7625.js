@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[5221],{28581:function(a){a.exports=JSON.parse('{"allTagsPath":"/ai/blog/tags","slug":"/ai/blog/tags/chatbot","name":"chatbot","count":1,"permalink":"/ai/blog/tags/chatbot"}')}}]);

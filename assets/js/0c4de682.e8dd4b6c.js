@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[2879],{47195:function(e){e.exports=JSON.parse('{"allTagsPath":"/recohut/blog/tags","slug":"/recohut/blog/tags/opencv","name":"opencv","count":1,"permalink":"/recohut/blog/tags/opencv"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[9335],{34681:function(e){e.exports=JSON.parse('{"allTagsPath":"/recohut/blog/tags","slug":"/recohut/blog/tags/healthcare","name":"healthcare","count":2,"permalink":"/recohut/blog/tags/healthcare"}')}}]);

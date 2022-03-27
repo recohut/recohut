@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[5297],{74310:function(a){a.exports=JSON.parse('{"allTagsPath":"/ai/blog/tags","slug":"/ai/blog/tags/aws-beanstalk","name":"aws beanstalk","count":1,"permalink":"/ai/blog/tags/aws-beanstalk"}')}}]);

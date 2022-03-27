@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[3599],{33961:function(s){s.exports=JSON.parse('{"allTagsPath":"/recohut/blog/tags","slug":"/recohut/blog/tags/nlp","name":"nlp","count":5,"permalink":"/recohut/blog/tags/nlp"}')}}]);

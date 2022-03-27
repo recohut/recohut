@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[4690],{30348:function(s){s.exports=JSON.parse('{"allTagsPath":"/recohut/blog/tags","slug":"/recohut/blog/tags/vision","name":"vision","count":9,"permalink":"/recohut/blog/tags/vision"}')}}]);

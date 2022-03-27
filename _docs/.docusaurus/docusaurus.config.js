@@ -7,12 +7,12 @@ export default {
   "title": "AI",
   "tagline": "AI and ML utils",
   "url": "https://docs.recohut.com",
-  "baseUrl": "/ai/",
+  "baseUrl": "/recohut/",
   "onBrokenLinks": "warn",
   "onBrokenMarkdownLinks": "warn",
   "favicon": "img/logo.svg",
   "organizationName": "sparsh-ai",
-  "projectName": "ai",
+  "projectName": "recohut",
   "plugins": [
     "/Users/sparshagarwal/Desktop/up/o289458/recohut-main/_docs/node_modules/@cmfcmf/docusaurus-search-local/lib/server/index.js"
   ],
@@ -22,7 +22,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "/Users/sparshagarwal/Desktop/up/o289458/recohut-main/_docs/sidebars.js",
-          "editUrl": "https://github.com/sparsh-ai/ai",
+          "editUrl": "https://github.com/sparsh-ai/recohut",
           "remarkPlugins": [
             null
           ],
@@ -32,7 +32,7 @@ export default {
         },
         "blog": {
           "showReadingTime": true,
-          "editUrl": "https://github.com/sparsh-ai/ai/blog/"
+          "editUrl": "https://github.com/sparsh-ai/recohut/blog/"
         },
         "theme": {
           "customCss": "/Users/sparshagarwal/Desktop/up/o289458/recohut-main/_docs/src/css/custom.css"
@@ -68,7 +68,7 @@ export default {
           "position": "left"
         },
         {
-          "href": "https://github.com/sparsh-ai/ai",
+          "href": "https://github.com/sparsh-ai/recohut",
           "label": "GitHub",
           "position": "right"
         }
@@ -108,7 +108,7 @@ export default {
             },
             {
               "label": "GitHub",
-              "href": "https://github.com/sparsh-ai/ai"
+              "href": "https://github.com/sparsh-ai/recohut"
             },
             {
               "label": "Jupyter Notebooks",

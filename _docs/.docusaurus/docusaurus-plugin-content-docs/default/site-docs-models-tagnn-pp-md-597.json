@@ -6,18 +6,18 @@
   "source": "@site/docs/models/tagnn-pp.md",
   "sourceDirName": "models",
   "slug": "/models/tagnn-pp",
-  "permalink": "/ai/docs/models/tagnn-pp",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/tagnn-pp.md",
+  "permalink": "/recohut/docs/models/tagnn-pp",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/tagnn-pp.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "TAaMR",
-    "permalink": "/ai/docs/models/taamr"
+    "permalink": "/recohut/docs/models/taamr"
   },
   "next": {
     "title": "TAGNN",
-    "permalink": "/ai/docs/models/tagnn"
+    "permalink": "/recohut/docs/models/tagnn"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/vision/scene-text-recognition.mdx",
   "sourceDirName": "concept-extras/vision",
   "slug": "/concept-extras/vision/scene-text-recognition",
-  "permalink": "/ai/docs/concept-extras/vision/scene-text-recognition",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/vision/scene-text-recognition.mdx",
+  "permalink": "/recohut/docs/concept-extras/vision/scene-text-recognition",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/vision/scene-text-recognition.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Pose Estimation",
-    "permalink": "/ai/docs/concept-extras/vision/pose-estimation"
+    "permalink": "/recohut/docs/concept-extras/vision/pose-estimation"
   },
   "next": {
     "title": "Video Action Recognition",
-    "permalink": "/ai/docs/concept-extras/vision/video-action-recognition"
+    "permalink": "/recohut/docs/concept-extras/vision/video-action-recognition"
   }
 }

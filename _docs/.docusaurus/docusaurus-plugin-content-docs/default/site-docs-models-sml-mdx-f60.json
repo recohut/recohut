@@ -6,18 +6,18 @@
   "source": "@site/docs/models/sml.mdx",
   "sourceDirName": "models",
   "slug": "/models/sml",
-  "permalink": "/ai/docs/models/sml",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sml.mdx",
+  "permalink": "/recohut/docs/models/sml",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/sml.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "SLIST",
-    "permalink": "/ai/docs/models/slist"
+    "permalink": "/recohut/docs/models/slist"
   },
   "next": {
     "title": "SPop",
-    "permalink": "/ai/docs/models/spop"
+    "permalink": "/recohut/docs/models/spop"
   }
 }

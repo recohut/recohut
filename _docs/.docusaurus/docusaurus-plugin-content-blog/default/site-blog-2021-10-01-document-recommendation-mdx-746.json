@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/document-recommendation",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-document-recommendation.mdx",
+  "permalink": "/recohut/blog/2021/10/01/document-recommendation",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-document-recommendation.mdx",
   "source": "@site/blog/2021-10-01-document-recommendation.mdx",
   "title": "Document Recommendation",
   "description": "/img/content-blog-raw-blog-document-recommendation-untitled.png",
@@ -9,11 +9,11 @@
   "tags": [
     {
       "label": "nlp",
-      "permalink": "/ai/blog/tags/nlp"
+      "permalink": "/recohut/blog/tags/nlp"
     },
     {
       "label": "similarity",
-      "permalink": "/ai/blog/tags/similarity"
+      "permalink": "/recohut/blog/tags/similarity"
     }
   ],
   "readingTime": 1.285,
@@ -37,10 +37,10 @@
   },
   "prevItem": {
     "title": "Distributed Training of Recommender Systems",
-    "permalink": "/ai/blog/2021/10/01/distributed-training-of-recommender-systems"
+    "permalink": "/recohut/blog/2021/10/01/distributed-training-of-recommender-systems"
   },
   "nextItem": {
     "title": "Fake Voice Detection",
-    "permalink": "/ai/blog/2021/10/01/fake-voice-detection"
+    "permalink": "/recohut/blog/2021/10/01/fake-voice-detection"
   }
 }

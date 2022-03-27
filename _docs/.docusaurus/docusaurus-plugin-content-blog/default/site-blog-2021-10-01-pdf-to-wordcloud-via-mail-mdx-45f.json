@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/pdf-to-wordcloud-via-mail",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-pdf-to-wordcloud-via-mail.mdx",
+  "permalink": "/recohut/blog/2021/10/01/pdf-to-wordcloud-via-mail",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-pdf-to-wordcloud-via-mail.mdx",
   "source": "@site/blog/2021-10-01-pdf-to-wordcloud-via-mail.mdx",
   "title": "PDF to Wordcloud via Mail",
   "description": "/img/content-blog-raw-blog-pdf-to-wordcloud-via-mail-untitled.png",
@@ -24,10 +24,10 @@
   },
   "prevItem": {
     "title": "OCR experiments",
-    "permalink": "/ai/blog/2021/10/01/ocr-experiments"
+    "permalink": "/recohut/blog/2021/10/01/ocr-experiments"
   },
   "nextItem": {
     "title": "Personalized Unexpectedness in  Recommender Systems",
-    "permalink": "/ai/blog/2021/10/01/personalized-unexpectedness-in-recommender-systems"
+    "permalink": "/recohut/blog/2021/10/01/personalized-unexpectedness-in-recommender-systems"
   }
 }

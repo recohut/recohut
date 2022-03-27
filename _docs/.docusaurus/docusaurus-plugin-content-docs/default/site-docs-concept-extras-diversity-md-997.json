@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/diversity.md",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/diversity",
-  "permalink": "/ai/docs/concept-extras/diversity",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/diversity.md",
+  "permalink": "/recohut/docs/concept-extras/diversity",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/diversity.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Data Science",
-    "permalink": "/ai/docs/concept-extras/data-science"
+    "permalink": "/recohut/docs/concept-extras/data-science"
   },
   "next": {
     "title": "Emerging Concepts in Recommender Systems",
-    "permalink": "/ai/docs/concept-extras/emerging-concepts-in-recommender-systems"
+    "permalink": "/recohut/docs/concept-extras/emerging-concepts-in-recommender-systems"
   }
 }

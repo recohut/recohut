@@ -6,18 +6,18 @@
   "source": "@site/docs/tools/pachyderm.md",
   "sourceDirName": "tools",
   "slug": "/tools/pachyderm",
-  "permalink": "/ai/docs/tools/pachyderm",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/tools/pachyderm.md",
+  "permalink": "/recohut/docs/tools/pachyderm",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/tools/pachyderm.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "OBP",
-    "permalink": "/ai/docs/tools/obp"
+    "permalink": "/recohut/docs/tools/obp"
   },
   "next": {
     "title": "PySpark",
-    "permalink": "/ai/docs/tools/pyspark"
+    "permalink": "/recohut/docs/tools/pyspark"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/tutorials/name-address-parsing.mdx",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/name-address-parsing",
-  "permalink": "/ai/docs/tutorials/name-address-parsing",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/name-address-parsing.mdx",
+  "permalink": "/recohut/docs/tutorials/name-address-parsing",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/tutorials/name-address-parsing.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Multi-Touch Attribution",
-    "permalink": "/ai/docs/tutorials/multi-touch-attribution"
+    "permalink": "/recohut/docs/tutorials/multi-touch-attribution"
   },
   "next": {
     "title": "Negative Implicit Feedback in Recommendations",
-    "permalink": "/ai/docs/tutorials/negative-implicit-feedback-rec"
+    "permalink": "/recohut/docs/tutorials/negative-implicit-feedback-rec"
   }
 }

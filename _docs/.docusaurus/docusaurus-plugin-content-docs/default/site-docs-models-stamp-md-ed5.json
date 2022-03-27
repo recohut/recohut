@@ -6,18 +6,18 @@
   "source": "@site/docs/models/stamp.md",
   "sourceDirName": "models",
   "slug": "/models/stamp",
-  "permalink": "/ai/docs/models/stamp",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/stamp.md",
+  "permalink": "/recohut/docs/models/stamp",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/stamp.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "SSE-PT",
-    "permalink": "/ai/docs/models/sse-pt"
+    "permalink": "/recohut/docs/models/sse-pt"
   },
   "next": {
     "title": "Struc2Vec",
-    "permalink": "/ai/docs/models/struc2vec"
+    "permalink": "/recohut/docs/models/struc2vec"
   }
 }

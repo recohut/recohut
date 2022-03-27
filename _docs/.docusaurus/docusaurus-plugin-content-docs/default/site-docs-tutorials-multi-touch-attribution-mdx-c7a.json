@@ -6,18 +6,18 @@
   "source": "@site/docs/tutorials/multi-touch-attribution.mdx",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/multi-touch-attribution",
-  "permalink": "/ai/docs/tutorials/multi-touch-attribution",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/multi-touch-attribution.mdx",
+  "permalink": "/recohut/docs/tutorials/multi-touch-attribution",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/tutorials/multi-touch-attribution.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "MLOps",
-    "permalink": "/ai/docs/tutorials/mlops"
+    "permalink": "/recohut/docs/tutorials/mlops"
   },
   "next": {
     "title": "Name and Address Parsing",
-    "permalink": "/ai/docs/tutorials/name-address-parsing"
+    "permalink": "/recohut/docs/tutorials/name-address-parsing"
   }
 }

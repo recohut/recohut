@@ -6,14 +6,14 @@
   "source": "@site/docs/projects.mdx",
   "sourceDirName": ".",
   "slug": "/projects",
-  "permalink": "/ai/docs/projects",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/projects.mdx",
+  "permalink": "/recohut/docs/projects",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/projects.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Notebooks",
-    "permalink": "/ai/docs/notebooks"
+    "permalink": "/recohut/docs/notebooks"
   }
 }

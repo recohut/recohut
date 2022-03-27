@@ -6,18 +6,18 @@
   "source": "@site/docs/models/shared-bottom.mdx",
   "sourceDirName": "models",
   "slug": "/models/shared-bottom",
-  "permalink": "/ai/docs/models/shared-bottom",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/shared-bottom.mdx",
+  "permalink": "/recohut/docs/models/shared-bottom",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/shared-bottom.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "SGL",
-    "permalink": "/ai/docs/models/sgl"
+    "permalink": "/recohut/docs/models/sgl"
   },
   "next": {
     "title": "SiReN",
-    "permalink": "/ai/docs/models/siren"
+    "permalink": "/recohut/docs/models/siren"
   }
 }

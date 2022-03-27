@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/success-stories/alipay-ctr.mdx",
   "sourceDirName": "concept-extras/success-stories",
   "slug": "/concept-extras/success-stories/alipay-ctr",
-  "permalink": "/ai/docs/concept-extras/success-stories/alipay-ctr",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/alipay-ctr.mdx",
+  "permalink": "/recohut/docs/concept-extras/success-stories/alipay-ctr",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/success-stories/alipay-ctr.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Airbnb Experiences",
-    "permalink": "/ai/docs/concept-extras/success-stories/airbnb-experiences"
+    "permalink": "/recohut/docs/concept-extras/success-stories/airbnb-experiences"
   },
   "next": {
     "title": "Doordash Contextual Bandit",
-    "permalink": "/ai/docs/concept-extras/success-stories/doordash-contextual-bandit"
+    "permalink": "/recohut/docs/concept-extras/success-stories/doordash-contextual-bandit"
   }
 }

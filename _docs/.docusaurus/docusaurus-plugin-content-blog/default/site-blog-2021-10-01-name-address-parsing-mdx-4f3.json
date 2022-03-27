@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/name-&-address-parsing",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-name-&-address-parsing.mdx",
+  "permalink": "/recohut/blog/2021/10/01/name-&-address-parsing",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-name-&-address-parsing.mdx",
   "source": "@site/blog/2021-10-01-name-&-address-parsing.mdx",
   "title": "Name & Address Parsing",
   "description": "/img/content-blog-raw-blog-name-&-address-parsing-untitled.png",
@@ -9,19 +9,19 @@
   "tags": [
     {
       "label": "app",
-      "permalink": "/ai/blog/tags/app"
+      "permalink": "/recohut/blog/tags/app"
     },
     {
       "label": "flask",
-      "permalink": "/ai/blog/tags/flask"
+      "permalink": "/recohut/blog/tags/flask"
     },
     {
       "label": "ner",
-      "permalink": "/ai/blog/tags/ner"
+      "permalink": "/recohut/blog/tags/ner"
     },
     {
       "label": "nlp",
-      "permalink": "/ai/blog/tags/nlp"
+      "permalink": "/recohut/blog/tags/nlp"
     }
   ],
   "readingTime": 3.8,
@@ -47,10 +47,10 @@
   },
   "prevItem": {
     "title": "Insurance Personalization",
-    "permalink": "/ai/blog/2021/10/01/insurance-personalization"
+    "permalink": "/recohut/blog/2021/10/01/insurance-personalization"
   },
   "nextItem": {
     "title": "Object Detection Hands-on Exercises",
-    "permalink": "/ai/blog/2021/10/01/object-detection-hands-on-exercises"
+    "permalink": "/recohut/blog/2021/10/01/object-detection-hands-on-exercises"
   }
 }

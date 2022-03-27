@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/jensen-shannon-divergence.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/jensen-shannon-divergence",
-  "permalink": "/ai/docs/concept-extras/jensen-shannon-divergence",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/jensen-shannon-divergence.mdx",
+  "permalink": "/recohut/docs/concept-extras/jensen-shannon-divergence",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/jensen-shannon-divergence.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Incremental Learning",
-    "permalink": "/ai/docs/concept-extras/incremental-learning"
+    "permalink": "/recohut/docs/concept-extras/incremental-learning"
   },
   "next": {
     "title": "Meta Learning",
-    "permalink": "/ai/docs/concept-extras/meta-learning"
+    "permalink": "/recohut/docs/concept-extras/meta-learning"
   }
 }

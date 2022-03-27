@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/model-retraining.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/model-retraining",
-  "permalink": "/ai/docs/concept-extras/model-retraining",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/model-retraining.mdx",
+  "permalink": "/recohut/docs/concept-extras/model-retraining",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/model-retraining.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Model Deployment",
-    "permalink": "/ai/docs/concept-extras/model-deployment"
+    "permalink": "/recohut/docs/concept-extras/model-deployment"
   },
   "next": {
     "title": "Multi-Objective Optimization",
-    "permalink": "/ai/docs/concept-extras/multi-objective-optimization"
+    "permalink": "/recohut/docs/concept-extras/multi-objective-optimization"
   }
 }

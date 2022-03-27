@@ -6,18 +6,18 @@
   "source": "@site/docs/tutorials/mlops.mdx",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/mlops",
-  "permalink": "/ai/docs/tutorials/mlops",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/mlops.mdx",
+  "permalink": "/recohut/docs/tutorials/mlops",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/tutorials/mlops.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Matrix Factorizations",
-    "permalink": "/ai/docs/tutorials/matrix-factorizations"
+    "permalink": "/recohut/docs/tutorials/matrix-factorizations"
   },
   "next": {
     "title": "Multi-Touch Attribution",
-    "permalink": "/ai/docs/tutorials/multi-touch-attribution"
+    "permalink": "/recohut/docs/tutorials/multi-touch-attribution"
   }
 }

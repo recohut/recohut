@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/mlops.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/mlops",
-  "permalink": "/ai/docs/concept-extras/mlops",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/mlops.mdx",
+  "permalink": "/recohut/docs/concept-extras/mlops",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/mlops.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Meta Learning",
-    "permalink": "/ai/docs/concept-extras/meta-learning"
+    "permalink": "/recohut/docs/concept-extras/meta-learning"
   },
   "next": {
     "title": "Model Deployment",
-    "permalink": "/ai/docs/concept-extras/model-deployment"
+    "permalink": "/recohut/docs/concept-extras/model-deployment"
   }
 }

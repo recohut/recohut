@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/object-detection-with-opencv",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-object-detection-with-opencv.mdx",
+  "permalink": "/recohut/blog/2021/10/01/object-detection-with-opencv",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-object-detection-with-opencv.mdx",
   "source": "@site/blog/2021-10-01-object-detection-with-opencv.mdx",
   "title": "Object detection with OpenCV",
   "description": "Face detection",
@@ -9,15 +9,15 @@
   "tags": [
     {
       "label": "object detection",
-      "permalink": "/ai/blog/tags/object-detection"
+      "permalink": "/recohut/blog/tags/object-detection"
     },
     {
       "label": "opencv",
-      "permalink": "/ai/blog/tags/opencv"
+      "permalink": "/recohut/blog/tags/opencv"
     },
     {
       "label": "vision",
-      "permalink": "/ai/blog/tags/vision"
+      "permalink": "/recohut/blog/tags/vision"
     }
   ],
   "readingTime": 1.565,
@@ -42,10 +42,10 @@
   },
   "prevItem": {
     "title": "Object Detection Hands-on Exercises",
-    "permalink": "/ai/blog/2021/10/01/object-detection-hands-on-exercises"
+    "permalink": "/recohut/blog/2021/10/01/object-detection-hands-on-exercises"
   },
   "nextItem": {
     "title": "Object detection with YOLO3",
-    "permalink": "/ai/blog/2021/10/01/object-detection-with-yolo3"
+    "permalink": "/recohut/blog/2021/10/01/object-detection-with-yolo3"
   }
 }

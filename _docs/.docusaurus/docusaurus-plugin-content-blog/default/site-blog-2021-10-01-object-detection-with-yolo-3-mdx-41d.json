@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/object-detection-with-yolo3",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-object-detection-with-yolo3.mdx",
+  "permalink": "/recohut/blog/2021/10/01/object-detection-with-yolo3",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-object-detection-with-yolo3.mdx",
   "source": "@site/blog/2021-10-01-object-detection-with-yolo3.mdx",
   "title": "Object detection with YOLO3",
   "description": "Live app",
@@ -9,15 +9,15 @@
   "tags": [
     {
       "label": "app",
-      "permalink": "/ai/blog/tags/app"
+      "permalink": "/recohut/blog/tags/app"
     },
     {
       "label": "streamlit",
-      "permalink": "/ai/blog/tags/streamlit"
+      "permalink": "/recohut/blog/tags/streamlit"
     },
     {
       "label": "vision",
-      "permalink": "/ai/blog/tags/vision"
+      "permalink": "/recohut/blog/tags/vision"
     }
   ],
   "readingTime": 1.975,
@@ -42,10 +42,10 @@
   },
   "prevItem": {
     "title": "Object detection with OpenCV",
-    "permalink": "/ai/blog/2021/10/01/object-detection-with-opencv"
+    "permalink": "/recohut/blog/2021/10/01/object-detection-with-opencv"
   },
   "nextItem": {
     "title": "OCR experiments",
-    "permalink": "/ai/blog/2021/10/01/ocr-experiments"
+    "permalink": "/recohut/blog/2021/10/01/ocr-experiments"
   }
 }

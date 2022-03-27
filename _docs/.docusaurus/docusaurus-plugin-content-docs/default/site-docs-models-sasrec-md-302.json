@@ -6,18 +6,18 @@
   "source": "@site/docs/models/sasrec.md",
   "sourceDirName": "models",
   "slug": "/models/sasrec",
-  "permalink": "/ai/docs/models/sasrec",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sasrec.md",
+  "permalink": "/recohut/docs/models/sasrec",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/sasrec.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "SARSA",
-    "permalink": "/ai/docs/models/sarsa"
+    "permalink": "/recohut/docs/models/sarsa"
   },
   "next": {
     "title": "SDNE",
-    "permalink": "/ai/docs/models/sdne"
+    "permalink": "/recohut/docs/models/sdne"
   }
 }

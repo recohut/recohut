@@ -6,18 +6,18 @@
   "source": "@site/docs/models/drr.md",
   "sourceDirName": "models",
   "slug": "/models/drr",
-  "permalink": "/ai/docs/models/drr",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/drr.md",
+  "permalink": "/recohut/docs/models/drr",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/drr.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "DRQN",
-    "permalink": "/ai/docs/models/drqn"
+    "permalink": "/recohut/docs/models/drqn"
   },
   "next": {
     "title": "Dueling DQN",
-    "permalink": "/ai/docs/models/dueling-dqn"
+    "permalink": "/recohut/docs/models/dueling-dqn"
   }
 }

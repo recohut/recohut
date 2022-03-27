@@ -6,18 +6,18 @@
   "source": "@site/docs/models/asmg.md",
   "sourceDirName": "models",
   "slug": "/models/asmg",
-  "permalink": "/ai/docs/models/asmg",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/asmg.md",
+  "permalink": "/recohut/docs/models/asmg",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/asmg.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "AR",
-    "permalink": "/ai/docs/models/ar"
+    "permalink": "/recohut/docs/models/ar"
   },
   "next": {
     "title": "AttRec",
-    "permalink": "/ai/docs/models/attrec"
+    "permalink": "/recohut/docs/models/attrec"
   }
 }

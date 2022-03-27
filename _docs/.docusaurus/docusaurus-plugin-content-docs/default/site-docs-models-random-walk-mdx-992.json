@@ -6,18 +6,18 @@
   "source": "@site/docs/models/random_walk.mdx",
   "sourceDirName": "models",
   "slug": "/models/random_walk",
-  "permalink": "/ai/docs/models/random_walk",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/random_walk.mdx",
+  "permalink": "/recohut/docs/models/random_walk",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/random_walk.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Q-learning",
-    "permalink": "/ai/docs/models/q-learning"
+    "permalink": "/recohut/docs/models/q-learning"
   },
   "next": {
     "title": "RKMF",
-    "permalink": "/ai/docs/models/rkmf"
+    "permalink": "/recohut/docs/models/rkmf"
   }
 }

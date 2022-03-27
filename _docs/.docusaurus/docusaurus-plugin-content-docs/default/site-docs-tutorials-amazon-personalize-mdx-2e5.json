@@ -6,18 +6,18 @@
   "source": "@site/docs/tutorials/amazon-personalize.mdx",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/amazon-personalize",
-  "permalink": "/ai/docs/tutorials/amazon-personalize",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/amazon-personalize.mdx",
+  "permalink": "/recohut/docs/tutorials/amazon-personalize",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/tutorials/amazon-personalize.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "xDeepFM",
-    "permalink": "/ai/docs/models/xdeepfm"
+    "permalink": "/recohut/docs/models/xdeepfm"
   },
   "next": {
     "title": "Database Connections",
-    "permalink": "/ai/docs/tutorials/database-conn"
+    "permalink": "/recohut/docs/tutorials/database-conn"
   }
 }

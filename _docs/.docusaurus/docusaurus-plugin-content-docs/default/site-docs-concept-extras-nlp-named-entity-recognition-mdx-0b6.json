@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/nlp/named-entity-recognition.mdx",
   "sourceDirName": "concept-extras/nlp",
   "slug": "/concept-extras/nlp/named-entity-recognition",
-  "permalink": "/ai/docs/concept-extras/nlp/named-entity-recognition",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/nlp/named-entity-recognition.mdx",
+  "permalink": "/recohut/docs/concept-extras/nlp/named-entity-recognition",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/nlp/named-entity-recognition.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Language Modeling",
-    "permalink": "/ai/docs/concept-extras/nlp/language-modeling"
+    "permalink": "/recohut/docs/concept-extras/nlp/language-modeling"
   },
   "next": {
     "title": "Text Analysis",
-    "permalink": "/ai/docs/concept-extras/nlp/text-analysis"
+    "permalink": "/recohut/docs/concept-extras/nlp/text-analysis"
   }
 }

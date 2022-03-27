@@ -6,18 +6,18 @@
   "source": "@site/docs/models/q-learning.md",
   "sourceDirName": "models",
   "slug": "/models/q-learning",
-  "permalink": "/ai/docs/models/q-learning",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/q-learning.md",
+  "permalink": "/recohut/docs/models/q-learning",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/q-learning.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "PPO",
-    "permalink": "/ai/docs/models/ppo"
+    "permalink": "/recohut/docs/models/ppo"
   },
   "next": {
     "title": "Random Walk",
-    "permalink": "/ai/docs/models/random_walk"
+    "permalink": "/recohut/docs/models/random_walk"
   }
 }

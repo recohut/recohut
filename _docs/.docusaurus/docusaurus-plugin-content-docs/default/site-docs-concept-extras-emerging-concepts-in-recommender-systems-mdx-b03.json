@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/emerging-concepts-in-recommender-systems.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/emerging-concepts-in-recommender-systems",
-  "permalink": "/ai/docs/concept-extras/emerging-concepts-in-recommender-systems",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/emerging-concepts-in-recommender-systems.mdx",
+  "permalink": "/recohut/docs/concept-extras/emerging-concepts-in-recommender-systems",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/emerging-concepts-in-recommender-systems.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Diversity",
-    "permalink": "/ai/docs/concept-extras/diversity"
+    "permalink": "/recohut/docs/concept-extras/diversity"
   },
   "next": {
     "title": "Graph Embeddings",
-    "permalink": "/ai/docs/concept-extras/graph-embeddings"
+    "permalink": "/recohut/docs/concept-extras/graph-embeddings"
   }
 }

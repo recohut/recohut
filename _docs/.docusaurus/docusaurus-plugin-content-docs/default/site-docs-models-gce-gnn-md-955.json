@@ -6,18 +6,18 @@
   "source": "@site/docs/models/gce-gnn.md",
   "sourceDirName": "models",
   "slug": "/models/gce-gnn",
-  "permalink": "/ai/docs/models/gce-gnn",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/gce-gnn.md",
+  "permalink": "/recohut/docs/models/gce-gnn",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/gce-gnn.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "GC-SAN",
-    "permalink": "/ai/docs/models/gc-san"
+    "permalink": "/recohut/docs/models/gc-san"
   },
   "next": {
     "title": "GLMix",
-    "permalink": "/ai/docs/models/glmix"
+    "permalink": "/recohut/docs/models/glmix"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/models/ngcf.md",
   "sourceDirName": "models",
   "slug": "/models/ngcf",
-  "permalink": "/ai/docs/models/ngcf",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/ngcf.md",
+  "permalink": "/recohut/docs/models/ngcf",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/ngcf.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "NeuMF",
-    "permalink": "/ai/docs/models/neumf"
+    "permalink": "/recohut/docs/models/neumf"
   },
   "next": {
     "title": "NMRN",
-    "permalink": "/ai/docs/models/nmrn"
+    "permalink": "/recohut/docs/models/nmrn"
   }
 }

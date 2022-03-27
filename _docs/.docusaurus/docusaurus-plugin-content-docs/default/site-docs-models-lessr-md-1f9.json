@@ -6,18 +6,18 @@
   "source": "@site/docs/models/lessr.md",
   "sourceDirName": "models",
   "slug": "/models/lessr",
-  "permalink": "/ai/docs/models/lessr",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/lessr.md",
+  "permalink": "/recohut/docs/models/lessr",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/lessr.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "KHGT",
-    "permalink": "/ai/docs/models/khgt"
+    "permalink": "/recohut/docs/models/khgt"
   },
   "next": {
     "title": "LightFM WARP",
-    "permalink": "/ai/docs/models/lightfm-warp"
+    "permalink": "/recohut/docs/models/lightfm-warp"
   }
 }

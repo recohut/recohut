@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/distributed-training-of-recommender-systems",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-distributed-training-of-recommender-systems.mdx",
+  "permalink": "/recohut/blog/2021/10/01/distributed-training-of-recommender-systems",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-distributed-training-of-recommender-systems.mdx",
   "source": "@site/blog/2021-10-01-distributed-training-of-recommender-systems.mdx",
   "title": "Distributed Training of Recommender Systems",
   "description": "The usage and importance of recommender systems are increasing at a fast pace. And deep learning is gaining traction as the preferred choice for model architecture. Giants like Google and Facebook are already using recommenders to earn billions of dollars.",
@@ -9,11 +9,11 @@
   "tags": [
     {
       "label": "distributed",
-      "permalink": "/ai/blog/tags/distributed"
+      "permalink": "/recohut/blog/tags/distributed"
     },
     {
       "label": "recsys",
-      "permalink": "/ai/blog/tags/recsys"
+      "permalink": "/recohut/blog/tags/recsys"
     }
   ],
   "readingTime": 5.85,
@@ -37,10 +37,10 @@
   },
   "prevItem": {
     "title": "Detectron 2",
-    "permalink": "/ai/blog/2021/10/01/detectron-2"
+    "permalink": "/recohut/blog/2021/10/01/detectron-2"
   },
   "nextItem": {
     "title": "Document Recommendation",
-    "permalink": "/ai/blog/2021/10/01/document-recommendation"
+    "permalink": "/recohut/blog/2021/10/01/document-recommendation"
   }
 }

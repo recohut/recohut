@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/tools-for-building-recommender-systems",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-tools-for-building-recommender-systems.mdx",
+  "permalink": "/recohut/blog/2021/10/01/tools-for-building-recommender-systems",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-tools-for-building-recommender-systems.mdx",
   "source": "@site/blog/2021-10-01-tools-for-building-recommender-systems.mdx",
   "title": "Tools for building recommender systems",
   "description": "/img/content-blog-raw-blog-tools-for-building-recommender-systems-untitled.png",
@@ -9,11 +9,11 @@
   "tags": [
     {
       "label": "recsys",
-      "permalink": "/ai/blog/tags/recsys"
+      "permalink": "/recohut/blog/tags/recsys"
     },
     {
       "label": "tool",
-      "permalink": "/ai/blog/tags/tool"
+      "permalink": "/recohut/blog/tags/tool"
     }
   ],
   "readingTime": 11.025,
@@ -37,10 +37,10 @@
   },
   "prevItem": {
     "title": "The progression of analytics in enterprises",
-    "permalink": "/ai/blog/2021/10/01/the-progression-of-analytics-in-enterprises"
+    "permalink": "/recohut/blog/2021/10/01/the-progression-of-analytics-in-enterprises"
   },
   "nextItem": {
     "title": "Vehicle Suggestions",
-    "permalink": "/ai/blog/2021/10/01/vehicle-suggestions"
+    "permalink": "/recohut/blog/2021/10/01/vehicle-suggestions"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/success-stories/doordash-contextual-bandit.md",
   "sourceDirName": "concept-extras/success-stories",
   "slug": "/concept-extras/success-stories/doordash-contextual-bandit",
-  "permalink": "/ai/docs/concept-extras/success-stories/doordash-contextual-bandit",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/doordash-contextual-bandit.md",
+  "permalink": "/recohut/docs/concept-extras/success-stories/doordash-contextual-bandit",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/success-stories/doordash-contextual-bandit.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Alibaba",
-    "permalink": "/ai/docs/concept-extras/success-stories/alipay-ctr"
+    "permalink": "/recohut/docs/concept-extras/success-stories/alipay-ctr"
   },
   "next": {
     "title": "Etsy Personalization",
-    "permalink": "/ai/docs/concept-extras/success-stories/etsy-personalization"
+    "permalink": "/recohut/docs/concept-extras/success-stories/etsy-personalization"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/models/biasonly.md",
   "sourceDirName": "models",
   "slug": "/models/biasonly",
-  "permalink": "/ai/docs/models/biasonly",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/biasonly.md",
+  "permalink": "/recohut/docs/models/biasonly",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/biasonly.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Behavior Propensity Modeling",
-    "permalink": "/ai/docs/models/beh-prop"
+    "permalink": "/recohut/docs/models/beh-prop"
   },
   "next": {
     "title": "BigGraph",
-    "permalink": "/ai/docs/models/biggraph"
+    "permalink": "/recohut/docs/models/biggraph"
   }
 }

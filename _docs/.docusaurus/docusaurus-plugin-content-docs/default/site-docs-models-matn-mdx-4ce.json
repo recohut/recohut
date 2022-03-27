@@ -6,18 +6,18 @@
   "source": "@site/docs/models/matn.mdx",
   "sourceDirName": "models",
   "slug": "/models/matn",
-  "permalink": "/ai/docs/models/matn",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/matn.mdx",
+  "permalink": "/recohut/docs/models/matn",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/matn.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Markov Chains",
-    "permalink": "/ai/docs/models/markov-chains"
+    "permalink": "/recohut/docs/models/markov-chains"
   },
   "next": {
     "title": "MB-GMN",
-    "permalink": "/ai/docs/models/mb-gmn"
+    "permalink": "/recohut/docs/models/mb-gmn"
   }
 }

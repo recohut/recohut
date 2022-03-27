@@ -6,18 +6,18 @@
   "source": "@site/docs/models/mian.md",
   "sourceDirName": "models",
   "slug": "/models/mian",
-  "permalink": "/ai/docs/models/mian",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/mian.md",
+  "permalink": "/recohut/docs/models/mian",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/mian.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "MF",
-    "permalink": "/ai/docs/models/mf"
+    "permalink": "/recohut/docs/models/mf"
   },
   "next": {
     "title": "MMoE",
-    "permalink": "/ai/docs/models/mmoe"
+    "permalink": "/recohut/docs/models/mmoe"
   }
 }

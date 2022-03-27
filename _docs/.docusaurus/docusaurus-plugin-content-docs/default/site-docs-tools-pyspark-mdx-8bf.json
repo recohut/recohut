@@ -6,18 +6,18 @@
   "source": "@site/docs/tools/pyspark.mdx",
   "sourceDirName": "tools",
   "slug": "/tools/pyspark",
-  "permalink": "/ai/docs/tools/pyspark",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/tools/pyspark.mdx",
+  "permalink": "/recohut/docs/tools/pyspark",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/tools/pyspark.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Pachyderm",
-    "permalink": "/ai/docs/tools/pachyderm"
+    "permalink": "/recohut/docs/tools/pachyderm"
   },
   "next": {
     "title": "River",
-    "permalink": "/ai/docs/tools/river"
+    "permalink": "/recohut/docs/tools/river"
   }
 }

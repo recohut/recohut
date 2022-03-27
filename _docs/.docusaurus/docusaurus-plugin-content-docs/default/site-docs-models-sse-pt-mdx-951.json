@@ -6,18 +6,18 @@
   "source": "@site/docs/models/sse-pt.mdx",
   "sourceDirName": "models",
   "slug": "/models/sse-pt",
-  "permalink": "/ai/docs/models/sse-pt",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sse-pt.mdx",
+  "permalink": "/recohut/docs/models/sse-pt",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/sse-pt.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "SR-SAN",
-    "permalink": "/ai/docs/models/sr-san"
+    "permalink": "/recohut/docs/models/sr-san"
   },
   "next": {
     "title": "STAMP",
-    "permalink": "/ai/docs/models/stamp"
+    "permalink": "/recohut/docs/models/stamp"
   }
 }

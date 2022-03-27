@@ -6,18 +6,18 @@
   "source": "@site/docs/models/dgtn.md",
   "sourceDirName": "models",
   "slug": "/models/dgtn",
-  "permalink": "/ai/docs/models/dgtn",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/dgtn.md",
+  "permalink": "/recohut/docs/models/dgtn",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/dgtn.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "DeepWalk",
-    "permalink": "/ai/docs/models/deepwalk"
+    "permalink": "/recohut/docs/models/deepwalk"
   },
   "next": {
     "title": "DM",
-    "permalink": "/ai/docs/models/dm"
+    "permalink": "/recohut/docs/models/dm"
   }
 }

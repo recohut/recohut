@@ -6,18 +6,18 @@
   "source": "@site/docs/tools/tools.mdx",
   "sourceDirName": "tools",
   "slug": "/tools/",
-  "permalink": "/ai/docs/tools/",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/tools/tools.mdx",
+  "permalink": "/recohut/docs/tools/",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/tools/tools.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Unix shell",
-    "permalink": "/ai/docs/snippets/unix-shell-snippets"
+    "permalink": "/recohut/docs/snippets/unix-shell-snippets"
   },
   "next": {
     "title": "OBP",
-    "permalink": "/ai/docs/tools/obp"
+    "permalink": "/recohut/docs/tools/obp"
   }
 }

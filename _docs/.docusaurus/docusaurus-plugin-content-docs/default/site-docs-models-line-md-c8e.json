@@ -6,18 +6,18 @@
   "source": "@site/docs/models/line.md",
   "sourceDirName": "models",
   "slug": "/models/line",
-  "permalink": "/ai/docs/models/line",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/line.md",
+  "permalink": "/recohut/docs/models/line",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/line.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "LightGCN",
-    "permalink": "/ai/docs/models/lightgcn"
+    "permalink": "/recohut/docs/models/lightgcn"
   },
   "next": {
     "title": "LIRD",
-    "permalink": "/ai/docs/models/lird"
+    "permalink": "/recohut/docs/models/lird"
   }
 }

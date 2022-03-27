@@ -6,18 +6,18 @@
   "source": "@site/docs/models/deepwalk.mdx",
   "sourceDirName": "models",
   "slug": "/models/deepwalk",
-  "permalink": "/ai/docs/models/deepwalk",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/deepwalk.mdx",
+  "permalink": "/recohut/docs/models/deepwalk",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/deepwalk.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "DeepFM",
-    "permalink": "/ai/docs/models/deepfm"
+    "permalink": "/recohut/docs/models/deepfm"
   },
   "next": {
     "title": "DGTN",
-    "permalink": "/ai/docs/models/dgtn"
+    "permalink": "/recohut/docs/models/dgtn"
   }
 }

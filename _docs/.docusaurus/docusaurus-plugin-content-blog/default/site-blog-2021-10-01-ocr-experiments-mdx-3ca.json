@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/ocr-experiments",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-ocr-experiments.mdx",
+  "permalink": "/recohut/blog/2021/10/01/ocr-experiments",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-ocr-experiments.mdx",
   "source": "@site/blog/2021-10-01-ocr-experiments.mdx",
   "title": "OCR experiments",
   "description": "/img/content-blog-raw-blog-ocr-experiments-untitled.png",
@@ -9,11 +9,11 @@
   "tags": [
     {
       "label": "ocr",
-      "permalink": "/ai/blog/tags/ocr"
+      "permalink": "/recohut/blog/tags/ocr"
     },
     {
       "label": "vision",
-      "permalink": "/ai/blog/tags/vision"
+      "permalink": "/recohut/blog/tags/vision"
     }
   ],
   "readingTime": 1.155,
@@ -37,10 +37,10 @@
   },
   "prevItem": {
     "title": "Object detection with YOLO3",
-    "permalink": "/ai/blog/2021/10/01/object-detection-with-yolo3"
+    "permalink": "/recohut/blog/2021/10/01/object-detection-with-yolo3"
   },
   "nextItem": {
     "title": "PDF to Wordcloud via Mail",
-    "permalink": "/ai/blog/2021/10/01/pdf-to-wordcloud-via-mail"
+    "permalink": "/recohut/blog/2021/10/01/pdf-to-wordcloud-via-mail"
   }
 }

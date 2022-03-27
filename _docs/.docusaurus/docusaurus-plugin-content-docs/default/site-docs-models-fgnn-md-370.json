@@ -6,18 +6,18 @@
   "source": "@site/docs/models/fgnn.md",
   "sourceDirName": "models",
   "slug": "/models/fgnn",
-  "permalink": "/ai/docs/models/fgnn",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/fgnn.md",
+  "permalink": "/recohut/docs/models/fgnn",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/fgnn.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "FFM",
-    "permalink": "/ai/docs/models/ffm"
+    "permalink": "/recohut/docs/models/ffm"
   },
   "next": {
     "title": "FM",
-    "permalink": "/ai/docs/models/fm"
+    "permalink": "/recohut/docs/models/fm"
   }
 }

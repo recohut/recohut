@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/success-stories/taobao-bst.md",
   "sourceDirName": "concept-extras/success-stories",
   "slug": "/concept-extras/success-stories/taobao-bst",
-  "permalink": "/ai/docs/concept-extras/success-stories/taobao-bst",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/taobao-bst.md",
+  "permalink": "/recohut/docs/concept-extras/success-stories/taobao-bst",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/success-stories/taobao-bst.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "StitchFix Multi-armed Bandit",
-    "permalink": "/ai/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit"
+    "permalink": "/recohut/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit"
   },
   "next": {
     "title": "The Long Tail",
-    "permalink": "/ai/docs/concept-extras/success-stories/the-long-tail"
+    "permalink": "/recohut/docs/concept-extras/success-stories/the-long-tail"
   }
 }

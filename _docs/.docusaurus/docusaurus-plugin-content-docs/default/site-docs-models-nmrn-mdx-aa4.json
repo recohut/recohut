@@ -6,18 +6,18 @@
   "source": "@site/docs/models/nmrn.mdx",
   "sourceDirName": "models",
   "slug": "/models/nmrn",
-  "permalink": "/ai/docs/models/nmrn",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/nmrn.mdx",
+  "permalink": "/recohut/docs/models/nmrn",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/nmrn.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "NGCF",
-    "permalink": "/ai/docs/models/ngcf"
+    "permalink": "/recohut/docs/models/ngcf"
   },
   "next": {
     "title": "Node2vec",
-    "permalink": "/ai/docs/models/node2vec"
+    "permalink": "/recohut/docs/models/node2vec"
   }
 }

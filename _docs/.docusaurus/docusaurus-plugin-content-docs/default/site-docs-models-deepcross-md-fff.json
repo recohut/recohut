@@ -6,18 +6,18 @@
   "source": "@site/docs/models/deepcross.md",
   "sourceDirName": "models",
   "slug": "/models/deepcross",
-  "permalink": "/ai/docs/models/deepcross",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/deepcross.md",
+  "permalink": "/recohut/docs/models/deepcross",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/deepcross.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "DDPG",
-    "permalink": "/ai/docs/models/ddpg"
+    "permalink": "/recohut/docs/models/ddpg"
   },
   "next": {
     "title": "DeepFM",
-    "permalink": "/ai/docs/models/deepfm"
+    "permalink": "/recohut/docs/models/deepfm"
   }
 }

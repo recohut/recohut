@@ -6,18 +6,18 @@
   "source": "@site/docs/models/gat.mdx",
   "sourceDirName": "models",
   "slug": "/models/gat",
-  "permalink": "/ai/docs/models/gat",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/gat.mdx",
+  "permalink": "/recohut/docs/models/gat",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/gat.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "FM",
-    "permalink": "/ai/docs/models/fm"
+    "permalink": "/recohut/docs/models/fm"
   },
   "next": {
     "title": "GC-SAN",
-    "permalink": "/ai/docs/models/gc-san"
+    "permalink": "/recohut/docs/models/gc-san"
   }
 }

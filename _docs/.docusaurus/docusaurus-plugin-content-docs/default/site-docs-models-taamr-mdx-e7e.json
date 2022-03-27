@@ -6,18 +6,18 @@
   "source": "@site/docs/models/taamr.mdx",
   "sourceDirName": "models",
   "slug": "/models/taamr",
-  "permalink": "/ai/docs/models/taamr",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/taamr.mdx",
+  "permalink": "/recohut/docs/models/taamr",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/taamr.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "SVAE",
-    "permalink": "/ai/docs/models/svae"
+    "permalink": "/recohut/docs/models/svae"
   },
   "next": {
     "title": "TAGNN-PP",
-    "permalink": "/ai/docs/models/tagnn-pp"
+    "permalink": "/recohut/docs/models/tagnn-pp"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/vision/image-similarity.mdx",
   "sourceDirName": "concept-extras/vision",
   "slug": "/concept-extras/vision/image-similarity",
-  "permalink": "/ai/docs/concept-extras/vision/image-similarity",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/vision/image-similarity.mdx",
+  "permalink": "/recohut/docs/concept-extras/vision/image-similarity",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/vision/image-similarity.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Image Segmentation",
-    "permalink": "/ai/docs/concept-extras/vision/image-segmentation"
+    "permalink": "/recohut/docs/concept-extras/vision/image-segmentation"
   },
   "next": {
     "title": "Object Detection",
-    "permalink": "/ai/docs/concept-extras/vision/object-detection"
+    "permalink": "/recohut/docs/concept-extras/vision/object-detection"
   }
 }

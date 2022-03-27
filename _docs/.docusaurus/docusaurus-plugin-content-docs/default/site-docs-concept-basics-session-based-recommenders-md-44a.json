@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-basics/session-based-recommenders.md",
   "sourceDirName": "concept-basics",
   "slug": "/concept-basics/session-based-recommenders",
-  "permalink": "/ai/docs/concept-basics/session-based-recommenders",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-basics/session-based-recommenders.md",
+  "permalink": "/recohut/docs/concept-basics/session-based-recommenders",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-basics/session-based-recommenders.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Processes",
-    "permalink": "/ai/docs/concept-basics/processes"
+    "permalink": "/recohut/docs/concept-basics/processes"
   },
   "next": {
     "title": "Tasks",
-    "permalink": "/ai/docs/concept-basics/tasks"
+    "permalink": "/recohut/docs/concept-basics/tasks"
   }
 }

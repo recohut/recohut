@@ -3,23 +3,23 @@
   "items": [
     {
       "title": "Clinical Decision Making",
-      "permalink": "/ai/blog/2021/10/01/clinical-decision-making"
+      "permalink": "/recohut/blog/2021/10/01/clinical-decision-making"
     },
     {
       "title": "Detectron 2",
-      "permalink": "/ai/blog/2021/10/01/detectron-2"
+      "permalink": "/recohut/blog/2021/10/01/detectron-2"
     },
     {
       "title": "Distributed Training of Recommender Systems",
-      "permalink": "/ai/blog/2021/10/01/distributed-training-of-recommender-systems"
+      "permalink": "/recohut/blog/2021/10/01/distributed-training-of-recommender-systems"
     },
     {
       "title": "Document Recommendation",
-      "permalink": "/ai/blog/2021/10/01/document-recommendation"
+      "permalink": "/recohut/blog/2021/10/01/document-recommendation"
     },
     {
       "title": "Fake Voice Detection",
-      "permalink": "/ai/blog/2021/10/01/fake-voice-detection"
+      "permalink": "/recohut/blog/2021/10/01/fake-voice-detection"
     }
   ]
 }

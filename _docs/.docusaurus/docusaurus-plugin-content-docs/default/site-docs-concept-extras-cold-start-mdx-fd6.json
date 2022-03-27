@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/cold-start.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/cold-start",
-  "permalink": "/ai/docs/concept-extras/cold-start",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/cold-start.mdx",
+  "permalink": "/recohut/docs/concept-extras/cold-start",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/cold-start.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Causal Inference",
-    "permalink": "/ai/docs/concept-extras/causal-inference"
+    "permalink": "/recohut/docs/concept-extras/causal-inference"
   },
   "next": {
     "title": "Cross-domain",
-    "permalink": "/ai/docs/concept-extras/cross-domain"
+    "permalink": "/recohut/docs/concept-extras/cross-domain"
   }
 }

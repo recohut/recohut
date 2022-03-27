@@ -6,18 +6,18 @@
   "source": "@site/docs/models/caser.md",
   "sourceDirName": "models",
   "slug": "/models/caser",
-  "permalink": "/ai/docs/models/caser",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/caser.md",
+  "permalink": "/recohut/docs/models/caser",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/caser.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "BST",
-    "permalink": "/ai/docs/models/bst"
+    "permalink": "/recohut/docs/models/bst"
   },
   "next": {
     "title": "CIGC",
-    "permalink": "/ai/docs/models/cigc"
+    "permalink": "/recohut/docs/models/cigc"
   }
 }

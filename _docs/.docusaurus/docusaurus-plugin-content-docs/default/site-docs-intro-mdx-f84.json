@@ -6,8 +6,8 @@
   "source": "@site/docs/intro.mdx",
   "sourceDirName": ".",
   "slug": "/intro",
-  "permalink": "/ai/docs/intro",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/intro.mdx",
+  "permalink": "/recohut/docs/intro",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/intro.mdx",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
@@ -17,6 +17,6 @@
   "sidebar": "tutorialSidebar",
   "next": {
     "title": "Concept - Basics",
-    "permalink": "/ai/docs/concept-basics/"
+    "permalink": "/recohut/docs/concept-basics/"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/models/sac.md",
   "sourceDirName": "models",
   "slug": "/models/sac",
-  "permalink": "/ai/docs/models/sac",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sac.md",
+  "permalink": "/recohut/docs/models/sac",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/sac.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "RKMF",
-    "permalink": "/ai/docs/models/rkmf"
+    "permalink": "/recohut/docs/models/rkmf"
   },
   "next": {
     "title": "SARSA",
-    "permalink": "/ai/docs/models/sarsa"
+    "permalink": "/recohut/docs/models/sarsa"
   }
 }

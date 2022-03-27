@@ -6,18 +6,18 @@
   "source": "@site/docs/models/basr.mdx",
   "sourceDirName": "models",
   "slug": "/models/basr",
-  "permalink": "/ai/docs/models/basr",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/basr.mdx",
+  "permalink": "/recohut/docs/models/basr",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/basr.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "AutoInt",
-    "permalink": "/ai/docs/models/autoint"
+    "permalink": "/recohut/docs/models/autoint"
   },
   "next": {
     "title": "BCQ",
-    "permalink": "/ai/docs/models/bcq"
+    "permalink": "/recohut/docs/models/bcq"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/models/aush.mdx",
   "sourceDirName": "models",
   "slug": "/models/aush",
-  "permalink": "/ai/docs/models/aush",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/aush.mdx",
+  "permalink": "/recohut/docs/models/aush",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/aush.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "AttRec",
-    "permalink": "/ai/docs/models/attrec"
+    "permalink": "/recohut/docs/models/attrec"
   },
   "next": {
     "title": "AutoInt",
-    "permalink": "/ai/docs/models/autoint"
+    "permalink": "/recohut/docs/models/autoint"
   }
 }

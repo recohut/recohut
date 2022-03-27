@@ -6,18 +6,18 @@
   "source": "@site/docs/models/dcn.md",
   "sourceDirName": "models",
   "slug": "/models/dcn",
-  "permalink": "/ai/docs/models/dcn",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/dcn.md",
+  "permalink": "/recohut/docs/models/dcn",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/dcn.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "CoKE",
-    "permalink": "/ai/docs/models/coke"
+    "permalink": "/recohut/docs/models/coke"
   },
   "next": {
     "title": "DDPG",
-    "permalink": "/ai/docs/models/ddpg"
+    "permalink": "/recohut/docs/models/ddpg"
   }
 }

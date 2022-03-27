@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/01/23/object-detection-with-yolo3",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-01-23-object-detection-with-yolo3.mdx",
+  "permalink": "/recohut/blog/2021/01/23/object-detection-with-yolo3",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-01-23-object-detection-with-yolo3.mdx",
   "source": "@site/blog/2021-01-23-object-detection-with-yolo3.mdx",
   "title": "Object detection with YOLO3",
   "description": "Live app",
@@ -9,15 +9,15 @@
   "tags": [
     {
       "label": "app",
-      "permalink": "/ai/blog/tags/app"
+      "permalink": "/recohut/blog/tags/app"
     },
     {
       "label": "vision",
-      "permalink": "/ai/blog/tags/vision"
+      "permalink": "/recohut/blog/tags/vision"
     },
     {
       "label": "streamlit",
-      "permalink": "/ai/blog/tags/streamlit"
+      "permalink": "/recohut/blog/tags/streamlit"
     }
   ],
   "readingTime": 1.975,
@@ -44,10 +44,10 @@
   },
   "prevItem": {
     "title": "What is Livestream Ecommerce",
-    "permalink": "/ai/blog/2021/10/01/what-is-livestream-ecommerce"
+    "permalink": "/recohut/blog/2021/10/01/what-is-livestream-ecommerce"
   },
   "nextItem": {
     "title": "MobileNet SSD Caffe Pre-trained model",
-    "permalink": "/ai/blog/2020/01/19/mobilenet-ssd-caffe-pre-trained-model"
+    "permalink": "/recohut/blog/2020/01/19/mobilenet-ssd-caffe-pre-trained-model"
   }
 }

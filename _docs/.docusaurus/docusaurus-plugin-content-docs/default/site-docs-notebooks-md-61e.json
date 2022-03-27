@@ -6,18 +6,18 @@
   "source": "@site/docs/notebooks.md",
   "sourceDirName": ".",
   "slug": "/notebooks",
-  "permalink": "/ai/docs/notebooks",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/notebooks.md",
+  "permalink": "/recohut/docs/notebooks",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/notebooks.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Datasets",
-    "permalink": "/ai/docs/datasets"
+    "permalink": "/recohut/docs/datasets"
   },
   "next": {
     "title": "Projects",
-    "permalink": "/ai/docs/projects"
+    "permalink": "/recohut/docs/projects"
   }
 }

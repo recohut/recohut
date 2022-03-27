@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/wellness-tracker-chatbot",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-wellness-tracker-chatbot.mdx",
+  "permalink": "/recohut/blog/2021/10/01/wellness-tracker-chatbot",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-wellness-tracker-chatbot.mdx",
   "source": "@site/blog/2021-10-01-wellness-tracker-chatbot.mdx",
   "title": "Wellness tracker chatbot",
   "description": "/img/content-blog-raw-blog-wellness-tracker-chatbot-untitled.png",
@@ -9,15 +9,15 @@
   "tags": [
     {
       "label": "chatbot",
-      "permalink": "/ai/blog/tags/chatbot"
+      "permalink": "/recohut/blog/tags/chatbot"
     },
     {
       "label": "healthcare",
-      "permalink": "/ai/blog/tags/healthcare"
+      "permalink": "/recohut/blog/tags/healthcare"
     },
     {
       "label": "nlp",
-      "permalink": "/ai/blog/tags/nlp"
+      "permalink": "/recohut/blog/tags/nlp"
     }
   ],
   "readingTime": 0.455,
@@ -42,10 +42,10 @@
   },
   "prevItem": {
     "title": "Web Scraping with Gazpacho",
-    "permalink": "/ai/blog/2021/10/01/web-scraping-with-gazpacho"
+    "permalink": "/recohut/blog/2021/10/01/web-scraping-with-gazpacho"
   },
   "nextItem": {
     "title": "What is Livestream Ecommerce",
-    "permalink": "/ai/blog/2021/10/01/what-is-livestream-ecommerce"
+    "permalink": "/recohut/blog/2021/10/01/what-is-livestream-ecommerce"
   }
 }

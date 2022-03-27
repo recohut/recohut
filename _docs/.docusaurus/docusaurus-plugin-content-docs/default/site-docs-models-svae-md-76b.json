@@ -6,18 +6,18 @@
   "source": "@site/docs/models/svae.md",
   "sourceDirName": "models",
   "slug": "/models/svae",
-  "permalink": "/ai/docs/models/svae",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/svae.md",
+  "permalink": "/recohut/docs/models/svae",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/svae.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Struc2Vec",
-    "permalink": "/ai/docs/models/struc2vec"
+    "permalink": "/recohut/docs/models/struc2vec"
   },
   "next": {
     "title": "TAaMR",
-    "permalink": "/ai/docs/models/taamr"
+    "permalink": "/recohut/docs/models/taamr"
   }
 }

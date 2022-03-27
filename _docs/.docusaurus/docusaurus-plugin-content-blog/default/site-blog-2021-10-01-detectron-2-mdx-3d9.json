@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/detectron-2",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-detectron-2.mdx",
+  "permalink": "/recohut/blog/2021/10/01/detectron-2",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-detectron-2.mdx",
   "source": "@site/blog/2021-10-01-detectron-2.mdx",
   "title": "Detectron 2",
   "description": "/img/content-blog-raw-blog-detectron-2-untitled.png",
@@ -9,11 +9,11 @@
   "tags": [
     {
       "label": "tool",
-      "permalink": "/ai/blog/tags/tool"
+      "permalink": "/recohut/blog/tags/tool"
     },
     {
       "label": "vision",
-      "permalink": "/ai/blog/tags/vision"
+      "permalink": "/recohut/blog/tags/vision"
     }
   ],
   "readingTime": 6.13,
@@ -37,10 +37,10 @@
   },
   "prevItem": {
     "title": "Clinical Decision Making",
-    "permalink": "/ai/blog/2021/10/01/clinical-decision-making"
+    "permalink": "/recohut/blog/2021/10/01/clinical-decision-making"
   },
   "nextItem": {
     "title": "Distributed Training of Recommender Systems",
-    "permalink": "/ai/blog/2021/10/01/distributed-training-of-recommender-systems"
+    "permalink": "/recohut/blog/2021/10/01/distributed-training-of-recommender-systems"
   }
 }

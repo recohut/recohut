@@ -6,18 +6,18 @@
   "source": "@site/docs/models/siren.md",
   "sourceDirName": "models",
   "slug": "/models/siren",
-  "permalink": "/ai/docs/models/siren",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/siren.md",
+  "permalink": "/recohut/docs/models/siren",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/siren.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Shared Bottom",
-    "permalink": "/ai/docs/models/shared-bottom"
+    "permalink": "/recohut/docs/models/shared-bottom"
   },
   "next": {
     "title": "SLIST",
-    "permalink": "/ai/docs/models/slist"
+    "permalink": "/recohut/docs/models/slist"
   }
 }

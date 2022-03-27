@@ -6,18 +6,18 @@
   "source": "@site/docs/models/dqn.md",
   "sourceDirName": "models",
   "slug": "/models/dqn",
-  "permalink": "/ai/docs/models/dqn",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/dqn.md",
+  "permalink": "/recohut/docs/models/dqn",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/dqn.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "DPADL",
-    "permalink": "/ai/docs/models/dpadl"
+    "permalink": "/recohut/docs/models/dpadl"
   },
   "next": {
     "title": "DRQN",
-    "permalink": "/ai/docs/models/drqn"
+    "permalink": "/recohut/docs/models/drqn"
   }
 }

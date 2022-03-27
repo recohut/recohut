@@ -6,18 +6,18 @@
   "source": "@site/docs/models/sdne.mdx",
   "sourceDirName": "models",
   "slug": "/models/sdne",
-  "permalink": "/ai/docs/models/sdne",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sdne.mdx",
+  "permalink": "/recohut/docs/models/sdne",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/sdne.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "SASRec",
-    "permalink": "/ai/docs/models/sasrec"
+    "permalink": "/recohut/docs/models/sasrec"
   },
   "next": {
     "title": "SGL",
-    "permalink": "/ai/docs/models/sgl"
+    "permalink": "/recohut/docs/models/sgl"
   }
 }

@@ -1,6 +1,6 @@
 {
   "type": "mdx",
-  "permalink": "/ai/markdown-page",
+  "permalink": "/recohut/markdown-page",
   "source": "@site/src/pages/markdown-page.mdx",
   "title": "Markdown page example",
   "description": "You don't need React to write simple standalone pages.",

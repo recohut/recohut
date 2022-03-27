@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/graph-networks.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/graph-networks",
-  "permalink": "/ai/docs/concept-extras/graph-networks",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/graph-networks.mdx",
+  "permalink": "/recohut/docs/concept-extras/graph-networks",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/graph-networks.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Graph Embeddings",
-    "permalink": "/ai/docs/concept-extras/graph-embeddings"
+    "permalink": "/recohut/docs/concept-extras/graph-embeddings"
   },
   "next": {
     "title": "Incremental Learning",
-    "permalink": "/ai/docs/concept-extras/incremental-learning"
+    "permalink": "/recohut/docs/concept-extras/incremental-learning"
   }
 }

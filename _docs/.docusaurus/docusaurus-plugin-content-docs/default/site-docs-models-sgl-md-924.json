@@ -6,18 +6,18 @@
   "source": "@site/docs/models/sgl.md",
   "sourceDirName": "models",
   "slug": "/models/sgl",
-  "permalink": "/ai/docs/models/sgl",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sgl.md",
+  "permalink": "/recohut/docs/models/sgl",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/sgl.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "SDNE",
-    "permalink": "/ai/docs/models/sdne"
+    "permalink": "/recohut/docs/models/sdne"
   },
   "next": {
     "title": "Shared Bottom",
-    "permalink": "/ai/docs/models/shared-bottom"
+    "permalink": "/recohut/docs/models/shared-bottom"
   }
 }

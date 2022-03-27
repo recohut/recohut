@@ -6,18 +6,18 @@
   "source": "@site/docs/models/markov-chains.md",
   "sourceDirName": "models",
   "slug": "/models/markov-chains",
-  "permalink": "/ai/docs/models/markov-chains",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/markov-chains.md",
+  "permalink": "/recohut/docs/models/markov-chains",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/markov-chains.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "LIRD",
-    "permalink": "/ai/docs/models/lird"
+    "permalink": "/recohut/docs/models/lird"
   },
   "next": {
     "title": "MATN",
-    "permalink": "/ai/docs/models/matn"
+    "permalink": "/recohut/docs/models/matn"
   }
 }

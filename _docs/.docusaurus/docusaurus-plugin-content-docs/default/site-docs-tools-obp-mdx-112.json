@@ -6,18 +6,18 @@
   "source": "@site/docs/tools/obp.mdx",
   "sourceDirName": "tools",
   "slug": "/tools/obp",
-  "permalink": "/ai/docs/tools/obp",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/tools/obp.mdx",
+  "permalink": "/recohut/docs/tools/obp",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/tools/obp.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Tools",
-    "permalink": "/ai/docs/tools/"
+    "permalink": "/recohut/docs/tools/"
   },
   "next": {
     "title": "Pachyderm",
-    "permalink": "/ai/docs/tools/pachyderm"
+    "permalink": "/recohut/docs/tools/pachyderm"
   }
 }

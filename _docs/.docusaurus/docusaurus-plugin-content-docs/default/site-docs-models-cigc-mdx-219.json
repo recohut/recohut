@@ -6,18 +6,18 @@
   "source": "@site/docs/models/cigc.mdx",
   "sourceDirName": "models",
   "slug": "/models/cigc",
-  "permalink": "/ai/docs/models/cigc",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/cigc.mdx",
+  "permalink": "/recohut/docs/models/cigc",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/cigc.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "CASER",
-    "permalink": "/ai/docs/models/caser"
+    "permalink": "/recohut/docs/models/caser"
   },
   "next": {
     "title": "CoKE",
-    "permalink": "/ai/docs/models/coke"
+    "permalink": "/recohut/docs/models/coke"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/tutorials/negative-implicit-feedback-rec.mdx",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/negative-implicit-feedback-rec",
-  "permalink": "/ai/docs/tutorials/negative-implicit-feedback-rec",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/negative-implicit-feedback-rec.mdx",
+  "permalink": "/recohut/docs/tutorials/negative-implicit-feedback-rec",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/tutorials/negative-implicit-feedback-rec.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Name and Address Parsing",
-    "permalink": "/ai/docs/tutorials/name-address-parsing"
+    "permalink": "/recohut/docs/tutorials/name-address-parsing"
   },
   "next": {
     "title": "PDF to WordCloud via Email",
-    "permalink": "/ai/docs/tutorials/pdf-to-wordcloud-mail"
+    "permalink": "/recohut/docs/tutorials/pdf-to-wordcloud-mail"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/tutorials/resale-price-prediction.mdx",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/resale-price-prediction",
-  "permalink": "/ai/docs/tutorials/resale-price-prediction",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/resale-price-prediction.mdx",
+  "permalink": "/recohut/docs/tutorials/resale-price-prediction",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/tutorials/resale-price-prediction.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Recommender System Evaluation",
-    "permalink": "/ai/docs/tutorials/recsys-evaluation"
+    "permalink": "/recohut/docs/tutorials/recsys-evaluation"
   },
   "next": {
     "title": "Vector Search",
-    "permalink": "/ai/docs/tutorials/vector-search"
+    "permalink": "/recohut/docs/tutorials/vector-search"
   }
 }

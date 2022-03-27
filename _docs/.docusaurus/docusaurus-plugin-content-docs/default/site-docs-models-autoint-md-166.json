@@ -6,18 +6,18 @@
   "source": "@site/docs/models/autoint.md",
   "sourceDirName": "models",
   "slug": "/models/autoint",
-  "permalink": "/ai/docs/models/autoint",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/autoint.md",
+  "permalink": "/recohut/docs/models/autoint",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/autoint.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "AUSH",
-    "permalink": "/ai/docs/models/aush"
+    "permalink": "/recohut/docs/models/aush"
   },
   "next": {
     "title": "BASR",
-    "permalink": "/ai/docs/models/basr"
+    "permalink": "/recohut/docs/models/basr"
   }
 }

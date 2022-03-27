@@ -6,18 +6,18 @@
   "source": "@site/docs/models/dm.mdx",
   "sourceDirName": "models",
   "slug": "/models/dm",
-  "permalink": "/ai/docs/models/dm",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/dm.mdx",
+  "permalink": "/recohut/docs/models/dm",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/dm.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "DGTN",
-    "permalink": "/ai/docs/models/dgtn"
+    "permalink": "/recohut/docs/models/dgtn"
   },
   "next": {
     "title": "DMT",
-    "permalink": "/ai/docs/models/dmt"
+    "permalink": "/recohut/docs/models/dmt"
   }
 }

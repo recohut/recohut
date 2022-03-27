@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/vision/pose-estimation.mdx",
   "sourceDirName": "concept-extras/vision",
   "slug": "/concept-extras/vision/pose-estimation",
-  "permalink": "/ai/docs/concept-extras/vision/pose-estimation",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/vision/pose-estimation.mdx",
+  "permalink": "/recohut/docs/concept-extras/vision/pose-estimation",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/vision/pose-estimation.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Object Tracking",
-    "permalink": "/ai/docs/concept-extras/vision/object-tracking"
+    "permalink": "/recohut/docs/concept-extras/vision/object-tracking"
   },
   "next": {
     "title": "Scene Text Recognition",
-    "permalink": "/ai/docs/concept-extras/vision/scene-text-recognition"
+    "permalink": "/recohut/docs/concept-extras/vision/scene-text-recognition"
   }
 }

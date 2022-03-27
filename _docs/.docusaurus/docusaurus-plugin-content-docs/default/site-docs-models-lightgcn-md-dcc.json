@@ -6,18 +6,18 @@
   "source": "@site/docs/models/lightgcn.md",
   "sourceDirName": "models",
   "slug": "/models/lightgcn",
-  "permalink": "/ai/docs/models/lightgcn",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/lightgcn.md",
+  "permalink": "/recohut/docs/models/lightgcn",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/lightgcn.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "LightFM WARP",
-    "permalink": "/ai/docs/models/lightfm-warp"
+    "permalink": "/recohut/docs/models/lightfm-warp"
   },
   "next": {
     "title": "LINE",
-    "permalink": "/ai/docs/models/line"
+    "permalink": "/recohut/docs/models/line"
   }
 }

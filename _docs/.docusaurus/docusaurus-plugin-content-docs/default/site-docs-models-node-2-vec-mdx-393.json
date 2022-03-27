@@ -6,18 +6,18 @@
   "source": "@site/docs/models/node2vec.mdx",
   "sourceDirName": "models",
   "slug": "/models/node2vec",
-  "permalink": "/ai/docs/models/node2vec",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/node2vec.mdx",
+  "permalink": "/recohut/docs/models/node2vec",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/node2vec.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "NMRN",
-    "permalink": "/ai/docs/models/nmrn"
+    "permalink": "/recohut/docs/models/nmrn"
   },
   "next": {
     "title": "PNN",
-    "permalink": "/ai/docs/models/pnn"
+    "permalink": "/recohut/docs/models/pnn"
   }
 }

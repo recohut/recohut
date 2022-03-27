@@ -6,18 +6,18 @@
   "source": "@site/docs/models/sr-gnn.md",
   "sourceDirName": "models",
   "slug": "/models/sr-gnn",
-  "permalink": "/ai/docs/models/sr-gnn",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/sr-gnn.md",
+  "permalink": "/recohut/docs/models/sr-gnn",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/sr-gnn.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "SPop",
-    "permalink": "/ai/docs/models/spop"
+    "permalink": "/recohut/docs/models/spop"
   },
   "next": {
     "title": "SR-SAN",
-    "permalink": "/ai/docs/models/sr-san"
+    "permalink": "/recohut/docs/models/sr-san"
   }
 }

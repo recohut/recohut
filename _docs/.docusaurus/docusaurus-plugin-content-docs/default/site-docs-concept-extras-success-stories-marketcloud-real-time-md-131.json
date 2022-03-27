@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/success-stories/marketcloud-real-time.md",
   "sourceDirName": "concept-extras/success-stories",
   "slug": "/concept-extras/success-stories/marketcloud-real-time",
-  "permalink": "/ai/docs/concept-extras/success-stories/marketcloud-real-time",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/marketcloud-real-time.md",
+  "permalink": "/recohut/docs/concept-extras/success-stories/marketcloud-real-time",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/success-stories/marketcloud-real-time.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "LinkedIn GLMix",
-    "permalink": "/ai/docs/concept-extras/success-stories/linkedin-glmix"
+    "permalink": "/recohut/docs/concept-extras/success-stories/linkedin-glmix"
   },
   "next": {
     "title": "Netflix Personalize Images",
-    "permalink": "/ai/docs/concept-extras/success-stories/netflix-personalize-images"
+    "permalink": "/recohut/docs/concept-extras/success-stories/netflix-personalize-images"
   }
 }

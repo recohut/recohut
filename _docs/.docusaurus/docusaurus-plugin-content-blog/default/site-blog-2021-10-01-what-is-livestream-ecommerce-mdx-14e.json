@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/what-is-livestream-ecommerce",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-what-is-livestream-ecommerce.mdx",
+  "permalink": "/recohut/blog/2021/10/01/what-is-livestream-ecommerce",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-what-is-livestream-ecommerce.mdx",
   "source": "@site/blog/2021-10-01-what-is-livestream-ecommerce.mdx",
   "title": "What is Livestream Ecommerce",
   "description": "/img/content-blog-raw-blog-what-is-livestream-ecommerce-untitled.png",
@@ -9,11 +9,11 @@
   "tags": [
     {
       "label": "personalization",
-      "permalink": "/ai/blog/tags/personalization"
+      "permalink": "/recohut/blog/tags/personalization"
     },
     {
       "label": "trend",
-      "permalink": "/ai/blog/tags/trend"
+      "permalink": "/recohut/blog/tags/trend"
     }
   ],
   "readingTime": 3.385,
@@ -37,10 +37,10 @@
   },
   "prevItem": {
     "title": "Wellness tracker chatbot",
-    "permalink": "/ai/blog/2021/10/01/wellness-tracker-chatbot"
+    "permalink": "/recohut/blog/2021/10/01/wellness-tracker-chatbot"
   },
   "nextItem": {
     "title": "Object detection with YOLO3",
-    "permalink": "/ai/blog/2021/01/23/object-detection-with-yolo3"
+    "permalink": "/recohut/blog/2021/01/23/object-detection-with-yolo3"
   }
 }

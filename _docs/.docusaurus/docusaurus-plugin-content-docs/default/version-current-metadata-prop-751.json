@@ -11,7 +11,7 @@
       {
         "type": "link",
         "label": "Introduction",
-        "href": "/ai/docs/intro",
+        "href": "/recohut/docs/intro",
         "docId": "intro"
       },
       {
@@ -23,53 +23,53 @@
           {
             "type": "link",
             "label": "Challenges",
-            "href": "/ai/docs/concept-basics/challenges",
+            "href": "/recohut/docs/concept-basics/challenges",
             "docId": "concept-basics/challenges"
           },
           {
             "type": "link",
             "label": "Collaborative Filtering",
-            "href": "/ai/docs/concept-basics/collaborative-filtering",
+            "href": "/recohut/docs/concept-basics/collaborative-filtering",
             "docId": "concept-basics/collaborative-filtering"
           },
           {
             "type": "link",
             "label": "Evaluation",
-            "href": "/ai/docs/concept-basics/evaluation",
+            "href": "/recohut/docs/concept-basics/evaluation",
             "docId": "concept-basics/evaluation"
           },
           {
             "type": "link",
             "label": "User Feedback",
-            "href": "/ai/docs/concept-basics/implicit-feedback",
+            "href": "/recohut/docs/concept-basics/implicit-feedback",
             "docId": "concept-basics/implicit-feedback"
           },
           {
             "type": "link",
             "label": "Processes",
-            "href": "/ai/docs/concept-basics/processes",
+            "href": "/recohut/docs/concept-basics/processes",
             "docId": "concept-basics/processes"
           },
           {
             "type": "link",
             "label": "Session-based Recommenders",
-            "href": "/ai/docs/concept-basics/session-based-recommenders",
+            "href": "/recohut/docs/concept-basics/session-based-recommenders",
             "docId": "concept-basics/session-based-recommenders"
           },
           {
             "type": "link",
             "label": "Tasks",
-            "href": "/ai/docs/concept-basics/tasks",
+            "href": "/recohut/docs/concept-basics/tasks",
             "docId": "concept-basics/tasks"
           },
           {
             "type": "link",
             "label": "Types of Recommender Systems",
-            "href": "/ai/docs/concept-basics/types-of-recommender-systems",
+            "href": "/recohut/docs/concept-basics/types-of-recommender-systems",
             "docId": "concept-basics/types-of-recommender-systems"
           }
         ],
-        "href": "/ai/docs/concept-basics/"
+        "href": "/recohut/docs/concept-basics/"
       },
       {
         "type": "category",
@@ -80,121 +80,121 @@
           {
             "type": "link",
             "label": "Amazon Personalize",
-            "href": "/ai/docs/concept-extras/amazon-personalize",
+            "href": "/recohut/docs/concept-extras/amazon-personalize",
             "docId": "concept-extras/amazon-personalize"
           },
           {
             "type": "link",
             "label": "Apps",
-            "href": "/ai/docs/concept-extras/apps",
+            "href": "/recohut/docs/concept-extras/apps",
             "docId": "concept-extras/apps"
           },
           {
             "type": "link",
             "label": "Bias & Fairness",
-            "href": "/ai/docs/concept-extras/bias-&-fairness",
+            "href": "/recohut/docs/concept-extras/bias-&-fairness",
             "docId": "concept-extras/bias-&-fairness"
           },
           {
             "type": "link",
             "label": "Causal Inference",
-            "href": "/ai/docs/concept-extras/causal-inference",
+            "href": "/recohut/docs/concept-extras/causal-inference",
             "docId": "concept-extras/causal-inference"
           },
           {
             "type": "link",
             "label": "Cold Start",
-            "href": "/ai/docs/concept-extras/cold-start",
+            "href": "/recohut/docs/concept-extras/cold-start",
             "docId": "concept-extras/cold-start"
           },
           {
             "type": "link",
             "label": "Cross-domain",
-            "href": "/ai/docs/concept-extras/cross-domain",
+            "href": "/recohut/docs/concept-extras/cross-domain",
             "docId": "concept-extras/cross-domain"
           },
           {
             "type": "link",
             "label": "Data Science",
-            "href": "/ai/docs/concept-extras/data-science",
+            "href": "/recohut/docs/concept-extras/data-science",
             "docId": "concept-extras/data-science"
           },
           {
             "type": "link",
             "label": "Diversity",
-            "href": "/ai/docs/concept-extras/diversity",
+            "href": "/recohut/docs/concept-extras/diversity",
             "docId": "concept-extras/diversity"
           },
           {
             "type": "link",
             "label": "Emerging Concepts in Recommender Systems",
-            "href": "/ai/docs/concept-extras/emerging-concepts-in-recommender-systems",
+            "href": "/recohut/docs/concept-extras/emerging-concepts-in-recommender-systems",
             "docId": "concept-extras/emerging-concepts-in-recommender-systems"
           },
           {
             "type": "link",
             "label": "Graph Embeddings",
-            "href": "/ai/docs/concept-extras/graph-embeddings",
+            "href": "/recohut/docs/concept-extras/graph-embeddings",
             "docId": "concept-extras/graph-embeddings"
           },
           {
             "type": "link",
             "label": "Graph Networks",
-            "href": "/ai/docs/concept-extras/graph-networks",
+            "href": "/recohut/docs/concept-extras/graph-networks",
             "docId": "concept-extras/graph-networks"
           },
           {
             "type": "link",
             "label": "Incremental Learning",
-            "href": "/ai/docs/concept-extras/incremental-learning",
+            "href": "/recohut/docs/concept-extras/incremental-learning",
             "docId": "concept-extras/incremental-learning"
           },
           {
             "type": "link",
             "label": "Jensen–Shannon divergence",
-            "href": "/ai/docs/concept-extras/jensen-shannon-divergence",
+            "href": "/recohut/docs/concept-extras/jensen-shannon-divergence",
             "docId": "concept-extras/jensen-shannon-divergence"
           },
           {
             "type": "link",
             "label": "Meta Learning",
-            "href": "/ai/docs/concept-extras/meta-learning",
+            "href": "/recohut/docs/concept-extras/meta-learning",
             "docId": "concept-extras/meta-learning"
           },
           {
             "type": "link",
             "label": "MLOps",
-            "href": "/ai/docs/concept-extras/mlops",
+            "href": "/recohut/docs/concept-extras/mlops",
             "docId": "concept-extras/mlops"
           },
           {
             "type": "link",
             "label": "Model Deployment",
-            "href": "/ai/docs/concept-extras/model-deployment",
+            "href": "/recohut/docs/concept-extras/model-deployment",
             "docId": "concept-extras/model-deployment"
           },
           {
             "type": "link",
             "label": "Model Retraining",
-            "href": "/ai/docs/concept-extras/model-retraining",
+            "href": "/recohut/docs/concept-extras/model-retraining",
             "docId": "concept-extras/model-retraining"
           },
           {
             "type": "link",
             "label": "Multi-Objective Optimization",
-            "href": "/ai/docs/concept-extras/multi-objective-optimization",
+            "href": "/recohut/docs/concept-extras/multi-objective-optimization",
             "docId": "concept-extras/multi-objective-optimization"
           },
           {
             "type": "link",
             "label": "Multi-Task Learning",
-            "href": "/ai/docs/concept-extras/multi-task-learning",
+            "href": "/recohut/docs/concept-extras/multi-task-learning",
             "docId": "concept-extras/multi-task-learning"
           },
           {
             "type": "link",
             "label": "Multi-task Learning",
-            "href": "/ai/docs/concept-extras/multitask-learning",
+            "href": "/recohut/docs/concept-extras/multitask-learning",
             "docId": "concept-extras/multitask-learning"
           },
           {
@@ -206,67 +206,67 @@
               {
                 "type": "link",
                 "label": "Chatbot",
-                "href": "/ai/docs/concept-extras/nlp/chatbot",
+                "href": "/recohut/docs/concept-extras/nlp/chatbot",
                 "docId": "concept-extras/nlp/chatbot"
               },
               {
                 "type": "link",
                 "label": "Language Modeling",
-                "href": "/ai/docs/concept-extras/nlp/language-modeling",
+                "href": "/recohut/docs/concept-extras/nlp/language-modeling",
                 "docId": "concept-extras/nlp/language-modeling"
               },
               {
                 "type": "link",
                 "label": "Named Entity Recognition",
-                "href": "/ai/docs/concept-extras/nlp/named-entity-recognition",
+                "href": "/recohut/docs/concept-extras/nlp/named-entity-recognition",
                 "docId": "concept-extras/nlp/named-entity-recognition"
               },
               {
                 "type": "link",
                 "label": "Text Analysis",
-                "href": "/ai/docs/concept-extras/nlp/text-analysis",
+                "href": "/recohut/docs/concept-extras/nlp/text-analysis",
                 "docId": "concept-extras/nlp/text-analysis"
               },
               {
                 "type": "link",
                 "label": "Text Classification",
-                "href": "/ai/docs/concept-extras/nlp/text-classification",
+                "href": "/recohut/docs/concept-extras/nlp/text-classification",
                 "docId": "concept-extras/nlp/text-classification"
               },
               {
                 "type": "link",
                 "label": "Text Generation",
-                "href": "/ai/docs/concept-extras/nlp/text-generation",
+                "href": "/recohut/docs/concept-extras/nlp/text-generation",
                 "docId": "concept-extras/nlp/text-generation"
               },
               {
                 "type": "link",
                 "label": "Text Similarity",
-                "href": "/ai/docs/concept-extras/nlp/text-similarity",
+                "href": "/recohut/docs/concept-extras/nlp/text-similarity",
                 "docId": "concept-extras/nlp/text-similarity"
               },
               {
                 "type": "link",
                 "label": "Text Style Transfer",
-                "href": "/ai/docs/concept-extras/nlp/text-style-transfer",
+                "href": "/recohut/docs/concept-extras/nlp/text-style-transfer",
                 "docId": "concept-extras/nlp/text-style-transfer"
               },
               {
                 "type": "link",
                 "label": "Text Summarization",
-                "href": "/ai/docs/concept-extras/nlp/text-summarization",
+                "href": "/recohut/docs/concept-extras/nlp/text-summarization",
                 "docId": "concept-extras/nlp/text-summarization"
               },
               {
                 "type": "link",
                 "label": "Topic Modeling",
-                "href": "/ai/docs/concept-extras/nlp/topic-modeling",
+                "href": "/recohut/docs/concept-extras/nlp/topic-modeling",
                 "docId": "concept-extras/nlp/topic-modeling"
               },
               {
                 "type": "link",
                 "label": "Transformers",
-                "href": "/ai/docs/concept-extras/nlp/transformers",
+                "href": "/recohut/docs/concept-extras/nlp/transformers",
                 "docId": "concept-extras/nlp/transformers"
               }
             ]
@@ -274,13 +274,13 @@
           {
             "type": "link",
             "label": "Off-Policy Learning",
-            "href": "/ai/docs/concept-extras/offline-learning",
+            "href": "/recohut/docs/concept-extras/offline-learning",
             "docId": "concept-extras/offline-learning"
           },
           {
             "type": "link",
             "label": "Scalarization",
-            "href": "/ai/docs/concept-extras/scalarization",
+            "href": "/recohut/docs/concept-extras/scalarization",
             "docId": "concept-extras/scalarization"
           },
           {
@@ -292,119 +292,119 @@
               {
                 "type": "link",
                 "label": "1mg Prod2vec",
-                "href": "/ai/docs/concept-extras/success-stories/1mg-prod2vec",
+                "href": "/recohut/docs/concept-extras/success-stories/1mg-prod2vec",
                 "docId": "concept-extras/success-stories/1mg-prod2vec"
               },
               {
                 "type": "link",
                 "label": "Airbnb Experiences",
-                "href": "/ai/docs/concept-extras/success-stories/airbnb-experiences",
+                "href": "/recohut/docs/concept-extras/success-stories/airbnb-experiences",
                 "docId": "concept-extras/success-stories/airbnb-experiences"
               },
               {
                 "type": "link",
                 "label": "Alibaba",
-                "href": "/ai/docs/concept-extras/success-stories/alipay-ctr",
+                "href": "/recohut/docs/concept-extras/success-stories/alipay-ctr",
                 "docId": "concept-extras/success-stories/alipay-ctr"
               },
               {
                 "type": "link",
                 "label": "Doordash Contextual Bandit",
-                "href": "/ai/docs/concept-extras/success-stories/doordash-contextual-bandit",
+                "href": "/recohut/docs/concept-extras/success-stories/doordash-contextual-bandit",
                 "docId": "concept-extras/success-stories/doordash-contextual-bandit"
               },
               {
                 "type": "link",
                 "label": "Etsy Personalization",
-                "href": "/ai/docs/concept-extras/success-stories/etsy-personalization",
+                "href": "/recohut/docs/concept-extras/success-stories/etsy-personalization",
                 "docId": "concept-extras/success-stories/etsy-personalization"
               },
               {
                 "type": "link",
                 "label": "Huawei AppGallery",
-                "href": "/ai/docs/concept-extras/success-stories/huawei-appgallery",
+                "href": "/recohut/docs/concept-extras/success-stories/huawei-appgallery",
                 "docId": "concept-extras/success-stories/huawei-appgallery"
               },
               {
                 "type": "link",
                 "label": "LinkedIn GLMix",
-                "href": "/ai/docs/concept-extras/success-stories/linkedin-glmix",
+                "href": "/recohut/docs/concept-extras/success-stories/linkedin-glmix",
                 "docId": "concept-extras/success-stories/linkedin-glmix"
               },
               {
                 "type": "link",
                 "label": "MarketCloud Real-time",
-                "href": "/ai/docs/concept-extras/success-stories/marketcloud-real-time",
+                "href": "/recohut/docs/concept-extras/success-stories/marketcloud-real-time",
                 "docId": "concept-extras/success-stories/marketcloud-real-time"
               },
               {
                 "type": "link",
                 "label": "Netflix Personalize Images",
-                "href": "/ai/docs/concept-extras/success-stories/netflix-personalize-images",
+                "href": "/recohut/docs/concept-extras/success-stories/netflix-personalize-images",
                 "docId": "concept-extras/success-stories/netflix-personalize-images"
               },
               {
                 "type": "link",
                 "label": "Pinterest Multi-task Learning",
-                "href": "/ai/docs/concept-extras/success-stories/pinterest-multi-task-learning",
+                "href": "/recohut/docs/concept-extras/success-stories/pinterest-multi-task-learning",
                 "docId": "concept-extras/success-stories/pinterest-multi-task-learning"
               },
               {
                 "type": "link",
                 "label": "Santander Banking Products",
-                "href": "/ai/docs/concept-extras/success-stories/santander-banking-products",
+                "href": "/recohut/docs/concept-extras/success-stories/santander-banking-products",
                 "docId": "concept-extras/success-stories/santander-banking-products"
               },
               {
                 "type": "link",
                 "label": "Scribd Real-time",
-                "href": "/ai/docs/concept-extras/success-stories/scribd-real-time",
+                "href": "/recohut/docs/concept-extras/success-stories/scribd-real-time",
                 "docId": "concept-extras/success-stories/scribd-real-time"
               },
               {
                 "type": "link",
                 "label": "Spotify Contextual Bandits",
-                "href": "/ai/docs/concept-extras/success-stories/spotify-contextual-bandits",
+                "href": "/recohut/docs/concept-extras/success-stories/spotify-contextual-bandits",
                 "docId": "concept-extras/success-stories/spotify-contextual-bandits"
               },
               {
                 "type": "link",
                 "label": "Spotify RL",
-                "href": "/ai/docs/concept-extras/success-stories/spotify-rl",
+                "href": "/recohut/docs/concept-extras/success-stories/spotify-rl",
                 "docId": "concept-extras/success-stories/spotify-rl"
               },
               {
                 "type": "link",
                 "label": "StitchFix Multi-armed Bandit",
-                "href": "/ai/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit",
+                "href": "/recohut/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit",
                 "docId": "concept-extras/success-stories/stitchfix-multi-armed-bandit"
               },
               {
                 "type": "link",
                 "label": "Taobao BST",
-                "href": "/ai/docs/concept-extras/success-stories/taobao-bst",
+                "href": "/recohut/docs/concept-extras/success-stories/taobao-bst",
                 "docId": "concept-extras/success-stories/taobao-bst"
               },
               {
                 "type": "link",
                 "label": "The Long Tail",
-                "href": "/ai/docs/concept-extras/success-stories/the-long-tail",
+                "href": "/recohut/docs/concept-extras/success-stories/the-long-tail",
                 "docId": "concept-extras/success-stories/the-long-tail"
               },
               {
                 "type": "link",
                 "label": "UberEats Personalization",
-                "href": "/ai/docs/concept-extras/success-stories/ubereats-personalization",
+                "href": "/recohut/docs/concept-extras/success-stories/ubereats-personalization",
                 "docId": "concept-extras/success-stories/ubereats-personalization"
               },
               {
                 "type": "link",
                 "label": "Walmart Model Selection",
-                "href": "/ai/docs/concept-extras/success-stories/walmart-model-selection",
+                "href": "/recohut/docs/concept-extras/success-stories/walmart-model-selection",
                 "docId": "concept-extras/success-stories/walmart-model-selection"
               }
             ],
-            "href": "/ai/docs/concept-extras/success-stories/"
+            "href": "/recohut/docs/concept-extras/success-stories/"
           },
           {
             "type": "category",
@@ -415,55 +415,55 @@
               {
                 "type": "link",
                 "label": "Facial Analytics",
-                "href": "/ai/docs/concept-extras/vision/facial-analytics",
+                "href": "/recohut/docs/concept-extras/vision/facial-analytics",
                 "docId": "concept-extras/vision/facial-analytics"
               },
               {
                 "type": "link",
                 "label": "Image Segmentation",
-                "href": "/ai/docs/concept-extras/vision/image-segmentation",
+                "href": "/recohut/docs/concept-extras/vision/image-segmentation",
                 "docId": "concept-extras/vision/image-segmentation"
               },
               {
                 "type": "link",
                 "label": "Image Similarity",
-                "href": "/ai/docs/concept-extras/vision/image-similarity",
+                "href": "/recohut/docs/concept-extras/vision/image-similarity",
                 "docId": "concept-extras/vision/image-similarity"
               },
               {
                 "type": "link",
                 "label": "Object Detection",
-                "href": "/ai/docs/concept-extras/vision/object-detection",
+                "href": "/recohut/docs/concept-extras/vision/object-detection",
                 "docId": "concept-extras/vision/object-detection"
               },
               {
                 "type": "link",
                 "label": "Object Tracking",
-                "href": "/ai/docs/concept-extras/vision/object-tracking",
+                "href": "/recohut/docs/concept-extras/vision/object-tracking",
                 "docId": "concept-extras/vision/object-tracking"
               },
               {
                 "type": "link",
                 "label": "Pose Estimation",
-                "href": "/ai/docs/concept-extras/vision/pose-estimation",
+                "href": "/recohut/docs/concept-extras/vision/pose-estimation",
                 "docId": "concept-extras/vision/pose-estimation"
               },
               {
                 "type": "link",
                 "label": "Scene Text Recognition",
-                "href": "/ai/docs/concept-extras/vision/scene-text-recognition",
+                "href": "/recohut/docs/concept-extras/vision/scene-text-recognition",
                 "docId": "concept-extras/vision/scene-text-recognition"
               },
               {
                 "type": "link",
                 "label": "Video Action Recognition",
-                "href": "/ai/docs/concept-extras/vision/video-action-recognition",
+                "href": "/recohut/docs/concept-extras/vision/video-action-recognition",
                 "docId": "concept-extras/vision/video-action-recognition"
               }
             ]
           }
         ],
-        "href": "/ai/docs/concept-extras/"
+        "href": "/recohut/docs/concept-extras/"
       },
       {
         "type": "category",
@@ -474,551 +474,551 @@
           {
             "type": "link",
             "label": "A3C",
-            "href": "/ai/docs/models/a3c",
+            "href": "/recohut/docs/models/a3c",
             "docId": "models/a3c"
           },
           {
             "type": "link",
             "label": "AFM",
-            "href": "/ai/docs/models/afm",
+            "href": "/recohut/docs/models/afm",
             "docId": "models/afm"
           },
           {
             "type": "link",
             "label": "AFN",
-            "href": "/ai/docs/models/afn",
+            "href": "/recohut/docs/models/afn",
             "docId": "models/afn"
           },
           {
             "type": "link",
             "label": "AR",
-            "href": "/ai/docs/models/ar",
+            "href": "/recohut/docs/models/ar",
             "docId": "models/ar"
           },
           {
             "type": "link",
             "label": "ASMG",
-            "href": "/ai/docs/models/asmg",
+            "href": "/recohut/docs/models/asmg",
             "docId": "models/asmg"
           },
           {
             "type": "link",
             "label": "AttRec",
-            "href": "/ai/docs/models/attrec",
+            "href": "/recohut/docs/models/attrec",
             "docId": "models/attrec"
           },
           {
             "type": "link",
             "label": "AUSH",
-            "href": "/ai/docs/models/aush",
+            "href": "/recohut/docs/models/aush",
             "docId": "models/aush"
           },
           {
             "type": "link",
             "label": "AutoInt",
-            "href": "/ai/docs/models/autoint",
+            "href": "/recohut/docs/models/autoint",
             "docId": "models/autoint"
           },
           {
             "type": "link",
             "label": "BASR",
-            "href": "/ai/docs/models/basr",
+            "href": "/recohut/docs/models/basr",
             "docId": "models/basr"
           },
           {
             "type": "link",
             "label": "BCQ",
-            "href": "/ai/docs/models/bcq",
+            "href": "/recohut/docs/models/bcq",
             "docId": "models/bcq"
           },
           {
             "type": "link",
             "label": "Behavior Propensity Modeling",
-            "href": "/ai/docs/models/beh-prop",
+            "href": "/recohut/docs/models/beh-prop",
             "docId": "models/beh-prop"
           },
           {
             "type": "link",
             "label": "BiasOnly",
-            "href": "/ai/docs/models/biasonly",
+            "href": "/recohut/docs/models/biasonly",
             "docId": "models/biasonly"
           },
           {
             "type": "link",
             "label": "BigGraph",
-            "href": "/ai/docs/models/biggraph",
+            "href": "/recohut/docs/models/biggraph",
             "docId": "models/biggraph"
           },
           {
             "type": "link",
             "label": "BPR",
-            "href": "/ai/docs/models/bpr",
+            "href": "/recohut/docs/models/bpr",
             "docId": "models/bpr"
           },
           {
             "type": "link",
             "label": "BST",
-            "href": "/ai/docs/models/bst",
+            "href": "/recohut/docs/models/bst",
             "docId": "models/bst"
           },
           {
             "type": "link",
             "label": "CASER",
-            "href": "/ai/docs/models/caser",
+            "href": "/recohut/docs/models/caser",
             "docId": "models/caser"
           },
           {
             "type": "link",
             "label": "CIGC",
-            "href": "/ai/docs/models/cigc",
+            "href": "/recohut/docs/models/cigc",
             "docId": "models/cigc"
           },
           {
             "type": "link",
             "label": "CoKE",
-            "href": "/ai/docs/models/coke",
+            "href": "/recohut/docs/models/coke",
             "docId": "models/coke"
           },
           {
             "type": "link",
             "label": "DCN",
-            "href": "/ai/docs/models/dcn",
+            "href": "/recohut/docs/models/dcn",
             "docId": "models/dcn"
           },
           {
             "type": "link",
             "label": "DDPG",
-            "href": "/ai/docs/models/ddpg",
+            "href": "/recohut/docs/models/ddpg",
             "docId": "models/ddpg"
           },
           {
             "type": "link",
             "label": "DeepCross",
-            "href": "/ai/docs/models/deepcross",
+            "href": "/recohut/docs/models/deepcross",
             "docId": "models/deepcross"
           },
           {
             "type": "link",
             "label": "DeepFM",
-            "href": "/ai/docs/models/deepfm",
+            "href": "/recohut/docs/models/deepfm",
             "docId": "models/deepfm"
           },
           {
             "type": "link",
             "label": "DeepWalk",
-            "href": "/ai/docs/models/deepwalk",
+            "href": "/recohut/docs/models/deepwalk",
             "docId": "models/deepwalk"
           },
           {
             "type": "link",
             "label": "DGTN",
-            "href": "/ai/docs/models/dgtn",
+            "href": "/recohut/docs/models/dgtn",
             "docId": "models/dgtn"
           },
           {
             "type": "link",
             "label": "DM",
-            "href": "/ai/docs/models/dm",
+            "href": "/recohut/docs/models/dm",
             "docId": "models/dm"
           },
           {
             "type": "link",
             "label": "DMT",
-            "href": "/ai/docs/models/dmt",
+            "href": "/recohut/docs/models/dmt",
             "docId": "models/dmt"
           },
           {
             "type": "link",
             "label": "DPADL",
-            "href": "/ai/docs/models/dpadl",
+            "href": "/recohut/docs/models/dpadl",
             "docId": "models/dpadl"
           },
           {
             "type": "link",
             "label": "DQN",
-            "href": "/ai/docs/models/dqn",
+            "href": "/recohut/docs/models/dqn",
             "docId": "models/dqn"
           },
           {
             "type": "link",
             "label": "DRQN",
-            "href": "/ai/docs/models/drqn",
+            "href": "/recohut/docs/models/drqn",
             "docId": "models/drqn"
           },
           {
             "type": "link",
             "label": "DRR",
-            "href": "/ai/docs/models/drr",
+            "href": "/recohut/docs/models/drr",
             "docId": "models/drr"
           },
           {
             "type": "link",
             "label": "Dueling DQN",
-            "href": "/ai/docs/models/dueling-dqn",
+            "href": "/recohut/docs/models/dueling-dqn",
             "docId": "models/dueling-dqn"
           },
           {
             "type": "link",
             "label": "FFM",
-            "href": "/ai/docs/models/ffm",
+            "href": "/recohut/docs/models/ffm",
             "docId": "models/ffm"
           },
           {
             "type": "link",
             "label": "FGNN",
-            "href": "/ai/docs/models/fgnn",
+            "href": "/recohut/docs/models/fgnn",
             "docId": "models/fgnn"
           },
           {
             "type": "link",
             "label": "FM",
-            "href": "/ai/docs/models/fm",
+            "href": "/recohut/docs/models/fm",
             "docId": "models/fm"
           },
           {
             "type": "link",
             "label": "GAT",
-            "href": "/ai/docs/models/gat",
+            "href": "/recohut/docs/models/gat",
             "docId": "models/gat"
           },
           {
             "type": "link",
             "label": "GC-SAN",
-            "href": "/ai/docs/models/gc-san",
+            "href": "/recohut/docs/models/gc-san",
             "docId": "models/gc-san"
           },
           {
             "type": "link",
             "label": "GCE-GNN",
-            "href": "/ai/docs/models/gce-gnn",
+            "href": "/recohut/docs/models/gce-gnn",
             "docId": "models/gce-gnn"
           },
           {
             "type": "link",
             "label": "GLMix",
-            "href": "/ai/docs/models/glmix",
+            "href": "/recohut/docs/models/glmix",
             "docId": "models/glmix"
           },
           {
             "type": "link",
             "label": "GRU4Rec",
-            "href": "/ai/docs/models/gru4rec",
+            "href": "/recohut/docs/models/gru4rec",
             "docId": "models/gru4rec"
           },
           {
             "type": "link",
             "label": "HMLET",
-            "href": "/ai/docs/models/hmlet",
+            "href": "/recohut/docs/models/hmlet",
             "docId": "models/hmlet"
           },
           {
             "type": "link",
             "label": "IncCTR",
-            "href": "/ai/docs/models/incctr",
+            "href": "/recohut/docs/models/incctr",
             "docId": "models/incctr"
           },
           {
             "type": "link",
             "label": "IPW",
-            "href": "/ai/docs/models/ipw",
+            "href": "/recohut/docs/models/ipw",
             "docId": "models/ipw"
           },
           {
             "type": "link",
             "label": "ItemPop",
-            "href": "/ai/docs/models/itempop",
+            "href": "/recohut/docs/models/itempop",
             "docId": "models/itempop"
           },
           {
             "type": "link",
             "label": "KHGT",
-            "href": "/ai/docs/models/khgt",
+            "href": "/recohut/docs/models/khgt",
             "docId": "models/khgt"
           },
           {
             "type": "link",
             "label": "LESSR",
-            "href": "/ai/docs/models/lessr",
+            "href": "/recohut/docs/models/lessr",
             "docId": "models/lessr"
           },
           {
             "type": "link",
             "label": "LightFM WARP",
-            "href": "/ai/docs/models/lightfm-warp",
+            "href": "/recohut/docs/models/lightfm-warp",
             "docId": "models/lightfm-warp"
           },
           {
             "type": "link",
             "label": "LightGCN",
-            "href": "/ai/docs/models/lightgcn",
+            "href": "/recohut/docs/models/lightgcn",
             "docId": "models/lightgcn"
           },
           {
             "type": "link",
             "label": "LINE",
-            "href": "/ai/docs/models/line",
+            "href": "/recohut/docs/models/line",
             "docId": "models/line"
           },
           {
             "type": "link",
             "label": "LIRD",
-            "href": "/ai/docs/models/lird",
+            "href": "/recohut/docs/models/lird",
             "docId": "models/lird"
           },
           {
             "type": "link",
             "label": "Markov Chains",
-            "href": "/ai/docs/models/markov-chains",
+            "href": "/recohut/docs/models/markov-chains",
             "docId": "models/markov-chains"
           },
           {
             "type": "link",
             "label": "MATN",
-            "href": "/ai/docs/models/matn",
+            "href": "/recohut/docs/models/matn",
             "docId": "models/matn"
           },
           {
             "type": "link",
             "label": "MB-GMN",
-            "href": "/ai/docs/models/mb-gmn",
+            "href": "/recohut/docs/models/mb-gmn",
             "docId": "models/mb-gmn"
           },
           {
             "type": "link",
             "label": "MDP",
-            "href": "/ai/docs/models/mdp",
+            "href": "/recohut/docs/models/mdp",
             "docId": "models/mdp"
           },
           {
             "type": "link",
             "label": "MF",
-            "href": "/ai/docs/models/mf",
+            "href": "/recohut/docs/models/mf",
             "docId": "models/mf"
           },
           {
             "type": "link",
             "label": "MIAN",
-            "href": "/ai/docs/models/mian",
+            "href": "/recohut/docs/models/mian",
             "docId": "models/mian"
           },
           {
             "type": "link",
             "label": "MMoE",
-            "href": "/ai/docs/models/mmoe",
+            "href": "/recohut/docs/models/mmoe",
             "docId": "models/mmoe"
           },
           {
             "type": "link",
             "label": "MPNN",
-            "href": "/ai/docs/models/mpnn",
+            "href": "/recohut/docs/models/mpnn",
             "docId": "models/mpnn"
           },
           {
             "type": "link",
             "label": "NeuMF",
-            "href": "/ai/docs/models/neumf",
+            "href": "/recohut/docs/models/neumf",
             "docId": "models/neumf"
           },
           {
             "type": "link",
             "label": "NGCF",
-            "href": "/ai/docs/models/ngcf",
+            "href": "/recohut/docs/models/ngcf",
             "docId": "models/ngcf"
           },
           {
             "type": "link",
             "label": "NMRN",
-            "href": "/ai/docs/models/nmrn",
+            "href": "/recohut/docs/models/nmrn",
             "docId": "models/nmrn"
           },
           {
             "type": "link",
             "label": "Node2vec",
-            "href": "/ai/docs/models/node2vec",
+            "href": "/recohut/docs/models/node2vec",
             "docId": "models/node2vec"
           },
           {
             "type": "link",
             "label": "PNN",
-            "href": "/ai/docs/models/pnn",
+            "href": "/recohut/docs/models/pnn",
             "docId": "models/pnn"
           },
           {
             "type": "link",
             "label": "PPO",
-            "href": "/ai/docs/models/ppo",
+            "href": "/recohut/docs/models/ppo",
             "docId": "models/ppo"
           },
           {
             "type": "link",
             "label": "Q-learning",
-            "href": "/ai/docs/models/q-learning",
+            "href": "/recohut/docs/models/q-learning",
             "docId": "models/q-learning"
           },
           {
             "type": "link",
             "label": "Random Walk",
-            "href": "/ai/docs/models/random_walk",
+            "href": "/recohut/docs/models/random_walk",
             "docId": "models/random_walk"
           },
           {
             "type": "link",
             "label": "RKMF",
-            "href": "/ai/docs/models/rkmf",
+            "href": "/recohut/docs/models/rkmf",
             "docId": "models/rkmf"
           },
           {
             "type": "link",
             "label": "SAC",
-            "href": "/ai/docs/models/sac",
+            "href": "/recohut/docs/models/sac",
             "docId": "models/sac"
           },
           {
             "type": "link",
             "label": "SARSA",
-            "href": "/ai/docs/models/sarsa",
+            "href": "/recohut/docs/models/sarsa",
             "docId": "models/sarsa"
           },
           {
             "type": "link",
             "label": "SASRec",
-            "href": "/ai/docs/models/sasrec",
+            "href": "/recohut/docs/models/sasrec",
             "docId": "models/sasrec"
           },
           {
             "type": "link",
             "label": "SDNE",
-            "href": "/ai/docs/models/sdne",
+            "href": "/recohut/docs/models/sdne",
             "docId": "models/sdne"
           },
           {
             "type": "link",
             "label": "SGL",
-            "href": "/ai/docs/models/sgl",
+            "href": "/recohut/docs/models/sgl",
             "docId": "models/sgl"
           },
           {
             "type": "link",
             "label": "Shared Bottom",
-            "href": "/ai/docs/models/shared-bottom",
+            "href": "/recohut/docs/models/shared-bottom",
             "docId": "models/shared-bottom"
           },
           {
             "type": "link",
             "label": "SiReN",
-            "href": "/ai/docs/models/siren",
+            "href": "/recohut/docs/models/siren",
             "docId": "models/siren"
           },
           {
             "type": "link",
             "label": "SLIST",
-            "href": "/ai/docs/models/slist",
+            "href": "/recohut/docs/models/slist",
             "docId": "models/slist"
           },
           {
             "type": "link",
             "label": "SML",
-            "href": "/ai/docs/models/sml",
+            "href": "/recohut/docs/models/sml",
             "docId": "models/sml"
           },
           {
             "type": "link",
             "label": "SPop",
-            "href": "/ai/docs/models/spop",
+            "href": "/recohut/docs/models/spop",
             "docId": "models/spop"
           },
           {
             "type": "link",
             "label": "SR-GNN",
-            "href": "/ai/docs/models/sr-gnn",
+            "href": "/recohut/docs/models/sr-gnn",
             "docId": "models/sr-gnn"
           },
           {
             "type": "link",
             "label": "SR-SAN",
-            "href": "/ai/docs/models/sr-san",
+            "href": "/recohut/docs/models/sr-san",
             "docId": "models/sr-san"
           },
           {
             "type": "link",
             "label": "SSE-PT",
-            "href": "/ai/docs/models/sse-pt",
+            "href": "/recohut/docs/models/sse-pt",
             "docId": "models/sse-pt"
           },
           {
             "type": "link",
             "label": "STAMP",
-            "href": "/ai/docs/models/stamp",
+            "href": "/recohut/docs/models/stamp",
             "docId": "models/stamp"
           },
           {
             "type": "link",
             "label": "Struc2Vec",
-            "href": "/ai/docs/models/struc2vec",
+            "href": "/recohut/docs/models/struc2vec",
             "docId": "models/struc2vec"
           },
           {
             "type": "link",
             "label": "SVAE",
-            "href": "/ai/docs/models/svae",
+            "href": "/recohut/docs/models/svae",
             "docId": "models/svae"
           },
           {
             "type": "link",
             "label": "TAaMR",
-            "href": "/ai/docs/models/taamr",
+            "href": "/recohut/docs/models/taamr",
             "docId": "models/taamr"
           },
           {
             "type": "link",
             "label": "TAGNN-PP",
-            "href": "/ai/docs/models/tagnn-pp",
+            "href": "/recohut/docs/models/tagnn-pp",
             "docId": "models/tagnn-pp"
           },
           {
             "type": "link",
             "label": "TAGNN",
-            "href": "/ai/docs/models/tagnn",
+            "href": "/recohut/docs/models/tagnn",
             "docId": "models/tagnn"
           },
           {
             "type": "link",
             "label": "TGIN",
-            "href": "/ai/docs/models/tgin",
+            "href": "/recohut/docs/models/tgin",
             "docId": "models/tgin"
           },
           {
             "type": "link",
             "label": "VNCF",
-            "href": "/ai/docs/models/vncf",
+            "href": "/recohut/docs/models/vncf",
             "docId": "models/vncf"
           },
           {
             "type": "link",
             "label": "VSKNN",
-            "href": "/ai/docs/models/vsknn",
+            "href": "/recohut/docs/models/vsknn",
             "docId": "models/vsknn"
           },
           {
             "type": "link",
             "label": "Wide and Deep",
-            "href": "/ai/docs/models/wide-and-deep",
+            "href": "/recohut/docs/models/wide-and-deep",
             "docId": "models/wide-and-deep"
           },
           {
             "type": "link",
             "label": "Word2vec",
-            "href": "/ai/docs/models/word2vec",
+            "href": "/recohut/docs/models/word2vec",
             "docId": "models/word2vec"
           },
           {
             "type": "link",
             "label": "xDeepFM",
-            "href": "/ai/docs/models/xdeepfm",
+            "href": "/recohut/docs/models/xdeepfm",
             "docId": "models/xdeepfm"
           }
         ],
-        "href": "/ai/docs/models/"
+        "href": "/recohut/docs/models/"
       },
       {
         "type": "category",
@@ -1029,91 +1029,91 @@
           {
             "type": "link",
             "label": "Amazon Personalize",
-            "href": "/ai/docs/tutorials/amazon-personalize",
+            "href": "/recohut/docs/tutorials/amazon-personalize",
             "docId": "tutorials/amazon-personalize"
           },
           {
             "type": "link",
             "label": "Database Connections",
-            "href": "/ai/docs/tutorials/database-conn",
+            "href": "/recohut/docs/tutorials/database-conn",
             "docId": "tutorials/database-conn"
           },
           {
             "type": "link",
             "label": "Email Classification",
-            "href": "/ai/docs/tutorials/email-classification",
+            "href": "/recohut/docs/tutorials/email-classification",
             "docId": "tutorials/email-classification"
           },
           {
             "type": "link",
             "label": "Graph-based Modeling",
-            "href": "/ai/docs/tutorials/graph",
+            "href": "/recohut/docs/tutorials/graph",
             "docId": "tutorials/graph"
           },
           {
             "type": "link",
             "label": "Mathematics",
-            "href": "/ai/docs/tutorials/mathematics",
+            "href": "/recohut/docs/tutorials/mathematics",
             "docId": "tutorials/mathematics"
           },
           {
             "type": "link",
             "label": "Matrix Factorizations",
-            "href": "/ai/docs/tutorials/matrix-factorizations",
+            "href": "/recohut/docs/tutorials/matrix-factorizations",
             "docId": "tutorials/matrix-factorizations"
           },
           {
             "type": "link",
             "label": "MLOps",
-            "href": "/ai/docs/tutorials/mlops",
+            "href": "/recohut/docs/tutorials/mlops",
             "docId": "tutorials/mlops"
           },
           {
             "type": "link",
             "label": "Multi-Touch Attribution",
-            "href": "/ai/docs/tutorials/multi-touch-attribution",
+            "href": "/recohut/docs/tutorials/multi-touch-attribution",
             "docId": "tutorials/multi-touch-attribution"
           },
           {
             "type": "link",
             "label": "Name and Address Parsing",
-            "href": "/ai/docs/tutorials/name-address-parsing",
+            "href": "/recohut/docs/tutorials/name-address-parsing",
             "docId": "tutorials/name-address-parsing"
           },
           {
             "type": "link",
             "label": "Negative Implicit Feedback in Recommendations",
-            "href": "/ai/docs/tutorials/negative-implicit-feedback-rec",
+            "href": "/recohut/docs/tutorials/negative-implicit-feedback-rec",
             "docId": "tutorials/negative-implicit-feedback-rec"
           },
           {
             "type": "link",
             "label": "PDF to WordCloud via Email",
-            "href": "/ai/docs/tutorials/pdf-to-wordcloud-mail",
+            "href": "/recohut/docs/tutorials/pdf-to-wordcloud-mail",
             "docId": "tutorials/pdf-to-wordcloud-mail"
           },
           {
             "type": "link",
             "label": "Recommender System Evaluation",
-            "href": "/ai/docs/tutorials/recsys-evaluation",
+            "href": "/recohut/docs/tutorials/recsys-evaluation",
             "docId": "tutorials/recsys-evaluation"
           },
           {
             "type": "link",
             "label": "Resale Price Prediction",
-            "href": "/ai/docs/tutorials/resale-price-prediction",
+            "href": "/recohut/docs/tutorials/resale-price-prediction",
             "docId": "tutorials/resale-price-prediction"
           },
           {
             "type": "link",
             "label": "Vector Search",
-            "href": "/ai/docs/tutorials/vector-search",
+            "href": "/recohut/docs/tutorials/vector-search",
             "docId": "tutorials/vector-search"
           },
           {
             "type": "link",
             "label": "Word2vec",
-            "href": "/ai/docs/tutorials/word2vec",
+            "href": "/recohut/docs/tutorials/word2vec",
             "docId": "tutorials/word2vec"
           }
         ]
@@ -1127,13 +1127,13 @@
           {
             "type": "link",
             "label": "Python code",
-            "href": "/ai/docs/snippets/python-snippets",
+            "href": "/recohut/docs/snippets/python-snippets",
             "docId": "snippets/python-snippets"
           },
           {
             "type": "link",
             "label": "Unix shell",
-            "href": "/ai/docs/snippets/unix-shell-snippets",
+            "href": "/recohut/docs/snippets/unix-shell-snippets",
             "docId": "snippets/unix-shell-snippets"
           }
         ]
@@ -1147,46 +1147,46 @@
           {
             "type": "link",
             "label": "OBP",
-            "href": "/ai/docs/tools/obp",
+            "href": "/recohut/docs/tools/obp",
             "docId": "tools/obp"
           },
           {
             "type": "link",
             "label": "Pachyderm",
-            "href": "/ai/docs/tools/pachyderm",
+            "href": "/recohut/docs/tools/pachyderm",
             "docId": "tools/pachyderm"
           },
           {
             "type": "link",
             "label": "PySpark",
-            "href": "/ai/docs/tools/pyspark",
+            "href": "/recohut/docs/tools/pyspark",
             "docId": "tools/pyspark"
           },
           {
             "type": "link",
             "label": "River",
-            "href": "/ai/docs/tools/river",
+            "href": "/recohut/docs/tools/river",
             "docId": "tools/river"
           }
         ],
-        "href": "/ai/docs/tools/"
+        "href": "/recohut/docs/tools/"
       },
       {
         "type": "link",
         "label": "Datasets",
-        "href": "/ai/docs/datasets",
+        "href": "/recohut/docs/datasets",
         "docId": "datasets"
       },
       {
         "type": "link",
         "label": "Notebooks",
-        "href": "/ai/docs/notebooks",
+        "href": "/recohut/docs/notebooks",
         "docId": "notebooks"
       },
       {
         "type": "link",
         "label": "Projects",
-        "href": "/ai/docs/projects",
+        "href": "/recohut/docs/projects",
         "docId": "projects"
       }
     ]

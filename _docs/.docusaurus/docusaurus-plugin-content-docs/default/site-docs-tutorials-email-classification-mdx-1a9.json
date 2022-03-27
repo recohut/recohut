@@ -6,18 +6,18 @@
   "source": "@site/docs/tutorials/email-classification.mdx",
   "sourceDirName": "tutorials",
   "slug": "/tutorials/email-classification",
-  "permalink": "/ai/docs/tutorials/email-classification",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/tutorials/email-classification.mdx",
+  "permalink": "/recohut/docs/tutorials/email-classification",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/tutorials/email-classification.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Database Connections",
-    "permalink": "/ai/docs/tutorials/database-conn"
+    "permalink": "/recohut/docs/tutorials/database-conn"
   },
   "next": {
     "title": "Graph-based Modeling",
-    "permalink": "/ai/docs/tutorials/graph"
+    "permalink": "/recohut/docs/tutorials/graph"
   }
 }

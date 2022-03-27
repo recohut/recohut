@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/causal-inference.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/causal-inference",
-  "permalink": "/ai/docs/concept-extras/causal-inference",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/causal-inference.mdx",
+  "permalink": "/recohut/docs/concept-extras/causal-inference",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/causal-inference.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Bias & Fairness",
-    "permalink": "/ai/docs/concept-extras/bias-&-fairness"
+    "permalink": "/recohut/docs/concept-extras/bias-&-fairness"
   },
   "next": {
     "title": "Cold Start",
-    "permalink": "/ai/docs/concept-extras/cold-start"
+    "permalink": "/recohut/docs/concept-extras/cold-start"
   }
 }

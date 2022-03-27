@@ -6,18 +6,18 @@
   "source": "@site/docs/models/bst.mdx",
   "sourceDirName": "models",
   "slug": "/models/bst",
-  "permalink": "/ai/docs/models/bst",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/bst.mdx",
+  "permalink": "/recohut/docs/models/bst",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/bst.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "BPR",
-    "permalink": "/ai/docs/models/bpr"
+    "permalink": "/recohut/docs/models/bpr"
   },
   "next": {
     "title": "CASER",
-    "permalink": "/ai/docs/models/caser"
+    "permalink": "/recohut/docs/models/caser"
   }
 }

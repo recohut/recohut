@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-basics/concept-basics.mdx",
   "sourceDirName": "concept-basics",
   "slug": "/concept-basics/",
-  "permalink": "/ai/docs/concept-basics/",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-basics/concept-basics.mdx",
+  "permalink": "/recohut/docs/concept-basics/",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-basics/concept-basics.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Introduction",
-    "permalink": "/ai/docs/intro"
+    "permalink": "/recohut/docs/intro"
   },
   "next": {
     "title": "Challenges",
-    "permalink": "/ai/docs/concept-basics/challenges"
+    "permalink": "/recohut/docs/concept-basics/challenges"
   }
 }

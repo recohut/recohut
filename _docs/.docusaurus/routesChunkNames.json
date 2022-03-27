@@ -1,5 +1,5 @@
 {
-  "/ai/blog-1ed": {
+  "/recohut/blog-d89": {
     "component": "a6aa9e1f",
     "sidebar": "814f3328",
     "items": [
@@ -34,148 +34,148 @@
         "content": "edadaca9"
       }
     ],
-    "metadata": "a4b6d05c"
+    "metadata": "3bc4648c"
   },
-  "/ai/blog/2020/01/19/mobilenet-ssd-caffe-pre-trained-model-168": {
+  "/recohut/blog/2020/01/19/mobilenet-ssd-caffe-pre-trained-model-66d": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "ae27c878"
   },
-  "/ai/blog/2021/01/23/object-detection-with-yolo3-4b1": {
+  "/recohut/blog/2021/01/23/object-detection-with-yolo3-984": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "f76e21a9"
   },
-  "/ai/blog/2021/10/01/clinical-decision-making-4de": {
+  "/recohut/blog/2021/10/01/clinical-decision-making-4ca": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "7f20c9b3"
   },
-  "/ai/blog/2021/10/01/detectron-2-9db": {
+  "/recohut/blog/2021/10/01/detectron-2-8f8": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "3d93fce4"
   },
-  "/ai/blog/2021/10/01/distributed-training-of-recommender-systems-a32": {
+  "/recohut/blog/2021/10/01/distributed-training-of-recommender-systems-c3b": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "0ada242c"
   },
-  "/ai/blog/2021/10/01/document-recommendation-c6a": {
+  "/recohut/blog/2021/10/01/document-recommendation-9e7": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "746b09f8"
   },
-  "/ai/blog/2021/10/01/fake-voice-detection-cd0": {
+  "/recohut/blog/2021/10/01/fake-voice-detection-304": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "ef4cd368"
   },
-  "/ai/blog/2021/10/01/image-similarity-system-800": {
+  "/recohut/blog/2021/10/01/image-similarity-system-0df": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "caa49cac"
   },
-  "/ai/blog/2021/10/01/insurance-personalization-39e": {
+  "/recohut/blog/2021/10/01/insurance-personalization-0fd": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "f6af6df9"
   },
-  "/ai/blog/2021/10/01/name-&-address-parsing-2b1": {
+  "/recohut/blog/2021/10/01/name-&-address-parsing-6fb": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "4f303f78"
   },
-  "/ai/blog/2021/10/01/object-detection-hands-on-exercises-77d": {
+  "/recohut/blog/2021/10/01/object-detection-hands-on-exercises-542": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "2143c78b"
   },
-  "/ai/blog/2021/10/01/object-detection-with-opencv-25b": {
+  "/recohut/blog/2021/10/01/object-detection-with-opencv-a84": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "bfe29135"
   },
-  "/ai/blog/2021/10/01/object-detection-with-yolo3-dee": {
+  "/recohut/blog/2021/10/01/object-detection-with-yolo3-7a0": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "41dadac5"
   },
-  "/ai/blog/2021/10/01/ocr-experiments-af1": {
+  "/recohut/blog/2021/10/01/ocr-experiments-004": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "3ca4ffcb"
   },
-  "/ai/blog/2021/10/01/pdf-to-wordcloud-via-mail-241": {
+  "/recohut/blog/2021/10/01/pdf-to-wordcloud-via-mail-661": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "45f8179f"
   },
-  "/ai/blog/2021/10/01/personalized-unexpectedness-in-recommender-systems-3d7": {
+  "/recohut/blog/2021/10/01/personalized-unexpectedness-in-recommender-systems-56b": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "96e00020"
   },
-  "/ai/blog/2021/10/01/predicting-electronics-resale-price-0d2": {
+  "/recohut/blog/2021/10/01/predicting-electronics-resale-price-f8d": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "7dca322b"
   },
-  "/ai/blog/2021/10/01/real-time-news-personalization-with-flink-824": {
+  "/recohut/blog/2021/10/01/real-time-news-personalization-with-flink-fa1": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "a999e6ba"
   },
-  "/ai/blog/2021/10/01/semantic-similarity-f62": {
+  "/recohut/blog/2021/10/01/semantic-similarity-f60": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "84115211"
   },
-  "/ai/blog/2021/10/01/short-video-background-music-recommender-f9c": {
+  "/recohut/blog/2021/10/01/short-video-background-music-recommender-369": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "edbe2c02"
   },
-  "/ai/blog/2021/10/01/the-progression-of-analytics-in-enterprises-6c1": {
+  "/recohut/blog/2021/10/01/the-progression-of-analytics-in-enterprises-550": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "f66eeb44"
   },
-  "/ai/blog/2021/10/01/tools-for-building-recommender-systems-e05": {
+  "/recohut/blog/2021/10/01/tools-for-building-recommender-systems-8db": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "f1450ef9"
   },
-  "/ai/blog/2021/10/01/vehicle-suggestions-8cc": {
+  "/recohut/blog/2021/10/01/vehicle-suggestions-434": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "03158ba3"
   },
-  "/ai/blog/2021/10/01/web-scraping-using-scrapy-bs4-and-selenium-5be": {
+  "/recohut/blog/2021/10/01/web-scraping-using-scrapy-bs4-and-selenium-5c5": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "15f89aec"
   },
-  "/ai/blog/2021/10/01/web-scraping-with-gazpacho-1d6": {
+  "/recohut/blog/2021/10/01/web-scraping-with-gazpacho-79a": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "1125aadf"
   },
-  "/ai/blog/2021/10/01/wellness-tracker-chatbot-89d": {
+  "/recohut/blog/2021/10/01/wellness-tracker-chatbot-e44": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "c6b8a14b"
   },
-  "/ai/blog/2021/10/01/what-is-livestream-ecommerce-dc7": {
+  "/recohut/blog/2021/10/01/what-is-livestream-ecommerce-91d": {
     "component": "ccc49370",
     "sidebar": "814f3328",
     "content": "14e07bbd"
   },
-  "/ai/blog/archive-b8c": {
+  "/recohut/blog/archive-47d": {
     "component": "9e4087bc",
-    "archive": "7896468f"
+    "archive": "9614d8d6"
   },
-  "/ai/blog/page/2-199": {
+  "/recohut/blog/page/2-f9d": {
     "component": "a6aa9e1f",
     "sidebar": "814f3328",
     "items": [
@@ -210,9 +210,9 @@
         "content": "7bd4c30f"
       }
     ],
-    "metadata": "4e6fdbfb"
+    "metadata": "038bb491"
   },
-  "/ai/blog/page/3-247": {
+  "/recohut/blog/page/3-ff5": {
     "component": "a6aa9e1f",
     "sidebar": "814f3328",
     "items": [
@@ -238,14 +238,14 @@
         "content": "0690447f"
       }
     ],
-    "metadata": "587fcb27"
+    "metadata": "76317a30"
   },
-  "/ai/blog/tags-3d6": {
+  "/recohut/blog/tags-de6": {
     "component": "01a85c17",
     "sidebar": "814f3328",
-    "tags": "1a862410"
+    "tags": "1308b70a"
   },
-  "/ai/blog/tags/app-eb5": {
+  "/recohut/blog/tags/app-ed9": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -262,10 +262,10 @@
         "content": "0690447f"
       }
     ],
-    "metadata": "2d09faf1",
-    "listMetadata": "c95fe51b"
+    "metadata": "86bc9be1",
+    "listMetadata": "acf50469"
   },
-  "/ai/blog/tags/audio-a7c": {
+  "/recohut/blog/tags/audio-9cf": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -273,10 +273,10 @@
         "content": "90386e86"
       }
     ],
-    "metadata": "d70b7150",
-    "listMetadata": "9c1145a6"
+    "metadata": "ec92ff3f",
+    "listMetadata": "bdd5fbb0"
   },
-  "/ai/blog/tags/aws-beanstalk-c49": {
+  "/recohut/blog/tags/aws-beanstalk-eac": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -284,10 +284,10 @@
         "content": "d4ab1fbc"
       }
     ],
-    "metadata": "4d63a9b2",
-    "listMetadata": "22690797"
+    "metadata": "9e794148",
+    "listMetadata": "152292ab"
   },
-  "/ai/blog/tags/chatbot-da8": {
+  "/recohut/blog/tags/chatbot-41c": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -295,10 +295,10 @@
         "content": "9ea30017"
       }
     ],
-    "metadata": "4407445c",
-    "listMetadata": "9de95385"
+    "metadata": "7d291d05",
+    "listMetadata": "0b533ee1"
   },
-  "/ai/blog/tags/classification-65d": {
+  "/recohut/blog/tags/classification-050": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -306,10 +306,10 @@
         "content": "02a5a6e0"
       }
     ],
-    "metadata": "3b041e48",
-    "listMetadata": "2a7442f4"
+    "metadata": "2f6b95b4",
+    "listMetadata": "3d79443e"
   },
-  "/ai/blog/tags/deepfake-9c4": {
+  "/recohut/blog/tags/deepfake-7b1": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -317,10 +317,10 @@
         "content": "90386e86"
       }
     ],
-    "metadata": "b1de1e05",
-    "listMetadata": "63cb8def"
+    "metadata": "8814fb88",
+    "listMetadata": "25922fcf"
   },
-  "/ai/blog/tags/distributed-11d": {
+  "/recohut/blog/tags/distributed-988": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -328,10 +328,10 @@
         "content": "efed6fa0"
       }
     ],
-    "metadata": "9ee9509c",
-    "listMetadata": "482f2f6c"
+    "metadata": "1970d7ad",
+    "listMetadata": "6872fc28"
   },
-  "/ai/blog/tags/flask-7c3": {
+  "/recohut/blog/tags/flask-306": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -342,10 +342,10 @@
         "content": "bafaae06"
       }
     ],
-    "metadata": "cf1f25f5",
-    "listMetadata": "0b6453f9"
+    "metadata": "bcc6bd65",
+    "listMetadata": "d0901c10"
   },
-  "/ai/blog/tags/healthcare-ae0": {
+  "/recohut/blog/tags/healthcare-302": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -356,10 +356,10 @@
         "content": "9ea30017"
       }
     ],
-    "metadata": "c70be3aa",
-    "listMetadata": "bcefd9b7"
+    "metadata": "97879abc",
+    "listMetadata": "f3667db7"
   },
-  "/ai/blog/tags/insight-1b8": {
+  "/recohut/blog/tags/insight-19a": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -367,10 +367,10 @@
         "content": "1c317916"
       }
     ],
-    "metadata": "b263301d",
-    "listMetadata": "b2351b84"
+    "metadata": "a7805985",
+    "listMetadata": "1c2038b6"
   },
-  "/ai/blog/tags/insurance-455": {
+  "/recohut/blog/tags/insurance-040": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -378,10 +378,10 @@
         "content": "7cf6b45a"
       }
     ],
-    "metadata": "e6e80beb",
-    "listMetadata": "5a28154d"
+    "metadata": "3230bcd7",
+    "listMetadata": "883a0cd0"
   },
-  "/ai/blog/tags/ner-542": {
+  "/recohut/blog/tags/ner-037": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -389,10 +389,10 @@
         "content": "bafaae06"
       }
     ],
-    "metadata": "2e054ade",
-    "listMetadata": "babd15f6"
+    "metadata": "fc9c402b",
+    "listMetadata": "6c2ec375"
   },
-  "/ai/blog/tags/nlp-896": {
+  "/recohut/blog/tags/nlp-6f6": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -412,10 +412,10 @@
         "content": "9ea30017"
       }
     ],
-    "metadata": "dca03091",
-    "listMetadata": "fa0d9ec7"
+    "metadata": "14e1e1e3",
+    "listMetadata": "e16446eb"
   },
-  "/ai/blog/tags/object-detection-ff1": {
+  "/recohut/blog/tags/object-detection-2b4": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -426,10 +426,10 @@
         "content": "edadaca9"
       }
     ],
-    "metadata": "ba247005",
-    "listMetadata": "c3a87b18"
+    "metadata": "201657de",
+    "listMetadata": "c3f9b170"
   },
-  "/ai/blog/tags/ocr-965": {
+  "/recohut/blog/tags/ocr-428": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -437,10 +437,10 @@
         "content": "0bcd0601"
       }
     ],
-    "metadata": "8fbfb9ff",
-    "listMetadata": "20ebbd80"
+    "metadata": "56de27b9",
+    "listMetadata": "da11d9c9"
   },
-  "/ai/blog/tags/opencv-031": {
+  "/recohut/blog/tags/opencv-3ce": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -448,10 +448,10 @@
         "content": "edadaca9"
       }
     ],
-    "metadata": "7ebff1a7",
-    "listMetadata": "9f0671ed"
+    "metadata": "0c4de682",
+    "listMetadata": "8c3b4f7f"
   },
-  "/ai/blog/tags/personalization-192": {
+  "/recohut/blog/tags/personalization-74f": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -468,10 +468,10 @@
         "content": "f4866862"
       }
     ],
-    "metadata": "d95238f5",
-    "listMetadata": "635c655d"
+    "metadata": "5ccaecac",
+    "listMetadata": "f5b4f18b"
   },
-  "/ai/blog/tags/realtime-830": {
+  "/recohut/blog/tags/realtime-e27": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -479,10 +479,10 @@
         "content": "8a789c15"
       }
     ],
-    "metadata": "1f6b9aef",
-    "listMetadata": "fc9f8c62"
+    "metadata": "1f53e31f",
+    "listMetadata": "81b01cb3"
   },
-  "/ai/blog/tags/recsys-ba5": {
+  "/recohut/blog/tags/recsys-b14": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -496,10 +496,10 @@
         "content": "7bd4c30f"
       }
     ],
-    "metadata": "4401745f",
-    "listMetadata": "e92ff043"
+    "metadata": "2a2e8026",
+    "listMetadata": "17425805"
   },
-  "/ai/blog/tags/regression-afd": {
+  "/recohut/blog/tags/regression-982": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -507,10 +507,10 @@
         "content": "9cd79544"
       }
     ],
-    "metadata": "83e80faa",
-    "listMetadata": "b30c1624"
+    "metadata": "c1a9d1b6",
+    "listMetadata": "78221f73"
   },
-  "/ai/blog/tags/scraping-675": {
+  "/recohut/blog/tags/scraping-d8f": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -521,10 +521,10 @@
         "content": "28598ea0"
       }
     ],
-    "metadata": "5488b6dd",
-    "listMetadata": "38a47197"
+    "metadata": "93d3831a",
+    "listMetadata": "9822f611"
   },
-  "/ai/blog/tags/similarity-5ca": {
+  "/recohut/blog/tags/similarity-479": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -541,10 +541,10 @@
         "content": "defae8b4"
       }
     ],
-    "metadata": "edcf4f61",
-    "listMetadata": "216146dd"
+    "metadata": "427479a5",
+    "listMetadata": "bd7eacd1"
   },
-  "/ai/blog/tags/streamlit-c7f": {
+  "/recohut/blog/tags/streamlit-e88": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -558,10 +558,10 @@
         "content": "0690447f"
       }
     ],
-    "metadata": "a5992364",
-    "listMetadata": "8c77acf1"
+    "metadata": "20c093a3",
+    "listMetadata": "0c825bb7"
   },
-  "/ai/blog/tags/tool-a65": {
+  "/recohut/blog/tags/tool-0f5": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -572,10 +572,10 @@
         "content": "7bd4c30f"
       }
     ],
-    "metadata": "49feaca9",
-    "listMetadata": "0d7122ad"
+    "metadata": "566bddf7",
+    "listMetadata": "a8ec01cc"
   },
-  "/ai/blog/tags/trend-1b4": {
+  "/recohut/blog/tags/trend-fb0": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -583,10 +583,10 @@
         "content": "f4866862"
       }
     ],
-    "metadata": "5f18d5ae",
-    "listMetadata": "7a382530"
+    "metadata": "a9701142",
+    "listMetadata": "cb0017f8"
   },
-  "/ai/blog/tags/vision-36b": {
+  "/recohut/blog/tags/vision-474": {
     "component": "6875c492",
     "sidebar": "814f3328",
     "items": [
@@ -618,774 +618,774 @@
         "content": "0690447f"
       }
     ],
-    "metadata": "f7b63f49",
-    "listMetadata": "cadb07a8"
+    "metadata": "f1bd4abf",
+    "listMetadata": "82398ae3"
   },
-  "/ai/markdown-page-efc": {
+  "/recohut/markdown-page-cad": {
     "component": "1f391b9e",
     "content": "4c678320"
   },
-  "/ai/docs-8de": {
+  "/recohut/docs-2bc": {
     "component": "1be78505",
     "versionMetadata": "935f2afb"
   },
-  "/ai/docs/concept-basics/-09e": {
+  "/recohut/docs/concept-basics/-2e8": {
     "component": "17896441",
     "content": "d79f9bcf"
   },
-  "/ai/docs/concept-basics/challenges-360": {
+  "/recohut/docs/concept-basics/challenges-3c3": {
     "component": "17896441",
     "content": "ddfb07d5"
   },
-  "/ai/docs/concept-basics/collaborative-filtering-023": {
+  "/recohut/docs/concept-basics/collaborative-filtering-344": {
     "component": "17896441",
     "content": "1d7accc1"
   },
-  "/ai/docs/concept-basics/evaluation-4fc": {
+  "/recohut/docs/concept-basics/evaluation-b0f": {
     "component": "17896441",
     "content": "e1cd180f"
   },
-  "/ai/docs/concept-basics/implicit-feedback-655": {
+  "/recohut/docs/concept-basics/implicit-feedback-f07": {
     "component": "17896441",
     "content": "b5427eb4"
   },
-  "/ai/docs/concept-basics/processes-24f": {
+  "/recohut/docs/concept-basics/processes-985": {
     "component": "17896441",
     "content": "36a5d791"
   },
-  "/ai/docs/concept-basics/session-based-recommenders-33c": {
+  "/recohut/docs/concept-basics/session-based-recommenders-7ba": {
     "component": "17896441",
     "content": "44aba2af"
   },
-  "/ai/docs/concept-basics/tasks-f55": {
+  "/recohut/docs/concept-basics/tasks-9d3": {
     "component": "17896441",
     "content": "3893b702"
   },
-  "/ai/docs/concept-basics/types-of-recommender-systems-515": {
+  "/recohut/docs/concept-basics/types-of-recommender-systems-348": {
     "component": "17896441",
     "content": "cd7428df"
   },
-  "/ai/docs/concept-extras/-413": {
+  "/recohut/docs/concept-extras/-f12": {
     "component": "17896441",
     "content": "2eb401dd"
   },
-  "/ai/docs/concept-extras/amazon-personalize-a34": {
+  "/recohut/docs/concept-extras/amazon-personalize-ef4": {
     "component": "17896441",
     "content": "b114af35"
   },
-  "/ai/docs/concept-extras/apps-a70": {
+  "/recohut/docs/concept-extras/apps-488": {
     "component": "17896441",
     "content": "3364a0a7"
   },
-  "/ai/docs/concept-extras/bias-&-fairness-2aa": {
+  "/recohut/docs/concept-extras/bias-&-fairness-900": {
     "component": "17896441",
     "content": "38879a8f"
   },
-  "/ai/docs/concept-extras/causal-inference-cb4": {
+  "/recohut/docs/concept-extras/causal-inference-717": {
     "component": "17896441",
     "content": "3d4242a1"
   },
-  "/ai/docs/concept-extras/cold-start-6de": {
+  "/recohut/docs/concept-extras/cold-start-88e": {
     "component": "17896441",
     "content": "fd6d6020"
   },
-  "/ai/docs/concept-extras/cross-domain-2de": {
+  "/recohut/docs/concept-extras/cross-domain-0b8": {
     "component": "17896441",
     "content": "4ddda5bd"
   },
-  "/ai/docs/concept-extras/data-science-bfb": {
+  "/recohut/docs/concept-extras/data-science-d40": {
     "component": "17896441",
     "content": "ac30c77d"
   },
-  "/ai/docs/concept-extras/diversity-a98": {
+  "/recohut/docs/concept-extras/diversity-d4d": {
     "component": "17896441",
     "content": "997facb3"
   },
-  "/ai/docs/concept-extras/emerging-concepts-in-recommender-systems-059": {
+  "/recohut/docs/concept-extras/emerging-concepts-in-recommender-systems-ccf": {
     "component": "17896441",
     "content": "b0339283"
   },
-  "/ai/docs/concept-extras/graph-embeddings-717": {
+  "/recohut/docs/concept-extras/graph-embeddings-027": {
     "component": "17896441",
     "content": "41fc1781"
   },
-  "/ai/docs/concept-extras/graph-networks-2ab": {
+  "/recohut/docs/concept-extras/graph-networks-6a3": {
     "component": "17896441",
     "content": "e1893f79"
   },
-  "/ai/docs/concept-extras/incremental-learning-f5a": {
+  "/recohut/docs/concept-extras/incremental-learning-311": {
     "component": "17896441",
     "content": "fd427ffe"
   },
-  "/ai/docs/concept-extras/jensen-shannon-divergence-8b6": {
+  "/recohut/docs/concept-extras/jensen-shannon-divergence-d82": {
     "component": "17896441",
     "content": "2e7122d4"
   },
-  "/ai/docs/concept-extras/meta-learning-8b7": {
+  "/recohut/docs/concept-extras/meta-learning-e81": {
     "component": "17896441",
     "content": "e2162060"
   },
-  "/ai/docs/concept-extras/mlops-09e": {
+  "/recohut/docs/concept-extras/mlops-5f5": {
     "component": "17896441",
     "content": "e2ba42d3"
   },
-  "/ai/docs/concept-extras/model-deployment-79b": {
+  "/recohut/docs/concept-extras/model-deployment-7c2": {
     "component": "17896441",
     "content": "09d2840e"
   },
-  "/ai/docs/concept-extras/model-retraining-351": {
+  "/recohut/docs/concept-extras/model-retraining-545": {
     "component": "17896441",
     "content": "aa1576ad"
   },
-  "/ai/docs/concept-extras/multi-objective-optimization-cd2": {
+  "/recohut/docs/concept-extras/multi-objective-optimization-686": {
     "component": "17896441",
     "content": "b6bb8872"
   },
-  "/ai/docs/concept-extras/multi-task-learning-69e": {
+  "/recohut/docs/concept-extras/multi-task-learning-064": {
     "component": "17896441",
     "content": "86e8bda5"
   },
-  "/ai/docs/concept-extras/multitask-learning-432": {
+  "/recohut/docs/concept-extras/multitask-learning-5b4": {
     "component": "17896441",
     "content": "370b4b67"
   },
-  "/ai/docs/concept-extras/nlp/chatbot-8dd": {
+  "/recohut/docs/concept-extras/nlp/chatbot-021": {
     "component": "17896441",
     "content": "1f45df2f"
   },
-  "/ai/docs/concept-extras/nlp/language-modeling-364": {
+  "/recohut/docs/concept-extras/nlp/language-modeling-f34": {
     "component": "17896441",
     "content": "ad1e313f"
   },
-  "/ai/docs/concept-extras/nlp/named-entity-recognition-03a": {
+  "/recohut/docs/concept-extras/nlp/named-entity-recognition-d46": {
     "component": "17896441",
     "content": "0b69bfbd"
   },
-  "/ai/docs/concept-extras/nlp/text-analysis-22d": {
+  "/recohut/docs/concept-extras/nlp/text-analysis-e50": {
     "component": "17896441",
     "content": "9a16c49c"
   },
-  "/ai/docs/concept-extras/nlp/text-classification-1b0": {
+  "/recohut/docs/concept-extras/nlp/text-classification-c33": {
     "component": "17896441",
     "content": "463d24a3"
   },
-  "/ai/docs/concept-extras/nlp/text-generation-340": {
+  "/recohut/docs/concept-extras/nlp/text-generation-3a7": {
     "component": "17896441",
     "content": "b7de7a80"
   },
-  "/ai/docs/concept-extras/nlp/text-similarity-c21": {
+  "/recohut/docs/concept-extras/nlp/text-similarity-278": {
     "component": "17896441",
     "content": "a76264cd"
   },
-  "/ai/docs/concept-extras/nlp/text-style-transfer-d72": {
+  "/recohut/docs/concept-extras/nlp/text-style-transfer-ec7": {
     "component": "17896441",
     "content": "62732856"
   },
-  "/ai/docs/concept-extras/nlp/text-summarization-d2c": {
+  "/recohut/docs/concept-extras/nlp/text-summarization-a0e": {
     "component": "17896441",
     "content": "986ac21d"
   },
-  "/ai/docs/concept-extras/nlp/topic-modeling-fe7": {
+  "/recohut/docs/concept-extras/nlp/topic-modeling-716": {
     "component": "17896441",
     "content": "57ab7e8d"
   },
-  "/ai/docs/concept-extras/nlp/transformers-64f": {
+  "/recohut/docs/concept-extras/nlp/transformers-246": {
     "component": "17896441",
     "content": "08e0249a"
   },
-  "/ai/docs/concept-extras/offline-learning-7dc": {
+  "/recohut/docs/concept-extras/offline-learning-ba2": {
     "component": "17896441",
     "content": "daae9272"
   },
-  "/ai/docs/concept-extras/scalarization-981": {
+  "/recohut/docs/concept-extras/scalarization-2cc": {
     "component": "17896441",
     "content": "3f52bc8f"
   },
-  "/ai/docs/concept-extras/success-stories/-8f6": {
+  "/recohut/docs/concept-extras/success-stories/-6e4": {
     "component": "17896441",
     "content": "d6d23ee0"
   },
-  "/ai/docs/concept-extras/success-stories/1mg-prod2vec-e43": {
+  "/recohut/docs/concept-extras/success-stories/1mg-prod2vec-f53": {
     "component": "17896441",
     "content": "ddf584a6"
   },
-  "/ai/docs/concept-extras/success-stories/airbnb-experiences-fc4": {
+  "/recohut/docs/concept-extras/success-stories/airbnb-experiences-454": {
     "component": "17896441",
     "content": "afe99cf3"
   },
-  "/ai/docs/concept-extras/success-stories/alipay-ctr-cd5": {
+  "/recohut/docs/concept-extras/success-stories/alipay-ctr-6d5": {
     "component": "17896441",
     "content": "2bc56b97"
   },
-  "/ai/docs/concept-extras/success-stories/doordash-contextual-bandit-107": {
+  "/recohut/docs/concept-extras/success-stories/doordash-contextual-bandit-408": {
     "component": "17896441",
     "content": "8d95d61e"
   },
-  "/ai/docs/concept-extras/success-stories/etsy-personalization-23c": {
+  "/recohut/docs/concept-extras/success-stories/etsy-personalization-fe2": {
     "component": "17896441",
     "content": "94e31a49"
   },
-  "/ai/docs/concept-extras/success-stories/huawei-appgallery-002": {
+  "/recohut/docs/concept-extras/success-stories/huawei-appgallery-191": {
     "component": "17896441",
     "content": "6c167341"
   },
-  "/ai/docs/concept-extras/success-stories/linkedin-glmix-4df": {
+  "/recohut/docs/concept-extras/success-stories/linkedin-glmix-fd3": {
     "component": "17896441",
     "content": "c2f7ab3e"
   },
-  "/ai/docs/concept-extras/success-stories/marketcloud-real-time-4a5": {
+  "/recohut/docs/concept-extras/success-stories/marketcloud-real-time-219": {
     "component": "17896441",
     "content": "131ec613"
   },
-  "/ai/docs/concept-extras/success-stories/netflix-personalize-images-e26": {
+  "/recohut/docs/concept-extras/success-stories/netflix-personalize-images-190": {
     "component": "17896441",
     "content": "baf28957"
   },
-  "/ai/docs/concept-extras/success-stories/pinterest-multi-task-learning-370": {
+  "/recohut/docs/concept-extras/success-stories/pinterest-multi-task-learning-069": {
     "component": "17896441",
     "content": "aa084b6c"
   },
-  "/ai/docs/concept-extras/success-stories/santander-banking-products-b17": {
+  "/recohut/docs/concept-extras/success-stories/santander-banking-products-97b": {
     "component": "17896441",
     "content": "54da09c6"
   },
-  "/ai/docs/concept-extras/success-stories/scribd-real-time-490": {
+  "/recohut/docs/concept-extras/success-stories/scribd-real-time-790": {
     "component": "17896441",
     "content": "fec9a38a"
   },
-  "/ai/docs/concept-extras/success-stories/spotify-contextual-bandits-390": {
+  "/recohut/docs/concept-extras/success-stories/spotify-contextual-bandits-daa": {
     "component": "17896441",
     "content": "3ea27344"
   },
-  "/ai/docs/concept-extras/success-stories/spotify-rl-6d6": {
+  "/recohut/docs/concept-extras/success-stories/spotify-rl-c6b": {
     "component": "17896441",
     "content": "6c799552"
   },
-  "/ai/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit-366": {
+  "/recohut/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit-f35": {
     "component": "17896441",
     "content": "ea8c3f56"
   },
-  "/ai/docs/concept-extras/success-stories/taobao-bst-941": {
+  "/recohut/docs/concept-extras/success-stories/taobao-bst-add": {
     "component": "17896441",
     "content": "454df2e4"
   },
-  "/ai/docs/concept-extras/success-stories/the-long-tail-809": {
+  "/recohut/docs/concept-extras/success-stories/the-long-tail-1f7": {
     "component": "17896441",
     "content": "5379b28c"
   },
-  "/ai/docs/concept-extras/success-stories/ubereats-personalization-652": {
+  "/recohut/docs/concept-extras/success-stories/ubereats-personalization-798": {
     "component": "17896441",
     "content": "5cee3faa"
   },
-  "/ai/docs/concept-extras/success-stories/walmart-model-selection-110": {
+  "/recohut/docs/concept-extras/success-stories/walmart-model-selection-175": {
     "component": "17896441",
     "content": "fa1eb168"
   },
-  "/ai/docs/concept-extras/vision/facial-analytics-40e": {
+  "/recohut/docs/concept-extras/vision/facial-analytics-f07": {
     "component": "17896441",
     "content": "98ad4284"
   },
-  "/ai/docs/concept-extras/vision/image-segmentation-523": {
+  "/recohut/docs/concept-extras/vision/image-segmentation-410": {
     "component": "17896441",
     "content": "8f67ec41"
   },
-  "/ai/docs/concept-extras/vision/image-similarity-131": {
+  "/recohut/docs/concept-extras/vision/image-similarity-708": {
     "component": "17896441",
     "content": "46474ef2"
   },
-  "/ai/docs/concept-extras/vision/object-detection-d3f": {
+  "/recohut/docs/concept-extras/vision/object-detection-118": {
     "component": "17896441",
     "content": "1662659e"
   },
-  "/ai/docs/concept-extras/vision/object-tracking-6c3": {
+  "/recohut/docs/concept-extras/vision/object-tracking-849": {
     "component": "17896441",
     "content": "45114f24"
   },
-  "/ai/docs/concept-extras/vision/pose-estimation-c9b": {
+  "/recohut/docs/concept-extras/vision/pose-estimation-219": {
     "component": "17896441",
     "content": "46bd159d"
   },
-  "/ai/docs/concept-extras/vision/scene-text-recognition-212": {
+  "/recohut/docs/concept-extras/vision/scene-text-recognition-be3": {
     "component": "17896441",
     "content": "02e5d225"
   },
-  "/ai/docs/concept-extras/vision/video-action-recognition-bce": {
+  "/recohut/docs/concept-extras/vision/video-action-recognition-59e": {
     "component": "17896441",
     "content": "fd2a5de5"
   },
-  "/ai/docs/datasets-850": {
+  "/recohut/docs/datasets-ba7": {
     "component": "17896441",
     "content": "46d74525"
   },
-  "/ai/docs/intro-61e": {
+  "/recohut/docs/intro-026": {
     "component": "17896441",
     "content": "f8409a7e"
   },
-  "/ai/docs/models/-0fe": {
+  "/recohut/docs/models/-032": {
     "component": "17896441",
     "content": "a6bb01ad"
   },
-  "/ai/docs/models/a3c-d3e": {
+  "/recohut/docs/models/a3c-533": {
     "component": "17896441",
     "content": "028ac276"
   },
-  "/ai/docs/models/afm-645": {
+  "/recohut/docs/models/afm-b40": {
     "component": "17896441",
     "content": "4c3d31cd"
   },
-  "/ai/docs/models/afn-f20": {
+  "/recohut/docs/models/afn-7f7": {
     "component": "17896441",
     "content": "24dbcdc6"
   },
-  "/ai/docs/models/ar-876": {
+  "/recohut/docs/models/ar-d08": {
     "component": "17896441",
     "content": "04550df2"
   },
-  "/ai/docs/models/asmg-b26": {
+  "/recohut/docs/models/asmg-ad4": {
     "component": "17896441",
     "content": "0c78a21b"
   },
-  "/ai/docs/models/attrec-0d7": {
+  "/recohut/docs/models/attrec-bad": {
     "component": "17896441",
     "content": "69be3988"
   },
-  "/ai/docs/models/aush-036": {
+  "/recohut/docs/models/aush-2f0": {
     "component": "17896441",
     "content": "6b1ffc7a"
   },
-  "/ai/docs/models/autoint-9a5": {
+  "/recohut/docs/models/autoint-a59": {
     "component": "17896441",
     "content": "166c6a7f"
   },
-  "/ai/docs/models/basr-c22": {
+  "/recohut/docs/models/basr-477": {
     "component": "17896441",
     "content": "6cbd66af"
   },
-  "/ai/docs/models/bcq-2d0": {
+  "/recohut/docs/models/bcq-a3f": {
     "component": "17896441",
     "content": "59454cf7"
   },
-  "/ai/docs/models/beh-prop-8b0": {
+  "/recohut/docs/models/beh-prop-b8f": {
     "component": "17896441",
     "content": "34a7ace0"
   },
-  "/ai/docs/models/biasonly-2ce": {
+  "/recohut/docs/models/biasonly-5aa": {
     "component": "17896441",
     "content": "cf9a208c"
   },
-  "/ai/docs/models/biggraph-7c0": {
+  "/recohut/docs/models/biggraph-f74": {
     "component": "17896441",
     "content": "b278daee"
   },
-  "/ai/docs/models/bpr-74b": {
+  "/recohut/docs/models/bpr-5f9": {
     "component": "17896441",
     "content": "38b66072"
   },
-  "/ai/docs/models/bst-525": {
+  "/recohut/docs/models/bst-e48": {
     "component": "17896441",
     "content": "c2cf0978"
   },
-  "/ai/docs/models/caser-5dc": {
+  "/recohut/docs/models/caser-035": {
     "component": "17896441",
     "content": "45a566eb"
   },
-  "/ai/docs/models/cigc-5b8": {
+  "/recohut/docs/models/cigc-c05": {
     "component": "17896441",
     "content": "219bd67c"
   },
-  "/ai/docs/models/coke-f19": {
+  "/recohut/docs/models/coke-22e": {
     "component": "17896441",
     "content": "67f1fbd0"
   },
-  "/ai/docs/models/dcn-815": {
+  "/recohut/docs/models/dcn-7a7": {
     "component": "17896441",
     "content": "fe7548a4"
   },
-  "/ai/docs/models/ddpg-261": {
+  "/recohut/docs/models/ddpg-588": {
     "component": "17896441",
     "content": "62b5206f"
   },
-  "/ai/docs/models/deepcross-f8e": {
+  "/recohut/docs/models/deepcross-92b": {
     "component": "17896441",
     "content": "fff5b552"
   },
-  "/ai/docs/models/deepfm-7c0": {
+  "/recohut/docs/models/deepfm-9a1": {
     "component": "17896441",
     "content": "82257829"
   },
-  "/ai/docs/models/deepwalk-dc3": {
+  "/recohut/docs/models/deepwalk-bfa": {
     "component": "17896441",
     "content": "a87219ab"
   },
-  "/ai/docs/models/dgtn-508": {
+  "/recohut/docs/models/dgtn-f13": {
     "component": "17896441",
     "content": "34c245f9"
   },
-  "/ai/docs/models/dm-e39": {
+  "/recohut/docs/models/dm-8ea": {
     "component": "17896441",
     "content": "8af5790f"
   },
-  "/ai/docs/models/dmt-7d3": {
+  "/recohut/docs/models/dmt-ebe": {
     "component": "17896441",
     "content": "e6333d4c"
   },
-  "/ai/docs/models/dpadl-672": {
+  "/recohut/docs/models/dpadl-d70": {
     "component": "17896441",
     "content": "a55b26af"
   },
-  "/ai/docs/models/dqn-7d2": {
+  "/recohut/docs/models/dqn-e06": {
     "component": "17896441",
     "content": "fdd5b31f"
   },
-  "/ai/docs/models/drqn-bfd": {
+  "/recohut/docs/models/drqn-e65": {
     "component": "17896441",
     "content": "7ae1eb67"
   },
-  "/ai/docs/models/drr-1d3": {
+  "/recohut/docs/models/drr-ef1": {
     "component": "17896441",
     "content": "0ed8b9f8"
   },
-  "/ai/docs/models/dueling-dqn-355": {
+  "/recohut/docs/models/dueling-dqn-aa1": {
     "component": "17896441",
     "content": "32116b5c"
   },
-  "/ai/docs/models/ffm-5e9": {
+  "/recohut/docs/models/ffm-4e2": {
     "component": "17896441",
     "content": "f1a0a79e"
   },
-  "/ai/docs/models/fgnn-cfa": {
+  "/recohut/docs/models/fgnn-d9f": {
     "component": "17896441",
     "content": "3703d50b"
   },
-  "/ai/docs/models/fm-47b": {
+  "/recohut/docs/models/fm-b0b": {
     "component": "17896441",
     "content": "8129baa5"
   },
-  "/ai/docs/models/gat-a49": {
+  "/recohut/docs/models/gat-bac": {
     "component": "17896441",
     "content": "0d382527"
   },
-  "/ai/docs/models/gc-san-4fb": {
+  "/recohut/docs/models/gc-san-cc9": {
     "component": "17896441",
     "content": "cf4e9014"
   },
-  "/ai/docs/models/gce-gnn-9b9": {
+  "/recohut/docs/models/gce-gnn-909": {
     "component": "17896441",
     "content": "955b016c"
   },
-  "/ai/docs/models/glmix-357": {
+  "/recohut/docs/models/glmix-8b0": {
     "component": "17896441",
     "content": "d99e01e6"
   },
-  "/ai/docs/models/gru4rec-326": {
+  "/recohut/docs/models/gru4rec-e1f": {
     "component": "17896441",
     "content": "ef60ccbb"
   },
-  "/ai/docs/models/hmlet-654": {
+  "/recohut/docs/models/hmlet-16c": {
     "component": "17896441",
     "content": "b0ac56d4"
   },
-  "/ai/docs/models/incctr-c3f": {
+  "/recohut/docs/models/incctr-40e": {
     "component": "17896441",
     "content": "582c9c41"
   },
-  "/ai/docs/models/ipw-c21": {
+  "/recohut/docs/models/ipw-d9c": {
     "component": "17896441",
     "content": "ae36fd55"
   },
-  "/ai/docs/models/itempop-e1c": {
+  "/recohut/docs/models/itempop-f48": {
     "component": "17896441",
     "content": "fc7a266e"
   },
-  "/ai/docs/models/khgt-895": {
+  "/recohut/docs/models/khgt-c74": {
     "component": "17896441",
     "content": "b57cc83d"
   },
-  "/ai/docs/models/lessr-895": {
+  "/recohut/docs/models/lessr-582": {
     "component": "17896441",
     "content": "1f900998"
   },
-  "/ai/docs/models/lightfm-warp-b56": {
+  "/recohut/docs/models/lightfm-warp-abd": {
     "component": "17896441",
     "content": "b5d80fb8"
   },
-  "/ai/docs/models/lightgcn-48f": {
+  "/recohut/docs/models/lightgcn-f16": {
     "component": "17896441",
     "content": "dcc8d722"
   },
-  "/ai/docs/models/line-e67": {
+  "/recohut/docs/models/line-eb2": {
     "component": "17896441",
     "content": "c8ea734d"
   },
-  "/ai/docs/models/lird-522": {
+  "/recohut/docs/models/lird-d93": {
     "component": "17896441",
     "content": "5c34d655"
   },
-  "/ai/docs/models/markov-chains-7ab": {
+  "/recohut/docs/models/markov-chains-f26": {
     "component": "17896441",
     "content": "82771ff9"
   },
-  "/ai/docs/models/matn-dff": {
+  "/recohut/docs/models/matn-711": {
     "component": "17896441",
     "content": "4ce58c5b"
   },
-  "/ai/docs/models/mb-gmn-c45": {
+  "/recohut/docs/models/mb-gmn-4fa": {
     "component": "17896441",
     "content": "9438f7c4"
   },
-  "/ai/docs/models/mdp-6a2": {
+  "/recohut/docs/models/mdp-262": {
     "component": "17896441",
     "content": "1d903609"
   },
-  "/ai/docs/models/mf-1d2": {
+  "/recohut/docs/models/mf-a3f": {
     "component": "17896441",
     "content": "b1f4f34b"
   },
-  "/ai/docs/models/mian-ca1": {
+  "/recohut/docs/models/mian-f3d": {
     "component": "17896441",
     "content": "4d0e2452"
   },
-  "/ai/docs/models/mmoe-515": {
+  "/recohut/docs/models/mmoe-552": {
     "component": "17896441",
     "content": "110ea8e0"
   },
-  "/ai/docs/models/mpnn-0d7": {
+  "/recohut/docs/models/mpnn-77b": {
     "component": "17896441",
     "content": "5f5c06c1"
   },
-  "/ai/docs/models/neumf-818": {
+  "/recohut/docs/models/neumf-aa5": {
     "component": "17896441",
     "content": "10a3d27e"
   },
-  "/ai/docs/models/ngcf-b62": {
+  "/recohut/docs/models/ngcf-f2e": {
     "component": "17896441",
     "content": "5c2e3d73"
   },
-  "/ai/docs/models/nmrn-77c": {
+  "/recohut/docs/models/nmrn-d04": {
     "component": "17896441",
     "content": "aa47c92d"
   },
-  "/ai/docs/models/node2vec-0ff": {
+  "/recohut/docs/models/node2vec-726": {
     "component": "17896441",
     "content": "393bbff6"
   },
-  "/ai/docs/models/pnn-0bb": {
+  "/recohut/docs/models/pnn-66f": {
     "component": "17896441",
     "content": "330f61f2"
   },
-  "/ai/docs/models/ppo-bb5": {
+  "/recohut/docs/models/ppo-e58": {
     "component": "17896441",
     "content": "4208559d"
   },
-  "/ai/docs/models/q-learning-1a0": {
+  "/recohut/docs/models/q-learning-690": {
     "component": "17896441",
     "content": "68f1d7f3"
   },
-  "/ai/docs/models/random_walk-329": {
+  "/recohut/docs/models/random_walk-77a": {
     "component": "17896441",
     "content": "99248959"
   },
-  "/ai/docs/models/rkmf-4e7": {
+  "/recohut/docs/models/rkmf-6f7": {
     "component": "17896441",
     "content": "54e17eb8"
   },
-  "/ai/docs/models/sac-bbe": {
+  "/recohut/docs/models/sac-8dd": {
     "component": "17896441",
     "content": "aee97735"
   },
-  "/ai/docs/models/sarsa-e19": {
+  "/recohut/docs/models/sarsa-aa6": {
     "component": "17896441",
     "content": "92918cd3"
   },
-  "/ai/docs/models/sasrec-b6e": {
+  "/recohut/docs/models/sasrec-439": {
     "component": "17896441",
     "content": "302b9db2"
   },
-  "/ai/docs/models/sdne-3fe": {
+  "/recohut/docs/models/sdne-007": {
     "component": "17896441",
     "content": "3de4afa3"
   },
-  "/ai/docs/models/sgl-d40": {
+  "/recohut/docs/models/sgl-9bc": {
     "component": "17896441",
     "content": "924986c7"
   },
-  "/ai/docs/models/shared-bottom-66b": {
+  "/recohut/docs/models/shared-bottom-0b1": {
     "component": "17896441",
     "content": "33e6adb8"
   },
-  "/ai/docs/models/siren-c5c": {
+  "/recohut/docs/models/siren-442": {
     "component": "17896441",
     "content": "4abbe002"
   },
-  "/ai/docs/models/slist-d9b": {
+  "/recohut/docs/models/slist-ff3": {
     "component": "17896441",
     "content": "a045cb23"
   },
-  "/ai/docs/models/sml-b12": {
+  "/recohut/docs/models/sml-b87": {
     "component": "17896441",
     "content": "f6076a3e"
   },
-  "/ai/docs/models/spop-3b1": {
+  "/recohut/docs/models/spop-cc6": {
     "component": "17896441",
     "content": "ffd06d30"
   },
-  "/ai/docs/models/sr-gnn-995": {
+  "/recohut/docs/models/sr-gnn-61f": {
     "component": "17896441",
     "content": "de82467d"
   },
-  "/ai/docs/models/sr-san-180": {
+  "/recohut/docs/models/sr-san-8dd": {
     "component": "17896441",
     "content": "b1cd8063"
   },
-  "/ai/docs/models/sse-pt-d0e": {
+  "/recohut/docs/models/sse-pt-bcc": {
     "component": "17896441",
     "content": "95177047"
   },
-  "/ai/docs/models/stamp-345": {
+  "/recohut/docs/models/stamp-4a1": {
     "component": "17896441",
     "content": "ed5638c8"
   },
-  "/ai/docs/models/struc2vec-0b4": {
+  "/recohut/docs/models/struc2vec-0dc": {
     "component": "17896441",
     "content": "0e5fcb63"
   },
-  "/ai/docs/models/svae-67d": {
+  "/recohut/docs/models/svae-32e": {
     "component": "17896441",
     "content": "76b52ec7"
   },
-  "/ai/docs/models/taamr-d32": {
+  "/recohut/docs/models/taamr-b38": {
     "component": "17896441",
     "content": "e7ee080c"
   },
-  "/ai/docs/models/tagnn-332": {
+  "/recohut/docs/models/tagnn-ced": {
     "component": "17896441",
     "content": "1369e2cc"
   },
-  "/ai/docs/models/tagnn-pp-40c": {
+  "/recohut/docs/models/tagnn-pp-f38": {
     "component": "17896441",
     "content": "597206b0"
   },
-  "/ai/docs/models/tgin-be9": {
+  "/recohut/docs/models/tgin-98d": {
     "component": "17896441",
     "content": "28190081"
   },
-  "/ai/docs/models/vncf-941": {
+  "/recohut/docs/models/vncf-777": {
     "component": "17896441",
     "content": "99315e44"
   },
-  "/ai/docs/models/vsknn-466": {
+  "/recohut/docs/models/vsknn-cc2": {
     "component": "17896441",
     "content": "9ccd5c6b"
   },
-  "/ai/docs/models/wide-and-deep-a13": {
+  "/recohut/docs/models/wide-and-deep-429": {
     "component": "17896441",
     "content": "062eb12e"
   },
-  "/ai/docs/models/word2vec-889": {
+  "/recohut/docs/models/word2vec-1dd": {
     "component": "17896441",
     "content": "525e4a90"
   },
-  "/ai/docs/models/xdeepfm-f62": {
+  "/recohut/docs/models/xdeepfm-64c": {
     "component": "17896441",
     "content": "4313e232"
   },
-  "/ai/docs/notebooks-8bb": {
+  "/recohut/docs/notebooks-250": {
     "component": "17896441",
     "content": "61e35f98"
   },
-  "/ai/docs/projects-3d7": {
+  "/recohut/docs/projects-ac8": {
     "component": "17896441",
     "content": "1dc2fafb"
   },
-  "/ai/docs/snippets/python-snippets-1c0": {
+  "/recohut/docs/snippets/python-snippets-052": {
     "component": "17896441",
     "content": "c656e6bf"
   },
-  "/ai/docs/snippets/unix-shell-snippets-437": {
+  "/recohut/docs/snippets/unix-shell-snippets-126": {
     "component": "17896441",
     "content": "f32002bc"
   },
-  "/ai/docs/tools/-8ae": {
+  "/recohut/docs/tools/-6ef": {
     "component": "17896441",
     "content": "e7827875"
   },
-  "/ai/docs/tools/obp-d90": {
+  "/recohut/docs/tools/obp-544": {
     "component": "17896441",
     "content": "1127d87b"
   },
-  "/ai/docs/tools/pachyderm-7d8": {
+  "/recohut/docs/tools/pachyderm-fc4": {
     "component": "17896441",
     "content": "a6c44403"
   },
-  "/ai/docs/tools/pyspark-218": {
+  "/recohut/docs/tools/pyspark-c70": {
     "component": "17896441",
     "content": "8bf4c400"
   },
-  "/ai/docs/tools/river-af0": {
+  "/recohut/docs/tools/river-1b7": {
     "component": "17896441",
     "content": "6a6646b2"
   },
-  "/ai/docs/tutorials/amazon-personalize-19f": {
+  "/recohut/docs/tutorials/amazon-personalize-74e": {
     "component": "17896441",
     "content": "2e5bab18"
   },
-  "/ai/docs/tutorials/database-conn-a33": {
+  "/recohut/docs/tutorials/database-conn-e65": {
     "component": "17896441",
     "content": "a3f43433"
   },
-  "/ai/docs/tutorials/email-classification-51a": {
+  "/recohut/docs/tutorials/email-classification-a36": {
     "component": "17896441",
     "content": "1a9a7898"
   },
-  "/ai/docs/tutorials/graph-d6a": {
+  "/recohut/docs/tutorials/graph-1b7": {
     "component": "17896441",
     "content": "c0e8acf8"
   },
-  "/ai/docs/tutorials/mathematics-c54": {
+  "/recohut/docs/tutorials/mathematics-212": {
     "component": "17896441",
     "content": "32b591e2"
   },
-  "/ai/docs/tutorials/matrix-factorizations-001": {
+  "/recohut/docs/tutorials/matrix-factorizations-12e": {
     "component": "17896441",
     "content": "c637d9e1"
   },
-  "/ai/docs/tutorials/mlops-922": {
+  "/recohut/docs/tutorials/mlops-893": {
     "component": "17896441",
     "content": "27c72ada"
   },
-  "/ai/docs/tutorials/multi-touch-attribution-33e": {
+  "/recohut/docs/tutorials/multi-touch-attribution-2ac": {
     "component": "17896441",
     "content": "c7a10471"
   },
-  "/ai/docs/tutorials/name-address-parsing-82b": {
+  "/recohut/docs/tutorials/name-address-parsing-ba8": {
     "component": "17896441",
     "content": "014681ef"
   },
-  "/ai/docs/tutorials/negative-implicit-feedback-rec-209": {
+  "/recohut/docs/tutorials/negative-implicit-feedback-rec-488": {
     "component": "17896441",
     "content": "1ffd5353"
   },
-  "/ai/docs/tutorials/pdf-to-wordcloud-mail-ff4": {
+  "/recohut/docs/tutorials/pdf-to-wordcloud-mail-6c7": {
     "component": "17896441",
     "content": "81b2594b"
   },
-  "/ai/docs/tutorials/recsys-evaluation-e0e": {
+  "/recohut/docs/tutorials/recsys-evaluation-c1c": {
     "component": "17896441",
     "content": "d79dc4e6"
   },
-  "/ai/docs/tutorials/resale-price-prediction-4ab": {
+  "/recohut/docs/tutorials/resale-price-prediction-87e": {
     "component": "17896441",
     "content": "8535609d"
   },
-  "/ai/docs/tutorials/vector-search-dae": {
+  "/recohut/docs/tutorials/vector-search-f62": {
     "component": "17896441",
     "content": "b3ef215f"
   },
-  "/ai/docs/tutorials/word2vec-f92": {
+  "/recohut/docs/tutorials/word2vec-584": {
     "component": "17896441",
     "content": "965daf4f"
   },
-  "/ai/-805": {
+  "/recohut/-786": {
     "component": "c4f5d8e4",
     "config": "5e9f5e1a"
   }

@@ -6,18 +6,18 @@
   "source": "@site/docs/models/rkmf.mdx",
   "sourceDirName": "models",
   "slug": "/models/rkmf",
-  "permalink": "/ai/docs/models/rkmf",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/rkmf.mdx",
+  "permalink": "/recohut/docs/models/rkmf",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/rkmf.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Random Walk",
-    "permalink": "/ai/docs/models/random_walk"
+    "permalink": "/recohut/docs/models/random_walk"
   },
   "next": {
     "title": "SAC",
-    "permalink": "/ai/docs/models/sac"
+    "permalink": "/recohut/docs/models/sac"
   }
 }

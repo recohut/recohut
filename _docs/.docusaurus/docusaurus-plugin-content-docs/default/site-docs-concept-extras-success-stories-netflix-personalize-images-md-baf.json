@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/success-stories/netflix-personalize-images.md",
   "sourceDirName": "concept-extras/success-stories",
   "slug": "/concept-extras/success-stories/netflix-personalize-images",
-  "permalink": "/ai/docs/concept-extras/success-stories/netflix-personalize-images",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/netflix-personalize-images.md",
+  "permalink": "/recohut/docs/concept-extras/success-stories/netflix-personalize-images",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/success-stories/netflix-personalize-images.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "MarketCloud Real-time",
-    "permalink": "/ai/docs/concept-extras/success-stories/marketcloud-real-time"
+    "permalink": "/recohut/docs/concept-extras/success-stories/marketcloud-real-time"
   },
   "next": {
     "title": "Pinterest Multi-task Learning",
-    "permalink": "/ai/docs/concept-extras/success-stories/pinterest-multi-task-learning"
+    "permalink": "/recohut/docs/concept-extras/success-stories/pinterest-multi-task-learning"
   }
 }

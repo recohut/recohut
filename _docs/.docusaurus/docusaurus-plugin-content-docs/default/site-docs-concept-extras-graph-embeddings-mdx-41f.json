@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/graph-embeddings.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/graph-embeddings",
-  "permalink": "/ai/docs/concept-extras/graph-embeddings",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/graph-embeddings.mdx",
+  "permalink": "/recohut/docs/concept-extras/graph-embeddings",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/graph-embeddings.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Emerging Concepts in Recommender Systems",
-    "permalink": "/ai/docs/concept-extras/emerging-concepts-in-recommender-systems"
+    "permalink": "/recohut/docs/concept-extras/emerging-concepts-in-recommender-systems"
   },
   "next": {
     "title": "Graph Networks",
-    "permalink": "/ai/docs/concept-extras/graph-networks"
+    "permalink": "/recohut/docs/concept-extras/graph-networks"
   }
 }

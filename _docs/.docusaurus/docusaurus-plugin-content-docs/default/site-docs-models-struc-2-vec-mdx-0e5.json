@@ -6,18 +6,18 @@
   "source": "@site/docs/models/struc2vec.mdx",
   "sourceDirName": "models",
   "slug": "/models/struc2vec",
-  "permalink": "/ai/docs/models/struc2vec",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/struc2vec.mdx",
+  "permalink": "/recohut/docs/models/struc2vec",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/struc2vec.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "STAMP",
-    "permalink": "/ai/docs/models/stamp"
+    "permalink": "/recohut/docs/models/stamp"
   },
   "next": {
     "title": "SVAE",
-    "permalink": "/ai/docs/models/svae"
+    "permalink": "/recohut/docs/models/svae"
   }
 }

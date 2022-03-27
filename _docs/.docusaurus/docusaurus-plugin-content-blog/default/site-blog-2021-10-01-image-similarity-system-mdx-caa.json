@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/image-similarity-system",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-image-similarity-system.mdx",
+  "permalink": "/recohut/blog/2021/10/01/image-similarity-system",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-image-similarity-system.mdx",
   "source": "@site/blog/2021-10-01-image-similarity-system.mdx",
   "title": "Image Similarity System",
   "description": "/img/content-blog-raw-blog-image-similarity-system-untitled.png",
@@ -9,19 +9,19 @@
   "tags": [
     {
       "label": "aws beanstalk",
-      "permalink": "/ai/blog/tags/aws-beanstalk"
+      "permalink": "/recohut/blog/tags/aws-beanstalk"
     },
     {
       "label": "flask",
-      "permalink": "/ai/blog/tags/flask"
+      "permalink": "/recohut/blog/tags/flask"
     },
     {
       "label": "similarity",
-      "permalink": "/ai/blog/tags/similarity"
+      "permalink": "/recohut/blog/tags/similarity"
     },
     {
       "label": "vision",
-      "permalink": "/ai/blog/tags/vision"
+      "permalink": "/recohut/blog/tags/vision"
     }
   ],
   "readingTime": 3.045,
@@ -47,10 +47,10 @@
   },
   "prevItem": {
     "title": "Fake Voice Detection",
-    "permalink": "/ai/blog/2021/10/01/fake-voice-detection"
+    "permalink": "/recohut/blog/2021/10/01/fake-voice-detection"
   },
   "nextItem": {
     "title": "Insurance Personalization",
-    "permalink": "/ai/blog/2021/10/01/insurance-personalization"
+    "permalink": "/recohut/blog/2021/10/01/insurance-personalization"
   }
 }

@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/insurance-personalization",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-insurance-personalization.mdx",
+  "permalink": "/recohut/blog/2021/10/01/insurance-personalization",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-insurance-personalization.mdx",
   "source": "@site/blog/2021-10-01-insurance-personalization.mdx",
   "title": "Insurance Personalization",
   "description": "Author: Alexsoft",
@@ -9,11 +9,11 @@
   "tags": [
     {
       "label": "insurance",
-      "permalink": "/ai/blog/tags/insurance"
+      "permalink": "/recohut/blog/tags/insurance"
     },
     {
       "label": "personalization",
-      "permalink": "/ai/blog/tags/personalization"
+      "permalink": "/recohut/blog/tags/personalization"
     }
   ],
   "readingTime": 9.355,
@@ -37,10 +37,10 @@
   },
   "prevItem": {
     "title": "Image Similarity System",
-    "permalink": "/ai/blog/2021/10/01/image-similarity-system"
+    "permalink": "/recohut/blog/2021/10/01/image-similarity-system"
   },
   "nextItem": {
     "title": "Name & Address Parsing",
-    "permalink": "/ai/blog/2021/10/01/name-&-address-parsing"
+    "permalink": "/recohut/blog/2021/10/01/name-&-address-parsing"
   }
 }

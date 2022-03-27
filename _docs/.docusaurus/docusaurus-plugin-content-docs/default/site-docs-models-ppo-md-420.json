@@ -6,18 +6,18 @@
   "source": "@site/docs/models/ppo.md",
   "sourceDirName": "models",
   "slug": "/models/ppo",
-  "permalink": "/ai/docs/models/ppo",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/ppo.md",
+  "permalink": "/recohut/docs/models/ppo",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/ppo.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "PNN",
-    "permalink": "/ai/docs/models/pnn"
+    "permalink": "/recohut/docs/models/pnn"
   },
   "next": {
     "title": "Q-learning",
-    "permalink": "/ai/docs/models/q-learning"
+    "permalink": "/recohut/docs/models/q-learning"
   }
 }

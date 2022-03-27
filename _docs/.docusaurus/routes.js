@@ -4,1443 +4,1443 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/ai/blog',
-    component: ComponentCreator('/ai/blog','1ed'),
+    path: '/recohut/blog',
+    component: ComponentCreator('/recohut/blog','d89'),
     exact: true
   },
   {
-    path: '/ai/blog/2020/01/19/mobilenet-ssd-caffe-pre-trained-model',
-    component: ComponentCreator('/ai/blog/2020/01/19/mobilenet-ssd-caffe-pre-trained-model','168'),
+    path: '/recohut/blog/2020/01/19/mobilenet-ssd-caffe-pre-trained-model',
+    component: ComponentCreator('/recohut/blog/2020/01/19/mobilenet-ssd-caffe-pre-trained-model','66d'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/01/23/object-detection-with-yolo3',
-    component: ComponentCreator('/ai/blog/2021/01/23/object-detection-with-yolo3','4b1'),
+    path: '/recohut/blog/2021/01/23/object-detection-with-yolo3',
+    component: ComponentCreator('/recohut/blog/2021/01/23/object-detection-with-yolo3','984'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/clinical-decision-making',
-    component: ComponentCreator('/ai/blog/2021/10/01/clinical-decision-making','4de'),
+    path: '/recohut/blog/2021/10/01/clinical-decision-making',
+    component: ComponentCreator('/recohut/blog/2021/10/01/clinical-decision-making','4ca'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/detectron-2',
-    component: ComponentCreator('/ai/blog/2021/10/01/detectron-2','9db'),
+    path: '/recohut/blog/2021/10/01/detectron-2',
+    component: ComponentCreator('/recohut/blog/2021/10/01/detectron-2','8f8'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/distributed-training-of-recommender-systems',
-    component: ComponentCreator('/ai/blog/2021/10/01/distributed-training-of-recommender-systems','a32'),
+    path: '/recohut/blog/2021/10/01/distributed-training-of-recommender-systems',
+    component: ComponentCreator('/recohut/blog/2021/10/01/distributed-training-of-recommender-systems','c3b'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/document-recommendation',
-    component: ComponentCreator('/ai/blog/2021/10/01/document-recommendation','c6a'),
+    path: '/recohut/blog/2021/10/01/document-recommendation',
+    component: ComponentCreator('/recohut/blog/2021/10/01/document-recommendation','9e7'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/fake-voice-detection',
-    component: ComponentCreator('/ai/blog/2021/10/01/fake-voice-detection','cd0'),
+    path: '/recohut/blog/2021/10/01/fake-voice-detection',
+    component: ComponentCreator('/recohut/blog/2021/10/01/fake-voice-detection','304'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/image-similarity-system',
-    component: ComponentCreator('/ai/blog/2021/10/01/image-similarity-system','800'),
+    path: '/recohut/blog/2021/10/01/image-similarity-system',
+    component: ComponentCreator('/recohut/blog/2021/10/01/image-similarity-system','0df'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/insurance-personalization',
-    component: ComponentCreator('/ai/blog/2021/10/01/insurance-personalization','39e'),
+    path: '/recohut/blog/2021/10/01/insurance-personalization',
+    component: ComponentCreator('/recohut/blog/2021/10/01/insurance-personalization','0fd'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/name-&-address-parsing',
-    component: ComponentCreator('/ai/blog/2021/10/01/name-&-address-parsing','2b1'),
+    path: '/recohut/blog/2021/10/01/name-&-address-parsing',
+    component: ComponentCreator('/recohut/blog/2021/10/01/name-&-address-parsing','6fb'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/object-detection-hands-on-exercises',
-    component: ComponentCreator('/ai/blog/2021/10/01/object-detection-hands-on-exercises','77d'),
+    path: '/recohut/blog/2021/10/01/object-detection-hands-on-exercises',
+    component: ComponentCreator('/recohut/blog/2021/10/01/object-detection-hands-on-exercises','542'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/object-detection-with-opencv',
-    component: ComponentCreator('/ai/blog/2021/10/01/object-detection-with-opencv','25b'),
+    path: '/recohut/blog/2021/10/01/object-detection-with-opencv',
+    component: ComponentCreator('/recohut/blog/2021/10/01/object-detection-with-opencv','a84'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/object-detection-with-yolo3',
-    component: ComponentCreator('/ai/blog/2021/10/01/object-detection-with-yolo3','dee'),
+    path: '/recohut/blog/2021/10/01/object-detection-with-yolo3',
+    component: ComponentCreator('/recohut/blog/2021/10/01/object-detection-with-yolo3','7a0'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/ocr-experiments',
-    component: ComponentCreator('/ai/blog/2021/10/01/ocr-experiments','af1'),
+    path: '/recohut/blog/2021/10/01/ocr-experiments',
+    component: ComponentCreator('/recohut/blog/2021/10/01/ocr-experiments','004'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/pdf-to-wordcloud-via-mail',
-    component: ComponentCreator('/ai/blog/2021/10/01/pdf-to-wordcloud-via-mail','241'),
+    path: '/recohut/blog/2021/10/01/pdf-to-wordcloud-via-mail',
+    component: ComponentCreator('/recohut/blog/2021/10/01/pdf-to-wordcloud-via-mail','661'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/personalized-unexpectedness-in-recommender-systems',
-    component: ComponentCreator('/ai/blog/2021/10/01/personalized-unexpectedness-in-recommender-systems','3d7'),
+    path: '/recohut/blog/2021/10/01/personalized-unexpectedness-in-recommender-systems',
+    component: ComponentCreator('/recohut/blog/2021/10/01/personalized-unexpectedness-in-recommender-systems','56b'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/predicting-electronics-resale-price',
-    component: ComponentCreator('/ai/blog/2021/10/01/predicting-electronics-resale-price','0d2'),
+    path: '/recohut/blog/2021/10/01/predicting-electronics-resale-price',
+    component: ComponentCreator('/recohut/blog/2021/10/01/predicting-electronics-resale-price','f8d'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/real-time-news-personalization-with-flink',
-    component: ComponentCreator('/ai/blog/2021/10/01/real-time-news-personalization-with-flink','824'),
+    path: '/recohut/blog/2021/10/01/real-time-news-personalization-with-flink',
+    component: ComponentCreator('/recohut/blog/2021/10/01/real-time-news-personalization-with-flink','fa1'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/semantic-similarity',
-    component: ComponentCreator('/ai/blog/2021/10/01/semantic-similarity','f62'),
+    path: '/recohut/blog/2021/10/01/semantic-similarity',
+    component: ComponentCreator('/recohut/blog/2021/10/01/semantic-similarity','f60'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/short-video-background-music-recommender',
-    component: ComponentCreator('/ai/blog/2021/10/01/short-video-background-music-recommender','f9c'),
+    path: '/recohut/blog/2021/10/01/short-video-background-music-recommender',
+    component: ComponentCreator('/recohut/blog/2021/10/01/short-video-background-music-recommender','369'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/the-progression-of-analytics-in-enterprises',
-    component: ComponentCreator('/ai/blog/2021/10/01/the-progression-of-analytics-in-enterprises','6c1'),
+    path: '/recohut/blog/2021/10/01/the-progression-of-analytics-in-enterprises',
+    component: ComponentCreator('/recohut/blog/2021/10/01/the-progression-of-analytics-in-enterprises','550'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/tools-for-building-recommender-systems',
-    component: ComponentCreator('/ai/blog/2021/10/01/tools-for-building-recommender-systems','e05'),
+    path: '/recohut/blog/2021/10/01/tools-for-building-recommender-systems',
+    component: ComponentCreator('/recohut/blog/2021/10/01/tools-for-building-recommender-systems','8db'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/vehicle-suggestions',
-    component: ComponentCreator('/ai/blog/2021/10/01/vehicle-suggestions','8cc'),
+    path: '/recohut/blog/2021/10/01/vehicle-suggestions',
+    component: ComponentCreator('/recohut/blog/2021/10/01/vehicle-suggestions','434'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/web-scraping-using-scrapy-bs4-and-selenium',
-    component: ComponentCreator('/ai/blog/2021/10/01/web-scraping-using-scrapy-bs4-and-selenium','5be'),
+    path: '/recohut/blog/2021/10/01/web-scraping-using-scrapy-bs4-and-selenium',
+    component: ComponentCreator('/recohut/blog/2021/10/01/web-scraping-using-scrapy-bs4-and-selenium','5c5'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/web-scraping-with-gazpacho',
-    component: ComponentCreator('/ai/blog/2021/10/01/web-scraping-with-gazpacho','1d6'),
+    path: '/recohut/blog/2021/10/01/web-scraping-with-gazpacho',
+    component: ComponentCreator('/recohut/blog/2021/10/01/web-scraping-with-gazpacho','79a'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/wellness-tracker-chatbot',
-    component: ComponentCreator('/ai/blog/2021/10/01/wellness-tracker-chatbot','89d'),
+    path: '/recohut/blog/2021/10/01/wellness-tracker-chatbot',
+    component: ComponentCreator('/recohut/blog/2021/10/01/wellness-tracker-chatbot','e44'),
     exact: true
   },
   {
-    path: '/ai/blog/2021/10/01/what-is-livestream-ecommerce',
-    component: ComponentCreator('/ai/blog/2021/10/01/what-is-livestream-ecommerce','dc7'),
+    path: '/recohut/blog/2021/10/01/what-is-livestream-ecommerce',
+    component: ComponentCreator('/recohut/blog/2021/10/01/what-is-livestream-ecommerce','91d'),
     exact: true
   },
   {
-    path: '/ai/blog/archive',
-    component: ComponentCreator('/ai/blog/archive','b8c'),
+    path: '/recohut/blog/archive',
+    component: ComponentCreator('/recohut/blog/archive','47d'),
     exact: true
   },
   {
-    path: '/ai/blog/page/2',
-    component: ComponentCreator('/ai/blog/page/2','199'),
+    path: '/recohut/blog/page/2',
+    component: ComponentCreator('/recohut/blog/page/2','f9d'),
     exact: true
   },
   {
-    path: '/ai/blog/page/3',
-    component: ComponentCreator('/ai/blog/page/3','247'),
+    path: '/recohut/blog/page/3',
+    component: ComponentCreator('/recohut/blog/page/3','ff5'),
     exact: true
   },
   {
-    path: '/ai/blog/tags',
-    component: ComponentCreator('/ai/blog/tags','3d6'),
+    path: '/recohut/blog/tags',
+    component: ComponentCreator('/recohut/blog/tags','de6'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/app',
-    component: ComponentCreator('/ai/blog/tags/app','eb5'),
+    path: '/recohut/blog/tags/app',
+    component: ComponentCreator('/recohut/blog/tags/app','ed9'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/audio',
-    component: ComponentCreator('/ai/blog/tags/audio','a7c'),
+    path: '/recohut/blog/tags/audio',
+    component: ComponentCreator('/recohut/blog/tags/audio','9cf'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/aws-beanstalk',
-    component: ComponentCreator('/ai/blog/tags/aws-beanstalk','c49'),
+    path: '/recohut/blog/tags/aws-beanstalk',
+    component: ComponentCreator('/recohut/blog/tags/aws-beanstalk','eac'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/chatbot',
-    component: ComponentCreator('/ai/blog/tags/chatbot','da8'),
+    path: '/recohut/blog/tags/chatbot',
+    component: ComponentCreator('/recohut/blog/tags/chatbot','41c'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/classification',
-    component: ComponentCreator('/ai/blog/tags/classification','65d'),
+    path: '/recohut/blog/tags/classification',
+    component: ComponentCreator('/recohut/blog/tags/classification','050'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/deepfake',
-    component: ComponentCreator('/ai/blog/tags/deepfake','9c4'),
+    path: '/recohut/blog/tags/deepfake',
+    component: ComponentCreator('/recohut/blog/tags/deepfake','7b1'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/distributed',
-    component: ComponentCreator('/ai/blog/tags/distributed','11d'),
+    path: '/recohut/blog/tags/distributed',
+    component: ComponentCreator('/recohut/blog/tags/distributed','988'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/flask',
-    component: ComponentCreator('/ai/blog/tags/flask','7c3'),
+    path: '/recohut/blog/tags/flask',
+    component: ComponentCreator('/recohut/blog/tags/flask','306'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/healthcare',
-    component: ComponentCreator('/ai/blog/tags/healthcare','ae0'),
+    path: '/recohut/blog/tags/healthcare',
+    component: ComponentCreator('/recohut/blog/tags/healthcare','302'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/insight',
-    component: ComponentCreator('/ai/blog/tags/insight','1b8'),
+    path: '/recohut/blog/tags/insight',
+    component: ComponentCreator('/recohut/blog/tags/insight','19a'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/insurance',
-    component: ComponentCreator('/ai/blog/tags/insurance','455'),
+    path: '/recohut/blog/tags/insurance',
+    component: ComponentCreator('/recohut/blog/tags/insurance','040'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/ner',
-    component: ComponentCreator('/ai/blog/tags/ner','542'),
+    path: '/recohut/blog/tags/ner',
+    component: ComponentCreator('/recohut/blog/tags/ner','037'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/nlp',
-    component: ComponentCreator('/ai/blog/tags/nlp','896'),
+    path: '/recohut/blog/tags/nlp',
+    component: ComponentCreator('/recohut/blog/tags/nlp','6f6'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/object-detection',
-    component: ComponentCreator('/ai/blog/tags/object-detection','ff1'),
+    path: '/recohut/blog/tags/object-detection',
+    component: ComponentCreator('/recohut/blog/tags/object-detection','2b4'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/ocr',
-    component: ComponentCreator('/ai/blog/tags/ocr','965'),
+    path: '/recohut/blog/tags/ocr',
+    component: ComponentCreator('/recohut/blog/tags/ocr','428'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/opencv',
-    component: ComponentCreator('/ai/blog/tags/opencv','031'),
+    path: '/recohut/blog/tags/opencv',
+    component: ComponentCreator('/recohut/blog/tags/opencv','3ce'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/personalization',
-    component: ComponentCreator('/ai/blog/tags/personalization','192'),
+    path: '/recohut/blog/tags/personalization',
+    component: ComponentCreator('/recohut/blog/tags/personalization','74f'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/realtime',
-    component: ComponentCreator('/ai/blog/tags/realtime','830'),
+    path: '/recohut/blog/tags/realtime',
+    component: ComponentCreator('/recohut/blog/tags/realtime','e27'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/recsys',
-    component: ComponentCreator('/ai/blog/tags/recsys','ba5'),
+    path: '/recohut/blog/tags/recsys',
+    component: ComponentCreator('/recohut/blog/tags/recsys','b14'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/regression',
-    component: ComponentCreator('/ai/blog/tags/regression','afd'),
+    path: '/recohut/blog/tags/regression',
+    component: ComponentCreator('/recohut/blog/tags/regression','982'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/scraping',
-    component: ComponentCreator('/ai/blog/tags/scraping','675'),
+    path: '/recohut/blog/tags/scraping',
+    component: ComponentCreator('/recohut/blog/tags/scraping','d8f'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/similarity',
-    component: ComponentCreator('/ai/blog/tags/similarity','5ca'),
+    path: '/recohut/blog/tags/similarity',
+    component: ComponentCreator('/recohut/blog/tags/similarity','479'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/streamlit',
-    component: ComponentCreator('/ai/blog/tags/streamlit','c7f'),
+    path: '/recohut/blog/tags/streamlit',
+    component: ComponentCreator('/recohut/blog/tags/streamlit','e88'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/tool',
-    component: ComponentCreator('/ai/blog/tags/tool','a65'),
+    path: '/recohut/blog/tags/tool',
+    component: ComponentCreator('/recohut/blog/tags/tool','0f5'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/trend',
-    component: ComponentCreator('/ai/blog/tags/trend','1b4'),
+    path: '/recohut/blog/tags/trend',
+    component: ComponentCreator('/recohut/blog/tags/trend','fb0'),
     exact: true
   },
   {
-    path: '/ai/blog/tags/vision',
-    component: ComponentCreator('/ai/blog/tags/vision','36b'),
+    path: '/recohut/blog/tags/vision',
+    component: ComponentCreator('/recohut/blog/tags/vision','474'),
     exact: true
   },
   {
-    path: '/ai/markdown-page',
-    component: ComponentCreator('/ai/markdown-page','efc'),
+    path: '/recohut/markdown-page',
+    component: ComponentCreator('/recohut/markdown-page','cad'),
     exact: true
   },
   {
-    path: '/ai/docs',
-    component: ComponentCreator('/ai/docs','8de'),
+    path: '/recohut/docs',
+    component: ComponentCreator('/recohut/docs','2bc'),
     routes: [
       {
-        path: '/ai/docs/concept-basics/',
-        component: ComponentCreator('/ai/docs/concept-basics/','09e'),
+        path: '/recohut/docs/concept-basics/',
+        component: ComponentCreator('/recohut/docs/concept-basics/','2e8'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-basics/challenges',
-        component: ComponentCreator('/ai/docs/concept-basics/challenges','360'),
+        path: '/recohut/docs/concept-basics/challenges',
+        component: ComponentCreator('/recohut/docs/concept-basics/challenges','3c3'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-basics/collaborative-filtering',
-        component: ComponentCreator('/ai/docs/concept-basics/collaborative-filtering','023'),
+        path: '/recohut/docs/concept-basics/collaborative-filtering',
+        component: ComponentCreator('/recohut/docs/concept-basics/collaborative-filtering','344'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-basics/evaluation',
-        component: ComponentCreator('/ai/docs/concept-basics/evaluation','4fc'),
+        path: '/recohut/docs/concept-basics/evaluation',
+        component: ComponentCreator('/recohut/docs/concept-basics/evaluation','b0f'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-basics/implicit-feedback',
-        component: ComponentCreator('/ai/docs/concept-basics/implicit-feedback','655'),
+        path: '/recohut/docs/concept-basics/implicit-feedback',
+        component: ComponentCreator('/recohut/docs/concept-basics/implicit-feedback','f07'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-basics/processes',
-        component: ComponentCreator('/ai/docs/concept-basics/processes','24f'),
+        path: '/recohut/docs/concept-basics/processes',
+        component: ComponentCreator('/recohut/docs/concept-basics/processes','985'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-basics/session-based-recommenders',
-        component: ComponentCreator('/ai/docs/concept-basics/session-based-recommenders','33c'),
+        path: '/recohut/docs/concept-basics/session-based-recommenders',
+        component: ComponentCreator('/recohut/docs/concept-basics/session-based-recommenders','7ba'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-basics/tasks',
-        component: ComponentCreator('/ai/docs/concept-basics/tasks','f55'),
+        path: '/recohut/docs/concept-basics/tasks',
+        component: ComponentCreator('/recohut/docs/concept-basics/tasks','9d3'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-basics/types-of-recommender-systems',
-        component: ComponentCreator('/ai/docs/concept-basics/types-of-recommender-systems','515'),
+        path: '/recohut/docs/concept-basics/types-of-recommender-systems',
+        component: ComponentCreator('/recohut/docs/concept-basics/types-of-recommender-systems','348'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/',
-        component: ComponentCreator('/ai/docs/concept-extras/','413'),
+        path: '/recohut/docs/concept-extras/',
+        component: ComponentCreator('/recohut/docs/concept-extras/','f12'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/amazon-personalize',
-        component: ComponentCreator('/ai/docs/concept-extras/amazon-personalize','a34'),
+        path: '/recohut/docs/concept-extras/amazon-personalize',
+        component: ComponentCreator('/recohut/docs/concept-extras/amazon-personalize','ef4'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/apps',
-        component: ComponentCreator('/ai/docs/concept-extras/apps','a70'),
+        path: '/recohut/docs/concept-extras/apps',
+        component: ComponentCreator('/recohut/docs/concept-extras/apps','488'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/bias-&-fairness',
-        component: ComponentCreator('/ai/docs/concept-extras/bias-&-fairness','2aa'),
+        path: '/recohut/docs/concept-extras/bias-&-fairness',
+        component: ComponentCreator('/recohut/docs/concept-extras/bias-&-fairness','900'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/causal-inference',
-        component: ComponentCreator('/ai/docs/concept-extras/causal-inference','cb4'),
+        path: '/recohut/docs/concept-extras/causal-inference',
+        component: ComponentCreator('/recohut/docs/concept-extras/causal-inference','717'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/cold-start',
-        component: ComponentCreator('/ai/docs/concept-extras/cold-start','6de'),
+        path: '/recohut/docs/concept-extras/cold-start',
+        component: ComponentCreator('/recohut/docs/concept-extras/cold-start','88e'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/cross-domain',
-        component: ComponentCreator('/ai/docs/concept-extras/cross-domain','2de'),
+        path: '/recohut/docs/concept-extras/cross-domain',
+        component: ComponentCreator('/recohut/docs/concept-extras/cross-domain','0b8'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/data-science',
-        component: ComponentCreator('/ai/docs/concept-extras/data-science','bfb'),
+        path: '/recohut/docs/concept-extras/data-science',
+        component: ComponentCreator('/recohut/docs/concept-extras/data-science','d40'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/diversity',
-        component: ComponentCreator('/ai/docs/concept-extras/diversity','a98'),
+        path: '/recohut/docs/concept-extras/diversity',
+        component: ComponentCreator('/recohut/docs/concept-extras/diversity','d4d'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/emerging-concepts-in-recommender-systems',
-        component: ComponentCreator('/ai/docs/concept-extras/emerging-concepts-in-recommender-systems','059'),
+        path: '/recohut/docs/concept-extras/emerging-concepts-in-recommender-systems',
+        component: ComponentCreator('/recohut/docs/concept-extras/emerging-concepts-in-recommender-systems','ccf'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/graph-embeddings',
-        component: ComponentCreator('/ai/docs/concept-extras/graph-embeddings','717'),
+        path: '/recohut/docs/concept-extras/graph-embeddings',
+        component: ComponentCreator('/recohut/docs/concept-extras/graph-embeddings','027'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/graph-networks',
-        component: ComponentCreator('/ai/docs/concept-extras/graph-networks','2ab'),
+        path: '/recohut/docs/concept-extras/graph-networks',
+        component: ComponentCreator('/recohut/docs/concept-extras/graph-networks','6a3'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/incremental-learning',
-        component: ComponentCreator('/ai/docs/concept-extras/incremental-learning','f5a'),
+        path: '/recohut/docs/concept-extras/incremental-learning',
+        component: ComponentCreator('/recohut/docs/concept-extras/incremental-learning','311'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/jensen-shannon-divergence',
-        component: ComponentCreator('/ai/docs/concept-extras/jensen-shannon-divergence','8b6'),
+        path: '/recohut/docs/concept-extras/jensen-shannon-divergence',
+        component: ComponentCreator('/recohut/docs/concept-extras/jensen-shannon-divergence','d82'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/meta-learning',
-        component: ComponentCreator('/ai/docs/concept-extras/meta-learning','8b7'),
+        path: '/recohut/docs/concept-extras/meta-learning',
+        component: ComponentCreator('/recohut/docs/concept-extras/meta-learning','e81'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/mlops',
-        component: ComponentCreator('/ai/docs/concept-extras/mlops','09e'),
+        path: '/recohut/docs/concept-extras/mlops',
+        component: ComponentCreator('/recohut/docs/concept-extras/mlops','5f5'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/model-deployment',
-        component: ComponentCreator('/ai/docs/concept-extras/model-deployment','79b'),
+        path: '/recohut/docs/concept-extras/model-deployment',
+        component: ComponentCreator('/recohut/docs/concept-extras/model-deployment','7c2'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/model-retraining',
-        component: ComponentCreator('/ai/docs/concept-extras/model-retraining','351'),
+        path: '/recohut/docs/concept-extras/model-retraining',
+        component: ComponentCreator('/recohut/docs/concept-extras/model-retraining','545'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/multi-objective-optimization',
-        component: ComponentCreator('/ai/docs/concept-extras/multi-objective-optimization','cd2'),
+        path: '/recohut/docs/concept-extras/multi-objective-optimization',
+        component: ComponentCreator('/recohut/docs/concept-extras/multi-objective-optimization','686'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/multi-task-learning',
-        component: ComponentCreator('/ai/docs/concept-extras/multi-task-learning','69e'),
+        path: '/recohut/docs/concept-extras/multi-task-learning',
+        component: ComponentCreator('/recohut/docs/concept-extras/multi-task-learning','064'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/multitask-learning',
-        component: ComponentCreator('/ai/docs/concept-extras/multitask-learning','432'),
+        path: '/recohut/docs/concept-extras/multitask-learning',
+        component: ComponentCreator('/recohut/docs/concept-extras/multitask-learning','5b4'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/nlp/chatbot',
-        component: ComponentCreator('/ai/docs/concept-extras/nlp/chatbot','8dd'),
+        path: '/recohut/docs/concept-extras/nlp/chatbot',
+        component: ComponentCreator('/recohut/docs/concept-extras/nlp/chatbot','021'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/nlp/language-modeling',
-        component: ComponentCreator('/ai/docs/concept-extras/nlp/language-modeling','364'),
+        path: '/recohut/docs/concept-extras/nlp/language-modeling',
+        component: ComponentCreator('/recohut/docs/concept-extras/nlp/language-modeling','f34'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/nlp/named-entity-recognition',
-        component: ComponentCreator('/ai/docs/concept-extras/nlp/named-entity-recognition','03a'),
+        path: '/recohut/docs/concept-extras/nlp/named-entity-recognition',
+        component: ComponentCreator('/recohut/docs/concept-extras/nlp/named-entity-recognition','d46'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/nlp/text-analysis',
-        component: ComponentCreator('/ai/docs/concept-extras/nlp/text-analysis','22d'),
+        path: '/recohut/docs/concept-extras/nlp/text-analysis',
+        component: ComponentCreator('/recohut/docs/concept-extras/nlp/text-analysis','e50'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/nlp/text-classification',
-        component: ComponentCreator('/ai/docs/concept-extras/nlp/text-classification','1b0'),
+        path: '/recohut/docs/concept-extras/nlp/text-classification',
+        component: ComponentCreator('/recohut/docs/concept-extras/nlp/text-classification','c33'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/nlp/text-generation',
-        component: ComponentCreator('/ai/docs/concept-extras/nlp/text-generation','340'),
+        path: '/recohut/docs/concept-extras/nlp/text-generation',
+        component: ComponentCreator('/recohut/docs/concept-extras/nlp/text-generation','3a7'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/nlp/text-similarity',
-        component: ComponentCreator('/ai/docs/concept-extras/nlp/text-similarity','c21'),
+        path: '/recohut/docs/concept-extras/nlp/text-similarity',
+        component: ComponentCreator('/recohut/docs/concept-extras/nlp/text-similarity','278'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/nlp/text-style-transfer',
-        component: ComponentCreator('/ai/docs/concept-extras/nlp/text-style-transfer','d72'),
+        path: '/recohut/docs/concept-extras/nlp/text-style-transfer',
+        component: ComponentCreator('/recohut/docs/concept-extras/nlp/text-style-transfer','ec7'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/nlp/text-summarization',
-        component: ComponentCreator('/ai/docs/concept-extras/nlp/text-summarization','d2c'),
+        path: '/recohut/docs/concept-extras/nlp/text-summarization',
+        component: ComponentCreator('/recohut/docs/concept-extras/nlp/text-summarization','a0e'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/nlp/topic-modeling',
-        component: ComponentCreator('/ai/docs/concept-extras/nlp/topic-modeling','fe7'),
+        path: '/recohut/docs/concept-extras/nlp/topic-modeling',
+        component: ComponentCreator('/recohut/docs/concept-extras/nlp/topic-modeling','716'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/nlp/transformers',
-        component: ComponentCreator('/ai/docs/concept-extras/nlp/transformers','64f'),
+        path: '/recohut/docs/concept-extras/nlp/transformers',
+        component: ComponentCreator('/recohut/docs/concept-extras/nlp/transformers','246'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/offline-learning',
-        component: ComponentCreator('/ai/docs/concept-extras/offline-learning','7dc'),
+        path: '/recohut/docs/concept-extras/offline-learning',
+        component: ComponentCreator('/recohut/docs/concept-extras/offline-learning','ba2'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/scalarization',
-        component: ComponentCreator('/ai/docs/concept-extras/scalarization','981'),
+        path: '/recohut/docs/concept-extras/scalarization',
+        component: ComponentCreator('/recohut/docs/concept-extras/scalarization','2cc'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/','8f6'),
+        path: '/recohut/docs/concept-extras/success-stories/',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/','6e4'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/1mg-prod2vec',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/1mg-prod2vec','e43'),
+        path: '/recohut/docs/concept-extras/success-stories/1mg-prod2vec',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/1mg-prod2vec','f53'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/airbnb-experiences',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/airbnb-experiences','fc4'),
+        path: '/recohut/docs/concept-extras/success-stories/airbnb-experiences',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/airbnb-experiences','454'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/alipay-ctr',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/alipay-ctr','cd5'),
+        path: '/recohut/docs/concept-extras/success-stories/alipay-ctr',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/alipay-ctr','6d5'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/doordash-contextual-bandit',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/doordash-contextual-bandit','107'),
+        path: '/recohut/docs/concept-extras/success-stories/doordash-contextual-bandit',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/doordash-contextual-bandit','408'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/etsy-personalization',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/etsy-personalization','23c'),
+        path: '/recohut/docs/concept-extras/success-stories/etsy-personalization',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/etsy-personalization','fe2'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/huawei-appgallery',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/huawei-appgallery','002'),
+        path: '/recohut/docs/concept-extras/success-stories/huawei-appgallery',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/huawei-appgallery','191'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/linkedin-glmix',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/linkedin-glmix','4df'),
+        path: '/recohut/docs/concept-extras/success-stories/linkedin-glmix',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/linkedin-glmix','fd3'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/marketcloud-real-time',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/marketcloud-real-time','4a5'),
+        path: '/recohut/docs/concept-extras/success-stories/marketcloud-real-time',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/marketcloud-real-time','219'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/netflix-personalize-images',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/netflix-personalize-images','e26'),
+        path: '/recohut/docs/concept-extras/success-stories/netflix-personalize-images',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/netflix-personalize-images','190'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/pinterest-multi-task-learning',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/pinterest-multi-task-learning','370'),
+        path: '/recohut/docs/concept-extras/success-stories/pinterest-multi-task-learning',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/pinterest-multi-task-learning','069'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/santander-banking-products',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/santander-banking-products','b17'),
+        path: '/recohut/docs/concept-extras/success-stories/santander-banking-products',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/santander-banking-products','97b'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/scribd-real-time',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/scribd-real-time','490'),
+        path: '/recohut/docs/concept-extras/success-stories/scribd-real-time',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/scribd-real-time','790'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/spotify-contextual-bandits',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/spotify-contextual-bandits','390'),
+        path: '/recohut/docs/concept-extras/success-stories/spotify-contextual-bandits',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/spotify-contextual-bandits','daa'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/spotify-rl',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/spotify-rl','6d6'),
+        path: '/recohut/docs/concept-extras/success-stories/spotify-rl',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/spotify-rl','c6b'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit','366'),
+        path: '/recohut/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit','f35'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/taobao-bst',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/taobao-bst','941'),
+        path: '/recohut/docs/concept-extras/success-stories/taobao-bst',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/taobao-bst','add'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/the-long-tail',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/the-long-tail','809'),
+        path: '/recohut/docs/concept-extras/success-stories/the-long-tail',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/the-long-tail','1f7'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/ubereats-personalization',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/ubereats-personalization','652'),
+        path: '/recohut/docs/concept-extras/success-stories/ubereats-personalization',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/ubereats-personalization','798'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/success-stories/walmart-model-selection',
-        component: ComponentCreator('/ai/docs/concept-extras/success-stories/walmart-model-selection','110'),
+        path: '/recohut/docs/concept-extras/success-stories/walmart-model-selection',
+        component: ComponentCreator('/recohut/docs/concept-extras/success-stories/walmart-model-selection','175'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/vision/facial-analytics',
-        component: ComponentCreator('/ai/docs/concept-extras/vision/facial-analytics','40e'),
+        path: '/recohut/docs/concept-extras/vision/facial-analytics',
+        component: ComponentCreator('/recohut/docs/concept-extras/vision/facial-analytics','f07'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/vision/image-segmentation',
-        component: ComponentCreator('/ai/docs/concept-extras/vision/image-segmentation','523'),
+        path: '/recohut/docs/concept-extras/vision/image-segmentation',
+        component: ComponentCreator('/recohut/docs/concept-extras/vision/image-segmentation','410'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/vision/image-similarity',
-        component: ComponentCreator('/ai/docs/concept-extras/vision/image-similarity','131'),
+        path: '/recohut/docs/concept-extras/vision/image-similarity',
+        component: ComponentCreator('/recohut/docs/concept-extras/vision/image-similarity','708'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/vision/object-detection',
-        component: ComponentCreator('/ai/docs/concept-extras/vision/object-detection','d3f'),
+        path: '/recohut/docs/concept-extras/vision/object-detection',
+        component: ComponentCreator('/recohut/docs/concept-extras/vision/object-detection','118'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/vision/object-tracking',
-        component: ComponentCreator('/ai/docs/concept-extras/vision/object-tracking','6c3'),
+        path: '/recohut/docs/concept-extras/vision/object-tracking',
+        component: ComponentCreator('/recohut/docs/concept-extras/vision/object-tracking','849'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/vision/pose-estimation',
-        component: ComponentCreator('/ai/docs/concept-extras/vision/pose-estimation','c9b'),
+        path: '/recohut/docs/concept-extras/vision/pose-estimation',
+        component: ComponentCreator('/recohut/docs/concept-extras/vision/pose-estimation','219'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/vision/scene-text-recognition',
-        component: ComponentCreator('/ai/docs/concept-extras/vision/scene-text-recognition','212'),
+        path: '/recohut/docs/concept-extras/vision/scene-text-recognition',
+        component: ComponentCreator('/recohut/docs/concept-extras/vision/scene-text-recognition','be3'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/concept-extras/vision/video-action-recognition',
-        component: ComponentCreator('/ai/docs/concept-extras/vision/video-action-recognition','bce'),
+        path: '/recohut/docs/concept-extras/vision/video-action-recognition',
+        component: ComponentCreator('/recohut/docs/concept-extras/vision/video-action-recognition','59e'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/datasets',
-        component: ComponentCreator('/ai/docs/datasets','850'),
+        path: '/recohut/docs/datasets',
+        component: ComponentCreator('/recohut/docs/datasets','ba7'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/intro',
-        component: ComponentCreator('/ai/docs/intro','61e'),
+        path: '/recohut/docs/intro',
+        component: ComponentCreator('/recohut/docs/intro','026'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/',
-        component: ComponentCreator('/ai/docs/models/','0fe'),
+        path: '/recohut/docs/models/',
+        component: ComponentCreator('/recohut/docs/models/','032'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/a3c',
-        component: ComponentCreator('/ai/docs/models/a3c','d3e'),
+        path: '/recohut/docs/models/a3c',
+        component: ComponentCreator('/recohut/docs/models/a3c','533'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/afm',
-        component: ComponentCreator('/ai/docs/models/afm','645'),
+        path: '/recohut/docs/models/afm',
+        component: ComponentCreator('/recohut/docs/models/afm','b40'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/afn',
-        component: ComponentCreator('/ai/docs/models/afn','f20'),
+        path: '/recohut/docs/models/afn',
+        component: ComponentCreator('/recohut/docs/models/afn','7f7'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/ar',
-        component: ComponentCreator('/ai/docs/models/ar','876'),
+        path: '/recohut/docs/models/ar',
+        component: ComponentCreator('/recohut/docs/models/ar','d08'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/asmg',
-        component: ComponentCreator('/ai/docs/models/asmg','b26'),
+        path: '/recohut/docs/models/asmg',
+        component: ComponentCreator('/recohut/docs/models/asmg','ad4'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/attrec',
-        component: ComponentCreator('/ai/docs/models/attrec','0d7'),
+        path: '/recohut/docs/models/attrec',
+        component: ComponentCreator('/recohut/docs/models/attrec','bad'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/aush',
-        component: ComponentCreator('/ai/docs/models/aush','036'),
+        path: '/recohut/docs/models/aush',
+        component: ComponentCreator('/recohut/docs/models/aush','2f0'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/autoint',
-        component: ComponentCreator('/ai/docs/models/autoint','9a5'),
+        path: '/recohut/docs/models/autoint',
+        component: ComponentCreator('/recohut/docs/models/autoint','a59'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/basr',
-        component: ComponentCreator('/ai/docs/models/basr','c22'),
+        path: '/recohut/docs/models/basr',
+        component: ComponentCreator('/recohut/docs/models/basr','477'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/bcq',
-        component: ComponentCreator('/ai/docs/models/bcq','2d0'),
+        path: '/recohut/docs/models/bcq',
+        component: ComponentCreator('/recohut/docs/models/bcq','a3f'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/beh-prop',
-        component: ComponentCreator('/ai/docs/models/beh-prop','8b0'),
+        path: '/recohut/docs/models/beh-prop',
+        component: ComponentCreator('/recohut/docs/models/beh-prop','b8f'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/biasonly',
-        component: ComponentCreator('/ai/docs/models/biasonly','2ce'),
+        path: '/recohut/docs/models/biasonly',
+        component: ComponentCreator('/recohut/docs/models/biasonly','5aa'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/biggraph',
-        component: ComponentCreator('/ai/docs/models/biggraph','7c0'),
+        path: '/recohut/docs/models/biggraph',
+        component: ComponentCreator('/recohut/docs/models/biggraph','f74'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/bpr',
-        component: ComponentCreator('/ai/docs/models/bpr','74b'),
+        path: '/recohut/docs/models/bpr',
+        component: ComponentCreator('/recohut/docs/models/bpr','5f9'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/bst',
-        component: ComponentCreator('/ai/docs/models/bst','525'),
+        path: '/recohut/docs/models/bst',
+        component: ComponentCreator('/recohut/docs/models/bst','e48'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/caser',
-        component: ComponentCreator('/ai/docs/models/caser','5dc'),
+        path: '/recohut/docs/models/caser',
+        component: ComponentCreator('/recohut/docs/models/caser','035'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/cigc',
-        component: ComponentCreator('/ai/docs/models/cigc','5b8'),
+        path: '/recohut/docs/models/cigc',
+        component: ComponentCreator('/recohut/docs/models/cigc','c05'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/coke',
-        component: ComponentCreator('/ai/docs/models/coke','f19'),
+        path: '/recohut/docs/models/coke',
+        component: ComponentCreator('/recohut/docs/models/coke','22e'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/dcn',
-        component: ComponentCreator('/ai/docs/models/dcn','815'),
+        path: '/recohut/docs/models/dcn',
+        component: ComponentCreator('/recohut/docs/models/dcn','7a7'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/ddpg',
-        component: ComponentCreator('/ai/docs/models/ddpg','261'),
+        path: '/recohut/docs/models/ddpg',
+        component: ComponentCreator('/recohut/docs/models/ddpg','588'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/deepcross',
-        component: ComponentCreator('/ai/docs/models/deepcross','f8e'),
+        path: '/recohut/docs/models/deepcross',
+        component: ComponentCreator('/recohut/docs/models/deepcross','92b'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/deepfm',
-        component: ComponentCreator('/ai/docs/models/deepfm','7c0'),
+        path: '/recohut/docs/models/deepfm',
+        component: ComponentCreator('/recohut/docs/models/deepfm','9a1'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/deepwalk',
-        component: ComponentCreator('/ai/docs/models/deepwalk','dc3'),
+        path: '/recohut/docs/models/deepwalk',
+        component: ComponentCreator('/recohut/docs/models/deepwalk','bfa'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/dgtn',
-        component: ComponentCreator('/ai/docs/models/dgtn','508'),
+        path: '/recohut/docs/models/dgtn',
+        component: ComponentCreator('/recohut/docs/models/dgtn','f13'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/dm',
-        component: ComponentCreator('/ai/docs/models/dm','e39'),
+        path: '/recohut/docs/models/dm',
+        component: ComponentCreator('/recohut/docs/models/dm','8ea'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/dmt',
-        component: ComponentCreator('/ai/docs/models/dmt','7d3'),
+        path: '/recohut/docs/models/dmt',
+        component: ComponentCreator('/recohut/docs/models/dmt','ebe'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/dpadl',
-        component: ComponentCreator('/ai/docs/models/dpadl','672'),
+        path: '/recohut/docs/models/dpadl',
+        component: ComponentCreator('/recohut/docs/models/dpadl','d70'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/dqn',
-        component: ComponentCreator('/ai/docs/models/dqn','7d2'),
+        path: '/recohut/docs/models/dqn',
+        component: ComponentCreator('/recohut/docs/models/dqn','e06'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/drqn',
-        component: ComponentCreator('/ai/docs/models/drqn','bfd'),
+        path: '/recohut/docs/models/drqn',
+        component: ComponentCreator('/recohut/docs/models/drqn','e65'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/drr',
-        component: ComponentCreator('/ai/docs/models/drr','1d3'),
+        path: '/recohut/docs/models/drr',
+        component: ComponentCreator('/recohut/docs/models/drr','ef1'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/dueling-dqn',
-        component: ComponentCreator('/ai/docs/models/dueling-dqn','355'),
+        path: '/recohut/docs/models/dueling-dqn',
+        component: ComponentCreator('/recohut/docs/models/dueling-dqn','aa1'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/ffm',
-        component: ComponentCreator('/ai/docs/models/ffm','5e9'),
+        path: '/recohut/docs/models/ffm',
+        component: ComponentCreator('/recohut/docs/models/ffm','4e2'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/fgnn',
-        component: ComponentCreator('/ai/docs/models/fgnn','cfa'),
+        path: '/recohut/docs/models/fgnn',
+        component: ComponentCreator('/recohut/docs/models/fgnn','d9f'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/fm',
-        component: ComponentCreator('/ai/docs/models/fm','47b'),
+        path: '/recohut/docs/models/fm',
+        component: ComponentCreator('/recohut/docs/models/fm','b0b'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/gat',
-        component: ComponentCreator('/ai/docs/models/gat','a49'),
+        path: '/recohut/docs/models/gat',
+        component: ComponentCreator('/recohut/docs/models/gat','bac'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/gc-san',
-        component: ComponentCreator('/ai/docs/models/gc-san','4fb'),
+        path: '/recohut/docs/models/gc-san',
+        component: ComponentCreator('/recohut/docs/models/gc-san','cc9'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/gce-gnn',
-        component: ComponentCreator('/ai/docs/models/gce-gnn','9b9'),
+        path: '/recohut/docs/models/gce-gnn',
+        component: ComponentCreator('/recohut/docs/models/gce-gnn','909'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/glmix',
-        component: ComponentCreator('/ai/docs/models/glmix','357'),
+        path: '/recohut/docs/models/glmix',
+        component: ComponentCreator('/recohut/docs/models/glmix','8b0'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/gru4rec',
-        component: ComponentCreator('/ai/docs/models/gru4rec','326'),
+        path: '/recohut/docs/models/gru4rec',
+        component: ComponentCreator('/recohut/docs/models/gru4rec','e1f'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/hmlet',
-        component: ComponentCreator('/ai/docs/models/hmlet','654'),
+        path: '/recohut/docs/models/hmlet',
+        component: ComponentCreator('/recohut/docs/models/hmlet','16c'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/incctr',
-        component: ComponentCreator('/ai/docs/models/incctr','c3f'),
+        path: '/recohut/docs/models/incctr',
+        component: ComponentCreator('/recohut/docs/models/incctr','40e'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/ipw',
-        component: ComponentCreator('/ai/docs/models/ipw','c21'),
+        path: '/recohut/docs/models/ipw',
+        component: ComponentCreator('/recohut/docs/models/ipw','d9c'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/itempop',
-        component: ComponentCreator('/ai/docs/models/itempop','e1c'),
+        path: '/recohut/docs/models/itempop',
+        component: ComponentCreator('/recohut/docs/models/itempop','f48'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/khgt',
-        component: ComponentCreator('/ai/docs/models/khgt','895'),
+        path: '/recohut/docs/models/khgt',
+        component: ComponentCreator('/recohut/docs/models/khgt','c74'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/lessr',
-        component: ComponentCreator('/ai/docs/models/lessr','895'),
+        path: '/recohut/docs/models/lessr',
+        component: ComponentCreator('/recohut/docs/models/lessr','582'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/lightfm-warp',
-        component: ComponentCreator('/ai/docs/models/lightfm-warp','b56'),
+        path: '/recohut/docs/models/lightfm-warp',
+        component: ComponentCreator('/recohut/docs/models/lightfm-warp','abd'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/lightgcn',
-        component: ComponentCreator('/ai/docs/models/lightgcn','48f'),
+        path: '/recohut/docs/models/lightgcn',
+        component: ComponentCreator('/recohut/docs/models/lightgcn','f16'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/line',
-        component: ComponentCreator('/ai/docs/models/line','e67'),
+        path: '/recohut/docs/models/line',
+        component: ComponentCreator('/recohut/docs/models/line','eb2'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/lird',
-        component: ComponentCreator('/ai/docs/models/lird','522'),
+        path: '/recohut/docs/models/lird',
+        component: ComponentCreator('/recohut/docs/models/lird','d93'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/markov-chains',
-        component: ComponentCreator('/ai/docs/models/markov-chains','7ab'),
+        path: '/recohut/docs/models/markov-chains',
+        component: ComponentCreator('/recohut/docs/models/markov-chains','f26'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/matn',
-        component: ComponentCreator('/ai/docs/models/matn','dff'),
+        path: '/recohut/docs/models/matn',
+        component: ComponentCreator('/recohut/docs/models/matn','711'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/mb-gmn',
-        component: ComponentCreator('/ai/docs/models/mb-gmn','c45'),
+        path: '/recohut/docs/models/mb-gmn',
+        component: ComponentCreator('/recohut/docs/models/mb-gmn','4fa'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/mdp',
-        component: ComponentCreator('/ai/docs/models/mdp','6a2'),
+        path: '/recohut/docs/models/mdp',
+        component: ComponentCreator('/recohut/docs/models/mdp','262'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/mf',
-        component: ComponentCreator('/ai/docs/models/mf','1d2'),
+        path: '/recohut/docs/models/mf',
+        component: ComponentCreator('/recohut/docs/models/mf','a3f'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/mian',
-        component: ComponentCreator('/ai/docs/models/mian','ca1'),
+        path: '/recohut/docs/models/mian',
+        component: ComponentCreator('/recohut/docs/models/mian','f3d'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/mmoe',
-        component: ComponentCreator('/ai/docs/models/mmoe','515'),
+        path: '/recohut/docs/models/mmoe',
+        component: ComponentCreator('/recohut/docs/models/mmoe','552'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/mpnn',
-        component: ComponentCreator('/ai/docs/models/mpnn','0d7'),
+        path: '/recohut/docs/models/mpnn',
+        component: ComponentCreator('/recohut/docs/models/mpnn','77b'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/neumf',
-        component: ComponentCreator('/ai/docs/models/neumf','818'),
+        path: '/recohut/docs/models/neumf',
+        component: ComponentCreator('/recohut/docs/models/neumf','aa5'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/ngcf',
-        component: ComponentCreator('/ai/docs/models/ngcf','b62'),
+        path: '/recohut/docs/models/ngcf',
+        component: ComponentCreator('/recohut/docs/models/ngcf','f2e'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/nmrn',
-        component: ComponentCreator('/ai/docs/models/nmrn','77c'),
+        path: '/recohut/docs/models/nmrn',
+        component: ComponentCreator('/recohut/docs/models/nmrn','d04'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/node2vec',
-        component: ComponentCreator('/ai/docs/models/node2vec','0ff'),
+        path: '/recohut/docs/models/node2vec',
+        component: ComponentCreator('/recohut/docs/models/node2vec','726'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/pnn',
-        component: ComponentCreator('/ai/docs/models/pnn','0bb'),
+        path: '/recohut/docs/models/pnn',
+        component: ComponentCreator('/recohut/docs/models/pnn','66f'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/ppo',
-        component: ComponentCreator('/ai/docs/models/ppo','bb5'),
+        path: '/recohut/docs/models/ppo',
+        component: ComponentCreator('/recohut/docs/models/ppo','e58'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/q-learning',
-        component: ComponentCreator('/ai/docs/models/q-learning','1a0'),
+        path: '/recohut/docs/models/q-learning',
+        component: ComponentCreator('/recohut/docs/models/q-learning','690'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/random_walk',
-        component: ComponentCreator('/ai/docs/models/random_walk','329'),
+        path: '/recohut/docs/models/random_walk',
+        component: ComponentCreator('/recohut/docs/models/random_walk','77a'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/rkmf',
-        component: ComponentCreator('/ai/docs/models/rkmf','4e7'),
+        path: '/recohut/docs/models/rkmf',
+        component: ComponentCreator('/recohut/docs/models/rkmf','6f7'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/sac',
-        component: ComponentCreator('/ai/docs/models/sac','bbe'),
+        path: '/recohut/docs/models/sac',
+        component: ComponentCreator('/recohut/docs/models/sac','8dd'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/sarsa',
-        component: ComponentCreator('/ai/docs/models/sarsa','e19'),
+        path: '/recohut/docs/models/sarsa',
+        component: ComponentCreator('/recohut/docs/models/sarsa','aa6'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/sasrec',
-        component: ComponentCreator('/ai/docs/models/sasrec','b6e'),
+        path: '/recohut/docs/models/sasrec',
+        component: ComponentCreator('/recohut/docs/models/sasrec','439'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/sdne',
-        component: ComponentCreator('/ai/docs/models/sdne','3fe'),
+        path: '/recohut/docs/models/sdne',
+        component: ComponentCreator('/recohut/docs/models/sdne','007'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/sgl',
-        component: ComponentCreator('/ai/docs/models/sgl','d40'),
+        path: '/recohut/docs/models/sgl',
+        component: ComponentCreator('/recohut/docs/models/sgl','9bc'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/shared-bottom',
-        component: ComponentCreator('/ai/docs/models/shared-bottom','66b'),
+        path: '/recohut/docs/models/shared-bottom',
+        component: ComponentCreator('/recohut/docs/models/shared-bottom','0b1'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/siren',
-        component: ComponentCreator('/ai/docs/models/siren','c5c'),
+        path: '/recohut/docs/models/siren',
+        component: ComponentCreator('/recohut/docs/models/siren','442'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/slist',
-        component: ComponentCreator('/ai/docs/models/slist','d9b'),
+        path: '/recohut/docs/models/slist',
+        component: ComponentCreator('/recohut/docs/models/slist','ff3'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/sml',
-        component: ComponentCreator('/ai/docs/models/sml','b12'),
+        path: '/recohut/docs/models/sml',
+        component: ComponentCreator('/recohut/docs/models/sml','b87'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/spop',
-        component: ComponentCreator('/ai/docs/models/spop','3b1'),
+        path: '/recohut/docs/models/spop',
+        component: ComponentCreator('/recohut/docs/models/spop','cc6'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/sr-gnn',
-        component: ComponentCreator('/ai/docs/models/sr-gnn','995'),
+        path: '/recohut/docs/models/sr-gnn',
+        component: ComponentCreator('/recohut/docs/models/sr-gnn','61f'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/sr-san',
-        component: ComponentCreator('/ai/docs/models/sr-san','180'),
+        path: '/recohut/docs/models/sr-san',
+        component: ComponentCreator('/recohut/docs/models/sr-san','8dd'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/sse-pt',
-        component: ComponentCreator('/ai/docs/models/sse-pt','d0e'),
+        path: '/recohut/docs/models/sse-pt',
+        component: ComponentCreator('/recohut/docs/models/sse-pt','bcc'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/stamp',
-        component: ComponentCreator('/ai/docs/models/stamp','345'),
+        path: '/recohut/docs/models/stamp',
+        component: ComponentCreator('/recohut/docs/models/stamp','4a1'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/struc2vec',
-        component: ComponentCreator('/ai/docs/models/struc2vec','0b4'),
+        path: '/recohut/docs/models/struc2vec',
+        component: ComponentCreator('/recohut/docs/models/struc2vec','0dc'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/svae',
-        component: ComponentCreator('/ai/docs/models/svae','67d'),
+        path: '/recohut/docs/models/svae',
+        component: ComponentCreator('/recohut/docs/models/svae','32e'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/taamr',
-        component: ComponentCreator('/ai/docs/models/taamr','d32'),
+        path: '/recohut/docs/models/taamr',
+        component: ComponentCreator('/recohut/docs/models/taamr','b38'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/tagnn',
-        component: ComponentCreator('/ai/docs/models/tagnn','332'),
+        path: '/recohut/docs/models/tagnn',
+        component: ComponentCreator('/recohut/docs/models/tagnn','ced'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/tagnn-pp',
-        component: ComponentCreator('/ai/docs/models/tagnn-pp','40c'),
+        path: '/recohut/docs/models/tagnn-pp',
+        component: ComponentCreator('/recohut/docs/models/tagnn-pp','f38'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/tgin',
-        component: ComponentCreator('/ai/docs/models/tgin','be9'),
+        path: '/recohut/docs/models/tgin',
+        component: ComponentCreator('/recohut/docs/models/tgin','98d'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/vncf',
-        component: ComponentCreator('/ai/docs/models/vncf','941'),
+        path: '/recohut/docs/models/vncf',
+        component: ComponentCreator('/recohut/docs/models/vncf','777'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/vsknn',
-        component: ComponentCreator('/ai/docs/models/vsknn','466'),
+        path: '/recohut/docs/models/vsknn',
+        component: ComponentCreator('/recohut/docs/models/vsknn','cc2'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/wide-and-deep',
-        component: ComponentCreator('/ai/docs/models/wide-and-deep','a13'),
+        path: '/recohut/docs/models/wide-and-deep',
+        component: ComponentCreator('/recohut/docs/models/wide-and-deep','429'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/word2vec',
-        component: ComponentCreator('/ai/docs/models/word2vec','889'),
+        path: '/recohut/docs/models/word2vec',
+        component: ComponentCreator('/recohut/docs/models/word2vec','1dd'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/models/xdeepfm',
-        component: ComponentCreator('/ai/docs/models/xdeepfm','f62'),
+        path: '/recohut/docs/models/xdeepfm',
+        component: ComponentCreator('/recohut/docs/models/xdeepfm','64c'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/notebooks',
-        component: ComponentCreator('/ai/docs/notebooks','8bb'),
+        path: '/recohut/docs/notebooks',
+        component: ComponentCreator('/recohut/docs/notebooks','250'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/projects',
-        component: ComponentCreator('/ai/docs/projects','3d7'),
+        path: '/recohut/docs/projects',
+        component: ComponentCreator('/recohut/docs/projects','ac8'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/snippets/python-snippets',
-        component: ComponentCreator('/ai/docs/snippets/python-snippets','1c0'),
+        path: '/recohut/docs/snippets/python-snippets',
+        component: ComponentCreator('/recohut/docs/snippets/python-snippets','052'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/snippets/unix-shell-snippets',
-        component: ComponentCreator('/ai/docs/snippets/unix-shell-snippets','437'),
+        path: '/recohut/docs/snippets/unix-shell-snippets',
+        component: ComponentCreator('/recohut/docs/snippets/unix-shell-snippets','126'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tools/',
-        component: ComponentCreator('/ai/docs/tools/','8ae'),
+        path: '/recohut/docs/tools/',
+        component: ComponentCreator('/recohut/docs/tools/','6ef'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tools/obp',
-        component: ComponentCreator('/ai/docs/tools/obp','d90'),
+        path: '/recohut/docs/tools/obp',
+        component: ComponentCreator('/recohut/docs/tools/obp','544'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tools/pachyderm',
-        component: ComponentCreator('/ai/docs/tools/pachyderm','7d8'),
+        path: '/recohut/docs/tools/pachyderm',
+        component: ComponentCreator('/recohut/docs/tools/pachyderm','fc4'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tools/pyspark',
-        component: ComponentCreator('/ai/docs/tools/pyspark','218'),
+        path: '/recohut/docs/tools/pyspark',
+        component: ComponentCreator('/recohut/docs/tools/pyspark','c70'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tools/river',
-        component: ComponentCreator('/ai/docs/tools/river','af0'),
+        path: '/recohut/docs/tools/river',
+        component: ComponentCreator('/recohut/docs/tools/river','1b7'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/amazon-personalize',
-        component: ComponentCreator('/ai/docs/tutorials/amazon-personalize','19f'),
+        path: '/recohut/docs/tutorials/amazon-personalize',
+        component: ComponentCreator('/recohut/docs/tutorials/amazon-personalize','74e'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/database-conn',
-        component: ComponentCreator('/ai/docs/tutorials/database-conn','a33'),
+        path: '/recohut/docs/tutorials/database-conn',
+        component: ComponentCreator('/recohut/docs/tutorials/database-conn','e65'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/email-classification',
-        component: ComponentCreator('/ai/docs/tutorials/email-classification','51a'),
+        path: '/recohut/docs/tutorials/email-classification',
+        component: ComponentCreator('/recohut/docs/tutorials/email-classification','a36'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/graph',
-        component: ComponentCreator('/ai/docs/tutorials/graph','d6a'),
+        path: '/recohut/docs/tutorials/graph',
+        component: ComponentCreator('/recohut/docs/tutorials/graph','1b7'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/mathematics',
-        component: ComponentCreator('/ai/docs/tutorials/mathematics','c54'),
+        path: '/recohut/docs/tutorials/mathematics',
+        component: ComponentCreator('/recohut/docs/tutorials/mathematics','212'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/matrix-factorizations',
-        component: ComponentCreator('/ai/docs/tutorials/matrix-factorizations','001'),
+        path: '/recohut/docs/tutorials/matrix-factorizations',
+        component: ComponentCreator('/recohut/docs/tutorials/matrix-factorizations','12e'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/mlops',
-        component: ComponentCreator('/ai/docs/tutorials/mlops','922'),
+        path: '/recohut/docs/tutorials/mlops',
+        component: ComponentCreator('/recohut/docs/tutorials/mlops','893'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/multi-touch-attribution',
-        component: ComponentCreator('/ai/docs/tutorials/multi-touch-attribution','33e'),
+        path: '/recohut/docs/tutorials/multi-touch-attribution',
+        component: ComponentCreator('/recohut/docs/tutorials/multi-touch-attribution','2ac'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/name-address-parsing',
-        component: ComponentCreator('/ai/docs/tutorials/name-address-parsing','82b'),
+        path: '/recohut/docs/tutorials/name-address-parsing',
+        component: ComponentCreator('/recohut/docs/tutorials/name-address-parsing','ba8'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/negative-implicit-feedback-rec',
-        component: ComponentCreator('/ai/docs/tutorials/negative-implicit-feedback-rec','209'),
+        path: '/recohut/docs/tutorials/negative-implicit-feedback-rec',
+        component: ComponentCreator('/recohut/docs/tutorials/negative-implicit-feedback-rec','488'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/pdf-to-wordcloud-mail',
-        component: ComponentCreator('/ai/docs/tutorials/pdf-to-wordcloud-mail','ff4'),
+        path: '/recohut/docs/tutorials/pdf-to-wordcloud-mail',
+        component: ComponentCreator('/recohut/docs/tutorials/pdf-to-wordcloud-mail','6c7'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/recsys-evaluation',
-        component: ComponentCreator('/ai/docs/tutorials/recsys-evaluation','e0e'),
+        path: '/recohut/docs/tutorials/recsys-evaluation',
+        component: ComponentCreator('/recohut/docs/tutorials/recsys-evaluation','c1c'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/resale-price-prediction',
-        component: ComponentCreator('/ai/docs/tutorials/resale-price-prediction','4ab'),
+        path: '/recohut/docs/tutorials/resale-price-prediction',
+        component: ComponentCreator('/recohut/docs/tutorials/resale-price-prediction','87e'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/vector-search',
-        component: ComponentCreator('/ai/docs/tutorials/vector-search','dae'),
+        path: '/recohut/docs/tutorials/vector-search',
+        component: ComponentCreator('/recohut/docs/tutorials/vector-search','f62'),
         exact: true,
         'sidebar': "tutorialSidebar"
       },
       {
-        path: '/ai/docs/tutorials/word2vec',
-        component: ComponentCreator('/ai/docs/tutorials/word2vec','f92'),
+        path: '/recohut/docs/tutorials/word2vec',
+        component: ComponentCreator('/recohut/docs/tutorials/word2vec','584'),
         exact: true,
         'sidebar': "tutorialSidebar"
       }
     ]
   },
   {
-    path: '/ai/',
-    component: ComponentCreator('/ai/','805'),
+    path: '/recohut/',
+    component: ComponentCreator('/recohut/','786'),
     exact: true
   },
   {

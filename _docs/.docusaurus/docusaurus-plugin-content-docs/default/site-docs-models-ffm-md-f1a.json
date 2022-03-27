@@ -6,18 +6,18 @@
   "source": "@site/docs/models/ffm.md",
   "sourceDirName": "models",
   "slug": "/models/ffm",
-  "permalink": "/ai/docs/models/ffm",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/ffm.md",
+  "permalink": "/recohut/docs/models/ffm",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/ffm.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Dueling DQN",
-    "permalink": "/ai/docs/models/dueling-dqn"
+    "permalink": "/recohut/docs/models/dueling-dqn"
   },
   "next": {
     "title": "FGNN",
-    "permalink": "/ai/docs/models/fgnn"
+    "permalink": "/recohut/docs/models/fgnn"
   }
 }

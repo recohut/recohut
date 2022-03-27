@@ -6,18 +6,18 @@
   "source": "@site/docs/models/vncf.md",
   "sourceDirName": "models",
   "slug": "/models/vncf",
-  "permalink": "/ai/docs/models/vncf",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/vncf.md",
+  "permalink": "/recohut/docs/models/vncf",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/vncf.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "TGIN",
-    "permalink": "/ai/docs/models/tgin"
+    "permalink": "/recohut/docs/models/tgin"
   },
   "next": {
     "title": "VSKNN",
-    "permalink": "/ai/docs/models/vsknn"
+    "permalink": "/recohut/docs/models/vsknn"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/models/biggraph.mdx",
   "sourceDirName": "models",
   "slug": "/models/biggraph",
-  "permalink": "/ai/docs/models/biggraph",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/biggraph.mdx",
+  "permalink": "/recohut/docs/models/biggraph",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/biggraph.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "BiasOnly",
-    "permalink": "/ai/docs/models/biasonly"
+    "permalink": "/recohut/docs/models/biasonly"
   },
   "next": {
     "title": "BPR",
-    "permalink": "/ai/docs/models/bpr"
+    "permalink": "/recohut/docs/models/bpr"
   }
 }

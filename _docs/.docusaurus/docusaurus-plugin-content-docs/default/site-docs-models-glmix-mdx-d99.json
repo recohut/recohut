@@ -6,18 +6,18 @@
   "source": "@site/docs/models/glmix.mdx",
   "sourceDirName": "models",
   "slug": "/models/glmix",
-  "permalink": "/ai/docs/models/glmix",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/glmix.mdx",
+  "permalink": "/recohut/docs/models/glmix",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/glmix.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "GCE-GNN",
-    "permalink": "/ai/docs/models/gce-gnn"
+    "permalink": "/recohut/docs/models/gce-gnn"
   },
   "next": {
     "title": "GRU4Rec",
-    "permalink": "/ai/docs/models/gru4rec"
+    "permalink": "/recohut/docs/models/gru4rec"
   }
 }

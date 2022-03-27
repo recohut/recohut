@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-basics/evaluation.mdx",
   "sourceDirName": "concept-basics",
   "slug": "/concept-basics/evaluation",
-  "permalink": "/ai/docs/concept-basics/evaluation",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-basics/evaluation.mdx",
+  "permalink": "/recohut/docs/concept-basics/evaluation",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-basics/evaluation.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Collaborative Filtering",
-    "permalink": "/ai/docs/concept-basics/collaborative-filtering"
+    "permalink": "/recohut/docs/concept-basics/collaborative-filtering"
   },
   "next": {
     "title": "User Feedback",
-    "permalink": "/ai/docs/concept-basics/implicit-feedback"
+    "permalink": "/recohut/docs/concept-basics/implicit-feedback"
   }
 }

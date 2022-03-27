@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/success-stories/santander-banking-products.md",
   "sourceDirName": "concept-extras/success-stories",
   "slug": "/concept-extras/success-stories/santander-banking-products",
-  "permalink": "/ai/docs/concept-extras/success-stories/santander-banking-products",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/santander-banking-products.md",
+  "permalink": "/recohut/docs/concept-extras/success-stories/santander-banking-products",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/success-stories/santander-banking-products.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Pinterest Multi-task Learning",
-    "permalink": "/ai/docs/concept-extras/success-stories/pinterest-multi-task-learning"
+    "permalink": "/recohut/docs/concept-extras/success-stories/pinterest-multi-task-learning"
   },
   "next": {
     "title": "Scribd Real-time",
-    "permalink": "/ai/docs/concept-extras/success-stories/scribd-real-time"
+    "permalink": "/recohut/docs/concept-extras/success-stories/scribd-real-time"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/data-science.md",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/data-science",
-  "permalink": "/ai/docs/concept-extras/data-science",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/data-science.md",
+  "permalink": "/recohut/docs/concept-extras/data-science",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/data-science.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Cross-domain",
-    "permalink": "/ai/docs/concept-extras/cross-domain"
+    "permalink": "/recohut/docs/concept-extras/cross-domain"
   },
   "next": {
     "title": "Diversity",
-    "permalink": "/ai/docs/concept-extras/diversity"
+    "permalink": "/recohut/docs/concept-extras/diversity"
   }
 }

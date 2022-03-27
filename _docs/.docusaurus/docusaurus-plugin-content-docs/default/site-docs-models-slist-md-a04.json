@@ -6,18 +6,18 @@
   "source": "@site/docs/models/slist.md",
   "sourceDirName": "models",
   "slug": "/models/slist",
-  "permalink": "/ai/docs/models/slist",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/slist.md",
+  "permalink": "/recohut/docs/models/slist",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/slist.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "SiReN",
-    "permalink": "/ai/docs/models/siren"
+    "permalink": "/recohut/docs/models/siren"
   },
   "next": {
     "title": "SML",
-    "permalink": "/ai/docs/models/sml"
+    "permalink": "/recohut/docs/models/sml"
   }
 }

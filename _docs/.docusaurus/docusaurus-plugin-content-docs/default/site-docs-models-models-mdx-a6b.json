@@ -6,18 +6,18 @@
   "source": "@site/docs/models/models.mdx",
   "sourceDirName": "models",
   "slug": "/models/",
-  "permalink": "/ai/docs/models/",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/models.mdx",
+  "permalink": "/recohut/docs/models/",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/models.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Video Action Recognition",
-    "permalink": "/ai/docs/concept-extras/vision/video-action-recognition"
+    "permalink": "/recohut/docs/concept-extras/vision/video-action-recognition"
   },
   "next": {
     "title": "A3C",
-    "permalink": "/ai/docs/models/a3c"
+    "permalink": "/recohut/docs/models/a3c"
   }
 }

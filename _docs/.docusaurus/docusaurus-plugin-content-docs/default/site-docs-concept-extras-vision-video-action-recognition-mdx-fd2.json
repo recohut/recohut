@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/vision/video-action-recognition.mdx",
   "sourceDirName": "concept-extras/vision",
   "slug": "/concept-extras/vision/video-action-recognition",
-  "permalink": "/ai/docs/concept-extras/vision/video-action-recognition",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/vision/video-action-recognition.mdx",
+  "permalink": "/recohut/docs/concept-extras/vision/video-action-recognition",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/vision/video-action-recognition.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Scene Text Recognition",
-    "permalink": "/ai/docs/concept-extras/vision/scene-text-recognition"
+    "permalink": "/recohut/docs/concept-extras/vision/scene-text-recognition"
   },
   "next": {
     "title": "Models",
-    "permalink": "/ai/docs/models/"
+    "permalink": "/recohut/docs/models/"
   }
 }

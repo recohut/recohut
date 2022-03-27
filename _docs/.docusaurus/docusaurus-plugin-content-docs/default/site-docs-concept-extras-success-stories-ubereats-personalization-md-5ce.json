@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/success-stories/ubereats-personalization.md",
   "sourceDirName": "concept-extras/success-stories",
   "slug": "/concept-extras/success-stories/ubereats-personalization",
-  "permalink": "/ai/docs/concept-extras/success-stories/ubereats-personalization",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/ubereats-personalization.md",
+  "permalink": "/recohut/docs/concept-extras/success-stories/ubereats-personalization",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/success-stories/ubereats-personalization.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "The Long Tail",
-    "permalink": "/ai/docs/concept-extras/success-stories/the-long-tail"
+    "permalink": "/recohut/docs/concept-extras/success-stories/the-long-tail"
   },
   "next": {
     "title": "Walmart Model Selection",
-    "permalink": "/ai/docs/concept-extras/success-stories/walmart-model-selection"
+    "permalink": "/recohut/docs/concept-extras/success-stories/walmart-model-selection"
   }
 }

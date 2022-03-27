@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/success-stories/scribd-real-time.md",
   "sourceDirName": "concept-extras/success-stories",
   "slug": "/concept-extras/success-stories/scribd-real-time",
-  "permalink": "/ai/docs/concept-extras/success-stories/scribd-real-time",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/scribd-real-time.md",
+  "permalink": "/recohut/docs/concept-extras/success-stories/scribd-real-time",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/success-stories/scribd-real-time.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Santander Banking Products",
-    "permalink": "/ai/docs/concept-extras/success-stories/santander-banking-products"
+    "permalink": "/recohut/docs/concept-extras/success-stories/santander-banking-products"
   },
   "next": {
     "title": "Spotify Contextual Bandits",
-    "permalink": "/ai/docs/concept-extras/success-stories/spotify-contextual-bandits"
+    "permalink": "/recohut/docs/concept-extras/success-stories/spotify-contextual-bandits"
   }
 }

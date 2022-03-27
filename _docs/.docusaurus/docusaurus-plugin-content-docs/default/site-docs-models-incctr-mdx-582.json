@@ -6,18 +6,18 @@
   "source": "@site/docs/models/incctr.mdx",
   "sourceDirName": "models",
   "slug": "/models/incctr",
-  "permalink": "/ai/docs/models/incctr",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/incctr.mdx",
+  "permalink": "/recohut/docs/models/incctr",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/incctr.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "HMLET",
-    "permalink": "/ai/docs/models/hmlet"
+    "permalink": "/recohut/docs/models/hmlet"
   },
   "next": {
     "title": "IPW",
-    "permalink": "/ai/docs/models/ipw"
+    "permalink": "/recohut/docs/models/ipw"
   }
 }

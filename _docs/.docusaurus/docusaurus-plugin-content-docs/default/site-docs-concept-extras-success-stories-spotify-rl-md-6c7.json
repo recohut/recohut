@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/success-stories/spotify-rl.md",
   "sourceDirName": "concept-extras/success-stories",
   "slug": "/concept-extras/success-stories/spotify-rl",
-  "permalink": "/ai/docs/concept-extras/success-stories/spotify-rl",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/success-stories/spotify-rl.md",
+  "permalink": "/recohut/docs/concept-extras/success-stories/spotify-rl",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/success-stories/spotify-rl.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Spotify Contextual Bandits",
-    "permalink": "/ai/docs/concept-extras/success-stories/spotify-contextual-bandits"
+    "permalink": "/recohut/docs/concept-extras/success-stories/spotify-contextual-bandits"
   },
   "next": {
     "title": "StitchFix Multi-armed Bandit",
-    "permalink": "/ai/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit"
+    "permalink": "/recohut/docs/concept-extras/success-stories/stitchfix-multi-armed-bandit"
   }
 }

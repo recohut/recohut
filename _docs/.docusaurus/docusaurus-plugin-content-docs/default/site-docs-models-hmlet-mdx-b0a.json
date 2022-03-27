@@ -6,18 +6,18 @@
   "source": "@site/docs/models/hmlet.mdx",
   "sourceDirName": "models",
   "slug": "/models/hmlet",
-  "permalink": "/ai/docs/models/hmlet",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/hmlet.mdx",
+  "permalink": "/recohut/docs/models/hmlet",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/hmlet.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "GRU4Rec",
-    "permalink": "/ai/docs/models/gru4rec"
+    "permalink": "/recohut/docs/models/gru4rec"
   },
   "next": {
     "title": "IncCTR",
-    "permalink": "/ai/docs/models/incctr"
+    "permalink": "/recohut/docs/models/incctr"
   }
 }

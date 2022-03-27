@@ -6,18 +6,18 @@
   "source": "@site/docs/models/gru4rec.md",
   "sourceDirName": "models",
   "slug": "/models/gru4rec",
-  "permalink": "/ai/docs/models/gru4rec",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/gru4rec.md",
+  "permalink": "/recohut/docs/models/gru4rec",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/gru4rec.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "GLMix",
-    "permalink": "/ai/docs/models/glmix"
+    "permalink": "/recohut/docs/models/glmix"
   },
   "next": {
     "title": "HMLET",
-    "permalink": "/ai/docs/models/hmlet"
+    "permalink": "/recohut/docs/models/hmlet"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/multi-task-learning.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/multi-task-learning",
-  "permalink": "/ai/docs/concept-extras/multi-task-learning",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/multi-task-learning.mdx",
+  "permalink": "/recohut/docs/concept-extras/multi-task-learning",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/multi-task-learning.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Multi-Objective Optimization",
-    "permalink": "/ai/docs/concept-extras/multi-objective-optimization"
+    "permalink": "/recohut/docs/concept-extras/multi-objective-optimization"
   },
   "next": {
     "title": "Multi-task Learning",
-    "permalink": "/ai/docs/concept-extras/multitask-learning"
+    "permalink": "/recohut/docs/concept-extras/multitask-learning"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/models/ipw.mdx",
   "sourceDirName": "models",
   "slug": "/models/ipw",
-  "permalink": "/ai/docs/models/ipw",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/ipw.mdx",
+  "permalink": "/recohut/docs/models/ipw",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/ipw.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "IncCTR",
-    "permalink": "/ai/docs/models/incctr"
+    "permalink": "/recohut/docs/models/incctr"
   },
   "next": {
     "title": "ItemPop",
-    "permalink": "/ai/docs/models/itempop"
+    "permalink": "/recohut/docs/models/itempop"
   }
 }

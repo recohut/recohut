@@ -6,18 +6,18 @@
   "source": "@site/docs/datasets.mdx",
   "sourceDirName": ".",
   "slug": "/datasets",
-  "permalink": "/ai/docs/datasets",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/datasets.mdx",
+  "permalink": "/recohut/docs/datasets",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/datasets.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "River",
-    "permalink": "/ai/docs/tools/river"
+    "permalink": "/recohut/docs/tools/river"
   },
   "next": {
     "title": "Notebooks",
-    "permalink": "/ai/docs/notebooks"
+    "permalink": "/recohut/docs/notebooks"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/models/mpnn.mdx",
   "sourceDirName": "models",
   "slug": "/models/mpnn",
-  "permalink": "/ai/docs/models/mpnn",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/mpnn.mdx",
+  "permalink": "/recohut/docs/models/mpnn",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/mpnn.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "MMoE",
-    "permalink": "/ai/docs/models/mmoe"
+    "permalink": "/recohut/docs/models/mmoe"
   },
   "next": {
     "title": "NeuMF",
-    "permalink": "/ai/docs/models/neumf"
+    "permalink": "/recohut/docs/models/neumf"
   }
 }

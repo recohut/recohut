@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/apps.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/apps",
-  "permalink": "/ai/docs/concept-extras/apps",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/apps.mdx",
+  "permalink": "/recohut/docs/concept-extras/apps",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/apps.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Amazon Personalize",
-    "permalink": "/ai/docs/concept-extras/amazon-personalize"
+    "permalink": "/recohut/docs/concept-extras/amazon-personalize"
   },
   "next": {
     "title": "Bias & Fairness",
-    "permalink": "/ai/docs/concept-extras/bias-&-fairness"
+    "permalink": "/recohut/docs/concept-extras/bias-&-fairness"
   }
 }

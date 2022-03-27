@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/fake-voice-detection",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-fake-voice-detection.mdx",
+  "permalink": "/recohut/blog/2021/10/01/fake-voice-detection",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-fake-voice-detection.mdx",
   "source": "@site/blog/2021-10-01-fake-voice-detection.mdx",
   "title": "Fake Voice Detection",
   "description": "/img/content-blog-raw-blog-fake-voice-detection-untitled.png",
@@ -9,11 +9,11 @@
   "tags": [
     {
       "label": "audio",
-      "permalink": "/ai/blog/tags/audio"
+      "permalink": "/recohut/blog/tags/audio"
     },
     {
       "label": "deepfake",
-      "permalink": "/ai/blog/tags/deepfake"
+      "permalink": "/recohut/blog/tags/deepfake"
     }
   ],
   "readingTime": 2.88,
@@ -37,10 +37,10 @@
   },
   "prevItem": {
     "title": "Document Recommendation",
-    "permalink": "/ai/blog/2021/10/01/document-recommendation"
+    "permalink": "/recohut/blog/2021/10/01/document-recommendation"
   },
   "nextItem": {
     "title": "Image Similarity System",
-    "permalink": "/ai/blog/2021/10/01/image-similarity-system"
+    "permalink": "/recohut/blog/2021/10/01/image-similarity-system"
   }
 }

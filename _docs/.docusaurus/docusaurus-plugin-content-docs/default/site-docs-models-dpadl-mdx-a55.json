@@ -6,18 +6,18 @@
   "source": "@site/docs/models/dpadl.mdx",
   "sourceDirName": "models",
   "slug": "/models/dpadl",
-  "permalink": "/ai/docs/models/dpadl",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/dpadl.mdx",
+  "permalink": "/recohut/docs/models/dpadl",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/dpadl.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "DMT",
-    "permalink": "/ai/docs/models/dmt"
+    "permalink": "/recohut/docs/models/dmt"
   },
   "next": {
     "title": "DQN",
-    "permalink": "/ai/docs/models/dqn"
+    "permalink": "/recohut/docs/models/dqn"
   }
 }

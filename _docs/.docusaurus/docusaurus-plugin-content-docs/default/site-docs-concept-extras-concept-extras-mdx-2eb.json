@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/concept-extras.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/",
-  "permalink": "/ai/docs/concept-extras/",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/concept-extras.mdx",
+  "permalink": "/recohut/docs/concept-extras/",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/concept-extras.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Types of Recommender Systems",
-    "permalink": "/ai/docs/concept-basics/types-of-recommender-systems"
+    "permalink": "/recohut/docs/concept-basics/types-of-recommender-systems"
   },
   "next": {
     "title": "Amazon Personalize",
-    "permalink": "/ai/docs/concept-extras/amazon-personalize"
+    "permalink": "/recohut/docs/concept-extras/amazon-personalize"
   }
 }

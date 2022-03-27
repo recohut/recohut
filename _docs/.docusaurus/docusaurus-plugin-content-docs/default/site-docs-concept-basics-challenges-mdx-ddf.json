@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-basics/challenges.mdx",
   "sourceDirName": "concept-basics",
   "slug": "/concept-basics/challenges",
-  "permalink": "/ai/docs/concept-basics/challenges",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-basics/challenges.mdx",
+  "permalink": "/recohut/docs/concept-basics/challenges",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-basics/challenges.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Concept - Basics",
-    "permalink": "/ai/docs/concept-basics/"
+    "permalink": "/recohut/docs/concept-basics/"
   },
   "next": {
     "title": "Collaborative Filtering",
-    "permalink": "/ai/docs/concept-basics/collaborative-filtering"
+    "permalink": "/recohut/docs/concept-basics/collaborative-filtering"
   }
 }

@@ -6,18 +6,18 @@
   "source": "@site/docs/models/ddpg.md",
   "sourceDirName": "models",
   "slug": "/models/ddpg",
-  "permalink": "/ai/docs/models/ddpg",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/ddpg.md",
+  "permalink": "/recohut/docs/models/ddpg",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/ddpg.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "DCN",
-    "permalink": "/ai/docs/models/dcn"
+    "permalink": "/recohut/docs/models/dcn"
   },
   "next": {
     "title": "DeepCross",
-    "permalink": "/ai/docs/models/deepcross"
+    "permalink": "/recohut/docs/models/deepcross"
   }
 }

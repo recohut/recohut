@@ -6,18 +6,18 @@
   "source": "@site/docs/models/bcq.md",
   "sourceDirName": "models",
   "slug": "/models/bcq",
-  "permalink": "/ai/docs/models/bcq",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/bcq.md",
+  "permalink": "/recohut/docs/models/bcq",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/bcq.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "BASR",
-    "permalink": "/ai/docs/models/basr"
+    "permalink": "/recohut/docs/models/basr"
   },
   "next": {
     "title": "Behavior Propensity Modeling",
-    "permalink": "/ai/docs/models/beh-prop"
+    "permalink": "/recohut/docs/models/beh-prop"
   }
 }

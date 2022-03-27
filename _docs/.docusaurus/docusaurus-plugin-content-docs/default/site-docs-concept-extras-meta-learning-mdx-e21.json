@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/meta-learning.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/meta-learning",
-  "permalink": "/ai/docs/concept-extras/meta-learning",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/meta-learning.mdx",
+  "permalink": "/recohut/docs/concept-extras/meta-learning",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/meta-learning.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Jensen–Shannon divergence",
-    "permalink": "/ai/docs/concept-extras/jensen-shannon-divergence"
+    "permalink": "/recohut/docs/concept-extras/jensen-shannon-divergence"
   },
   "next": {
     "title": "MLOps",
-    "permalink": "/ai/docs/concept-extras/mlops"
+    "permalink": "/recohut/docs/concept-extras/mlops"
   }
 }

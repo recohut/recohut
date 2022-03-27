@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/bias-&-fairness.mdx",
   "sourceDirName": "concept-extras",
   "slug": "/concept-extras/bias-&-fairness",
-  "permalink": "/ai/docs/concept-extras/bias-&-fairness",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/bias-&-fairness.mdx",
+  "permalink": "/recohut/docs/concept-extras/bias-&-fairness",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/bias-&-fairness.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Apps",
-    "permalink": "/ai/docs/concept-extras/apps"
+    "permalink": "/recohut/docs/concept-extras/apps"
   },
   "next": {
     "title": "Causal Inference",
-    "permalink": "/ai/docs/concept-extras/causal-inference"
+    "permalink": "/recohut/docs/concept-extras/causal-inference"
   }
 }

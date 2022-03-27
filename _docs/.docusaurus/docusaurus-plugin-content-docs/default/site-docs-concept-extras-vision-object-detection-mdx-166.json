@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/vision/object-detection.mdx",
   "sourceDirName": "concept-extras/vision",
   "slug": "/concept-extras/vision/object-detection",
-  "permalink": "/ai/docs/concept-extras/vision/object-detection",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/vision/object-detection.mdx",
+  "permalink": "/recohut/docs/concept-extras/vision/object-detection",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/vision/object-detection.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Image Similarity",
-    "permalink": "/ai/docs/concept-extras/vision/image-similarity"
+    "permalink": "/recohut/docs/concept-extras/vision/image-similarity"
   },
   "next": {
     "title": "Object Tracking",
-    "permalink": "/ai/docs/concept-extras/vision/object-tracking"
+    "permalink": "/recohut/docs/concept-extras/vision/object-tracking"
   }
 }

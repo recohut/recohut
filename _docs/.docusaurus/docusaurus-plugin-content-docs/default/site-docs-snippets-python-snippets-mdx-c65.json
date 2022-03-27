@@ -6,18 +6,18 @@
   "source": "@site/docs/snippets/python-snippets.mdx",
   "sourceDirName": "snippets",
   "slug": "/snippets/python-snippets",
-  "permalink": "/ai/docs/snippets/python-snippets",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/snippets/python-snippets.mdx",
+  "permalink": "/recohut/docs/snippets/python-snippets",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/snippets/python-snippets.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Word2vec",
-    "permalink": "/ai/docs/tutorials/word2vec"
+    "permalink": "/recohut/docs/tutorials/word2vec"
   },
   "next": {
     "title": "Unix shell",
-    "permalink": "/ai/docs/snippets/unix-shell-snippets"
+    "permalink": "/recohut/docs/snippets/unix-shell-snippets"
   }
 }

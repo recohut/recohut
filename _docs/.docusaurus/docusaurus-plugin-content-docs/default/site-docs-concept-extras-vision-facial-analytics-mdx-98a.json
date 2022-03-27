@@ -6,18 +6,18 @@
   "source": "@site/docs/concept-extras/vision/facial-analytics.mdx",
   "sourceDirName": "concept-extras/vision",
   "slug": "/concept-extras/vision/facial-analytics",
-  "permalink": "/ai/docs/concept-extras/vision/facial-analytics",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/concept-extras/vision/facial-analytics.mdx",
+  "permalink": "/recohut/docs/concept-extras/vision/facial-analytics",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/concept-extras/vision/facial-analytics.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Walmart Model Selection",
-    "permalink": "/ai/docs/concept-extras/success-stories/walmart-model-selection"
+    "permalink": "/recohut/docs/concept-extras/success-stories/walmart-model-selection"
   },
   "next": {
     "title": "Image Segmentation",
-    "permalink": "/ai/docs/concept-extras/vision/image-segmentation"
+    "permalink": "/recohut/docs/concept-extras/vision/image-segmentation"
   }
 }

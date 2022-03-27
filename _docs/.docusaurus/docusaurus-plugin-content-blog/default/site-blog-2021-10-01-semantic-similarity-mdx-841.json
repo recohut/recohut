@@ -1,6 +1,6 @@
 {
-  "permalink": "/ai/blog/2021/10/01/semantic-similarity",
-  "editUrl": "https://github.com/sparsh-ai/ai/blog/blog/2021-10-01-semantic-similarity.mdx",
+  "permalink": "/recohut/blog/2021/10/01/semantic-similarity",
+  "editUrl": "https://github.com/sparsh-ai/recohut/blog/blog/2021-10-01-semantic-similarity.mdx",
   "source": "@site/blog/2021-10-01-semantic-similarity.mdx",
   "title": "Semantic Similarity",
   "description": "/img/content-blog-raw-blog-semantic-similarity-untitled.png",
@@ -9,11 +9,11 @@
   "tags": [
     {
       "label": "nlp",
-      "permalink": "/ai/blog/tags/nlp"
+      "permalink": "/recohut/blog/tags/nlp"
     },
     {
       "label": "similarity",
-      "permalink": "/ai/blog/tags/similarity"
+      "permalink": "/recohut/blog/tags/similarity"
     }
   ],
   "readingTime": 1.67,
@@ -37,10 +37,10 @@
   },
   "prevItem": {
     "title": "Real-time news personalization with Flink",
-    "permalink": "/ai/blog/2021/10/01/real-time-news-personalization-with-flink"
+    "permalink": "/recohut/blog/2021/10/01/real-time-news-personalization-with-flink"
   },
   "nextItem": {
     "title": "Short-video Background Music Recommender",
-    "permalink": "/ai/blog/2021/10/01/short-video-background-music-recommender"
+    "permalink": "/recohut/blog/2021/10/01/short-video-background-music-recommender"
   }
 }

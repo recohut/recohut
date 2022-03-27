@@ -6,18 +6,18 @@
   "source": "@site/docs/models/khgt.mdx",
   "sourceDirName": "models",
   "slug": "/models/khgt",
-  "permalink": "/ai/docs/models/khgt",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/khgt.mdx",
+  "permalink": "/recohut/docs/models/khgt",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/khgt.mdx",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "ItemPop",
-    "permalink": "/ai/docs/models/itempop"
+    "permalink": "/recohut/docs/models/itempop"
   },
   "next": {
     "title": "LESSR",
-    "permalink": "/ai/docs/models/lessr"
+    "permalink": "/recohut/docs/models/lessr"
   }
 }

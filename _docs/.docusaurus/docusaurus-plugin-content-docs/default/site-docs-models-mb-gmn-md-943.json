@@ -6,18 +6,18 @@
   "source": "@site/docs/models/mb-gmn.md",
   "sourceDirName": "models",
   "slug": "/models/mb-gmn",
-  "permalink": "/ai/docs/models/mb-gmn",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/mb-gmn.md",
+  "permalink": "/recohut/docs/models/mb-gmn",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/mb-gmn.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "MATN",
-    "permalink": "/ai/docs/models/matn"
+    "permalink": "/recohut/docs/models/matn"
   },
   "next": {
     "title": "MDP",
-    "permalink": "/ai/docs/models/mdp"
+    "permalink": "/recohut/docs/models/mdp"
   }
 }

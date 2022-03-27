@@ -6,18 +6,18 @@
   "source": "@site/docs/models/vsknn.md",
   "sourceDirName": "models",
   "slug": "/models/vsknn",
-  "permalink": "/ai/docs/models/vsknn",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/vsknn.md",
+  "permalink": "/recohut/docs/models/vsknn",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/vsknn.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "VNCF",
-    "permalink": "/ai/docs/models/vncf"
+    "permalink": "/recohut/docs/models/vncf"
   },
   "next": {
     "title": "Wide and Deep",
-    "permalink": "/ai/docs/models/wide-and-deep"
+    "permalink": "/recohut/docs/models/wide-and-deep"
   }
 }

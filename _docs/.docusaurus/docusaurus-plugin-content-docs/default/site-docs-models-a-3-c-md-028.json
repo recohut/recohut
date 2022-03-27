@@ -6,18 +6,18 @@
   "source": "@site/docs/models/a3c.md",
   "sourceDirName": "models",
   "slug": "/models/a3c",
-  "permalink": "/ai/docs/models/a3c",
-  "editUrl": "https://github.com/sparsh-ai/ai/docs/models/a3c.md",
+  "permalink": "/recohut/docs/models/a3c",
+  "editUrl": "https://github.com/sparsh-ai/recohut/docs/models/a3c.md",
   "tags": [],
   "version": "current",
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Models",
-    "permalink": "/ai/docs/models/"
+    "permalink": "/recohut/docs/models/"
   },
   "next": {
     "title": "AFM",
-    "permalink": "/ai/docs/models/afm"
+    "permalink": "/recohut/docs/models/afm"
   }
 }

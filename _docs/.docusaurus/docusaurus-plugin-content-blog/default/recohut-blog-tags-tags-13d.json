@@ -1,0 +1,184 @@
+{
+  "classification": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/classification",
+    "name": "classification",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/classification"
+  },
+  "healthcare": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/healthcare",
+    "name": "healthcare",
+    "count": 2,
+    "permalink": "/recohut/blog/tags/healthcare"
+  },
+  "tool": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/tool",
+    "name": "tool",
+    "count": 2,
+    "permalink": "/recohut/blog/tags/tool"
+  },
+  "vision": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/vision",
+    "name": "vision",
+    "count": 9,
+    "permalink": "/recohut/blog/tags/vision"
+  },
+  "distributed": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/distributed",
+    "name": "distributed",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/distributed"
+  },
+  "recsys": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/recsys",
+    "name": "recsys",
+    "count": 3,
+    "permalink": "/recohut/blog/tags/recsys"
+  },
+  "nlp": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/nlp",
+    "name": "nlp",
+    "count": 5,
+    "permalink": "/recohut/blog/tags/nlp"
+  },
+  "similarity": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/similarity",
+    "name": "similarity",
+    "count": 4,
+    "permalink": "/recohut/blog/tags/similarity"
+  },
+  "audio": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/audio",
+    "name": "audio",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/audio"
+  },
+  "deepfake": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/deepfake",
+    "name": "deepfake",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/deepfake"
+  },
+  "aws beanstalk": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/aws-beanstalk",
+    "name": "aws beanstalk",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/aws-beanstalk"
+  },
+  "flask": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/flask",
+    "name": "flask",
+    "count": 2,
+    "permalink": "/recohut/blog/tags/flask"
+  },
+  "insurance": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/insurance",
+    "name": "insurance",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/insurance"
+  },
+  "personalization": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/personalization",
+    "name": "personalization",
+    "count": 4,
+    "permalink": "/recohut/blog/tags/personalization"
+  },
+  "app": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/app",
+    "name": "app",
+    "count": 4,
+    "permalink": "/recohut/blog/tags/app"
+  },
+  "ner": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/ner",
+    "name": "ner",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/ner"
+  },
+  "object detection": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/object-detection",
+    "name": "object detection",
+    "count": 2,
+    "permalink": "/recohut/blog/tags/object-detection"
+  },
+  "opencv": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/opencv",
+    "name": "opencv",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/opencv"
+  },
+  "streamlit": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/streamlit",
+    "name": "streamlit",
+    "count": 3,
+    "permalink": "/recohut/blog/tags/streamlit"
+  },
+  "ocr": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/ocr",
+    "name": "ocr",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/ocr"
+  },
+  "regression": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/regression",
+    "name": "regression",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/regression"
+  },
+  "realtime": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/realtime",
+    "name": "realtime",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/realtime"
+  },
+  "insight": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/insight",
+    "name": "insight",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/insight"
+  },
+  "scraping": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/scraping",
+    "name": "scraping",
+    "count": 2,
+    "permalink": "/recohut/blog/tags/scraping"
+  },
+  "chatbot": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/chatbot",
+    "name": "chatbot",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/chatbot"
+  },
+  "trend": {
+    "allTagsPath": "/recohut/blog/tags",
+    "slug": "/recohut/blog/tags/trend",
+    "name": "trend",
+    "count": 1,
+    "permalink": "/recohut/blog/tags/trend"
+  }
+}
